@@ -1,0 +1,31 @@
+# Site
+title: Cyberinfrastructure
+subtitle: for Researchers & Teams
+copyright: |
+  &copy; National Socio-Environmental Synthesis Center (SESYNC)<br>
+  1 Park Place, Suite 300, Annapolis, MD 21401
+
+# Content
+collections:
+  category_pages:
+    output: true
+gems:
+  - jemoji
+
+# Build
+theme: jekyll-theme-leap-day
+sass:
+  sass_dir: ./assets/css
+defaults:
+  - scope:
+      path: ""
+      type: category_pages
+    values:
+      layout: category
+      permalink: /:title/
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: category
+      permalink: /:categories/:title.html

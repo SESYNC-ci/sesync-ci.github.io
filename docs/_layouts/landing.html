@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+          crossorigin="anonymous"/>
+    <!-- fullPage CSS (https://cdnjs.com/libraries/fullPage.js) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css"
+          integrity="sha256-r2glH03VUY1R1G+7PwWdfL/NaTKpbInwaZFGiohbo4A="
+          crossorigin="anonymous"/>
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="/assets/css/landing.css"/>
+  </head>
+  <body>
+    {{ content }}
+    <!-- jQuery (https://code.jquery.com/) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <!-- fullPage.js (https://cdnjs.com/libraries/fullPage.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"
+            integrity="sha256-r80qU2FgO31x7HtK2BQxYOQxPb45x+eKKhzA0OrepyM="
+            crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#fullpage").fullpage({
+          navigation: true,
+          navigationPosition: "right",
+        });
+      });
+    </script>    
+  </body>
+</html>

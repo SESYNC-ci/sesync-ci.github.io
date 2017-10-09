@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <!-- Original downloaded from https://github.com/pages-themes/leap-day/blob/2c15b7c092971aa8af0e2752d562dd5ecad7d0f2/_layouts/default.html
+    on 2017-10-09. Subsequently modified by Ian Carroll <icarroll@sesync.org>. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+    <header>
+      {% if page.category %}
+        {% include title.html category=page.category %}
+      {% else %}
+        <h1>{{ site.title }}</h1>
+        <h2>{{ site.subtitle }}</h2>
+      {% endif %}
+    </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="/quickstart/" class="button"><strong>Quick Start</strong></a>
+        <a href="/FAQ/" class="button"><strong>FAQ</strong></a>
+        <a href="/blog/" class="button"><strong>Blog</strong></a>
+        <a href="/lessons/" class="button"><strong>Lessons</strong></a>
+      </div>
+
+    <div class="wrapper">
+      {% if content contains "<h2 " %}
+        <nav>
+          <ul></ul>
+        </nav>
+      {% endif %}
+      <section>
+        {{ content }}
+      </section>
+      {% if page.tags.size > 0 %}
+      <tags>
+        <h1>Related <i class="fa fa-tags" aria-hidden="true"></i></h1>
+        <ul>
+          {% for tag in page.tags %}
+            <li>
+              <a href="/tags/#{{ tag }}"> {{ tag }} </a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
+                <strong class="fa-stack-1x">{{ site.tags[tag].size | minus: 1}}</strong>
+              </span>
+            </li>          
+          {% endfor %}
+        </ul>
+      </tags>
+      {% endif %}
+      <footer>
+        {% if site.github.is_project_page %}
+          <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>
