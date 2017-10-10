@@ -9,9 +9,13 @@ header {
     background-size: auto 50%;
     background-position: 2% 25%;
     background-repeat: no-repeat;
-
     h1 {
+        font-family: proxima_nova_ltsemibold;
         text-shadow: 1px 2px 0px $color-light-grey;
+    }
+    h2 {
+        font-family: proxima_nova_ltsemibold;
+        color: #666;
     }
 }
 

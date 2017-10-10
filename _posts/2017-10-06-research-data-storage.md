@@ -1,12 +1,11 @@
 ---
-title: Research Data Storage
 category: quickstart
 tags:
  - NFS
  - Data
 ---
 
-# {{ title }}
+# {{ page.title }}
 
 ## Transfer data using the web portal
 
