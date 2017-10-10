@@ -15,21 +15,6 @@ header {
     }
 }
 
-#banner {
-    background-color: $color-primary;
-    border: none;
-    padding-left: calc(50% - 332px);
-    .button {
-        background-color: $color-primary-trim;
-        border: 0.5px solid;
-        border-color: $color-primary-dark;
-        box-shadow: 0px 0px 1px 0px black;
-    }
-    .button:hover {
-        background-color: $color-primary-light;
-    }
-}
-
 body {
     background-image: unset;
     background-color: $color-grey;
@@ -56,5 +41,42 @@ tags {
         line-height: 24px;
         list-style: none;
         padding: 0px;
+    }
+}
+
+
+#banner {
+    background-color: $color-primary;
+    border: none;
+    padding-left: calc(50% - 332px);
+    .button {
+        background-color: $color-primary-trim;
+        border: 0.5px solid;
+        border-color: $color-primary-dark;
+        box-shadow: 0px 0px 1px 0px black;
+    }
+    .button:hover {
+        background-color: $color-primary-light;
+    }
+}
+
+#search-box {
+    max-width: 300px;
+    float: right;
+    margin: 0 -50px 0 0;
+    td {
+        border: none;
+    }
+    .gsc-clear-button {
+        visibility: hidden;
+    }
+    
+}
+
+#search-result {
+    height: 100%;
+    overflow: scroll;
+    td {
+        border: none;
     }
 }

@@ -22,22 +22,18 @@
         var gcse = document.createElement('script');
         gcse.type = 'text/javascript';
         gcse.async = true;
-        gcse.src = 'https://www.google.com/cse/cse.js?cx=' + cx;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(gcse, s);
       })();
-</script>
+    </script>
 
   </head>
   <body>
 
     <header>
-      {% if page.category %}
-        {% include title.html category=page.category %}
-      {% else %}
-        <h1>{{ site.title }}</h1>
-        <h2>{{ site.subtitle }}</h2>
-      {% endif %}
+      <h1>{{ site.title }}</h1>
+      <h2>{{ site.subtitle }}</h2>
     </header>
 
     <div id="banner">
@@ -45,36 +41,12 @@
       <a href="/FAQ/" class="button"><strong>FAQ</strong></a>
       <a href="/blog/" class="button"><strong>Blog</strong></a>
       <a href="/lessons/" class="button"><strong>Lessons</strong></a>
-      <div id="search-box">
-        <gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only>
-      </div>
     </div>
 
     <div class="wrapper">
-      {% if content contains "<h2 " %}
-        <nav>
-          <ul></ul>
-        </nav>
-      {% endif %}
       <section>
         {{ content }}
       </section>
-      {% if page.tags.size > 0 %}
-      <tags>
-        <h1>Related <i class="fa fa-tags" aria-hidden="true"></i></h1>
-        <ul>
-          {% for tag in page.tags %}
-            <li>
-              <a href="/tags/#-{{ tag | downcase }}"> {{ tag }} </a>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
-                <strong class="fa-stack-1x">{{ site.tags[tag].size | minus: 1}}</strong>
-              </span>
-            </li>          
-          {% endfor %}
-        </ul>
-      </tags>
-      {% endif %}
       <footer>
         <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>

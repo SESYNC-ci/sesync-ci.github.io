@@ -9,7 +9,7 @@ copyright: |
 collections:
   category_pages:
     output: true
-gems:
+plugins:
   - jemoji
 
 # Build
