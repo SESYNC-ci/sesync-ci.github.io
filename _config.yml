@@ -13,6 +13,8 @@ plugins:
   - jemoji
 
 # Build
+exclude:
+  - .Rproj.user
 theme: jekyll-theme-leap-day
 sass:
   sass_dir: ./assets/css
