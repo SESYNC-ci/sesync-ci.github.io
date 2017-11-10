@@ -41,12 +41,21 @@
     </header>
 
     <div id="banner">
-      <a href="/quickstart/" class="button"><strong>Quick Start</strong></a>
-      <a href="/FAQ/" class="button"><strong>FAQ</strong></a>
-      <a href="/blog/" class="button"><strong>Blog</strong></a>
-      <a href="/lessons/" class="button"><strong>Lessons</strong></a>
+      <a href="{{ '/quickstart/' | relative_url }}" class="button">
+        <strong>Quick Start</strong>
+      </a>
+      <a href="{{ '/FAQ/' | relative_url }}" class="button">
+        <strong>FAQ</strong>
+      </a>
+      <a href="{{ '/blog/' | relative_url }}" class="button">
+        <strong>Blog</strong>
+      </a>
+      <a href="{{ '/lessons/' | relative_url }}" class="button">
+        <strong>Lessons</strong>
+      </a>
       <div id="search-box">
-        <gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only>
+        <gcse:searchbox-only resultsUrl="{{ '/search.html' | relative_url }}">
+        </gcse:searchbox-only>
       </div>
     </div>
 
@@ -65,10 +74,13 @@
         <ul>
           {% for tag in page.tags %}
             <li>
-              <a href="/tags/#-{{ tag | downcase }}"> {{ tag }} </a>
+              <a href="{{ '/tags' | relative_url }}/#-{{ tag | downcase }}">
+                <strong>{{ tag }} </strong>
+              </a>
               <span class="fa-stack fa-lg">
                 <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
-                <strong class="fa-stack-1x">{{ site.tags[tag].size | minus: 1}}</strong>
+                <strong class="fa-stack-1x">{{ site.tags[tag].size | minus: 1}}
+                </strong>
               </span>
             </li>          
           {% endfor %}
@@ -76,8 +88,12 @@
       </tags>
       {% endif %}
       <footer>
-        <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+        <p>Project maintained by <a
+          href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+        </p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a
+          href="https://twitter.com/michigangraham">mattgraham</a></small>
+        </p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
