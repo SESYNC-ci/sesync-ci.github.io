@@ -3,7 +3,7 @@ title: New Scheduled Computing Services
 category: blog
 tags:
   - R
-  - Infrastructure
+  - infrastructure
 author: msmorul
 ---
 

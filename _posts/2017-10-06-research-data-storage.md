@@ -2,7 +2,7 @@
 category: quickstart
 tags:
  - NFS
- - Data
+ - data
 ---
 
 # {{ page.title }}

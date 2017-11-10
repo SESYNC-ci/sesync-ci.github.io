@@ -2,7 +2,7 @@
 title: Tests using the PostgreSQL FDW and PostGIS
 category: blog
 tags:
-  - Database
+  - database
   - GIS
 author: msmorul
 ---

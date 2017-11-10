@@ -1,5 +1,4 @@
 ---
-#layout: search
 ---
 
 <div id="search-result">

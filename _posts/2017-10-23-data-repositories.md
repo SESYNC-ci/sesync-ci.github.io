@@ -2,8 +2,8 @@
 title: "Sharing data products"
 category: quickstart
 tags:
-  - Data
-  - Reproducible Research
+  - data
+  - "reproducible-research"
 ---
 
 # Introduction

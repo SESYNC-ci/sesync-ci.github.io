@@ -2,7 +2,7 @@
 title: County Shapefile Data Load
 category: blog
 tags:
-  - Database
+  - database
   - GIS
 author: msmorul
 ---

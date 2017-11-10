@@ -2,7 +2,7 @@
 title: Database Password Protection in R
 category: blog
 tags:
-  - Database
+  - database
   - R
 author: msmorul
 ---
