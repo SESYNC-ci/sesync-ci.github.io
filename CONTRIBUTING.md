@@ -1,6 +1,14 @@
-**TL;DR** Add or edit a file in the [_posts folder](_posts/) that
-includes a *single* category and a **list of at least one** tag. Follow the naming convention
-of "YYYY-MM-DD-post-tile.md". Here's a template:
+> **TL;DR** Add or edit a file in the [_posts folder](_posts/) that
+> includes a *single* category and a **list of at least one** tag. Follow the naming convention
+> of "YYYY-MM-DD-post-tile.md".
+
+## Content
+
+All of the content of the website lives in the [_posts folder](_posts/), divied up
+into single page Markdown files. A Markdown (.md) file is a plain text file which you
+can edit with your favorite text editor (or even on GitHub). Each file must have "front matter",
+the section fenced by `---` in the template below. The `category` and `tags`
+variables are essential front matter: they control the location of content on the website.
 
 ```
 ---
@@ -13,12 +21,6 @@ tags:
 My blog post about open data for reproducible research.
 ```
 
-## Content = "_posts"
-
-All of the content of the website lives in the [_posts folder](_posts/), divied up
-into single page Markdown files. A Markdown (.md) file is a plain text file which you
-can edit with your favorite text editor (or even on GitHub). The `category` and `tags`
-variables are essential: they control the location of content on the website.
 
 ## Category
 
