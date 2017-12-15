@@ -6,8 +6,8 @@ of "YYYY-MM-DD-post-tile.md". Here's a template:
 ---
 category: blog
 tags:
-  - Data
-  - Reproducible Research
+  - data
+  - reproducible-research
 ---
 
 My blog post about open data for reproducible research.
