@@ -38,7 +38,7 @@ novel tag.
 
 There is very little styling available through Markdown. Certain choices affect layout, however, so for consistency please:
 
-- **Headings:** Use a single `#` level heading at the top of a file. Consider even `# {{ page.title }}`.
+- **Headings:** Use a single `#` level heading at the top of a post. Consider even `# {{ page.title }}`.
 - That's it for now...
 
 ![](https://imgs.xkcd.com/comics/strunk_and_white.png)
