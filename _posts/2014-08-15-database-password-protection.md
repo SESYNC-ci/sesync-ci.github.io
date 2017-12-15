@@ -1,11 +1,13 @@
 ---
-title: Database Password Protection in R
 category: blog
 tags:
   - database
   - R
-author: msmorul
+authors: 
+  - Mike Smorul
 ---
+
+# {{ page.title }}
 
 A nice tip Ian found to prompt for a database password when
 connecting:
@@ -16,8 +18,8 @@ connecting:
         dbname='database_name', 
         host='database.host.org')
 
-You don't want to do something like password <-
-.rs.askForPassword("Enter password:") as this will store your password
+You don't want to do something like `password <-
+.rs.askForPassword("Enter password:")` as this will store your password
 in memory. Not the worst solution, but not the best either.
 
 Why don't you want to store your password directly in code? Simple, if

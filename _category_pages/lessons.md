@@ -1,4 +1,4 @@
 ---
 ---
 
-{% include title.html category=page.slug %}
+# Lessons Developed by CI Staff

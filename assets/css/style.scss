@@ -6,9 +6,7 @@
 
 header {
     background-color: black;
-    background-size: auto 50%;
-    background-position: 2% 25%;
-    background-repeat: no-repeat;
+    background-image: unset;
     h1 {
         font-family: proxima_nova_ltsemibold;
         text-shadow: 1px 2px 0px $color-light-grey;
@@ -17,6 +15,18 @@ header {
         font-family: proxima_nova_ltsemibold;
         color: #666;
     }
+    img {
+        position: fixed;
+        top: 10px;
+        left: 6px;
+        max-height: 7em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header img {
+        visibility: hidden;
+    }
 }
 
 body {
@@ -24,6 +34,31 @@ body {
     background-color: $color-grey;
 }
 
+footer {
+    width: 180px;
+    position: fixed;
+    left: 50%;
+    margin-left: 350px;
+    text-align: left;
+}
+
+ul {
+    margin: 0;
+    list-style-image: none;
+}
+
+li {
+    margin: 0px;
+}
+
+h1 {
+    margin: 0 0 1em;
+}
+
+h3 {
+    margin: 0.2em 0 0;
+    padding-left: 0.6em;
+}
 nav ul li.tag-h1 a {
     color: $color-blue;
 }
@@ -41,10 +76,14 @@ tags {
         color: white;
     }
     ul {
-        font-size: 18px;
+        font-size: 12px;
         line-height: 24px;
         list-style: none;
         padding: 0px;
+    }
+    a > strong {
+        font-size: 18px;
+        color: $color-primary;
     }
 }
 

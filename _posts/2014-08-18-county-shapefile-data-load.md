@@ -1,11 +1,13 @@
 ---
-title: County Shapefile Data Load
 category: blog
 tags:
   - database
   - GIS
-author: msmorul
+authors:
+  - Mike Smorul
 ---
+
+# {{ page.title }}
 
 These steps were done in Ubuntu 14.04 using the stock Postgresql 9.1
 and PostGIS 9.1. Only configuration changes: Allow access on all db

@@ -1,12 +1,13 @@
 ---
-title: "Sharing data products"
 category: quickstart
 tags:
   - data
-  - "reproducible-research"
+  - reproducible-research
 ---
 
-# Introduction
+# {{ page.title }}
+
+## Introduction
 
 Choosing to put your data products in a long-term repository can:
 
@@ -20,7 +21,7 @@ SESYNC’s Cyberinfrastructure team is ready to help you navigate this landscape
 
 **link to blog/quickstart page on writing data management plans**
 
-# Choosing a repository
+## Choosing a repository
 
 > Generic repositories are flexible and accept many forms of data
 
@@ -30,7 +31,7 @@ SESYNC’s Cyberinfrastructure team is ready to help you navigate this landscape
 
 Although any dataset should have comprehensive metadata to aid interpretation, domain-specific repositories often require adherence to standards for file formats and/or metadata, such as [Ecological Metadata Language](https://knb.ecoinformatics.org/) used by the ecology-focused [Knowledge Network for Biodiversity](https://knb.ecoinformatics.org/) or [Darwin Core] (http://rs.tdwg.org/dwc/) for biodiversity data. 
                                                                                  
-# Publication format
+## Publication format
 
 > Datasets can be the focus of a publication or released in support of a publication. 
 
@@ -44,29 +45,29 @@ Datasets that support manuscripts are traditionally considered Supplementary Mat
 
 1. Journal article describing a database and corresponding dataset (multiple CSV files, in LTER repository) - http://onlinelibrary.wiley.com/doi/10.1890/15-1027/full, https://lter.limnology.wisc.edu/dataset/global-database-methane-concentrations-and-atmospheric-fluxes-streams-and-rivers 
 
-# What to publish
+## What to publish
 
 > Publishing data vs. model code or data processing steps?
 
 If the products of your synthesis work are software/models, or use datasets that already exist in public repositories, it may be more appropriate to archive your computer code instead of (or in addition to) datasets. Some types of models may have specialized repositories, such as Open ABM (https://www.openabm.org/models) for agent-based models. Code for a processing public datasets and/or running a model can be hosted on Github with unique identifiers assigned to releases of the repository through Zenodo (https://guides.github.com/activities/citable-code/) such as acquiring and processing FAO data to use in a network model (https://github.com/SESYNC-ci/cereals-network-shocks).
 
-# Qualitative data
+## Qualitative data
 
 *Qualitative Data Repository description and example*
 
-# Using publicly available data
+## Using publicly available data
 
 > We used all or almost all publicly available data sources – should they still be archived?
 
-# Further reading  
+## Further reading  
   
-## Repository repositories
+### Repository repositories
 
 1. Data ONE is a federation of data repositories that supports easy discovery of and access to environmental and Earth science data, as well as various data management tools and educational resources. member nodes listed at (https://www.dataone.org/current-member-nodes)
 
 1. Registry of Research Data Repositories (http://www.re3data.org/) 
 
-## Resources and tools
+### Resources and tools
 
 1. Ecological Society of America: https://www.esa.org/esa/science/data-sharing/resources-and-tools/
 

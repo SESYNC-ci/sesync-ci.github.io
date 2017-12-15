@@ -1,4 +1,4 @@
 ---
 ---
 
-{% include title.html category=page.slug %}
+# Frequently Asked Questions
