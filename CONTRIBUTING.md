@@ -1,6 +1,6 @@
-**TL;DR** Add or edit a file in the `docs/_posts` folder that includes a
-single category and a list of at least one tag. Follow the naming convention
-of "YYYY-MM-DD-post-tile.md".
+**TL;DR** Add or edit a file in the [_posts folder](_posts/) that
+includes a *single* category and a **list of at least one** tag. Follow the naming convention
+of "YYYY-MM-DD-post-tile.md". Here's a template:
 
 ```
 ---
@@ -13,11 +13,18 @@ tags:
 My blog post ...
 ```
 
-## Categories
+## Content = "_posts"
 
-The names of the files in the "_category_pages" folder should be the
-only strings used in the "category:" definition in any post's front matter,
-but no mechanisms automatically checks this.
+All of the content of the website lives in the [_posts folder](_posts/), divied up
+into single page Markdown files. A Markdown (.md) file is a plain text file which you
+can edit with your favorite text editor (or even on GitHub). The `category` and `tags`
+variables are essential: they control the location of content on the website.
+
+## Category
+
+The names of the files in the [_category_pages folder](_category_pages/) should be the
+only strings used for the `category` variable in any post's front matter.
+No mechanism automatically checks this, so please type carefully.
 
 ## Tags
 
@@ -43,3 +50,9 @@ Leave that process running until you are done (then click 🛑). If the port
 
 Next call `servr::httw('_site', port = 4321)` in the **R console**, and leave that
 running until you're done too.
+
+## Pull Requests
+
+Collaborators (with push access) are not required to submit pull requests for their
+contributions. A good reason to submit a pull request, however, is to request feedback
+or to learn how they work!
