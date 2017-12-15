@@ -1,5 +1,3 @@
-**Under Development**
-
 # SESYNC Cyberinfrastructure for Researchers & Teams
 
 The resources available to SESYNC researchers and teams are many and varied. The
