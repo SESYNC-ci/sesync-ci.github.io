@@ -21,7 +21,6 @@ tags:
 My blog post about open data for reproducible research.
 ```
 
-
 ## Category
 
 The names of the files in the [_category_pages folder](_category_pages/) should be the
@@ -34,6 +33,15 @@ A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
 tags where possible (see them all at [/tags](https://sesync-ci.github.io/tags)), but also feel free to use a
 novel tag.
+
+## Style Guide
+
+There is very little styling available through Markdown. Certain choices affect layout, however, so for consistency please:
+
+- **Headings:** Use a single `#` level heading at the top of a file. Consider even `# {{ page.title }}`.
+- That's it for now...
+
+![](https://imgs.xkcd.com/comics/strunk_and_white.png)
 
 ## Preview
 
