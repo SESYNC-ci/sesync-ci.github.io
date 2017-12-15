@@ -10,7 +10,7 @@ tags:
   - Reproducible Research
 ---
 
-My blog post ...
+My blog post about open data for reproducible research.
 ```
 
 ## Content = "_posts"
