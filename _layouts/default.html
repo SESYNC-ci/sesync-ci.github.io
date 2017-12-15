@@ -63,11 +63,7 @@
     </div>
 
     <div class="wrapper">
-      {% if content contains "<h2 " %}
-        <nav>
-          <ul></ul>
-        </nav>
-      {% endif %}
+      {% if page.toc %}<nav><ul></ul></nav>{% endif %}
       <section>
         {{ content }}
       </section>

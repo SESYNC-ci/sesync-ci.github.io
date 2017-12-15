@@ -1,4 +1,5 @@
 ---
+toc: true
 ---
 
 {% for tag in site.tags %}

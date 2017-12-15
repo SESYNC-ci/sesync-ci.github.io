@@ -29,5 +29,5 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: category
+      toc: true
       permalink: /:categories/:title.html
