@@ -30,7 +30,7 @@ No mechanism automatically checks this, so please type carefully.
 
 A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
-tags where possible (see them all at `/tags/`), but also feel free to use a
+tags where possible (see them all at [/tags](https://sesync-ci.github.io/tags)), but also feel free to use a
 novel tag.
 
 ## Preview
