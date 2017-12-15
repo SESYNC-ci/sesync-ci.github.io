@@ -4,9 +4,7 @@ The resources available to SESYNC researchers and teams are many and varied. The
 web site maintained in this repository should explain how to use all the things.
 
 Please review [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on adding or
-modifying content.
-
-Please read below for information on the structure and function of this Jekyll
+modifying content. Read below for information on the structure and function of this Jekyll
 based web site.
 
 ## Files and Folders
