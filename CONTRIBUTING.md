@@ -1,24 +1,25 @@
-**TL;DR** Add or edit a file in the [_posts folder](_posts/) that
-includes a *single* category and a **list of at least one** tag. Follow the naming convention
-of "YYYY-MM-DD-post-tile.md". Here's a template:
+> **TL;DR** Add or edit a file in the [_posts folder](_posts/) that
+> includes a **single** category and a **list of at least one** tag. Follow the naming convention
+> of "YYYY-MM-DD-post-tile.md".
+
+## Content
+
+All of the content of the website lives in the [_posts folder](_posts/), divied up
+into single page Markdown files. A Markdown (.md) file is a plain text file which you
+can edit with your favorite text editor (or even on GitHub). Each file must have "front matter",
+the section fenced by `---` in the template below. The `category` and `tags`
+variables are essential front matter: they control the location of content on the website.
 
 ```
 ---
 category: blog
 tags:
-  - Data
-  - Reproducible Research
+  - data
+  - reproducible-research
 ---
 
 My blog post about open data for reproducible research.
 ```
-
-## Content = "_posts"
-
-All of the content of the website lives in the [_posts folder](_posts/), divied up
-into single page Markdown files. A Markdown (.md) file is a plain text file which you
-can edit with your favorite text editor (or even on GitHub). The `category` and `tags`
-variables are essential: they control the location of content on the website.
 
 ## Category
 
@@ -32,6 +33,15 @@ A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
 tags where possible (see them all at [/tags](https://sesync-ci.github.io/tags)), but also feel free to use a
 novel tag.
+
+## Style Guide
+
+There is very little styling available through Markdown. Certain choices affect layout, however, so for consistency please:
+
+- **Headings:** Use a single `#` level heading at the top of a post. Consider even `# {{ page.title }}`.
+- That's it for now...
+
+![](https://imgs.xkcd.com/comics/strunk_and_white.png)
 
 ## Preview
 
