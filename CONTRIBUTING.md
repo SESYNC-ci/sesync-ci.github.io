@@ -1,5 +1,5 @@
 > **TL;DR** Add or edit a file in the [_posts folder](_posts/) that
-> includes a *single* category and a **list of at least one** tag. Follow the naming convention
+> includes a **single** category and a **list of at least one** tag. Follow the naming convention
 > of "YYYY-MM-DD-post-tile.md".
 
 ## Content
