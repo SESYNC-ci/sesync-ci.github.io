@@ -53,7 +53,7 @@ version control), use the **RStudio terminal** to run
 
 ```bash
 bundle install
-bundle exec jekyll build --watch --baseurl /p/4321
+bundle exec jekyll build --watch --baseurl=/p/4321
 ```
 Leave that process running until you are done (then click 🛑). If the port
 (e.g. 4321) is not available, increment by 1 and try again.
