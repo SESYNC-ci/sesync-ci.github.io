@@ -16,6 +16,7 @@ Each database server maintained by SESYNC is identified by its hostname, each da
 
 A template for a script that securely connects to a PostgreSQL database might go something like:
 
+``` r
 library(RPostgreSQL)
 
 con <- dbConnect(PostgreSQL(),
@@ -24,10 +25,11 @@ con <- dbConnect(PostgreSQL(),
     user = 'abc_owner',
     password = .rs.askForPassword('Enter password:'))
 
-\# code referrencing "con"
-\# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
+# code referrencing "con"
+# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
 
 dbDisonnect(con)
+```
 
 The call to "dbConnect()" provides the connection parameters (host, database name, user, and password) as individual arguments, and uses an RStudio feature to allow the user to securely enter the password. Critically, the password is not written in the script, where it would likely be too widely distributed. Two drawbacks to this approach are:
 
