@@ -2,7 +2,7 @@
 title: Why does Git show that all my files changed even though I didn't change them?
 category: FAQ
 tags:
-  -git
+  - git
 ---
 
 # {{ page.title }}
