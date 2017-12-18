@@ -1,5 +1,5 @@
 ---
-title: How to access public SESYNC Shiny applications
+title: How to access public SESYNC Shiny applications?
 category: FAQ
 tags:
   - R
