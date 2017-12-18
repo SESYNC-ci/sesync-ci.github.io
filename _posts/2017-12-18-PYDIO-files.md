@@ -8,15 +8,15 @@ tags:
 
 # {{ page.title }}
 
-SESYNC researchers and staff can provide a link for outside collaborators to upload and/or download data from your research project directory
+SESYNC researchers and staff can provide a link for external collaborators to upload and/or download data from your research project directory
 
-## Access your research project data directory fiva PYDIO
+## Access your research project data directory via PYDIO
 
 1. Login to the PYDIO server at <https://files.sesync.org> and navigate to your workspace
 
 ![](/assets/images/PYDIOfiles/file00.PNG)
 
-## Send files to outside collaborators
+## Send files to external collaborators
 
 1. Right-click the file or folder to be shared with an ouside collaborator, select **Share**
 
@@ -32,7 +32,7 @@ SESYNC researchers and staff can provide a link for outside collaborators to upl
 
 3. Copy the shot link and send it to external collaborators.
 
-## Receive files from outside collaborators
+## Receive files from external collaborators
 
 
 
