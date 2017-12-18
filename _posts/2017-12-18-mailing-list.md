@@ -4,6 +4,7 @@ category: FAQ
 tags:
   - infrastructure
   - account
+  - mailing-list
 ---
 
 # {{ page.title }}
