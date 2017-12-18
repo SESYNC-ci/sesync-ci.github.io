@@ -5,6 +5,7 @@ tags:
   - infrastructure
   - cluster
   - maintenace-window
+  - slurm
 ---
 
 # What happens to my jobs during the maintenance window? 
