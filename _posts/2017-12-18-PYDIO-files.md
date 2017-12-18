@@ -48,7 +48,7 @@ SESYNC researchers and staff can provide a link for outside collaborators to upl
 
 ![](/assets/images/PYDIOfiles/receivefile03.PNG)
 
-** Disable download permissions by de-selecting **Download**  
+  * Disable download permissions by de-selecting **Download**  
 4. Copy the Link and send it to external collaborators.
 
 ## Add security permissions to the shared files/folder
