@@ -23,17 +23,17 @@ tags: data
 
 #### Use a shared password 
 
-1. Edit the folder's **Share** propeties
-2. Under **Secure Access* add a password and expiry date.
+1. Edit the folder's **Share** propeties  
+2. Under **Secure Access* add a password and expiry date.  
 ![](/assets/images/receivefile/receivefile04.PNG)
-3. Send the password to external collaborators in a secure way, such as <https://pwpush.com>
+3. Send the password to external collaborators in a secure way, such as <https://pwpush.com>  
 
 ### Create a shared username and password
 
-1. Edit the folder's **Share** properties
-2. Select thte Users tab and enter a shared username to be used to login
-3. Select pop-up of the user name to create the user
+1. Edit the folder's **Share** properties  
+2. Select thte Users tab and enter a shared username to be used to login  
+3. Select pop-up of the user name to create the user  
 ![](/assets/images/receivefile/receivefile05.PNG)
-4. Enter the Password and name of the shared user, select **Create User**
+4. Enter the Password and name of the shared user, select **Create User**  
 ![](/assets/images/receivefile/receivefile06.PNG)
-5. Send the username and password details to external collaborators, use a secure means to share password, such as <https://pwpush.com>
+5. Send the username and password details to external collaborators, use a secure means to share password, such as <https://pwpush.com>  
