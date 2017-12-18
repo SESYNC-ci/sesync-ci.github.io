@@ -4,9 +4,8 @@ tags:
   - R
   - shiny
 ---
-# {{ post.title }}
 
-## How to access public SESYNC Shiny applications
+# {{ page.title }}
 
 A Shiny application located in the shiny-apps-data/[PATH] shared folder is publicly accessible at the URL:
 
