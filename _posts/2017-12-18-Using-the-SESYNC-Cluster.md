@@ -1,4 +1,5 @@
 ---
+title: Using the SESYNC Cluster
 category: quickstart
 tags:
 - infrastructure
