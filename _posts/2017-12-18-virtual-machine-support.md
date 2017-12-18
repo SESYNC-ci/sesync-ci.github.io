@@ -21,6 +21,7 @@ we can deploy a virtual machine to meet your needs.
   * Backups taken daily and kept for 30 days in case of data loss
   * Monitored by SESYNC CI staff for uptime and availability
 
+
 SESYNC reserves the right to perform emergency patching on all services hosted at SESYNC at any time without warning.
 Depending on the severity of the vulnerability, there may be a litmited time window between when an exploit is announced and whe
 malicious users are actively exploiting the vulnerability.
