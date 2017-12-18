@@ -1,5 +1,5 @@
 ---
-title: "What's the difference between git, GitHub, and GitLab?
+title: "What's the difference between git, GitHub, and GitLab?"
 category: FAQ
 tags:
  - git
