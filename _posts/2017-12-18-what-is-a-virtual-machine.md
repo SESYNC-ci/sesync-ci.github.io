@@ -1,7 +1,7 @@
 ---
 category: FAQ
 tags: 
--virtual-machine
+- virtual-machine
 ---
 
 # {{ page.title }}?
