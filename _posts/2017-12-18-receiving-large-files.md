@@ -5,7 +5,7 @@ tags: data
 
 # {{ page.title }}
 
-## Anyone can send large files to SESYNC staff and researchers using the PYDIO server: https://files.sesync.org
+## Anyone can send large files to SESYNC staff and researchers using the PYDIO server: <https://files.sesync.org>
 
 1. Login to the PYDIO server and navigate to your workspace
 ![](/assets/images/recievefile00.PNG)
@@ -26,7 +26,7 @@ tags: data
 1. Edit the folder's **Share** propeties
 2. Under **Secure Access* add a password and expiry date.
 ![](/assets/images/receivefile04.PNG)
-3. Send the password to external collaborators in a secure way, such as https://pwpush.com
+3. Send the password to external collaborators in a secure way, such as <https://pwpush.com>
 
 ### Create a shared username and password
 
@@ -36,4 +36,4 @@ tags: data
 ![](/assets/images/receivefile05.PNG)
 4. Enter the Password and name of the shared user, select **Create User**
 ![](/assets/images/receivefile06.PNG)
-5. Send the username and password details to external collaborators, use a secure means to share password, such as https://pwpush.com
+5. Send the username and password details to external collaborators, use a secure means to share password, such as <https://pwpush.com>
