@@ -1,4 +1,5 @@
 ---
+title: Publishing Shiny Apps to the SESYNC Server
 category: quickstart
 tags:
   - R
