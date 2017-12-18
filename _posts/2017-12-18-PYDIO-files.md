@@ -12,7 +12,7 @@ SESYNC researchers and staff can provide a link for outside collaborators to upl
 
 ## Access your research project data directory fiva PYDIO
 
-1. Login to the PYDIO server at <files.sesync.org> and navigate to your workspace
+1. Login to the PYDIO server at <https://files.sesync.org> and navigate to your workspace
 
 ![](/assets/images/PYDIOfiles/file00.PNG)
 
@@ -33,7 +33,7 @@ SESYNC researchers and staff can provide a link for outside collaborators to upl
 
 ## Receive files from outside collaborators
 
-### Anyone can send large files to SESYNC staff and researchers using the PYDIO server: <https://files.sesync.org>
+
 
 1. Create a new folder in the workspace that will hold the uploaded files
 
