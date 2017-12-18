@@ -1,10 +1,12 @@
 ---
-title: How to access Linux Resources 
+title: How do I Access Linux Resources?
 category: FAQ
 tags:
   - shell
   - ssh
 ---
+
+# {{ page.title }}
 
 SESYNC linux resources are deployed on a private network at SESYNC. This means that you can access the internet from the machine to retrieve data (curl, wget, etc), however in order to push data to the machine, you either need to load data into your workspace, or use our ssh gateway to transfer data on to your research storage space.
 
