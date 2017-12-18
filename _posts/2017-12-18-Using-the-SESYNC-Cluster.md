@@ -23,10 +23,7 @@ The general process to submit your code (aka, job) to the cluster is as follows:
 
 Login to SESYNC's ssh gateway at `ssh.sesync.org` (click (here)[link to Linux resource page] if you need to know how to do that). 
 
-1. Create a file called `myscript.sh` using your favorite editor (nano, pico, vi, etc.). For example: `$ nano myscript.sh` 
-
-Type and save the following in the file:
-
+1. Create a file called `myscript.sh` using your favorite editor (nano, pico, vi, etc.). For example: `$ nano myscript.sh` Type and save the following in the file:
 ```
 #!/bin/bash
 #SBATCH -n 1
@@ -34,7 +31,6 @@ Type and save the following in the file:
 
 hostname
 ```
-
 This script will ask the scheduler to create a job that is up to 60 seconds long (-t 0:60), and it requests one CPU (-n 1).
 
 2. Submit this script to the cluster at the command prompt: `$ sbatch myscript.sh`
