@@ -12,9 +12,9 @@ SESYNC linux resources are deployed on a private network at SESYNC. This means t
 1. Use an ssh client (we recommend PUTTY http://www.chiark.greenend.org.uk/~sgtatham/putty/)
 2. Enter ssh.sesync.org as your Host Name and click Open
 
-![Connect with PUTTY](/https://github.com/SESYNC-ci/sesync-ci.github.io/upload/master/assets/images/ssh1.png)
+![Connect with PUTTY](https://github.com/SESYNC-ci/sesync-ci.github.io/upload/master/assets/images/ssh1.png)
 
 Once connected to ssh.seysnc.org, you will need to connect into your dedicated resource. Please DO NOT run your computational processing on the ssh gateway, it has limited memory and processing power.
 
-![ssh gateway](/https://github.com/SESYNC-ci/sesync-ci.github.io/upload/master/assets/images/ssh2.png)
+![ssh gateway](https://github.com/SESYNC-ci/sesync-ci.github.io/upload/master/assets/images/ssh2.png)
 
