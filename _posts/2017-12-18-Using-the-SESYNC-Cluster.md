@@ -1,5 +1,5 @@
 ---
-category: 
+category: quickstart
 tags:
 - infrastructure
 - cluster
