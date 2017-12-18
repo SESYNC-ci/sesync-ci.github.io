@@ -1,5 +1,5 @@
 ---
-category: quickstart
+category: quick start
 tags:
  - python
  - cluster
