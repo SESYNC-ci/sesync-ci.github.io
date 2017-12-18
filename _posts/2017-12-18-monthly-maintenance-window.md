@@ -26,9 +26,9 @@ The maintenance Window is usually a Thursday. A list of remaining maintenance wi
 * November 22nd 2018
 * December 20th 2018
 
-## What happens to my scheduled jobs during the maintenance window
+## What happens to my scheduled jobs during the maintenance window?
 
-
+[SLURM cluster maintenance window details](/blob/master/_posts/2017-12-18-maintenance-window-slurm.md)
 
 ## Patching Schedule and Notes
 
