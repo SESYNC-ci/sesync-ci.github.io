@@ -40,18 +40,17 @@ This script will ask the scheduler to create a job that is up to 60 seconds long
 
 ## Connect via Rstudio server
 
-Connect to the Rstudio server at `rstudio.sesync.org` For more information, (see)[link to rstudio page]. Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the (rslurm package documatation)[link] and/or this (example)[blog post]. Let's assume for now your R script is called `rcode.R`
+Connect to the Rstudio server at `rstudio.sesync.org` For more information, (see)[link to rstudio page]. Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the (rslurm package documatation)[link] and/or this (example)[blog post]. Let's assume for now your R script is called `myRcode.R`
 
 Create a new file in the RStudio editor (File -> New File -> Text file). Save it as `submit.sh` in the same folder as `rcode.R`. Type and save the following:
-
 ```
 #!/bin/bash
 #
 #SBATCH -n1
 
-Rscript --vanilla rcode.R
+Rscript --vanilla myRcode.R
 ```
-
+This scrpt tells tells the scheduler and linux that this is a shell script and should be run using the bash shell ( #!/bin/bash ), using one CPU (-n1) and that it should launch your R script with default configuration settings (Rscript --vanilla myRcode.R).
 
 
 
