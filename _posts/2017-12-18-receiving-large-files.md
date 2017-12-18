@@ -1,6 +1,9 @@
 ---
 category: quickstart
-tags: data
+tags: 
+- data
+- NFS
+- PYDIO
 ---
 
 # {{ page.title }}
