@@ -1,4 +1,3 @@
-
 ---
 title: What's the procedure for having remote participants at my meeting
 category: quickstart
