@@ -24,8 +24,8 @@ con <- dbConnect(PostgreSQL(),
     user = 'abc_owner',
     password = .rs.askForPassword('Enter password:'))
 
-# code referrencing "con"
-# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
+\# code referrencing "con"
+\# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
 
 dbDisonnect(con)
 
@@ -56,8 +56,8 @@ library(RPostgreSQL)
 
 con <- dbConnect(PostgreSQL(), dbname = 'postgresql://@/?service=abc')
 
-# code referrencing "con"
-# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
+\# code referrencing "con"
+\# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
 
 dbDisonnect(con)
 Here the string given for "dbname" is a connection URI missing all connection parameters except for the service name, which tells the client where to look the rest up in the connection service file.
