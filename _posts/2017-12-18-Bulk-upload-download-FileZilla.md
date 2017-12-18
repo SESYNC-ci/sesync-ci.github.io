@@ -25,11 +25,11 @@ You can upload and download data from your research data directory using an SFTP
 1. Navigate to the data to be uploaded in the left pane
 2. Right-click data to be uploaded and select **Upload**
 
-![](/assets/images/sftp/sftp00.PNG)
+![](/assets/images/sftp/sftp01.PNG)
 
 ## Download data
 
 1. Navigate to the data to be downloaded in the right pane
 2. Right-click data to be downloaded and select **Download**
 
-![](/assets/images/sftp/sftp00.PNG)
+![](/assets/images/sftp/sftp02.PNG)
