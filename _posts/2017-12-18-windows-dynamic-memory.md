@@ -3,7 +3,7 @@ title: Why does does my Virtual Machine show less memory than I requested?
 category: FAQ
 tags:
 - windows
--virtual-machine
+- virtual-machine
 ---
 
 # {{ page.title }}
