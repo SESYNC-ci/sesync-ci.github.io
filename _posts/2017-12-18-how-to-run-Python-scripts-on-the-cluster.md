@@ -1,5 +1,6 @@
 ---
-category: quick start
+title: Running Python Scripts on the Cluster
+category: quickstart
 tags:
  - python
  - cluster
@@ -20,6 +21,8 @@ At this point, the command prompt line should begin with (venv), indicating that
 * Run a Python script e.g.  python test.py . __IMPORTANT__: The SSH shell only has minimal computing power and memory, thus only short scripts for test/debugging purposes should be run directly from the shell. Any computationally-intensive task needs to be run on the cluster.
 * Submit a script to the cluster e.g.  sbatch submit.sh (see below).
 * Leave the virtual environment by typing:  deactivate
+
+(Note: For more info about [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/), see this guide from which this section was adapted.)
 
 ## 2. Creating a submission script
 The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
