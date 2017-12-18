@@ -54,14 +54,18 @@ It is essential that any configuration file be readable only by its owner: from 
 PGSERVICEFILE=/nfs/abc-data/pg_service.conf
 An alternative for scripts that exist outside of an RStudio project is inclusion of the command "Sys.setenv(PGSERVICEFILE='/nfs/abc-data/pg_service.conf')". Once the RPostgreSQL client is able to find the connection service file, the connection can be established using just a service name (i.e. the text within "[...]"):
 
+```r
+
 library(RPostgreSQL)
 
 con <- dbConnect(PostgreSQL(), dbname = 'postgresql://@/?service=abc')
 
-\# code referrencing "con"
-\# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
+# code referrencing "con"
+# see for example, https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
 
 dbDisonnect(con)
+```
+
 Here the string given for "dbname" is a connection URI missing all connection parameters except for the service name, which tells the client where to look the rest up in the connection service file.
 
 
