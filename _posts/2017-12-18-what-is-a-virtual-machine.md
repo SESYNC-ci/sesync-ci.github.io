@@ -1,6 +1,6 @@
 ---
 category: FAQ
-tags: 
+tags:
 - virtual-machine
 ---
 
