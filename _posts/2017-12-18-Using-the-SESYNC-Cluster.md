@@ -8,47 +8,22 @@ tags:
 
 # {{ page.title }}
 
-## Overview of the cluster and scheduler
+## Overview
 
-SESYNC's computational cluster enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many
-computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data
-set.
+You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through rstudio. The workflow for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will be written out to a file called slurm-[jobID].out and errors go to slurm-[jobID].err.
 
-The cluster is a group of 22 virtual machines with a total of 168 cores and 1.28 T of RAM that is accessible through
-a scheduler. Using two special commands (sbatch and srun), you request the scheduler to allocate one or more compute nodes for a job.
-The scheduler puts your job in a queue and executes it when sufficient compute nodes are available. The advantage of this type of
-processing is that you can submit many requests (hundreds or thousands), and they will run as  resources become available. It also means
-that when you gain access to a compute node, you have sole access to it during the time your code is running, i.e., you're not competing with
-other individuals for CPU cycles. 
-
-There are two types of nodes available in the SESYNC cluster: two development/testing nodes and 20 computation nodes. All computation nodes have
-8 CPU cores and 60Gb of memory available running 64-bit Ubuntu Linux version 14.04. All nodes have compilers, core R packages,
-and python available. 
-
-We use a scheduler system called the Simple Linux Utility for Resource Management (SLURM) developed by [Lawrence Livermore National Laboratory](https://www.llnl.gov/).
-It is  one of the most popular systems among large high performance clusters and is the one used by the University of Maryland Deepthought
-supercomputer. This means that any submission script you develop on our modest cluster can be easily ported to a much large HPC system.
-
-## Connecting to the cluster
-
-You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through rstudio. The workflow
-for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the
-cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will
-be written out to a file called slurm-[jobID].out or slurm-[jobID].err.
-
-The process to submit your code (aka, job) to the cluster is as follows:
+The general process to submit your code (aka, job) to the cluster is as follows:
 
 1. Create a submission script that lists the resources you request and lists the commands necessary to run your code;
 2. Submit this to the cluster
 3. Check your job's status
-4. Look for your job's output
+4. Look at your job's output
 
-### Via the ssh gateway
+## Connect via the ssh gateway
 
-1. Create the submission script:
+Login to SESYNC's ssh gateway at `ssh.sesync.org` (click (here)[link to Linux resource page] if you need to know how to do that). 
 
-Login to SESYNC's ssh gateway att ssh.sesync.org (click (here)[link to Linux resource page] if you need to know how to do that). Create a
-fiel called `myscript.sh` using your favorite editor (nano, pico, vi, etc.). For example: `>nano myscript.sh` 
+1. Create a file called `myscript.sh` using your favorite editor (nano, pico, vi, etc.). For example: `$ nano myscript.sh` 
 
 Type and save the following in the file:
 
@@ -59,6 +34,17 @@ Type and save the following in the file:
 
 hostname
 ```
+
+This script will ask the scheduler to create a job that is up to 60 seconds long (-t 0:60), and it requests one CPU (-n 1).
+
+2. Submit this script to the cluster at the command prompt: `$ sbatch myscript.sh`
+
+3. Check your job's status at the command prompt: `$ squeue`
+
+4. Check your job's output by using `$ ls` to find the `.out` (and maybe `.err`) file containing your job number. View the output with an editor or the `less` command. For example, if your job number were 1234, `$ less slurm-1234.out`
+
+## Connect via Rstudio server
+
 
 
 
