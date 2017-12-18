@@ -21,6 +21,8 @@ At this point, the command prompt line should begin with (venv), indicating that
 * Submit a script to the cluster e.g.  sbatch submit.sh (see below).
 * Leave the virtual environment by typing:  deactivate
 
+(Note: For more info about [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/), see this guide from which this section was adapted.)
+
 ## 2. Creating a submission script
 The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
 
