@@ -2,6 +2,7 @@
 category: FAQ
 tags: 
 - maintenance-window
+- infrastructure
 ---
 
 {{ page.title }}
