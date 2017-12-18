@@ -22,6 +22,7 @@ Once you are familiar with the process shown here, you may want to check our exa
 Before you begin, download the example data file from Data Carpentry at [](https://github.com/datacarpentry/datacarpentry/raw/master/data/biology/surveys.csv). Place it in your current directory. The file contains observations on the weight of several species of small mamals across 24 survey plots.
 
 * In the "Console" window in RStudio, run:
+
 ```
 download.file('https://github.com/datacarpentry/datacarpentry/raw/master/data/biology/surveys.csv','surveys.csv','wget')
 ```
@@ -30,6 +31,7 @@ Create a script to run some analyses on the data. The script below reads the dat
 
 * Create a new R script file called plot.R.
 * Copy and paste the code snippet below into the script file.
+
 ```
 surveys <- read.csv('surveys.csv')
 surveys_complete <- surveys[complete.cases(surveys), ]
