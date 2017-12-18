@@ -25,6 +25,11 @@ SESYNC researchers and staff can provide a link for outside collaborators to upl
 1. Select **Enable Public Link**
 ![](/assets/images/PYDIOfile/sendfile00.PNG)
 
+2. Enable Public Link and select **Download Files**
+
+![](/assets/images/PYDIOfiles/sendfile00.PNG)
+3. Copy the shot link and send it to external collaborators.
+
 ## Receive files from outside collaborators
 
 ### Anyone can send large files to SESYNC staff and researchers using the PYDIO server: <https://files.sesync.org>
