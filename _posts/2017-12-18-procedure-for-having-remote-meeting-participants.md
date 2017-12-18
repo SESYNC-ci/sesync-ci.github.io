@@ -22,7 +22,7 @@ All of our meeting rooms also have whiteboard capture devices that can be shared
 Virtual Group Meetings
 We're able to schedule fully virtual meetings for our working groups at any time while your project is in progress. Please contact us at least 5 business days prior to your meeting so that we may contact and test all of your participants.
 
-Send our IT Staff (itrequests@sesync.org) a request which contains the following:
+Send our IT Staff ({{ site.email }}) a request which contains the following:
 Date, time and duration of your meeting
 List of participants, names and email addresses.
 Would you like us to perform a test call with your participants prior to the meeting. We highly recommend this for video conferences or conferences which involves shared content.

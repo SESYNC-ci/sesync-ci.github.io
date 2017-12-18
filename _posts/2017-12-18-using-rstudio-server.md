@@ -16,7 +16,7 @@ the cluster, etc).
 Access RStudio by pointing any web browser to <https://rstudio.sesync.org/> and
 logging in with your SESYNC name and password. If you forgot your username or password, please
 go to <https://pwm.sesync.org/>. If your SESYNC credentials do not give you RStudio access,
-please email cyberhelp@sesync.org.
+please email {{ site.email }}.
 
 ## Running RSudio
 
@@ -31,7 +31,7 @@ installed on RStudio either through the menu or the R console. From the menu
 choose `Tools -> Install Packages`; from the R console use the `install.packages`
 function. If you receive and error saying the package cannot be installed there
 is a chance some underlying system library is not installed. Please email the error
-message to **cyberhelp@sesync.org**, and explain which package you need to install.
+message to **{{ site.email }}**, and explain which package you need to install.
 
 ## Where should I save stuff?  
 
