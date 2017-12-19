@@ -1,5 +1,5 @@
 ---
-title: How do I conact SESYNC's IT staff?
+title: How do I contact SESYNC's IT staff?
 category: FAQ
 tags:
 ---
