@@ -7,7 +7,7 @@ tags:
 - NFS
 - PYDIO
 - slurm
-shell
+- shell
 ---
 
 # {{ page.title }}
