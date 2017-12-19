@@ -8,10 +8,10 @@ tags:
 
 # {{ page.title }}
 
-SESYNC linux resources are deployed on a private network at SESYNC. This means that you can access the internet from the machine to retrieve data (curl, wget, etc), however in order to push data to the machine, you either need to load data into your workspace, or use our ssh gateway to transfer data on to your research storage space.
+SESYNC linux resources are deployed on a private network at SESYNC. This means that you can access the internet from the machine to retrieve data (curl, wget, etc). However in order to push data to the machine, you either need to load data into your workspace, or use our ssh gateway to transfer data on to your research storage space.
 
 ## Connecting to your linux virtual server
-1. Use an ssh client (we recommend PUTTY http://www.chiark.greenend.org.uk/~sgtatham/putty/)
+1. Use an ssh client (we recommend [PUTTY]:(http://www.chiark.greenend.org.uk/~sgtatham/putty/))
 2. Enter ssh.sesync.org as your Host Name and click Open
 
 ![Connect with PUTTY](/assets/images/ssh1.png)
