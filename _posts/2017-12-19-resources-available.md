@@ -14,7 +14,7 @@ shell
 
 ## SESYNC has an extensive set of computing resources available for researchers
 
-**For all Cyber support questions:** cyberhelp@sesync.org
+**For all Cyber support questions:** {{ site.email }}
 
 * **Mailing list server:** <https://lists.sesync.org>
 * **Gitlab server:** <https://gitlab.sesync.org>
