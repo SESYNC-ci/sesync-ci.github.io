@@ -13,7 +13,7 @@ To publish a R shiny application on the SESYNC server, you simply need to copy i
 ## Synchronizing changes between development and published version
 To sync changes to the application between your working directory (which we will call the _development version_ of the app) and shiny-apps-data (the _published version_), it is recommended that you use GitLab. Here are the basic steps:
 
-1. Create a new Git project for your application (see [How do I create a new Git Project]()).
+1. Create a new Git project for your application (see [How do I create a new Git Project](http://cyberhelp.sesync.org/quickstart/creating-a-new-git-project.html)).
 2. In your working directory, either: 
    * create a new R project from your Git repository (see [How do I create an R Studio Project from Git]()); __or__
    * associate an existing R project to the repository; when [this page](https://raw.githubusercontent.com/SESYNC-ci/sesync-ci.github.io/master/assets/images/createproject_git.png) appears after creating your GitLab project, follow the command line instructions under _Existing Git repo_. (You can send command line instructions from a SESYNC SSH session, or from a RStudio Server session using the system() function in R).
