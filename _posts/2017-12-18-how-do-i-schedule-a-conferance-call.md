@@ -1,5 +1,5 @@
 ---
-title: How do I schedule a conferance call?
+title: How do I schedule a conference call?
 category: FAQ
 tags:
   
