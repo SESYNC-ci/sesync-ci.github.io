@@ -20,4 +20,5 @@ Many funding agencies require proposals to include a section addressing plans fo
 * [Data Management Planning Online Tool](https://dmptool.org/) - a free tool to create customized data management plans, includes links to sample and public examples of DMPs.
 
 
+
 Where relevant, you can save yourself wordy descriptions of any generated (i.e. newly collected or modeled) data and (especially) metadata if you can reference existing standards. For example, you can reference ISO 19115 and follow its specification for any geographical metadata you might generate, rather than get into the weeds on file formats, compression, etc. Or reference the [Ecological Metadata Language](https://knb.ecoinformatics.org/#external//emlparser/docs/index.html) standard for describing ecological datasets you generate.
