@@ -15,10 +15,10 @@ To sync changes to the application between your working directory (which we will
 
 1. Create a new Git project for your application (see [How do I create a new Git Project](http://cyberhelp.sesync.org/quickstart/creating-a-new-git-project.html)).
 2. In your working directory, either: 
-   * create a new R project from your Git repository (see [How do I create an R Studio Project from Git]()); __or__
+   * create a new R project from your Git repository (see [How do I create an R Studio Project from Git](http://cyberhelp.sesync.org/faq/create-rstudio-from-git.html)); __or__
    * associate an existing R project to the repository; when [this page](https://raw.githubusercontent.com/SESYNC-ci/sesync-ci.github.io/master/assets/images/createproject_git.png) appears after creating your GitLab project, follow the command line instructions under _Existing Git repo_. (You can send command line instructions from a SESYNC SSH session, or from a RStudio Server session using the system() function in R).
 3. As you are working on the development version of your app, periodically __commit__ your changes, and __push__ the version you want to share to Git. Both operations can be done from the "Git" tab of the RStudio Server enviornment (see screenshot below).
-4. Create another R project from your Git repository (see [How do I create an R Studio Project from Git]()) , this time in the __shiny-apps-data folder__, which will contain the published version of the app.
+4. Create another R project from your Git repository (see [How do I create an R Studio Project from Git](http://cyberhelp.sesync.org/faq/create-rstudio-from-git.html)) , this time in the __shiny-apps-data folder__, which will contain the published version of the app.
 5. Anytime you push a new version from your development directory to the Git repository, you can __pull__ it in the shiny-apps-data version of the project to publish it. See the screenshot below showing the location of the pull button in the RStudio Server interface.
 ![](/assets/images/shiny_git.png)
 
