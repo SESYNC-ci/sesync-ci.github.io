@@ -5,6 +5,7 @@ tags:
   - dataviz
   - R
   - shiny
+author: khondula
 ---
 
 # {{ page.title }}
@@ -13,19 +14,17 @@ Photos, as a source of data, or to aid in the interpretation of data, can be a u
 
 ## Display images from URLs
 
-The first situation was using a social media dataset (images from Flickr) that was a table where each row contained information about a photograph, and columns contained data about that photo. One column contained URLs to the image file. The goal was to be able to browse through each image and potentially update other information in the table pertaining to that image. By using the [DataTables](https://rstudio.github.io/DT/shiny.html) library, I made an interactive table, so that each image could be viewed and changes could be made to its associated data. 
+The first situation was using a social media dataset (images from Flickr) that was a table where each row contained information about a photograph, and columns contained data about that photo. One column contained URLs to the image file. The goal was to be able to browse through each image and potentially update other information in the table pertaining to that image. This can be done in Shiny with an interactive [DataTable](https://rstudio.github.io/DT/shiny.html), where clicking on a row displays an image and allows for making changes to its associated data. 
 
-When a row in the table is clicked, the ID of that row becomes a variable that can be used in the shiny server. That ID can then be used to identify the URL text string in the "image_url" column of the `image_data` dataframe. That URL is enclosed within html [img](https://www.w3schools.com/tags/tag_img.asp) tags to render as a text object called "image1". 
+When a row in the table is clicked, the ID of that row becomes an input variable that can be used in the shiny server. That variable can then be used to select the URL text string in the "image_url" column of the `image_data` dataframe. That URL is then enclosed within html [img](https://www.w3schools.com/tags/tag_img.asp) tags to create as a text object called "image1". 
 
 ```
 output$image1 <- renderText({
-        c('<img src="',                                             # html tag
-          image_data[input$image_data_rows_selected, "image_url"],  # url string
-          '">')                                                     # html tag
+        c('<img src="', image_data[input$image_data_rows_selected, "image_url"], '">')
       })
 ```
 
-Output objects rendered within the shiny server need to be paired with a corresponding output function in the user interface. Since the output object "image1" is an html string, using it with `htmlOutput` will interpret the html string and display the jpeg image wherever it is placed in the app! 
+Output objects rendered within the shiny server need to be paired with a corresponding output function in the user interface. Since the text output object "image1" is actually an html string, using it with `htmlOutput` will interpret the html and display the image wherever it is placed in the app! 
 
 ```
 out1 <- htmlOutput("image1")
@@ -35,7 +34,7 @@ See a minimal example on github [here](https://github.com/khondula/image-viewer)
 
 ## Animal pictures from species names
 
-Another shiny app that used images to aid in data exploration shiny app was based on a large biodiversity data set. The main purpose of the app was to display country-level [time series](https://rstudio.github.io/dygraphs/shiny.html) data for a selected species---but with thousands of different taxa, exploring the dataset based on latin names proved difficult! So, I wanted to display some contextual information about the selected species aside from its latin name and the time series data. I incorporated functions from the [rinat](https://cran.r-project.org/web/packages/rinat/vignettes/rinatVignette.html) package to draw on [iNaturalist](http://www.inaturalist.org/) data, which includes urls of user-uploaded images based on taxa names. 
+Another shiny app that used images to aid in data exploration shiny app was based on a large biodiversity data set. The main purpose of the app was to display country-level [time series](https://rstudio.github.io/dygraphs/shiny.html) data for a selected species---but with thousands of different taxa, exploring the dataset based on latin names proved difficult! So, I wanted the app to display some contextual information about the selected species aside from its latin name and the time series data. This is possible with functions from the [rinat](https://cran.r-project.org/web/packages/rinat/vignettes/rinatVignette.html) package, whichs draws on [iNaturalist](http://www.inaturalist.org/) data---which includes urls of user-uploaded images based on taxa names. 
 
 ```
 inat <- reactive({
