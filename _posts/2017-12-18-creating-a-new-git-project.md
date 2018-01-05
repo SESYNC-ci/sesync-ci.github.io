@@ -21,7 +21,7 @@ To create a project, click the new project either from the dashboard when you lo
 * Internal - projects can be seen by any sesync researcher or workshop participant. (You probably don't want this)
 * Public - projects are available to anyone on the internet. If you want to share your code with outsiders, use this. Alternatively, you may want to look at github for public services.
 
-Your project is now created and you can load files into it. Follow the instructions to manually load data, or follow one of our tutorials such as [How do I create an R Studio Project from Git]()
+Your project is now created and you can load files into it. Follow the instructions to manually load data, or follow one of our tutorials such as [How do I create an R Studio Project from Git](http://cyberhelp.sesync.org/faq/create-rstudio-from-git.html)
 
 ![](/assets/images/new-project.png)
 ![](/assets/images/setting_up.png)
