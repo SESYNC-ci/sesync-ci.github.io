@@ -18,7 +18,11 @@ The first situation was using a social media dataset (images from Flickr) that w
 When a row in the table is clicked, the ID of that row becomes a variable that can be used in the shiny server. That ID can then be used to identify the URL text string in the "image_url" column of the `image_data` dataframe. That URL is enclosed within html [img](https://www.w3schools.com/tags/tag_img.asp) tags to render as a text object called "image1". 
 
 ```
-output$image1 <- renderText({c('<img src="', image_data[input$image_data_rows_selected, "image_url"], '">')})
+output$image1 <- renderText({
+        c('<img src="',                                             # html tag
+          image_data[input$image_data_rows_selected, "image_url"],  # url string
+          '">')                                                     # html tag
+      })
 ```
 
 Output objects rendered within the shiny server need to be paired with a corresponding output function in the user interface. Since the output object "image1" is an html string, using it with `htmlOutput` will interpret the html string and display the jpeg image wherever it is placed in the app! 
@@ -47,7 +51,9 @@ output$image1 = renderUI({
   })
 ```
 
-The [taxize](https://ropensci.org/tutorials/taxize_tutorial/) and [wikitaxa](https://cran.r-project.org/web/packages/wikitaxa/index.html)  packages also have useful functions for determining the common name, conservation status, geographic distribution, and lots of other taxonomic information. 
+The [taxize](https://ropensci.org/tutorials/taxize_tutorial/) and [wikitaxa](https://cran.r-project.org/web/packages/wikitaxa/index.html)  packages also have useful functions for determining the common name, taxonomy, conservation status, geographic distribution, and more. 
+
+![species_pix](/assets/images/species_pix2.png)
 
 ---
 
