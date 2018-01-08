@@ -22,4 +22,4 @@ Many funding agencies require proposals to include a section addressing plans fo
 <br>
 Where relevant, you can save yourself wordy descriptions of any generated (i.e. newly collected or modeled) data and (especially) metadata if you can reference existing standards. For example, you can reference ISO 19115 and follow its specification for any geographical metadata you might generate, rather than get into the weeds on file formats, compression, etc. Or reference the [Ecological Metadata Language](https://knb.ecoinformatics.org/#external//emlparser/docs/index.html) standard for describing ecological datasets you generate.
 
-For help finding an appropriate long-term data/code repository, check out the Quickstart page on [Sharing synthesis data products]{{ site.baseurl }}{% post_url 2017-10-23-sharing-data-products %}
+For help finding an appropriate long-term data/code repository, check out the Quickstart page on [Sharing synthesis data products]({{ site.baseurl }}{% post_url 2017-10-23-sharing-data-products %})
