@@ -1,5 +1,5 @@
 ---
-title: Version Control with git
+title: Use git for Version Control in RStudio
 category: quickstart
 tags: 
   - git
