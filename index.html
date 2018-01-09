@@ -1,40 +1,41 @@
 ---
 layout: landing
+order:
+ - [quickstart, Quick Start]
+ - [FAQ, FAQ]
+ - [blog, Blog]
+ - [lessons, Lessons]
 ---
 
 <div id="fullpage">
-  <div id="about" class="section">
-    <div class="section-content">
+  <div class="first section" data-tooltip="">
+    <div>
       <img src="{{ '/assets/images/background.png' | relative_url }}"/>
     </div>
-  	<div class="section-content">
+  	<div>
       <h1>{{ site.title }}</h1>
       <h2>{{ site.subtitle }}</h2>
     </div>
+    <div class="downArrow"></div>
   </div>
-  <!--
-	<div id="quickstart" class="section">
-  	<div class="section-content">
-      <a href="{{ '/quickstart/' | relative_url }}"><h1>Quick Start Guides</h1></a>
+  {% for category in page.order  %}
+  {% assign cat = category[0] %}
+  <div id="{{ cat }}"
+    class="section"
+    data-tooltip="{{ category[1] }}">
+    {% assign posts = site.categories[cat] %}
+    {% for post in posts limit:3 %}
+    <div>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    {% endfor %}
+    {% capture category_page %}/{{ cat }}/{% endcapture %}
+    <div>
+      <a href="{{ category_page | relative_url }}">More...</a>
     </div>
   </div>
-	<div id="FAQ" class="section">
-  	<div class="section-content">
-      <a href="{{ '/FAQ/' | relative_url }}"><h1>Frequently Asked Questions</h1></a>
-    </div>
-  </div>
-  <div id="blog" class="section">
-  	<div class="section-content">
-      <a href="{{ '/blog/' | relative_url }}"><h1>Blog</h1></a>
-    </div>
-  </div>
-  <div id="lessons" class="section">
-  	<div class="section-content">
-      <a href="{{ '/lessons/' | relative_url }}"><h1>Lessons</h1></a>
-    </div>
-  </div>
-  <div class="section fp-auto-height">
+  {% endfor %}
+  <div id="about" class="section fp-auto-height">
     {% include footer.html %}
   </div>
-  -->
 </div>

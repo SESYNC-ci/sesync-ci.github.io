@@ -4,7 +4,7 @@ layout: default
 
 {{ content }}
 
-{% for post in site.categories[page.slug] %}
+{% for post in site.categories[page.category] %}
 <div class="post {{ post.category }}">
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 </div>

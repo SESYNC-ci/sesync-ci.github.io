@@ -1,4 +1,3 @@
 ---
+category: lessons
 ---
-
-# Lessons Developed by CI Staff

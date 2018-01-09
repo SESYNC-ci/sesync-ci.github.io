@@ -17,9 +17,10 @@ header {
     }
     img {
         position: absolute;
-        left: 4%;
-        margin: auto;
-        max-width: 20%;
+        padding: inherit;
+        left: 0;
+        top: 0;
+        height: calc(100% - 25px - 40px);
     }
 }
 

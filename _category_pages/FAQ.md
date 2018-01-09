@@ -1,4 +1,3 @@
 ---
+category: FAQ
 ---
-
-# Frequently Asked Questions
