@@ -1,9 +1,9 @@
 ---
-title: How do I contact SESYNC's IT staff?
+title: How do I contact SESYNC's IT and research support staff?
 category: FAQ
 tags:
 ---
 
 # {{ page.title }}
 
-You can contact SESYNC's IT staff by sending e-mail to {{ site.email }}
+Send email to {{ site.email }}.
