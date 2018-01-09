@@ -24,7 +24,7 @@ SESYNC researchers and staff can provide a link for external collaborators to up
 
 1. Select **Enable Public Link**
 
-![](/assets/images/PYDIOfile/sendfile00.PNG)
+![](/assets/images/PYDIOfiles/sendfile00.PNG)
 
 2. Enable Public Link and select **Download Files**
 
