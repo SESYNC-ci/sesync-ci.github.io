@@ -1,5 +1,5 @@
 ---
-title: Can SESYNC buy us software?
+title: Will SESYNC purchase software?
 category: FAQ
 tags:
 ---
