@@ -1,5 +1,5 @@
 ---
-title: How do I access my Windows Virtual Machine?
+title: How do I access my Windows virtual machine?
 category: FAQ
 tags:
 - RDP
