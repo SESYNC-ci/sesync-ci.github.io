@@ -33,4 +33,4 @@ Users can sync their project data to your local machine using the PydioSync clie
 6. Select the local destination to store the synced files. Click Next
 
 ![](/assets/images/PYDIOfiles/pydiosync03.PNG)
-7. Name the Synconization. Click Next. Click **FIre the Rocket!** to start the first syncronization.
+7. Name the Synconization. Click Next. Click **Fire the Rocket!** to start the first syncronization.
