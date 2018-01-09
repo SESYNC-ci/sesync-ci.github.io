@@ -1,5 +1,5 @@
 ---
-title: Submiting R Scripts to the Cluster
+title: Running R Scripts on the Cluster
 category: quickstart
 tags:
   - R
