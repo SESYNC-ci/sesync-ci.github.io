@@ -1,5 +1,5 @@
 ---
-title: When does SESYNC setup my groups resources? 
+title: When does SESYNC setup resources for my group? 
 category: FAQ
 tags:
   - infrastructure
