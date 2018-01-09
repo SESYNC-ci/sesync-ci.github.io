@@ -1,5 +1,5 @@
 ---
-title: Why does Git show that all my files changed even though I didn't change them?
+title: Why does git show that all my files changed when I didn't change them?
 category: FAQ
 tags:
   - git
