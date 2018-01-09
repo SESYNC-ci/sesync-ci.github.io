@@ -1,5 +1,5 @@
 ---
-title: How do I create an R Studio Project from Git?
+title: How do I create an RStudio project with git?
 category: FAQ
 tags:
   - R
