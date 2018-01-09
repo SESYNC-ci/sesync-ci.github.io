@@ -1,5 +1,5 @@
 ---
-title: Can Code Move Between GitLab, GitHub, and Bitbucket?
+title: Can code move between GitLab, GitHub, and Bitbucket?
 category: FAQ
 tags:
  - git
