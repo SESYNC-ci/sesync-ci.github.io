@@ -16,7 +16,7 @@ Users can sync their project data to your local machine using the PydioSync clie
 
 1. Download [PydioSync Desktop App](https://pydio.com/en/get-pydio/downloads/pydiosync-desktop-app)
 2. Install PydioSync Desktop App and Open App
-3. Click **Get Started**]
+3. Click **Get Started**
 
     * ![](/assets/images/PYDIOfiles/pydiosync00.PNG)
 4. Configure Connection
