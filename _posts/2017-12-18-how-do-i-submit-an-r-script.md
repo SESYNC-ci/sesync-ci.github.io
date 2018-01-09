@@ -1,5 +1,5 @@
 ---
-title: Running R Scripts on the Cluster
+title: Run R Scripts on the Cluster
 category: quickstart
 tags:
   - R
