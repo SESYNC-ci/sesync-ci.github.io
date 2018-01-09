@@ -1,5 +1,5 @@
 ---
-title: Should I use SESYNC's Gitlab over Github?
+title: Should I use GitHub or SESYNC's GitLab?
 category: FAQ
 tags: 
 - git
