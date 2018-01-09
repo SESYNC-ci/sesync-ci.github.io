@@ -5,7 +5,7 @@
 
 body {
     background-color: black;
-    text-align: left;
+    text-align: right;
 }
 
 img {
@@ -15,11 +15,11 @@ img {
 
 .section {
     color: white;
-    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -31,18 +31,26 @@ img {
     text-align: center;
 }
 
-.first.section .fp-tableCell > div {
+.fp-tableCell > div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    padding: 20px;
     max-width: 420px;
     text-align: left;
+    font-family: proxima_nova_rgbold;
     background-color: black;
 }
 
-.fp-tableCell > div {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    font-family: proxima_nova_rgbold;
+.fp-tableCell > div.preview {
+    width: 140px;
+    height: 170px;
+    border-radius: 4px;
     background-color: white;
+}
+
+#footer {
+    max-width: 100%;
 }
 
 #fp-nav ul li {

@@ -24,13 +24,13 @@ order:
     class="section"
     data-tooltip="{{ category[1] }}">
     {% assign posts = site.categories[cat] %}
-    {% for post in posts limit:3 %}
-    <div>
+    {% for post in posts limit:4 %}
+    <div class="preview">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </div>
     {% endfor %}
     {% capture category_page %}/{{ cat }}/{% endcapture %}
-    <div>
+    <div class="preview more">
       <a href="{{ category_page | relative_url }}">More...</a>
     </div>
   </div>
