@@ -1,5 +1,5 @@
 ---
-title: How to Share files with someone outside of SESYNC
+title: Share Files and Folders with Anyone
 category: quickstart
 tags:
 - PYDIO
