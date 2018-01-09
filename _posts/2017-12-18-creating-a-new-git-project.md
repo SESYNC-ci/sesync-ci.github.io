@@ -1,5 +1,5 @@
 ---
-title: Creating a New Git Project
+title: Version Control with git
 category: quickstart
 tags: 
   - git
