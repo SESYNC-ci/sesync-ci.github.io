@@ -1,5 +1,5 @@
 ---
-title: Running Python Scripts on the Cluster
+title: Run Python Scripts on the Cluster
 category: quickstart
 tags:
  - python
