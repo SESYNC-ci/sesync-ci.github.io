@@ -1,12 +1,12 @@
 ---
-title: Connecting RStudio Server or Desktop to a database? 
+title: How do I connect to a database from RStudio? 
 category: FAQ
 tags:
   - infrastructure
   - account
 ---
 
-# Connecting RStudio Server or Desktop to a database 
+# {{ page.title }}
 
 Access to a MySQL or PostgreSQL database from within R requires a database client and connection parameters (including a password) for the particular database you wish to access. This FAQ explains a recommended configuration that allows R to access a database on the SESYNC infrastructure. The instructions below are specifically for a PostgreSQL database, but analagous instructions apply to MySQL.
 
