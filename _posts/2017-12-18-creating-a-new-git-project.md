@@ -1,5 +1,5 @@
 ---
-title: Use git for Version Control in RStudio
+title: Create Projects on GitLab
 category: quickstart
 tags: 
   - git
