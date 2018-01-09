@@ -1,8 +1,11 @@
 ---
+title: Do I have to use the cluster?
 category: FAQ
 tags:
 - cluster
 ---
+
+# {{ page.title }}
 
 We highly recommend using the scheduled cluster for running all of your CPU-intensive or long running programs. Below is SESYNC policy
 for long running processes on our different types of resources:
