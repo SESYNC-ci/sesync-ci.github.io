@@ -1,8 +1,8 @@
 ---
-title: Bulk uploading or downloading data using an SFTP client
+title: Bulk Uploads and Downloads by SFTP
 category: quickstart
 tags:
-- data
+ - data
 ---
 
 # {{ page.title }}
