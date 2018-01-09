@@ -1,5 +1,5 @@
 ---
-title: How do I Access Linux Resources?
+title: How do I access Linux resources?
 category: FAQ
 tags:
   - shell
