@@ -51,7 +51,6 @@ footer {
 }
 
 ul {
-    margin: 0;
     list-style-image: none;
 }
 
@@ -70,6 +69,18 @@ h3 {
 
 nav ul li.tag-h1 a {
     color: $color-blue;
+}
+
+code {
+    color: unset;
+    text-shadow: unset;
+    margin: unset;
+    padding: unset;
+    background: unset;
+}
+
+pre code {
+    text-color: #efefef;
 }
 
 tags {
