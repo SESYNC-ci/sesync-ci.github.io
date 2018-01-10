@@ -1,6 +1,6 @@
 ---
 title: Will SESYNC purchase software?
-category: FAQ
+category: faq
 tags:
 ---
 

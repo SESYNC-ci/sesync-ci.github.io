@@ -1,6 +1,6 @@
 ---
 title: Do I have to use the cluster?
-category: FAQ
+category: faq
 tags:
 - cluster
 ---

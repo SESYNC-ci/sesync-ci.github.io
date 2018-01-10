@@ -1,12 +1,12 @@
 ---
 title: What resources are available?
-category: FAQ
+category: faq
 tags: 
 - infrastructure
 - database
 - NFS
 - PYDIO
-- slurm
+- Slurm
 - shell
 ---
 

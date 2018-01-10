@@ -2,7 +2,7 @@
 title: Run Python Scripts on the Cluster
 category: quickstart
 tags:
- - python
+ - Python
  - cluster
 ---
 # {{ page.title }}

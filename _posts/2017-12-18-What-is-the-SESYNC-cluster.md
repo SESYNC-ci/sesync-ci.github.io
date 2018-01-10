@@ -1,6 +1,6 @@
 ---
 title: What is the SESYNC cluster?
-category: FAQ
+category: faq
 tags:
 - cluster
 ---

@@ -1,9 +1,9 @@
 ---
 title: How do I access my Windows virtual machine?
-category: FAQ
+category: faq
 tags:
 - RDP
-- windows
+- Windows
 ---
 
 # {{ page.title }}

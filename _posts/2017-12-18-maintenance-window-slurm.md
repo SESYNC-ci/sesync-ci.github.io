@@ -1,11 +1,11 @@
 ---
 title: What happens to my jobs during the maintenance window?
-category: FAQ
+category: faq
 tags:
   - infrastructure
   - cluster
-  - maintenace-window
-  - slurm
+  - maintenance-window
+  - Slurm
 ---
 
 # What happens to my jobs during the maintenance window? 

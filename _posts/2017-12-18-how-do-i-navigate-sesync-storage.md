@@ -1,9 +1,9 @@
 ---
 title: How do I navigate SESYNC's storage?
-category: FAQ
+category: faq
 tags:
   - data
-  - pydio
+  - PYDIO
 ---
 
 # {{ page.title }}

@@ -1,6 +1,6 @@
 ---
 title: How do I schedule a conference call?
-category: FAQ
+category: faq
 tags:
   
 ---

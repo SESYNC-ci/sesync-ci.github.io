@@ -1,6 +1,6 @@
 ---
 title: What is a virtual machine?
-category: FAQ
+category: faq
 tags:
 - virtual-machine
 ---

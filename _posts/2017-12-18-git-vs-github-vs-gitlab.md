@@ -1,6 +1,6 @@
 ---
 title: "What's the difference between git, GitHub, and GitLab?"
-category: FAQ
+category: faq
 tags:
  - git
  - reproducible-research

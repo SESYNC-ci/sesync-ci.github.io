@@ -1,6 +1,6 @@
 ---
 title: How do I access Linux resources?
-category: FAQ
+category: faq
 tags:
   - shell
   - ssh

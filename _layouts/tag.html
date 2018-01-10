@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign tagged = site.tags[page.slug] %}
+
+<h2>Quick Start</h2>
+
+<ul>{% for post in tagged %}
+  {% if post.category == 'quickstart' %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>FAQ</h2>
+
+<ul>{% for post in tagged %}
+  {% if post.category == 'faq' %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>Blog</h2>
+
+<ul>{% for post in tagged %}
+  {% if post.category == 'blog' %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>Lesson</h2>
+
+<ul>{% for post in tagged %}
+  {% if post.category == 'lessons' %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+<tags>
+  <h3>All <i class="fa fa-tags" aria-hidden="true"></i></h3>
+  <ul>
+    {% for tag in site.tags %}
+    <li>
+      <a href="{{ tag[0] | prepend: '/tag/' | relative_url }}">
+        <strong>{{ tag[0] }} </strong>
+      </a>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
+        <strong class="fa-stack-1x">{{ tag[1].size }}
+        </strong>
+      </span>
+    </li>          
+    {% endfor %}
+  </ul>
+</tags>

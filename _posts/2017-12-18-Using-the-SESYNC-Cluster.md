@@ -4,7 +4,7 @@ category: quickstart
 tags:
 - infrastructure
 - cluster
-- slurm
+- Slurm
 - R
 - shell
 ---

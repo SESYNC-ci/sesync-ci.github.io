@@ -1,6 +1,6 @@
 ---
 title: How do I Sync project data to my local machine
-category: FAQ
+category: faq
 tags:
   - PYDIO
   - data

@@ -1,6 +1,6 @@
 ---
 title: What support does SESYNC provide for custom virtual machines?
-category: FAQ
+category: faq
 tags:
 - virtual-machine
 ---

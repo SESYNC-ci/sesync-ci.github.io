@@ -48,7 +48,7 @@
       <a href="{{ '/quickstart/' | relative_url }}" class="button">
         <strong>Quick Start</strong>
       </a>
-      <a href="{{ '/FAQ/' | relative_url }}" class="button">
+      <a href="{{ '/faq/' | relative_url }}" class="button">
         <strong>FAQ</strong>
       </a>
       <a href="{{ '/blog/' | relative_url }}" class="button">
@@ -69,7 +69,7 @@
       </section>
       {% if page.tags.size > 0 %}
       <tags>
-        <h1>Related <i class="fa fa-tags" aria-hidden="true"></i></h1>
+        <h3>Related <i class="fa fa-tags" aria-hidden="true"></i></h3>
         <ul>
           {% for tag in page.tags %}
             <li>

@@ -1,6 +1,6 @@
 ---
 title: When are the SESYNC maintenance windows?
-category: FAQ
+category: faq
 tags: 
 - maintenance-window
 - infrastructure

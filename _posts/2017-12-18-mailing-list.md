@@ -1,6 +1,6 @@
 ---
 title: How do I manage my mailing list? 
-category: FAQ
+category: faq
 tags:
   - infrastructure
   - account

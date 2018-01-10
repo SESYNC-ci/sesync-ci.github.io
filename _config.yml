@@ -8,27 +8,41 @@ copyright: |
 
 # Content
 collections:
-  category_pages:
+  category:
     output: true
+    permalink: /:title/
+  tag:
+    output: true
+    permalink: /:collection/:title/
 plugins:
   - jemoji
 
 # Build
 exclude:
-  - .Rproj.user
+  - README.md
+  - CONTRIBUTING.md
+  - CNAME
+  - Gemfile.lock
+  - Gemfile
+  - "*.Rproj*"
 theme: jekyll-theme-leap-day
 sass:
   sass_dir: ./assets/css
 defaults:
   - scope:
       path: ""
-      type: category_pages
-    values:
-      layout: category
-      permalink: /:title/
-  - scope:
-      path: ""
       type: posts
     values:
       toc: true
       permalink: /:categories/:title.html
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: category
+  - scope:
+      path: ""
+      type: tag
+    values:
+      toc: true
+      layout: tag

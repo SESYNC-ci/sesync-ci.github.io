@@ -1,6 +1,6 @@
 ---
 title: How do I use the SESYNC eBeam whiteboard capture?
-category: FAQ
+category: faq
 tags:
   
 ---

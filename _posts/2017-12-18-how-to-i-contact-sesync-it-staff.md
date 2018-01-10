@@ -1,6 +1,6 @@
 ---
 title: How do I contact SESYNC's IT and research support staff?
-category: FAQ
+category: faq
 tags:
 ---
 
