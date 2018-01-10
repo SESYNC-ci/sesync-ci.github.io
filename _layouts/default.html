@@ -73,7 +73,7 @@
         <ul>
           {% for tag in page.tags %}
             <li>
-              <a href="{{ '/tags' | relative_url }}/#-{{ tag | downcase }}">
+              <a href="{{ tag | prepend: '/tag/' | relative_url }}">
                 <strong>{{ tag }} </strong>
               </a>
               <span class="fa-stack fa-lg">
