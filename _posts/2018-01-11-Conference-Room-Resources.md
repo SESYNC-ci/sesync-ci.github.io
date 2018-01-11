@@ -27,7 +27,7 @@ All conference rooms have a white guide book at the front explaining how to use 
 | Blue | 10-20 Large Square <br/> 18-26 Three pods of 3-4 tables <br/> 30-40 Five, *two table rows with chairs on both sides*^^ | 1 HD Projector | 4 HDMI (front and rear) <br/>2 VGA (front)| 4 with ebeam |
 | Fishbowl | 6-10 conference table | 2 HD 60" displays |2 HDMI | 2 walls, one with ebeam |
 | Cave | 10-14 conference table | 2 HD 60" displays | 2 HDMI| 3 walls |
-| Narnia | 10-14 Square | 1 HD Projector | 2 HDMI | 1 wall |
+| Narnia | 10-12 Square table arrangement | 1 HD Projector | 2 HDMI | 1 wall |
 
 ^^*This setup cannot support video conferencing as it is a little cramped and is recommended only for plenary/presentation oriented meetings.*
 
@@ -45,4 +45,4 @@ All conference rooms have a white guide book at the front explaining how to use 
 ![cave-front-640](/assets/images/cave-front-640.jpg) ![cave-rear-640.jpg](/assets/images/cave-rear-640.jpg)
 
 ### Narnia Conference Room
-![](/assests/images/) ![](/assests/images/)
+![narnia-front-640](/assets/images/narnia-front-640.jpg) ![narnia-rear-640](/assets/images/narnia-rear-640.jpg)
