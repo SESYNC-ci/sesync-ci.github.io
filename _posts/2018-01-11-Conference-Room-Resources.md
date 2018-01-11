@@ -20,6 +20,7 @@ All conference rooms have a white guide book at the front explaining how to use 
 * [Skype for Business Instructions](/assets/images/roomdocs/Skype-for-Business-Instructions.pdf)
 
 ### Capabilities in each room
+
 | Room | Capacity/Arrangement | Displays | Laptop Connections | Whiteboards |
 | ---- | -------------------- | -------- | ------------------ | ----------- |
 | Green | 10-16 square table arrangement | 1 HD Projector | HDMI,VGA | 2 with ebeam|
