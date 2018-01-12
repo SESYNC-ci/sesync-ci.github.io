@@ -1,6 +1,6 @@
 ---
 title: What's the procedure for having remote participants at my meeting?
-category: post
+category: faq
 tags:
   - meeting
   - remote-participants
