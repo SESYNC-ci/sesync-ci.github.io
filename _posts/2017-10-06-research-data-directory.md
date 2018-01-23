@@ -24,9 +24,9 @@ data directly to your PC similar to Dropbox. In order do to this, you will need
 to use the Pydio Desktop Client available for download at:
 <https://pyd.io/apps/pydio-sync/>
 
-## Using the Pydio Sync Client for Windows
 
-[Using PydioSync Client to sync data locally](/blob/master/_posts/2018-01-09-syncing-data-local.md)
+
+[Using the Pydio Sync Client for Windows](/blob/master/_posts/2018-01-09-syncing-data-local.md)
 
 ## Transfering data using the ssh gateway
 
@@ -54,9 +54,9 @@ connected via VPN.
 
 Direct access
 : From your Windows desktop, press the start button, type
-"\\storage.research.sesync.org\FILE_SHARE".
+"\\\storage.research.sesync.org\FILE_SHARE".
 
 Map a network drive
 : From your Windows desktop, click the file explorer icon in the task bar
 (folder icon). Then right-click "This PC" & choose "map network drive". In the
-"folder" space, type "\\storage.research.sesync.org\FILE_SHARE"
+"folder" space, type "\\\storage.research.sesync.org\FILE_SHARE"
