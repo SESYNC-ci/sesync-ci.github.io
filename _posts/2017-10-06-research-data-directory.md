@@ -26,6 +26,8 @@ to use the Pydio Desktop Client available for download at:
 
 ## Using the Pydio Sync Client for Windows
 
+[Using PydioSync Client to sync data locally](/blob/master/_posts/2018-01-09-syncing-data-local.md)
+
 ## Transfering data using the ssh gateway
 
 You can use any sftp client of your choice to connect to our ssh gateway and
