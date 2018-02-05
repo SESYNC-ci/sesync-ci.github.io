@@ -5,20 +5,17 @@ tags:
   - meeting
   - remote-participants
 ---
-# {{ page.title }}
-
-## Onsite Meetings with Remote Participants
 
 When you submit your travel planner to our travel office, please make sure to include a list of all remote participants that will be joining your meeting.
 You may add participants after the 8 week deadline but we require that you notify us of all participants at least one week befor ethe start of the meeting.
 
-### Testing and notifying remote participants
+## Testing and notifying remote participants
 
 The week before your meeting, our technical staff will reach out to all the remote to arrange testing (if they haven't connected before) and will send them a meeting invitation with connection instructions. 
 If you would let those participants know to expect contact from us it will help the process. During the testing, we will make sure they have a working camera and microphone and make note of any issues that may arise. 
 If the remote particiapant needs to share slides or other content, that will be tested as well.
 
-### Meeting Day
+## Meeting Day
 
 SESYNC IT staff will make sure that your meeting room is connected to the videoconference prior to your arrival. We will place a laptop in the room that is also connected to the room projectors, the videoconference and has screen sharing enabled. We recommend you load all presentations on to this laptop, or use the laptop to connect to your collaboration site to retrieve your presentations.
 

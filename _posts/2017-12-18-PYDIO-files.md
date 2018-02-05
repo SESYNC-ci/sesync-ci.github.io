@@ -6,7 +6,6 @@ tags:
 - data
 ---
 
-# {{ page.title }}
 
 SESYNC researchers and staff can provide a link for external collaborators to upload and/or download data from your research project directory
 

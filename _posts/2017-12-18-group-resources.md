@@ -6,7 +6,6 @@ tags:
   - account
 ---
 
-# {{ page.title }}
 
 For new groups, we generally follow the timeline below:
 

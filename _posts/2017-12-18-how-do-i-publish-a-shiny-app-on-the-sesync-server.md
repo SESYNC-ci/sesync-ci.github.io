@@ -6,7 +6,6 @@ tags:
   - shiny
 ---
 
-# {{ page.title }}
 
 To publish a R shiny application on the SESYNC server, you simply need to copy it from your working directory to the shiny-apps-data shared folder (__/nfs/shiny-apps-data on RStudio Server__). You may need to contact SESYNC IT staff to obtain write access to that directory.
 

@@ -5,7 +5,6 @@ tags:
  - data
 ---
 
-# {{ page.title }}
 
 You can upload and download data from your research data directory using an SFTP client. We recommend [FileZilla](https://filezilla-project.org)
 

@@ -5,8 +5,6 @@ tags:
   - NFS
 ---
 
-# {{ page.title }}
-
 SESYNC provides access to RStudio in your browser in order to develop and run R
 scripts that connect directly to other SESYNC resources (file storage, databases,
 the cluster, etc).

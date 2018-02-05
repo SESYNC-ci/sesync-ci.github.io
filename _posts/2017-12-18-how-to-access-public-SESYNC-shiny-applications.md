@@ -6,7 +6,6 @@ tags:
   - shiny
 ---
 
-# {{ page.title }}
 
 A Shiny application located in the shiny-apps-data/[PATH] shared folder is publicly accessible at the URL:
 

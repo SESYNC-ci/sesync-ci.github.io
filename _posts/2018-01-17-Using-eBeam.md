@@ -1,14 +1,13 @@
 ---
-title: Using the SESYNC eBeam whiteboard capture?
+title: Using eBeam Whiteboards
 category: quickstart
 tags:
   - meeting
 ---
-# {{ page.title }}
-
-### Starting up Whiteboard Capture
 
 SESYNC has installed the eBeam whitebaord capture software on all of our conference room PC's and laptops.
+
+## Starting up Whiteboard Capture
 
 1. Attach the whiteboard capture device to the side of the whiteboard.
 
@@ -25,7 +24,7 @@ SESYNC has installed the eBeam whitebaord capture software on all of our confere
 
 ![calibration03](/assets/images/eBeam-calibration03.png)
 
-### Navigating the Software
+## Navigating the Software
 
 * A/B/C - Change layout
 * D - Full screen
@@ -36,15 +35,15 @@ SESYNC has installed the eBeam whitebaord capture software on all of our confere
 
 ![navigation](/assets/images/eBeam-navigation.png)
 
-### Changing Whiteboards
+## Changing Whiteboards
 
 In order to change to a different whiteboard in the room, just move the capture device to the new whiteboard and recalibrate (Steps 3-5 above). You will also need to open up a new, blank sheet to record the whiteboard. Click the icon shown above 'E' above.
 
-### Saving
+## Saving
 
 Click 'File', 'Save As' and select PDF or Tiff as the type of file.  Please note, the capture software will only record the whiteboard while its open, you can save and re-open your worksheets by using the 'WBD' capture format.
 
-### Sharing
+## Sharing
 
 You may connect the Laptop running the eBeam software to your lync meeting so remote participants may see what you are drawing. Please see the Lync meeting guide for instructions on how to do this.
 

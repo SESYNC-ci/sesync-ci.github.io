@@ -6,7 +6,6 @@ tags:
  - reproducible-research
 ---
 
-# {{ page.title }}
 
 The three are often a source of confusion.
 

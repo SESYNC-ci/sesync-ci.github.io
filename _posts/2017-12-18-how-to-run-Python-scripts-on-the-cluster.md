@@ -5,9 +5,17 @@ tags:
  - Python
  - cluster
 ---
-# {{ page.title }}
 
-## 1. Setting up a virtual environment
+The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
+
+    #!/bin/bash
+    #
+    python test.py
+
+Let's say this script is saved as __submit.sh__. You can send it to the cluster with the command:  sbatch submit.sh . __Note__: If your script uses packages from a virtual environment (see above), make sure to first activate it before calling sbatch.
+
+## Setting up a virtual environment
+
 If your script requires additional Python packages besides the standard library and the few packages (such as numpy) already on the SESYNC server, you will need to install them in a virtual envrionment, which is a user-specific Python library. Follow these directions to create your virtual environment (monospace font indicates commands to type in the SSH shell):
 
 * Using a SSH client, log in to ssh.sesync.org with your SESYNC username and password.
@@ -24,16 +32,8 @@ At this point, the command prompt line should begin with (venv), indicating that
 
 (Note: For more info about [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/), see this guide from which this section was adapted.)
 
-## 2. Creating a submission script
-The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
+## Running multiple copies of a script
 
-    #!/bin/bash
-    #
-    python test.py
-
-Let's say this script is saved as __submit.sh__. You can send it to the cluster with the command:  sbatch submit.sh . __Note__: If your script uses packages from a virtual environment (see above), make sure to first activate it before calling sbatch.
-
-## 3. Running multiple copies of a script
 In general, you may want to run multiple copies of a script in parallel, using different parameter sets. The following submission script accepts two command line parameters and passes them to Python.
 
 __submit.sh__
@@ -62,4 +62,5 @@ __test.py__
     ...
 
 ## Tip: Editing your remote files
+
 The RStudio Server interface (accessible via your web browswer at __rstudio.sesync.org__) can recognize Python syntax and thus serve as a code editor for your files hosted on the SESYNC server. Note that it may not be possible to run the scripts in RStudio Server, since you cannot access your virtual environment from that interface.

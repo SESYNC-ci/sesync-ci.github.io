@@ -6,7 +6,6 @@ tags:
   - git
 ---
 
-# {{ page.title }}
 
 1. Create a new Gitlab or Github project and copy the URL for the project (e.g., https://gitlab.sesync.org/groupname/project.git)
 

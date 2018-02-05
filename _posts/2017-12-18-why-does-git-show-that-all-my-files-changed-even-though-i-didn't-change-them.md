@@ -5,7 +5,6 @@ tags:
   - git
 ---
 
-# {{ page.title }}
 
 Due to some quirks on our storage system your git repo may show that all of your files have modifications. If you perform a 'git diff' you will see a list that looks like:
 

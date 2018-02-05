@@ -5,7 +5,6 @@ tags:
 - git
 ---
 
-# {{ page.title }}
 
 The short answer is no. If you already have projects on GitHub that you are working on, we prefer that you continue to use
 GitHub due to its open nature. We'll gladly push and pull code from your public repository. We provide GitLab locally for

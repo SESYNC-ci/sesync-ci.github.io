@@ -5,7 +5,6 @@ tags:
   - git
 ---
 
-# {{ page.title }}
 
 SESYNC offers private git hosting through our GitLab server at [](https://gitlab.sesync.org). When you connect to gitlab using your sesync name and password, you'll see a dashboard of recent activity on projects that you are part of. If this is your first time connecting, it may be a little quiet.
 

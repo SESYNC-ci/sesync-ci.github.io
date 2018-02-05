@@ -6,7 +6,6 @@ tags:
 author: khondula
 ---
 
-# {{ page.title }}
 
 Many funding agencies require proposals to include a section addressing plans for data management. This includes how you will handle data as it is being collected during the project, as well as plans for sharing and archiving once the project is complete. Here is a collection of resources we've found helpful for writing DMPs:
 

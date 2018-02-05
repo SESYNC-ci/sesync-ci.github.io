@@ -6,7 +6,6 @@ tags:
   - ssh
 ---
 
-# {{ page.title }}
 
 SESYNC linux resources are deployed on a private network at SESYNC and are accessed via our ssh gateway at ssh.sesync.org.
 

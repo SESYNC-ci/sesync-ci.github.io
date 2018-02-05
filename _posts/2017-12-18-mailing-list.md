@@ -7,7 +7,6 @@ tags:
   - mailing-list
 ---
 
-# {{ page.title }}
 
 SESYNC uses the sympa mailing list server to manage mailing lists. 
 You can manage your list by going to [lists.sesync.org](https://lists.sesync.org) and entering your e-mail address and SESYNC password in the upper right. 

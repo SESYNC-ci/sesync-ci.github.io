@@ -6,7 +6,6 @@ tags:
  - reproducible-research
 ---
 
-# {{ page.title }}
 
 Choosing to put your data products in a long-term repository can:
 

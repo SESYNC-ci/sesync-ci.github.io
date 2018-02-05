@@ -8,7 +8,6 @@ tags:
 author: khondula
 ---
 
-# {{ page.title }}
 
 Photos, as a source of data, or to aid in the interpretation of data, can be a useful addition to [RShiny](http://cyberhelp.sesync.org/tags/#-shiny) applications. Here are two examples of using photo data: one that dispalys images from URLs, and another that uses species names to find pictures of animals. 
 

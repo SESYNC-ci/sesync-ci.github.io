@@ -6,7 +6,6 @@ tags:
   - PYDIO
 ---
 
-# {{ page.title }}
 
 SESYNC provide a large, shared file storage for hosting data for all of our projects. Once our IT staff creates a data storage location, its available to access on any Linux or Windows your group has access to. For SESYNC employees and postdocs  you can directly access this storage from your SESYNC desktop or laptop. For all others, we provide a web gateway to your groups' data storage.
 

@@ -6,10 +6,6 @@ tags:
  - remote-participants
 ---
 
-# {{ page.title }}
-
-## Onsite Meetings with Remote Participants
-
 When you submit your travel planner to our travel office, please make sure to include a list of all remote participants that will be joining your meeting. You may add participants after the 8 week deadline, but we require that you notify us of all participants at least one week before the start of your meeting.
 
 Testing and notifying remote participants
@@ -21,7 +17,8 @@ SESYNC IT staff will make sure that your meeting room is connected to the videoc
 
 All of our meeting rooms also have whiteboard capture devices that can be shared with the remote participants. There is a help card in the room with instructions on how to use the technology. If you have any questions, feel free to ask any of our IT staff for help
 
-Virtual Group Meetings
+## Virtual Group Meetings
+
 We're able to schedule fully virtual meetings for our working groups at any time while your project is in progress. Please contact us at least 5 business days prior to your meeting so that we may contact and test all of your participants.
 
 Send our IT Staff ({{ site.email }}) a request which contains the following:
@@ -30,6 +27,5 @@ Send our IT Staff ({{ site.email }}) a request which contains the following:
 - List of participants, names and email addresses.
 - Would you like us to perform a test call with your participants prior to the meeting. We highly recommend this for video conferences or conferences which involves shared content.
 
-Our IT staff will send you and your participants a meeting invite which will contain a link for connecting to the meeting.
-If requested, we will test with all participants who have not used our video conference system in the past. 
+Our IT staff will send you and your participants a meeting invite which will contain a link for connecting to the meeting. If requested, we will test with all participants who have not used our video conference system in the past. 
 On the day of your meeting, please use the link in your calendar invitation to join the meeting.

@@ -5,7 +5,8 @@ tags:
  - data
 ---
 
-# {{ page.title }}
+The data storage available at SESYNC has multiple points of access, suitable for
+different methods of transferring and accessing project data.
 
 ## Transfer data using the web portal
 

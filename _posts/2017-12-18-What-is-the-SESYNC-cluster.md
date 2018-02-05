@@ -5,11 +5,9 @@ tags:
 - cluster
 ---
 
-# {{ title }}
+SESYNC's computational cluster enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data set.
 
 ## Overview of the cluster and scheduler
-
-SESYNC's computational cluster enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data set.
 
 The cluster is a group of 22 virtual machines with a total of 168 cores and 1.28 T of RAM that is accessible through
 a scheduler. Using two special commands (sbatch and srun), you request the scheduler to allocate one or more compute nodes for a job.
@@ -27,18 +25,21 @@ A partition can be thought of as a work queue which has a set of policies and co
 currently has three partitions, each for different purposes:
 
 ### sesync
+
 This partition will allocate entire nodes to your process. You should submit here ONLY if your job is parallel and can use all
 resources on a node. Otherwise, CPU's on the node you requested would sit idle. In R, if you use the parallel package you should
 submit your job to this queue.  
 > Time Limit: 14 days | Max Job Size: 16 nodes | Node Description: 8 core, 60GB memory
 
 ### sesyncshared
+
 This queue will run up to 8 simultanious jobs on a compute node. This is good for long running jobs that do not require more than
 one processor. In general, unless you know your job is memory intensive or parallel you'll want to submit here. This is the default
 partition to which jobs get submitted if no partition has been specified
 > Time Limit: unlimited | Max Job Size: 1 node | Node Description: 8 core, 60GB memory
 
 ### sesynctest
+
 This is a partition designed for testing jobs and troubleshooting submissions. Using this partition on a small subset of data or
 paramaters allows you to receive immediate feedback to check for errors, so you will not waste time in queue only to find your
 job didn't work. Jobs submitted to this partition are limited to running for 1hr to ensure that resources are always available for

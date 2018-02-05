@@ -6,7 +6,6 @@ tags:
 - virtual-machine
 ---
 
-# {{ page.title }}
 
 SESYNC Windows client virtual machines are setup to use dynamic memory. What this means is that your virtual machine will
 show a different amount of memory available based on its current usage. You still have access to the full amount of memory

@@ -5,7 +5,6 @@ tags:
   
 ---
 
-# {{ page.title }}
 
 SESYNC offers the ability for your group to schedule conference calls outside of your onsite meetings. These calls can either be dial-in only, or audio-video. To schedule a call, please contact SESYNC it staff __{{ site.email }}__ at least 7 days in advance of your call and we will configure a one time or standing meeting for you. Please let your participants know to keep a lookout for a meeting invitation from SESYNC's IT staff. After you schedule your call, the following will happen:
 

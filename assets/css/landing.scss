@@ -43,11 +43,23 @@ img {
 }
 
 .fp-tableCell > div.preview {
-    width: 140px;
-    height: 170px;
+    width: 220px;
+    height: 290px;
     border-radius: 4px;
-    background-color: white;
+    background-color: block;
     overflow: hidden;
+    text-color: $color-light-grey;
+    
+    a {
+      font-size: 150%;
+      color: white;
+    }
+    a::before {
+      content: "";
+      width: 100%;
+      height: 100%;    
+      background: linear-gradient(transparent 50%, black);
+    }
 }
 
 #footer {

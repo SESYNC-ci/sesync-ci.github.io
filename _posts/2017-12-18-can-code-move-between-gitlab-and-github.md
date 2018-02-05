@@ -6,7 +6,6 @@ tags:
  - reprodicible-research
 ---
 
-# {{ page.title }}
 
 Yes! You can push a local git repository to any new remote resource. Please
 note that only your source code will move. However, the additional features

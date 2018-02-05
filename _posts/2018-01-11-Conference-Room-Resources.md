@@ -1,11 +1,11 @@
 ---
-title: What resources are available in the conference rooms
+title: What resources are available in the conference rooms?
 category: faq
 tags:
  - infrastructure
  - meeting
 ---
-# {{ page.title}}
+
 SESYNC has five conference rooms and a large breakout space equipped with HD screens, projectors, whiteboards and an array of collaborative tools. 
 Please note, depending on the size and requests of your group, your assigned meeting room may have a different table arrangement that waht is show in the pictures below.
 
