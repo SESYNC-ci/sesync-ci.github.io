@@ -18,6 +18,7 @@ plugins:
   - jemoji
 
 # Build
+repository: sesync-ci/sesync-ci.github.io
 exclude:
   - README.md
   - CONTRIBUTING.md

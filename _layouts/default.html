@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: en-US }}">
   <head>
     <!-- Original downloaded from https://github.com/pages-themes/leap-day/blob/2c15b7c092971aa8af0e2752d562dd5ecad7d0f2/_layouts/default.html
     on 2017-10-09. Subsequently modified by Ian Carroll <icarroll@sesync.org>. -->
@@ -28,10 +28,8 @@
         s.parentNode.insertBefore(gcse, s);
       })();
     </script>
-
   </head>
   <body>
-
     <header>
       <a href="https://www.sesync.org">
         <img src="{{ '/assets/images/background.png' | relative_url }}">
@@ -58,7 +56,7 @@
         <strong>Lessons</strong>
       </a>
       <div id="search-box">
-        <gcse:searchbox-only resultsUrl="{{ '/search.html' | relative_url }}"/>
+        <gcse:searchbox-only resultsUrl="{{ '/search.html' | relative_url }}"></gcse:searchbox-only>
       </div>
     </div>
 

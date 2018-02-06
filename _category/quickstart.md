@@ -1,3 +1,3 @@
 ---
-category: quickstart
+title: "Brief Introductions to SESYNC Resources:"
 ---

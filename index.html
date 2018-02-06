@@ -16,7 +16,7 @@ order:
       <h1>{{ site.title }}</h1>
       <h2>{{ site.subtitle }}</h2>
     </div>
-    <div class="downArrow"></div>
+    <div id="downArrow"></div>
   </div>
   {% for category in page.order  %}
   {% assign cat = category[0] %}
@@ -24,15 +24,15 @@ order:
     class="section"
     data-tooltip="{{ category[1] }}">
     {% assign posts = site.categories[cat] %}
-    {% for post in posts limit:4 %}
+    {% for post in posts limit: 5 %}
     <div class="preview">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
+      <p>{{ post.excerpt | truncate: 250 }}</p>
     </div>
     {% endfor %}
     {% capture category_page %}/{{ cat }}/{% endcapture %}
     <div class="preview more">
-      <a href="{{ category_page | relative_url }}">More...</a>
+      <a href="{{ category_page | relative_url }}">View More</a>
     </div>
   </div>
   {% endfor %}
