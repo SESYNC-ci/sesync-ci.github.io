@@ -24,7 +24,7 @@ order:
     class="section"
     data-tooltip="{{ category[1] }}">
     {% assign posts = site.categories[cat] %}
-    {% for post in posts limit: 5 %}
+    {% for post in posts limit: 2 %}
     <div class="preview">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <p>{{ post.excerpt | truncate: 250 }}</p>
