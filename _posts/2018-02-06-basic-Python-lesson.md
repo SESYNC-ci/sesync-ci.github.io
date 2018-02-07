@@ -3,6 +3,6 @@ title: Basic Python
 category: lessons
 tags:
  - Python
-permalink: "/:slug"
+permalink: "/basic-Python-lesson"
 ---
 {% include description.md name=page.slug %}
