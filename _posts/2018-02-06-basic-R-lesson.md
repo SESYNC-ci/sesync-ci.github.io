@@ -3,6 +3,6 @@ title: Basic R
 category: lessons
 tags:
  - R
-permalink: "/:slug"
+permalink: "/basic-R-lesson"
 ---
 {% include description.md name=page.slug %}
