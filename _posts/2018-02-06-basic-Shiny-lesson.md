@@ -3,6 +3,6 @@ title: Shiny Apps
 category: lessons
 tags:
  - R
-permalink: "/:slug"
+permalink: "/basic-Shiny-lesson"
 ---
 {% include description.md name=page.slug %}
