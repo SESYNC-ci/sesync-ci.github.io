@@ -5,4 +5,4 @@ tags:
  - R
 permalink: "/:slug"
 ---
-{% include lesson.md name=page.slug %}
+{% include description.md name=page.slug %}

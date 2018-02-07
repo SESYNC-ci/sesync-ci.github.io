@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+published: false
 category: lessons
 tags:
- - R
- - geospatial
-permalink: "/:slug"
+ - JavaScript
+permalink: "/basic-JavaScript-lesson"
 ---
 {% include description.md name=page.slug %}

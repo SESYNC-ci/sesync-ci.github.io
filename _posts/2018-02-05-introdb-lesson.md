@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+title: Relational Databases
 category: lessons
 tags:
- - R
- - geospatial
+ - qualitative
 permalink: "/:slug"
 ---
 {% include description.md name=page.slug %}

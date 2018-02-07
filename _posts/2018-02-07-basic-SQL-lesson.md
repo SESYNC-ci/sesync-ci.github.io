@@ -3,6 +3,6 @@ title: Basic SQL
 category: lessons
 tags:
  - SQL
-permalink: "/:slug"
+permalink: "/basic-SQL-lesson"
 ---
-{% include lesson.md name=page.slug %}
+{% include description.md name=page.slug %}

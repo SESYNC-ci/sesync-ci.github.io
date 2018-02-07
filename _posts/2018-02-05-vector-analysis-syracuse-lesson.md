@@ -1,5 +1,5 @@
 ---
-title: Maps with R
+published: false
 category: lessons
 tags:
  - R

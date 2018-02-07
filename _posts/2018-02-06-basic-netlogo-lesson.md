@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+Title: NetLogo ABMs
 category: lessons
 tags:
- - R
- - geospatial
+ - NetLogo
 permalink: "/:slug"
 ---
 {% include description.md name=page.slug %}

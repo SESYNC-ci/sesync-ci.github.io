@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+title: NetLogo Scripting
 category: lessons
 tags:
- - R
- - geospatial
+ - NetLogo
 permalink: "/:slug"
 ---
 {% include description.md name=page.slug %}

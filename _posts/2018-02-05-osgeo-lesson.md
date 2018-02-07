@@ -1,8 +1,7 @@
 ---
-title: Maps with R
+title: OSGeo
 category: lessons
 tags:
- - R
  - geospatial
 permalink: "/:slug"
 ---

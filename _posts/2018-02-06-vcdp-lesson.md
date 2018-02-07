@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+published: false
 category: lessons
 tags:
- - R
- - geospatial
+ - git
 permalink: "/:slug"
 ---
 {% include description.md name=page.slug %}

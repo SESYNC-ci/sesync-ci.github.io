@@ -1,9 +1,8 @@
 ---
-title: Maps with R
+title: Text Mine
 category: lessons
 tags:
- - R
- - geospatial
+ - qualitative
 permalink: "/:slug"
 ---
 {% include description.md name=page.slug %}
