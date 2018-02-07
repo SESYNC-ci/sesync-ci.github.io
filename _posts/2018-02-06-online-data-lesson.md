@@ -1,7 +1,7 @@
 ---
-title: RNetLogo
+title: Data APIs
 category: lessons
 tags:
- - R
+ - Python
 permalink: "/:slug"
 ---

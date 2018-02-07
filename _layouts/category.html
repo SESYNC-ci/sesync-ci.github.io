@@ -6,7 +6,7 @@ layout: default
 
 {% assign category = page.slug %}
 {% for post in site.categories[category] %}
-<div class="post {{ post.category }}">
+<div id = "{{ post.slug }}" class="post {{ post.category }}">
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 </div>
 {% endfor %}

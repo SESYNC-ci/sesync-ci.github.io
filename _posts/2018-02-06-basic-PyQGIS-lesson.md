@@ -1,7 +1,8 @@
 ---
-title: RNetLogo
+published: false
 category: lessons
 tags:
- - R
+ - Python
+ - geospatial
 permalink: "/:slug"
 ---

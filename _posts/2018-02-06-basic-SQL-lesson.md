@@ -1,7 +1,7 @@
 ---
-title: RNetLogo
+title: Basic SQL
 category: lessons
 tags:
- - R
+ - SQL
 permalink: "/:slug"
 ---

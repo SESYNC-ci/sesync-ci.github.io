@@ -18,7 +18,7 @@ plugins:
   - jemoji
 
 # Build
-repository: sesync-ci/sesync-ci.github.io
+repository: SESYNC-ci/sesync-ci.github.io
 exclude:
   - README.md
   - CONTRIBUTING.md
@@ -32,12 +32,6 @@ sass:
 defaults:
   - scope:
       path: ""
-      type: posts
-    values:
-      toc: true
-      permalink: /:categories/:title.html
-  - scope:
-      path: ""
       type: category
     values:
       layout: category
@@ -47,3 +41,9 @@ defaults:
     values:
       toc: true
       layout: tag
+  - scope:
+      path: ""
+      type: posts
+    values:
+      toc: true
+      permalink: /:categories/:title.html

@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: RMarkdown
 category: lessons
 tags:
  - R

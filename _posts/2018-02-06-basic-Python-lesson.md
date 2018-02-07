@@ -1,7 +1,7 @@
 ---
-title: RNetLogo
+title: Basic Python
 category: lessons
 tags:
- - R
+ - Python
 permalink: "/:slug"
 ---

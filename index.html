@@ -27,7 +27,9 @@ order:
     {% for post in posts limit: 2 %}
     <div class="preview">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt | truncate: 250 }}</p>
+      <p class="{{ post.category }}" id="{{ post.slug }}">
+        {{ post.excerpt | truncate: 250 }}
+      </p>
     </div>
     {% endfor %}
     {% capture category_page %}/{{ cat }}/{% endcapture %}

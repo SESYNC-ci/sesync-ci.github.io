@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: Basic R
 category: lessons
 tags:
  - R

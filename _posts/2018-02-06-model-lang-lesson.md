@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: Model Formulas
 category: lessons
 tags:
  - R

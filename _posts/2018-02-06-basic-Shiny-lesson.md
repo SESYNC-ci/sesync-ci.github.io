@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: Shiny Apps
 category: lessons
 tags:
  - R

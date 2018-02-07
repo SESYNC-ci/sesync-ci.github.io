@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: tidyr & dplyr
 category: lessons
 tags:
  - R

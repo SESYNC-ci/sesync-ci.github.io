@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: git in the shell
 category: lessons
 tags:
  - R

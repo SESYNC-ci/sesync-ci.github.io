@@ -31,14 +31,16 @@
             crossorigin="anonymous">
     </script>
     <script>
-      $(document).ready(function() {
-        $("#fullpage").fullpage({
+      jQuery(document).ready(function() {
+        jQuery("#fullpage").fullpage({
           navigation: true,
           navigationPosition: "right",
           showActiveTooltip: true,
           css3: false,
         });
       });
-    </script>    
+    </script>
+    <script src="{{ '/assets/js/lesson_description.js' | relative_url }}">
+    </script>
   </body>
 </html>

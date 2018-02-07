@@ -1,5 +1,5 @@
 ---
-title: RNetLogo
+title: Spatial NetLogo
 category: lessons
 tags:
  - R
