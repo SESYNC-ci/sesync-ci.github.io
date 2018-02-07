@@ -6,7 +6,10 @@ layout: default
 
 {% assign category = page.slug %}
 {% for post in site.categories[category] %}
-<div id = "{{ post.slug }}" class="post {{ post.category }}">
+<div class="post {{ post.category }}">
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% if post.category == 'lessons' %}
+    &mdash; {{ post.excerpt | strip_html }}
+  {% endif %}
 </div>
 {% endfor %}

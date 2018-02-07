@@ -1,8 +1,8 @@
 ---
 title: Basic SQL
-slug: basic-SQL-lesson
 category: lessons
 tags:
  - SQL
 permalink: "/:slug"
 ---
+{% include lesson.md name=page.slug %}
