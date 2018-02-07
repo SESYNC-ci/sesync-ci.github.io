@@ -94,11 +94,12 @@ tags {
     }
 }
 
-
 #banner {
     background-color: $color-primary;
     border: none;
     padding-left: calc(50% - 332px);
+    right: calc(50% - 332px);
+    margin-right: unset;
     .button {
         background-color: $color-primary-trim;
         border: 0.5px solid;
@@ -135,8 +136,8 @@ tags {
     footer {
         bottom: 0px;
     }
-    #search-box {
-        margin: 0 300px 0 0;
+    #banner {
+        right: 0;
     }
 }
 
