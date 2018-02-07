@@ -3,6 +3,6 @@ title: tidyr & dplyr
 category: lessons
 tags:
  - R
-permalink: "/:slug"
+permalink: "/data-manipulation-in-R-lesson"
 ---
 {% include description.md name=page.slug %}
