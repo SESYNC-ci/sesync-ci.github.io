@@ -3,6 +3,6 @@ title: RMarkdown
 category: lessons
 tags:
  - R
-permalink: "/:slug"
+permalink: "/basic-RMarkdown-lesson"
 ---
 {% include description.md name=page.slug %}
