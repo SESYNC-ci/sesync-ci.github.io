@@ -4,6 +4,6 @@ category: lessons
 tags:
  - R
  - geospatial
-permalink: "/:slug"
+permalink: "/geospatial-packages-in-R-lesson"
 ---
 {% include description.md name=page.slug %}
