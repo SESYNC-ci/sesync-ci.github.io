@@ -137,12 +137,16 @@ tags {
         bottom: 0px;
     }
     #banner {
+        width: unset;
         right: 0;
     }
 }
 
 @media print, screen and (max-width: 680px) {
     header img {
+        display: none;
+    }
+    #search-box {
         display: none;
     }
 }
