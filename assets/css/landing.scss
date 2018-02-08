@@ -23,25 +23,18 @@ img {
 }
 
 .first.section {
-    .flex-container {
-        align-content: center;
-        align-items: center;
+    .preview-wrapper {
     }
     div {
-        flex: 1 1 50%;
         padding: 40px;
     }
 }
 
-.flex-container {
-    overflow: hidden;
-    display: inline-flex;
-    align-content: center;
-    flex-flow: row wrap;
+.preview-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
     padding-right: 220px;
     & > div.preview {
-        flex: 0 1 320px;
-        display: inline-block;
         margin: 20px;
         padding: 40px;
         text-align: left;
@@ -57,10 +50,13 @@ img {
             font-size: inherit;
             color: inherit;
         }
-        &:nth-child(n + 2) {@media screen and (max-width: 950px) {display: none;}}
-        &:nth-child(n + 4) {@media screen and (max-width: 1270px) {display: none;}}
-        &:nth-child(n + 6) {@media screen and (max-width: 1590px) {display: none;}}
-        &:nth-last-child(1) {display: inline-block;}
+        &:nth-child(n+2){@media screen and (max-width:  950px) {display: none;}}
+        &:nth-child(n+4){@media screen and (max-width: 1270px) {display: none;}}
+        &:nth-child(n+6){@media screen and (max-width: 1590px) {display: none;}}
+        &:nth-child(n+8){@media screen and (max-width: 1810px) {display: none;}}
+        &.more {
+            display: block;
+        }
     }
 }
 

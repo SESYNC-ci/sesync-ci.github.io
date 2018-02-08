@@ -9,7 +9,7 @@ order:
 
 <div id="fullpage">
   <div class="first section" data-tooltip="">
-    <div class="flex-container">
+    <div class="preview-wrapper">
       <div>
         <img src="{{ '/assets/images/background.png' | relative_url }}"/>
       </div>
@@ -23,16 +23,16 @@ order:
   {% for category in page.order  %}
   {% assign cat = category[0] %}
   <div id="{{ cat }}" class="section" data-tooltip="{{ category[1] }}">
-    <div class="flex-container">
+    <div class="preview-wrapper">
       {% assign posts = site.categories[cat] %}
-      {% for post in posts limit: 7 %}
+      {% for post in posts limit: 9 %}
       <div class="preview {{ post.category }}">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <p>{{ post.excerpt | truncate: 250 }}</p>
       </div>
       {% endfor %}
       {% capture category_page %}/{{ cat }}/{% endcapture %}
-      <div class="preview">
+      <div class="preview more">
         <a href="{{ category_page | relative_url }}">View More</a>
       </div>
     </div>
