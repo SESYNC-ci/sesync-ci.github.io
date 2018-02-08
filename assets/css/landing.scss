@@ -22,15 +22,9 @@ img {
     background-attachment: fixed;
 }
 
-.fp-tableCell {
-    display: flex;
-    align-content: center;
-    flex-flow: row wrap;
-    padding-right: 220px;
-}
-
 .first.section {
-    .fp-tableCell {
+    .flex-container {
+        align-content: center;
         align-items: center;
     }
     div {
@@ -39,22 +33,34 @@ img {
     }
 }
 
-.fp-tableCell > div.preview {
-    flex: 0 1 320px;
-    margin: 20px;
-    padding: 40px;
-    text-align: left;
-    font-family: proxima_nova_rgbold;
-    background-color: black;
-    border-radius: 8px;
-    color: $color-light-grey;
-    a {
-        font-size: 150%;
-        color: white;
-    }
-    p > a {
-      font-size: inherit;
-      color: inherit;
+.flex-container {
+    overflow: hidden;
+    display: inline-flex;
+    align-content: center;
+    flex-flow: row wrap;
+    padding-right: 220px;
+    & > div.preview {
+        flex: 0 1 320px;
+        display: inline-block;
+        margin: 20px;
+        padding: 40px;
+        text-align: left;
+        font-family: proxima_nova_rgbold;
+        background-color: black;
+        border-radius: 8px;
+        color: $color-light-grey;
+        a {
+            font-size: 150%;
+            color: white;
+        }
+        p > a {
+            font-size: inherit;
+            color: inherit;
+        }
+        &:nth-child(n + 2) {@media screen and (max-width: 950px) {display: none;}}
+        &:nth-child(n + 4) {@media screen and (max-width: 1270px) {display: none;}}
+        &:nth-child(n + 6) {@media screen and (max-width: 1590px) {display: none;}}
+        &:nth-last-child(1) {display: inline-block;}
     }
 }
 
@@ -122,7 +128,7 @@ img {
 }
 
 #about {
-    .fp-tableCell {
+    .flex-container {
         padding-right: 0px;
     }
 }
