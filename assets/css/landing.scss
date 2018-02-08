@@ -5,6 +5,7 @@
 
 body {
     background-color: black;
+    font-family: proxima_nova_rgbold;
 }
 
 img {
@@ -22,12 +23,11 @@ img {
     background-attachment: fixed;
 }
 
-.first.section {
-    .preview-wrapper {
-    }
-    div {
-        padding: 40px;
-    }
+.first.section .preview-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    margin: 20px;
+    align-items: center;
 }
 
 .preview-wrapper {
@@ -38,7 +38,6 @@ img {
         margin: 20px;
         padding: 40px;
         text-align: left;
-        font-family: proxima_nova_rgbold;
         background-color: black;
         border-radius: 8px;
         color: $color-light-grey;
