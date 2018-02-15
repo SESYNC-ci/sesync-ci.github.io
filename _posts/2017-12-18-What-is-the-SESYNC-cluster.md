@@ -1,5 +1,5 @@
 ---
-title: What is the SESYNC cluster?
+title: What is the compute cluster?
 category: faq
 tags:
 - cluster
