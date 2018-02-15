@@ -1,5 +1,5 @@
 ---
-title: The SESYNC Cluster
+title: The Compute Cluster
 category: quickstart
 tags:
 - infrastructure
