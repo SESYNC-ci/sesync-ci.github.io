@@ -10,33 +10,23 @@ tags:
 - shell
 ---
 
-SESYNC has an extensive set of computing resources available for researchers.
+SESYNC has an extensive set of computing resources and expertiese available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the table below for quick references. **Direct all questions to {{ site.email }}.**
 
-**For all Cyber support questions:** {{ site.email }}
+| Resource | URL |
+|--|--|
+| mailing list | <https://lists.sesync.org> |
+| code repository | <https://gitlab.sesync.org> |
+| research directory access | <https://files.sesync.org> |
+| RStudio | <https:/rstudio.sesync.org> |
+| Shiny Apps | <https://shiny.sesync.org> |
+| SSH gateway | ```<username>@ssh.sesync.org``` |
+| MySQL/PostgreSQL database | ```<hostname>.research.sesync.org``` |
+| Remote desktop | <https://desktop.sesync.org> |
 
-- **Mailing list server:** <https://lists.sesync.org>
-- **Gitlab server:** <https://gitlab.sesync.org>
-- **File gateway server:** <https://files.sesync.org>
-- **RStudio server:** <https:/rstudio.sesync.org>
-- **Shiny server:** <https://shiny.sesync.org>
-- **SSH gateway:** ```user@ubuntu~#:ssh user@ssh.sesync.org```
-- **SLURM computational cluster:** 168 cores 1.2TB memory
-- **Project Data Storage:** 100TB+ project data storage available
-- **Database servers:**
-  - MySQL 
-  - PostgreSQL w/ PostGIS
-- **Custom Virtual Machines:**
-  - Linux
-  - Windows
-- **Enterprise Conferencing:** Skype for Business meetings
+| Service | Description |
+|--|--|
+| Custom virtual machines | Single purpose Windows or linux virtual machine with shared account. |
+| Enterprise cConferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
+| Software purchasing | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 
-SESYNC will also provide access to a variety of software packages including:
-
-- R
-- Python
-- Matlab
-- Stata
-- ArcGIS
-- qGIS
-- MaxQDA
-- Nvivo
+[high-level overview]: https://sesync.sharepoint.com/
