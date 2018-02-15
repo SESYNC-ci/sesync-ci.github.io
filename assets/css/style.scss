@@ -46,6 +46,11 @@ li {
     margin: 0px;
 }
 
+td {
+   border-left-color: $color-primary-trim;
+   border-right-color: $color-primary-trim;
+}
+
 h1 {
 #    margin: 0 0 1em;
 }
