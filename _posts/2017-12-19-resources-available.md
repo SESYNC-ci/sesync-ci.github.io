@@ -30,4 +30,4 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Enterprise conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
 | Software purchasing | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 
-[high-level overview]: https://sesync.sharepoint.com/:w:/s/sesyncci/EUiGtxEQtRhNvtOUFReSor4B7VktZgymaBdQpULJK_QPZw?e=cFdWKZ
+[high-level overview]: https://sesync.sharepoint.com/:w:/s/sesyncci/EUiGtxEQtRhNvtOUFReSor4BdlgQx-KcGYU5-mm5jc6ovg?e=lPW6mi
