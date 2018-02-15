@@ -1,5 +1,5 @@
 ---
-title: Why does does my Virtual Machine show less memory than I requested?
+title: Why does does my virtual machine show less memory than I requested?
 category: faq
 tags:
 - Windows
