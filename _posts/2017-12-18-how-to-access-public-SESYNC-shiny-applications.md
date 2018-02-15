@@ -1,5 +1,5 @@
 ---
-title: How to access public SESYNC Shiny applications?
+title: Where are Shiny apps published?
 category: faq
 tags:
   - R
@@ -7,8 +7,6 @@ tags:
 ---
 
 
-A Shiny application located in the shiny-apps-data/[PATH] shared folder is publicly accessible at the URL:
+Shiny applications hosted by SESYNC are publically available at the URL `http://shiny.sesync.org/apps/<APPNAME>`, where `<APPNAME>` is unique for each app. To get started on publishing an app, read [the quick start guide].
 
-__http://shiny.sesync.org/apps/[PATH]__
-
-If the URL directs to the folder containing the server.R and ui.R files, the app will automatically launch.
+[the chick start guide]: {{quickstart/how-do-i-publish-a-shiny-app-on-the-sesync-server.html | relative_url }}
