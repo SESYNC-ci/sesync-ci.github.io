@@ -5,4 +5,4 @@ tags:
 ---
 
 
-Send email to {{ site.email }}.
+Email [{{ site.email }}](mailto:{{ site.email }}) with your question or support request.
