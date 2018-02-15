@@ -8,6 +8,7 @@ tags:
 - PYDIO
 - Slurm
 - shell
+sticky: true
 ---
 
 SESYNC has an extensive set of computing resources and expertiese available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the tables below for a quick reference. **Direct all questions to {{ site.email }}.**
