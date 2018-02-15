@@ -1,4 +1,5 @@
 ---
+title: RStudio Server
 category: quickstart
 tags:
   - R
