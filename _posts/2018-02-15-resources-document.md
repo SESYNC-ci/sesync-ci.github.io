@@ -1,5 +1,5 @@
 ---
-title: Resource and Services Overview
+title: Resource and Service Overview
 category: quickstart
 sticky: true
 ---
