@@ -46,4 +46,5 @@ defaults:
       type: posts
     values:
       toc: true
+      sticky: false
       permalink: /:categories/:title.html

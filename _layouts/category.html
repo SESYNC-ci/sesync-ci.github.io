@@ -5,7 +5,20 @@ layout: default
 {{ content }}
 
 {% assign category = page.slug %}
-{% for post in site.categories[category] %}
+
+{% assign posts = site.categories[category] | where: 'sticky',true %}
+{% for post in posts %}
+<div class="sticky post {{ post.category }}">
+  <i class="fa fa-sticky-note" aria-hidden="true"></i>
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% if post.category == 'lessons' %}
+    &mdash; {{ post.excerpt | strip_html }}
+  {% endif %}
+</div>
+{% endfor %}
+
+{% assign posts = site.categories[category] | where: 'sticky',false %}
+{% for post in posts %}
 <div class="post {{ post.category }}">
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   {% if post.category == 'lessons' %}
