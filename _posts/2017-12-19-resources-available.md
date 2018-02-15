@@ -10,7 +10,7 @@ tags:
 - shell
 ---
 
-SESYNC has an extensive set of computing resources and expertiese available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the table below for quick references. **Direct all questions to {{ site.email }}.**
+SESYNC has an extensive set of computing resources and expertiese available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the tables below for a quick reference. **Direct all questions to {{ site.email }}.**
 
 | Resource | URL |
 |--|--|
@@ -26,7 +26,7 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Service | Description |
 |--|--|
 | Custom virtual machines | Single purpose Windows or linux virtual machine with shared account. |
-| Enterprise cConferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
+| Enterprise conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
 | Software purchasing | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 
 [high-level overview]: https://sesync.sharepoint.com/
