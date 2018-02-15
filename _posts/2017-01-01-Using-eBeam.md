@@ -1,5 +1,5 @@
 ---
-title: Using eBeam Whiteboards
+title: eBeam Whiteboards
 category: quickstart
 tags:
   - meeting
