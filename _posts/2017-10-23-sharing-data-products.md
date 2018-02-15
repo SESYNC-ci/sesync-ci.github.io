@@ -10,9 +10,7 @@ tags:
 Choosing to put your data products in a long-term repository can:
 
 - let others find and access your dataset
-
 - provide a permanent uniquely identifiable code (DOI) for citing your dataset
-
 - enable re-use and greater visibility of your work
 
 Data repositories vary in many ways including their specificity of topics and data types, requirements for submission, the types and formats of data they will accept, and level of curation. In general, you should (1) put your data where there are other similar types of data, and (2) include descriptive high-quality metadata that describes the dataset. 
