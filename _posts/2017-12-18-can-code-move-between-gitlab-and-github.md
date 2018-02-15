@@ -3,7 +3,7 @@ title: Can code move between GitLab, GitHub, and Bitbucket?
 category: faq
 tags:
  - git
- - reprodicible-research
+ - reproducible-research
 ---
 
 
