@@ -1,5 +1,5 @@
 ---
-title: When are the SESYNC maintenance windows?
+title: When are the server maintenance windows?
 category: faq
 tags: 
 - maintenance-window
