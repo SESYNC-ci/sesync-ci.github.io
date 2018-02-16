@@ -50,3 +50,5 @@ data = fetch(rs, n=-1);
   [http://cran.r-project.org/web/packages/dbConnect/dbConnect.pdf](http://cran.r-project.org/web/packages/dbConnect/dbConnect.pdf)
     and
       [http://www.r-bloggers.com/mysql-and-r/](http://www.r-bloggers.com/mysql-and-r/)
+
+Reference [conncting from R]({{ '/faq/Connecting-RStudio-to-database.html' | relative_url }}).
