@@ -72,13 +72,13 @@ To work with version control systems in RStudio, you create an RStudio "project"
 
 ## Dealing with Data
 
-Since everyone will be working off of the same set of code, there are two
+Since everyone will be working off of the same set of code, there are three
 options for working with data. If your data is quite small (i.e. a csv
 with a few hundred rows, also known as "small-batch artisinal data") you can
-include it in your project and push to your remote repository. Store larger
-datasets in your [Research Data Directory]({{ '/quickstart/research-data-directory.html' | relative_url }})
+include it in your project, push it to your remote repository, and everyone will have a clone. Larger
+datasets should be in your [Research Data Directory]({{ '/quickstart/research-data-directory.html' | relative_url }})
 so that everyone is able to work off one shared copy of the data. Very large datasets may need to be loaded into
-a RDBMS, and SESYNC provides both MySQL and PostgreSQL servers for this purpose.
+a RDBMS, and SESYNC provides both MySQL and PostgreSQL servers for this purpose. See our FAQ on [database connections from RStudio]({{ '/faq/Connecting-RStudio-to-database.html' | relative_url }}) or read the following example of shared file usage.
 
 Let's assume that J. Smith (with USERNAME "jsmith") is part of the "Trees and Urban Heat Island Mitigation"
 working group. When J. Smith logs in to <https://files.sesync.org>, the default workspace
