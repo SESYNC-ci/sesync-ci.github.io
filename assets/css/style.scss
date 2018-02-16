@@ -34,7 +34,7 @@ footer {
     position: fixed;
     bottom: 0px;
     left: 50%;
-    margin-left: 350px;
+    margin: 20px 350px;
     text-align: left;
 }
 
@@ -138,9 +138,6 @@ tags {
 }
 
 @media print, screen and (max-width: 1060px) {
-    footer {
-        bottom: 0px;
-    }
     #banner {
         width: unset;
         right: 0;
