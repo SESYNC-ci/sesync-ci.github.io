@@ -38,7 +38,7 @@ Check your job's status at the command prompt: `$ squeue`
 
 Check your job's output by using `$ ls` to find the `.out` (and maybe `.err`) file containing your job number. View the output with an editor or the `less` command. For example, if your job number were 1234, `$ less slurm-1234.out`
 
-## Connect via Rstudio server
+## Connect via RStudio server
 
 Connect to the RStudio server at `rstudio.sesync.org` For more information, (see)[link to rstudio page]. Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the (rslurm package documatation)[link] and/or this (example)[blog post]. Let's assume for now your R script is called `myRcode.R`
 
@@ -62,5 +62,6 @@ You can find your output in the files window of RStudio. Look for `.out` (and ma
 
 
 ## For more information
-See our (FAQ about the cluster)[link] as well as (the rslurm package)[link].
+
+See our [FAQ about the cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) as well as [the rslurm package](cran.r-project.org/package=rslurm).
 

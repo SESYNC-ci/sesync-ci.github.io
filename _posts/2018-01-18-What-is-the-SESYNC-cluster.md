@@ -29,14 +29,18 @@ currently has three partitions, each for different purposes:
 This partition will allocate entire nodes to your process. You should submit here ONLY if your job is parallel and can use all
 resources on a node. Otherwise, CPU's on the node you requested would sit idle. In R, if you use the parallel package you should
 submit your job to this queue.  
-> Time Limit: 14 days | Max Job Size: 16 nodes | Node Description: 8 core, 60GB memory
+
+| Time Limit | Max Job Size | Node Description |
+| 14 days | 16 nodes | 8 core, 60GB memory |
 
 ### sesyncshared
 
 This queue will run up to 8 simultanious jobs on a compute node. This is good for long running jobs that do not require more than
 one processor. In general, unless you know your job is memory intensive or parallel you'll want to submit here. This is the default
 partition to which jobs get submitted if no partition has been specified
-> Time Limit: unlimited | Max Job Size: 1 node | Node Description: 8 core, 60GB memory
+
+| Time Limit | Max Job Size | Node Description |
+| unlimited | 1 node | 8 core, 60GB memory |
 
 ### sesynctest
 
@@ -46,6 +50,8 @@ job didn't work. Jobs submitted to this partition are limited to running for 1hr
 testing.  Please remember to switch to one of sesync or sesyncshared once you've verified your job is working. You should NOT submit
 large jobs to this partition; submit them to sesync or sesync-shared. The two nodes in this partition are thin and have considerably
 less resources than the other cluster nodes. 
-> Time Limit: 1hr | Max Job Size: 2 nodes | Node Description: 4 core, 8GB memory
 
-## [Quickstart guide](http://cyberhelp.sesync.org/quickstart/Using-the-SESYNC-Cluster.html)
+| Time Limit | Max Job Size | Node Description |
+| 1hr | 2 nodes | 4 core, 8GB memory |
+
+Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
