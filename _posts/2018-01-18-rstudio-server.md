@@ -6,21 +6,20 @@ tags:
   - NFS
 ---
 
-SESYNC provides access to RStudio in your browser in order to develop and run R
-scripts that connect directly to other SESYNC resources (file storage, databases,
-the cluster, etc).
+SESYNC provides access to a remote RStudio session, via a web browser, in order to work in R while
+directly connected to other SESYNC resources (file storage, databases, the cluster, etc).
 
 ## Connecting
 
 Access RStudio by pointing any web browser to <https://rstudio.sesync.org/> and
 logging in with your SESYNC name and password. If you forgot your username or password, please
 go to <https://pwm.sesync.org/>. If your SESYNC credentials do not give you RStudio access,
-please email {{ site.email }}.
+please email {{ site.email }} and ask to enable this resource for your account or whole team.
 
 ## Running RSudio
 
-Once you login, you will see the in-browser version of RStudio. If you've used
-the desktop version, it works almost identically. To learn how to use all the
+Once you log in, you will see an RStudio desktop like application. This RStudio Server application
+works almost identically to the desktop version. To learn how to use all the
 features of the RStudio IDE, check out the [cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
 
 ## R Packages
@@ -36,40 +35,22 @@ message to **{{ site.email }}**, and explain which package you need to install.
 
 "Stuff" usually belongs in one of three places:
 
-1. SESYNC Home Directory (`~/`).
-1. Research Data Directory (`/nfs/my-group-data`)
-1. Version controlled project (paired with [GitLab](https://gitlab.sesync.org), for example)
+1. Research Home Directory (`~/` or equivalently `/research-home/USERNAME/`).
+1. Research Data Directory (`/nfs/PROJECTNAME-data`)
+1. Version controlled project (e.g. on [GitLab](https://gitlab.sesync.org) and cloned into `~/`)
 
-### SESYNC Home Directory
+### Research Home Directory
 
-When you first open R studio, you will be
-      working in your home directory which is located at /research-home/USERNAME
-      (e.g., /research-home/msmorul). This is your private directory and only
-      you have access to the files in it. We strongly recommend that you save
-      all project files and source code in to your home directory. This will
-      protect against multiple group members attempting to update a project file
-      at the same time. If you need to share code between project members please
-      see 'Sharing a project' below.
+When you first open R studio, you will be working in your home directory which is located at "/research-home/USERNAME" or equivalently "~/". This is a private directory, and only you have access to the files in it. We strongly recommend that you save source code in to your home directory. This will protect against multiple group members attempting to update a project file at the same time. If you need to share code between project members please see 'Version Controlled Project' below.
 
 ### Research Data Directory
 
-If you've requested it your group will have a data
-      directory available. This directory is located at /nfs/GROUP\_DIRECTORY
-      where GROUP\_DIRECTORY is the short name of your group appended with
-      -data. This will likely be the same as the name of your Pydio workspace
-      and mailing list. For example, if your workspace is located at
-https://files.sesync.org/pydio/ws-my-group-data/, then your group's data will
-      be located at /nfs/my-group-data. You can upload data to this directory
-      either by saving output from R to folders there, or by using our file
-      upload service described in the guide at \[\[How do I access SESYNC's data
-      storage\]\]. You should store all shared data here. Examples of data types
-      that should be placed here include csv files, landsat imagery, hdf5 data
-      files--anything that's not code that you will be sharing with your group
-      members.
+If you've requested it your group will have a data directory available. This directory is located at "/nfs/PROJECTNAME-data" where "PROJECTNAME" is the short name of your group or project. This will likely be the same as the name of your Pydio workspace and mailing list. For example, if your workspace is located at
+https://files.sesync.org/pydio/ws-PROJECTNAME/, then your group's data will be located at /nfs/PROJECTNAME-data. You can upload data to this directory either by saving output from R to folders there, or by using our file upload service described in the guide at [How do I access SESYNC's datastorage]({{ '/faq/how-do-i-navigate-sesync-storage.html' | relative_url }}). You should store all shared data here. Examples of data types that should be placed here include csv files, landsat imagery, hdf5 data files--anything that's not code that you will be sharing with your group members.
 
 ### Version Controlled Project
 
-We strongly support using version control to manage work with collaborators, not to mention keeping up with principles of reproducible research. SESYNC provides a free GitLab cloud service for private repositories for pre-release projects. Please see [Creating a new Git Project](/quickstart/creating-a-new-git-project.html) for more information on using this service.
+We strongly support using version control to manage work with collaborators, not to mention keeping up with principles of reproducible research. SESYNC provides a free GitLab cloud service for private repositories for pre-release projects. Please see [Creating a new Git Project]({{ '/quickstart/creating-a-new-git-project.html' | relative_url }}) for more information on using this service.
 
 To work with version control systems in RStudio, you create an RStudio "project" to pair with a remote repository.
 
@@ -98,3 +79,19 @@ include it in your project and push to your remote repository. Store larger
 datasets in your [Research Data Directory]({{ '/quickstart/research-data-directory.html' | relative_url }})
 so that everyone is able to work off one shared copy of the data. Very large datasets may need to be loaded into
 a RDBMS, and SESYNC provides both MySQL and PostgreSQL servers for this purpose.
+
+Let's assume that J. Smith (with USERNAME "jsmith") is part of the "Trees and Urban Heat Island Mitigation"
+working group. When J. Smith logs in to <https://files.sesync.org>, the default workspace
+will show the PROJECTNAME is "cool-trees". After uploading the file "urbanET.tif", any member of the project has access to the data from RStudio. For example, a script saved as "~/cool-viz.R" could include
+
+```r
+library(raster)
+urbanET <- raster("/nfs/cool-trees-data/urbanET.tif")
+```
+
+To make the code more portable (i.e. remove the explicit path to a SESYNC research data directory), J. Smith could create a shortcut with the R command `file.symlink('/nfs/cool-trees-data', 'data')`, and modify the "cool-viz.R" script to use the shortcut:
+
+```r
+library(raster)
+urbanET <- raster("data/urbanET.tif")
+```
