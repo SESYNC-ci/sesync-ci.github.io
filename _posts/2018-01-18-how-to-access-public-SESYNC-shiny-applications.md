@@ -9,4 +9,4 @@ tags:
 
 Shiny applications hosted by SESYNC are publically available at the URL `http://shiny.sesync.org/apps/<APPNAME>`, where `<APPNAME>` is unique for each app. To get started on publishing an app, read [the quick start guide].
 
-[the chick start guide]: {{quickstart/how-do-i-publish-a-shiny-app-on-the-sesync-server.html | relative_url }}
+[the quick start guide]: {{ '/quickstart/how-do-i-publish-a-shiny-app-on-the-sesync-server.html' | relative_url }}
