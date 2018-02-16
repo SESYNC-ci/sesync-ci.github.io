@@ -39,24 +39,26 @@ A better approach would be to store the connection parameters in a configuration
 
 ## Configuration File
 
-Connection parameters can be stored in a separate plain text file to be read by the database client. PostgreSQL clients look for a connection service file in the location "~/.pg_service.conf" by default or anywhere specified by the environment variable PGSERVICEFILE. MySQL clients similarly look for an options file. If the example above belonged to a SESYNC researcher with shared data directory "/nfs/abc-data/", a connection service file could be created with the R command "file.edit('/nfs/abc-data/pg_service.conf')" and saved with the entry
+Connection parameters can be stored in a separate plain text file to be read by the database client. PostgreSQL clients look for a connection service file in the location "~/.pg_service.conf" by default or anywhere specified by the environment variable PGSERVICEFILE. MySQL clients similarly look for an options file. If the example above belonged to a SESYNC researcher with shared data directory "/nfs/abc-data/", a connection service file could be created with the R command `file.edit('/nfs/abc-data/pg_service.conf')` and saved with the contents
 
+```
 [abc]
 host=xyz.research.sesync.org
 dbname=abc
 user=abc_owner
 password=abc_passwd
+```
 
-
-It is essential that any configuration file be readable only by its owner: from within R, secure the file imediately after creating it with "Sys.chmod('/nfs/abc-data/pg_service.conf', '0600')". Any RStudio project that will use database "abc" should then include a ".Renviron" file with the line
-
+It is essential that any configuration file be readable only by its owner: from within R, secure the file imediately after creating it with `Sys.chmod('/nfs/abc-data/pg_service.conf', '0600')`. Any RStudio project that will use database "abc" should then include a ".Renviron" file with the line
+```
 PGSERVICEFILE=/nfs/abc-data/pg_service.conf
-An alternative for scripts that exist outside of an RStudio project is inclusion of the command "Sys.setenv(PGSERVICEFILE='/nfs/abc-data/pg_service.conf')". Once the RPostgreSQL client is able to find the connection service file, the connection can be established using just a service name (i.e. the text within "[...]"):
+```
+An alternative for scripts that exist outside of an RStudio project is to include the command `Sys.setenv(PGSERVICEFILE='/nfs/abc-data/pg_service.conf')`.
+
+Once the RPostgreSQL client is able to find the connection service file, the connection can be established using just a service name (i.e. the text within "[...]"):
 
 ```r
-
 library(RPostgreSQL)
-
 con <- dbConnect(PostgreSQL(), dbname = 'postgresql://@/?service=abc')
 
 # code referrencing "con"
@@ -66,9 +68,3 @@ dbDisonnect(con)
 ```
 
 Here the string given for "dbname" is a connection URI missing all connection parameters except for the service name, which tells the client where to look the rest up in the connection service file.
-
-
-
-
-
-
