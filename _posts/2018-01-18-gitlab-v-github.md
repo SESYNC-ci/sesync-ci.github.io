@@ -6,7 +6,7 @@ tags:
 ---
 
 
-The short answer is no. If you already have projects on GitHub that you are working on, we prefer that you continue to use
+If you already have projects on GitHub that you are working on, we prefer that you continue to use
 GitHub due to its open nature. We'll gladly push and pull code from your public repository. We provide GitLab locally for
 projects that are just starting up, have sensitive data, or are not quite mature enough to be pushed out into the world.
 
