@@ -1,5 +1,5 @@
 ---
-title: How do I access the research data directory?
+title: How do I access SESYNC's data storage?
 category: faq
 tags:
   - data
@@ -13,6 +13,19 @@ In order to access your group's data, you will need to know the short name of th
 ## From Linux/RStudio Server
 
 Your storage is available to RStudio and your groups dedicated virtual machines by going to /nfs/group-data. Please note, your directory won't appear in /nfs until you attempt to access it (ie: 'cd /nfs/group-data' and not just 'ls /nfs')
+
+## Transfering data using the ssh gateway
+
+1. Connect to the SESYNC SSH gateway **ssh.sesync.org** with your SFTP client using your SESYNC credentials
+   * **Host:** ssh.sesync.org
+   * **Username:** \<YOUR SESYNC USERNAME\>
+   * **Password:** \<YOUR SESYNC PASSWORD\>
+   * **Port:** 22
+2. Change Remote site path to `/nfs/<research-data-directory-name>`
+
+![](/assets/images/sftp/sftp00.PNG)
+
+[Bulk Uploads and Downloads by SFTP](http://cyberhelp.sesync.org/quickstart/Bulk-upload-download-FileZilla.html)
 
 ## From Windows
 
