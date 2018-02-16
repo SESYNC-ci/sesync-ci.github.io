@@ -21,7 +21,7 @@ layout: default
 {% for post in posts %}
 <div class="post {{ post.category }}">
   {% if post.category == 'blog' %}
-    {{ post.date | date: '%B %d, %Y' }}&mdash;
+    {{ post.date | date: '%B %d, %Y' }} &mdash;
   {% endif %}
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   {% if post.category == 'lessons' %}
