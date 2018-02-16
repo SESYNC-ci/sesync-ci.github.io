@@ -63,5 +63,5 @@ You can find your output in the files window of RStudio. Look for `.out` (and ma
 
 ## For more information
 
-See our [FAQ about the cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) as well as [the rslurm package](cran.r-project.org/package=rslurm).
+See our [FAQ about the cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) as well as [the rslurm package](https://cran.r-project.org/package=rslurm).
 
