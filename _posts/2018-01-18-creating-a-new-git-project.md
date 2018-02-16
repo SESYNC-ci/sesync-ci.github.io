@@ -32,6 +32,9 @@ after your project is created, you can use the links on your project page to bro
 ![](/assets/images/git_repository.png)
 
 ## 3. Sharing your project
+
+#### Sharing your gitlab project with collaborators requires that collaborators have a SESYNC account. Please contact cyberhelp@sesync.org if your collaborator needs an account.
+
 From the dashboard of your project, click the 'Settings' link, then click 'Members'. You can share your project with new people by clicking the 'new project member' button.
 
 In the Choose people you want to share with, start typing the name of your collegues and they should appear. If they do not, they probably haven't logged in to gitlab yet. Drop them a quick e-mail asking them to login so you can grant access. You can shoose the level of access from the choices below.
