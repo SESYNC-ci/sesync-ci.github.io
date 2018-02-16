@@ -14,13 +14,19 @@ header {
     h2 {
         font-family: proxima_nova_ltsemibold;
         color: #666;
+        @media print, screen and (max-width: 680px) {
+            display: none;
+        }
     }
     img {
         position: absolute;
-        padding: 25px 20px 40px 20px;
+        padding: 15px 20px 40px 20px;
         left: 0;
         top: 0;
         height: calc(100% - 25px - 40px);
+        @media print, screen and (max-width: 680px) {
+            display: none;
+        }
     }
 }
 
@@ -114,6 +120,10 @@ tags {
     .button:hover {
         background-color: $color-primary-light;
     }
+    @media print, screen and (max-width: 1060px) {
+        width: unset;
+        right: 0;
+    }
 }
 
 #search-box {
@@ -126,7 +136,9 @@ tags {
     .gsc-clear-button {
         visibility: hidden;
     }
-    
+    @media print, screen and (max-width: 680px) {
+        display: none;
+    }
 }
 
 #search-result {
@@ -134,21 +146,5 @@ tags {
     overflow: scroll;
     td {
         border: none;
-    }
-}
-
-@media print, screen and (max-width: 1060px) {
-    #banner {
-        width: unset;
-        right: 0;
-    }
-}
-
-@media print, screen and (max-width: 680px) {
-    header img {
-        display: none;
-    }
-    #search-box {
-        display: none;
     }
 }
