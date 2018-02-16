@@ -7,9 +7,6 @@ tags:
 author: khondula
 ---
 
-# {{ page.title }}
-
-
 For multi-panel plots, I like to use the [cowplot](https://cran.r-project.org/web/packages/cowplot/index.html) package in R. It has an intuitive way to arrange panels and add annotation labels, which is described in one of the package's [vignettes](https://cran.r-project.org/web/packages/cowplot/vignettes/plot_grid.html). 
 
 The basic idea is to initiate an empty drawing canvas with the `ggdraw()` function, and then determined the location and sizing of each panel with `draw_plot()` functions. 
