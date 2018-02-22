@@ -30,7 +30,7 @@ The maintenance Window is usually a Thursday. A list of remaining maintenance wi
 
 ## What happens to my scheduled jobs during the maintenance window?
 
-[SLURM cluster maintenance window details](/blob/master/_posts/2017-12-18-maintenance-window-slurm.md)
+[SLURM cluster maintenance window details]({ '/faq/maintenance-window-slurm.html' | relative_url })
 
 ## Patching Schedule and Notes
 
