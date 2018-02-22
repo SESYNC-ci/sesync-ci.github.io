@@ -19,4 +19,4 @@ Virtual Machines will be managed by SESYNC CI IT staff including:
 SESYNC reserves the right to perform emergency patching on all services hosted at SESYNC at any time without warning.
 Depending on the severity of the vulnerability, there may be a litmited time window between when an exploit is announced and when malicious users begin exploiting the vulnerability.
   
-See [obtaining software for use at SESYNC](/blob/master/_posts/2017-12-18-obtaining-software.md) for more information.
+See [obtaining software for use at SESYNC]({{ '/faq/obtaining-software.html' | relative_url }}) for more information.
