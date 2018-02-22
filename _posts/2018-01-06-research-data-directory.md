@@ -27,7 +27,7 @@ to use the Pydio Desktop Client available for download at:
 
 
 
-[Using the Pydio Sync Client for Windows](/blob/master/_posts/2018-01-09-syncing-data-local.md)
+[Using the Pydio Sync Client for Windows]({{ '/faq/syncing-data-local.html' | relative_url }})
 
 ## Transfering data using the ssh gateway
 
