@@ -8,11 +8,6 @@ body {
     font-family: proxima_nova_rgbold;
 }
 
-img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
 .section {
     color: white;
     -webkit-background-size: cover;
@@ -23,24 +18,22 @@ img {
     background-attachment: fixed;
 }
 
-.first.section .preview-wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
-    margin: 20px;
-    align-items: center;
-}
-
 .preview-wrapper {
+    margin: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
-    padding-right: 220px;
+    grid-template-rows: repeat(2, minmax(260px, 1fr));
+    grid-auto-rows: 0;
+    overflow-y: hidden;
     & > div.preview {
-        margin: 20px;
+        margin: 10px;
         padding: 40px;
         text-align: left;
         background-color: black;
         border-radius: 8px;
         color: $color-light-grey;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
         a {
             font-size: 150%;
             color: white;
@@ -49,13 +42,20 @@ img {
             font-size: inherit;
             color: inherit;
         }
-        &:nth-child(n+2){@media screen and (max-width:  950px) {display: none;}}
-        &:nth-child(n+4){@media screen and (max-width: 1270px) {display: none;}}
-        &:nth-child(n+6){@media screen and (max-width: 1590px) {display: none;}}
-        &:nth-child(n+8){@media screen and (max-width: 1810px) {display: none;}}
         &.more {
-            display: block;
+            border: 1px solid white;
         }
+    }
+}
+
+.first.section .preview-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 40px;
+    align-items: center;
+    img {
+      width: 100%;
     }
 }
 
@@ -108,18 +108,30 @@ img {
 
 #quickstart {
     background-image: url("{{ 'assets/images/grey_puzzle_piece.jpg' | relative_url }}");
+    .preview.more {
+        background-color: #00436f;
+    }
 }
 
 #faq {
     background-image: url("{{ 'assets/images/question-mark-1872665.jpg' | relative_url }}");
+    .preview.more {
+        background-color: #626262;
+    }
 }
 
 #blog {
     background-image: url("{{ 'assets/images/Digital_network.jpg' | relative_url }}");
+    .preview.more {
+        background-color: #ea9700;
+    }
 }
 
 #lessons {
     background-image: url("{{ 'assets/images/Data_Center.jpg' | relative_url }}");
+    .preview.more {
+        background-color: #a307b6;
+    }
 }
 
 #about {
