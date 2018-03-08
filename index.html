@@ -31,8 +31,10 @@ order:
       {% assign posts = site.categories[cat] %}
       {% for post in posts %}
       <div class="preview {{ post.category }}">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
+        <div>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <p>{{ post.excerpt | strip_html }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>

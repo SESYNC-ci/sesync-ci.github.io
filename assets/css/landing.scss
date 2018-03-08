@@ -22,7 +22,10 @@ body {
     margin: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
-    grid-template-rows: repeat(2, minmax(260px, 1fr));
+    grid-template-rows: repeat(2, minmax(260px, 40vh));
+    @media screen and (max-height: 710px) {
+        grid-template-rows: minmax(260px, 80vh);
+    }
     grid-auto-rows: 0;
     overflow-y: hidden;
     & > div.preview {
@@ -41,6 +44,10 @@ body {
         p > a {
             font-size: inherit;
             color: inherit;
+        }
+        & > div {
+            height: 100%;
+            overflow: hidden;
         }
         &.more {
             border: 1px solid white;
