@@ -1,5 +1,5 @@
 ---
-title: Images for data exploration in RShiny apps
+title: Images for Data Exploration in RShiny Apps
 category: blog
 tags:
   - dataviz
