@@ -6,7 +6,7 @@ author: itcarroll
 category: blog
 tags:
  - R
- - data.table
+ - dplyr
 ---
 
 Partway through her LTER Postdoc at SESYNC, ecologist Meghan Avolio ran into trouble manipulating her data on plant communities with `dplyr` functions. I had encouraged Meghan to modularize her scripts by writing functions for common steps in her pipeline (such as converting count data into rank-abundance curves). "You'll love writing functions!" I said wrongly.
@@ -79,7 +79,7 @@ level_mean_nse <- function(data, factor, level, value) {
 }
 ```
 
-Focus on the second line, where substitute gets the expression `factor == level`. The first part of that expression will be substituted for the *expression* embedded in the promise object `factor`, whatever it may be when `level_mean_nse` gets used. The same happens for `level`, and the result is stored as `only_this_level`. Now at line 24, notice the `!!` in the call to `filter`, and again in `summarize` on the next line. Since we are implementing our own NSE, we have to bypass the `dplyr` mechanism for lazy evaluation, and that's exactly what the `!!` prefix does. Note you could also use [rlang's] "quosure", but c'mon this isn't [lolcode].
+Focus on the second line, where substitute gets the expression `factor == level`. The first part of that expression will be substituted for the *expression* embedded in the promise object `factor`, whatever it may be when `level_mean_nse` gets used. The same happens for `level`, and the result is stored as `only_this_level`. A couple lines below that, notice the `!!` in the call to `filter`, and again in `summarize`. Since we are implementing our own NSE, we have to bypass the `dplyr` mechanism for lazy evaluation, and that's exactly what the `!!` prefix does. Note you could also use [rlang's] "quosure", but c'mon this isn't [lolcode].
 
 Now try using your function with `dplyr` style unquoted arguments:
 
@@ -91,7 +91,7 @@ See how it works? The application of `filter` ended up equivalent to `filter(plo
 
 ## "No, you shouldn't."
 
-When you program with `substitute` (or `quo`) you are writing code to write code to do what you want. Whenever possible, just write code to do what you want. That way, the code is more readable for your colaborators, yourself two weeks from now, and the consumers of your open source contribution. The code is also easier to develop and debug. You cannot, for example, get the body of `level_mean_nse` working first and wrap it up in a `function() {}` last, because `substitute` only works right inside a function call.
+When you program with `substitute` (or `quo`) you are writing code to write code to do what you want. Whenever possible, just write code to do what you want. That way, the code is more readable for your colaborators, yourself two weeks from now, and the consumers of your open source contribution. The code is also easier to develop and debug. You cannot, for example, get the body of `level_mean_nse` working first and wrap it up in a `function() {...}` block last, because `substitute` only works right inside a function call.
 
 You should know how to avoid NSE altogether by treating column names as what they are, strings. Newer versions of `dplyr` that import `rlang` provde a `.data` object to get around NSE. The `.data` object is something like the original data but as processed "so far". Subset `.data` in the normal way, referencing columns by name, within any of the `dplyr` verbs:
 
