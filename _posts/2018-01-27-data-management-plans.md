@@ -1,5 +1,5 @@
 ---
-title: Writing data management plans
+title: Writing Data Management Plans
 category: blog
 tags:
   - data
