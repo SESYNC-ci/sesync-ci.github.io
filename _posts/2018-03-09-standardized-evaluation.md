@@ -59,7 +59,7 @@ level_mean_nope(plots, 'Plot', 2, 'Cover')
 ## 1  NA
 ```
 
-What's worse than the warning is that the answer given, `NA`, is wrong! Without the `summarize` part, the result would still not be what you'ld expect, and there would be no warning at all.
+What's worse than the warning is that the answer given, `NA`, is wrong! Without the `summarize` part, the result would still not be what you'd expect, and there would be no warning at all.
 
 By the way, have you read the [Programming with dplyr] vignette? Did it help? Yeah, me neither ... but this stuff is hard to understand!
 
