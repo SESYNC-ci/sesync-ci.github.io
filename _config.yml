@@ -16,6 +16,7 @@ collections:
     permalink: /:collection/:title/
 plugins:
   - jemoji
+  - jekyll-feed
 
 # Build
 repository: SESYNC-ci/sesync-ci.github.io
