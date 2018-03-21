@@ -4,6 +4,7 @@ category: quickstart
 tags:
   - R
   - NFS
+sticky: true
 ---
 
 SESYNC provides access to a remote RStudio session, via a web browser, in order to work in R while
