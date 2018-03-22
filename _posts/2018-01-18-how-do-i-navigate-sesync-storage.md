@@ -29,7 +29,7 @@ Your storage is available to RStudio and your groups dedicated virtual machines 
 
 ## From Windows
 
-From any SESYNC windows virtual machine, desktop, or laptop you can access your groups storage by opening your file browser (your local documents folder) and in the address bar at the top type \\storage.research.sesync.org\group-data
+From any SESYNC windows virtual machine, desktop, or laptop you can access your groups storage by opening your file browser (your local documents folder) and in the address bar at the top type \\\storage.research.sesync.org\group-data
 
 ## From a browser
 
