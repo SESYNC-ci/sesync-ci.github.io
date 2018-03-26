@@ -52,6 +52,7 @@ pkgs <- pkgs[mapply(compareVersion, pkgs$Min.Version, pkgs$Version) > 0, ]
 lapply(pkgs$Package, install.packages, repos="http://cran.us.r-project.org")
 
 # Require dependencies [optional]
+lapply(dependencies$Package, require, character.only=TRUE)
 ```
 
 2. Add "source(dependencies.R)" to the top of your __app.R__ single-file Shiny script.
