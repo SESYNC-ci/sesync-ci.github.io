@@ -1,5 +1,5 @@
 ---
-title: Build a shiny app to browse MODIS data
+title: Build a Shiny App to Browse MODIS Data
 category: blog
 tags:
   - dataviz
