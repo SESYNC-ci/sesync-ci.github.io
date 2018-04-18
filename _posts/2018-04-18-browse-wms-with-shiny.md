@@ -11,7 +11,7 @@ In preparation for our recent geospatial short course, I spent some time getting
 
 One of the things I really enjoy about [leaflet](https://rstudio.github.io/leaflet/) in R is how you can visualize and explore spatial data relatively quickly. Many public data sets like National Land Cover & National Hydrography from [The National Map](https://viewer.nationalmap.gov/services/), and even real time [weather](http://mesonet.agron.iastate.edu/ogc/) and satellite data are available as web mapping services that make it possible to add layers of these data sets with just a few lines of code. 
 
-A really nice update to leaflet is that it's now easier to add different base map layers, since there's a `providers` list that now ships with the package. Whereas previously you would need to know the exact name of the map layer you wanted to use and put it in quotes, now tab-completetion makes it possible to just scroll through the list of 110 providers! 
+A really nice update to leaflet is that it's now easier to add different base map layers, since there's a `providers` list that now ships with the package. Whereas previously you would need to know the exact name of the map layer you wanted to use and put it in quotes, now tab-completion makes it possible to just scroll through the list of 110 providers! 
 
 ![tab-providers](/assets/images/providers-tab.png)
 
@@ -44,4 +44,4 @@ shinyApp(ui, server)
 ```
 
 
-See a demo of the app [here](https://shiny.sesync.org/apps/modis-browser/).
+See a live demo of the app [here](https://shiny.sesync.org/apps/modis-browser/).
