@@ -44,4 +44,4 @@ shinyApp(ui, server)
 ```
 
 
-See a live demo of the app [here](https://shiny.sesync.org/apps/modis-browser/).
+See a live demo of the app [here](https://shiny.sesync.org/apps/modis-browser/) or get the code on [github](https://github.com/khondula/shiny-modis-browser).
