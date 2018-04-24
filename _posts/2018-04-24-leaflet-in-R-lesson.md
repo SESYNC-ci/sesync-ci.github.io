@@ -5,6 +5,6 @@ tags:
  - dataviz
  - R
  - geospatial
-permalink: "/:slug"
+permalink: "/leaflet-in-R-lesson"
 ---
 {% include description.md name=page.slug %}
