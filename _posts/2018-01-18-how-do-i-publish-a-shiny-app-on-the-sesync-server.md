@@ -49,7 +49,10 @@ pkgs <- merge(dependencies, pkgs, by="Package", all.x=TRUE)
 pkgs <- pkgs[mapply(compareVersion, pkgs$Min.Version, pkgs$Version) > 0, ]
 
 # Install missing and newer packages
-lapply(pkgs$Package, install.packages, repos="http://cran.us.r-project.org")
+cran <- pkgs[pkgs$source=='CRAN', ]
+null <- lapply(cran$Package, install.packages)
+github <- pkgs[pkgs$source=='github', ]
+null <- lapply(cran$Package, devtools::install_github)
 
 # Require dependencies [optional]
 lapply(dependencies$Package, require, character.only=TRUE)
