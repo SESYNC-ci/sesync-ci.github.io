@@ -2,9 +2,10 @@
 title: Making dataspice at runconf
 category: blog
 tags:
-  - dataviz
+  - metadata
   - R
-  - shiny
+  - reproducible-research
+  - data
 author: khondula
 ---
 
