@@ -1,5 +1,5 @@
 ---
-title: Making "dataspice" at #runconf18
+title: "Making \"dataspice\" at #runconf18"
 category: blog
 tags:
   - metadata
