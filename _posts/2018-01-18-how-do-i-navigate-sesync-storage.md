@@ -13,15 +13,15 @@ In order to access a research data directory, you will need to know the "workspa
 
 ## From RStudio Server and other Linux Machines
 
-Any research storage directory you have permission to access is available at the filesystem path at /nfs/%WORKSPACE%-data. Please note, these directories won't appear within the /nfs directory until you attempt to access it (i.e. by 'cd /nfs/%WORKSPACE%-data' rather than 'ls /nfs').
+Any research storage directory you have permission to access is available at the filesystem path at `/nfs/%WORKSPACE%-data`. Please note, these directories won't appear within the `/nfs` directory until you attempt to access it (i.e. by `cd /nfs/%WORKSPACE%-data` rather than `ls /nfs`).
 
 ## From Windows
 
-From a Windows desktop or laptop on "sesync-private" or any virtual machine, you can access a research data directory by opening the file browser (e.g. open your Documents folder) and entering \\\storage.research.sesync.org\%WORKSPACE%-data in the address bar.
+From a Windows desktop or laptop on "sesync-private" or any virtual machine, you can access a research data directory by opening the file browser (e.g. open your Documents folder) and entering `\\\storage.research.sesync.org\%WORKSPACE%-data` in the address bar.
 
 ## From macOS
 
-From a macOS desktop or laptop on "sesync-private" you can access a research data directory by opening Finder, navigating to "Go > Connect to Server ..." and entering smb://storage.research.sesync.org/%WORKSPACE%-data as the server address.
+From a macOS desktop or laptop on "sesync-private" you can access a research data directory by opening Finder, navigating to "Go > Connect to Server ..." and entering `smb://storage.research.sesync.org/%WORKSPACE%-data` as the server address.
 
 ## From a Browser
 
@@ -29,12 +29,12 @@ Point your web browser to [https://files.sesync.org](https://files.sesync.org) a
 
 ## Over SSH
 
-1. Connect to SESYNC's Linux gateway, **ssh.sesync.org**, with your SFTP client or via ssh using your SESYNC credentials
-   * **Host:** ssh.sesync.org
-   * **Username:** %YOUR SESYNC USERNAME%
-   * **Password:** %YOUR SESYNC PASSWORD%
-   * **Port:** 22
-2. Change Remote site path to "/nfs/%WORKSPACE%-name"
+1. Connect to SESYNC's Linux gateway with your SFTP client or via ssh using your SESYNC credentials:
+   - **Host:** ssh.sesync.org
+   - **Username:** %YOUR SESYNC USERNAME%
+   - **Password:** %YOUR SESYNC PASSWORD%
+   - **Port:** 22
+2. Change Remote site path to `/nfs/%WORKSPACE%-name`
 
 ![](/assets/images/sftp/sftp00.PNG)
 
