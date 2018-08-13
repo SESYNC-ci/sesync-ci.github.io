@@ -9,13 +9,13 @@ SESYNC's computational cluster enables users to run medium-to-large scale analys
 
 ## Overview of the cluster and scheduler
 
-The cluster is a group of 22 virtual machines with a total of 168 cores and 1.28 T of RAM that is accessible through
+The cluster is a group of 26 virtual machines with a total of 190 cores and 1.65 TB of RAM that is accessible through
 a scheduler. Using two special commands (sbatch and srun), you request the scheduler to allocate one or more compute nodes for a job.
 The scheduler puts your job in a queue and executes it when sufficient compute nodes are available. The advantage of this type of
 processing is that you can submit many requests (hundreds or thousands), and they will run as  resources become available. It also means
 that when you gain access to a compute node, you have sole access to it during the time your code is running, i.e., you're not competing with other individuals for CPU cycles. 
 
-There are two types of nodes available in the SESYNC cluster: two development/testing nodes and 20 computation nodes. All computation nodes have 8 CPU cores and 60Gb of memory available running 64-bit Ubuntu Linux version 14.04. All nodes have compilers, core R packages, and python available. 
+There are three types of nodes available in the SESYNC cluster: two development/testing nodes and 20 computation nodes, and 4 high memory computation nodes. All computation nodes are running running 64-bit Ubuntu Linux version 16.04. Twenty compuation nodes have 8 CPU cores and 60GB of memory each. Four computation nodes have 8 CPU cores and 120GB of memory each. All nodes have compilers, core R packages, and python available. 
 
 We use a scheduler system called the Simple Linux Utility for Resource Management (Slurm) developed by [Lawrence Livermore National Laboratory](https://www.llnl.gov/). It is  one of the most popular systems among large high performance clusters and is the one used by the University of Maryland Deepthought supercomputer. This means that any submission script you develop on our modest cluster can be easily ported to a much large HPC system.
 
@@ -31,7 +31,7 @@ resources on a node. Otherwise, CPU's on the node you requested would sit idle. 
 submit your job to this queue.  
 
 | Time Limit | Max Job Size | Node Description |
-| 14 days | 16 nodes | 8 core, 60GB memory |
+| 14 days | 24 nodes | 20 nodes of 8 core, 60GB memory nodes & 4 nodes of 8 core, 120GB memory|
 
 ### sesyncshared
 
