@@ -23,7 +23,7 @@ My blog post about open data for reproducible research.
 
 ## Category
 
-The names of the files in the [_category_pages folder](_category_pages/) should be the
+Posts are divided into a handful of categories, corresponding to the style of information delivery rather than the topic. The names of the files in the [_category folder](_category/) should be the
 only strings used for the `category` variable in any post's front matter.
 No mechanism automatically checks this, so please type carefully.
 
@@ -33,6 +33,8 @@ A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
 tags where possible (see them all at [/tags](https://sesync-ci.github.io/tags)), but also feel free to use a
 novel tag.
+
+If you add a tag, actually **add** the tag to the [_tags folder](_tags/)!
 
 ## Style Guide
 
