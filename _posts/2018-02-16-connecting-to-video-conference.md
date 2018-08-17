@@ -1,6 +1,6 @@
 ---
 title: How do I connect to a video conference?
-category: fag
+category: faq
 tags:
   - meeting
 ---
