@@ -5,7 +5,6 @@ tags:
 - infrastructure
 - database
 - NFS
-- PYDIO
 - Slurm
 - shell
 sticky: true
@@ -17,7 +16,7 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 |--|--|
 | mailing list | <https://lists.sesync.org> |
 | code repository | <https://gitlab.sesync.org> |
-| research directory access | <https://files.sesync.org> |
+| research data directory | <https://files.sesync.org> |
 | RStudio | <https:/rstudio.sesync.org> |
 | Shiny Apps | <https://shiny.sesync.org> |
 | SSH gateway | ```<username>@ssh.sesync.org``` |

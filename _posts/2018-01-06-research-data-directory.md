@@ -5,59 +5,77 @@ tags:
  - data
 ---
 
-The data storage available at SESYNC has multiple points of access, suitable for
-different methods of transferring and accessing project data.
+SESYNC provides a large, shared file store to host data for all of our projects.
+Once our IT staff creates a research data directory location, it's accessible
+from any Linux, macOS, or Windows machine (including Virtual Machines) that you
+have access to. Computers on the "sesync-secure" network, including desktops and
+laptops used by SESYNC postdocs and employees, can map the research data
+directory into their file viewer. Funded project participants, visitors, and
+staff all have access to their research data directory through our compute
+servers, a web portal, a desktop application for syncing, and SSH.
 
-## Transfer data using the web portal
+The "PROJECTNAME" variable referenced below is assigned by SESYNCs IT staff at
+creation. It will either be a short project title or an individual's SESYNC
+login.
 
-All of our data directories are accessible via a web portal, this portal allows
-you to upload, download and arrange your data on SESYNC's storage
+## RStudio Server and other Linux Machines
 
-1. Go to <https://files.sesync.org>, log in using your sesync username and
+Any research data directory you have permission to access is available at the
+filesystem path at `/nfs/PROJECTNAME-data`. Please note, these directories won't
+appear within the `/nfs` directory until you attempt to access it (i.e. by `cd
+/nfs/PROJECTNAME-data` rather than `ls /nfs`). The path is the same on all our
+Linux systems, including virtual machines and the [RStudio Server]({{
+'/quickstart/rstudio-server.html' | relative_url }})). From a Linux shell, type
+`cd /nfs/PROJECTNAME-data` to set your working directory to your research data
+directory.
+
+## Windows
+
+From a Windows virtual machine (e.e. at <https://desktop.sesync.org>) as well as
+desktops or laptops on the "sesync-secure" network or the VPN, you can access a
+research data directory by opening the file browser (e.g. open your Documents
+folder) and entering `\\\storage.research.sesync.org\PROJECTNAME-data` in the
+address bar. For regular access, you could map a network drive letter to your
+research data directory. Click the file explorer icon in the task bar (folder
+icon). Then right-click "This PC" & choose "map network drive". In the "folder"
+space, type `\\\storage.research.sesync.org\PROJECTNAME-data`.
+
+For computers not on SESYNC's internal network, use a [sync
+client]({{ '/faq/syncing-data-local.html' | relative_url }}) to keep a local folder
+up to date with your research data directory.
+
+## macOS
+
+From a macOS desktop or laptop on "sesync-secure" or the VPN, you can access a
+research data directory by opening Finder, navigating to "Go > Connect to Server
+..." and entering `smb://storage.research.sesync.org/PROJECTNAME-data` as the
+server address.
+
+For computers not on SESYNC's internal network, use a [sync
+client]({{ '/faq/syncing-data-local.html' | relative_url }}) to keep a local folder
+up to date with your research data directory.
+
+## Web Browser
+
+All of our data directories are accessible via your web browser---the portal
+allows you to upload, download and arrange your data on SESYNC's storage.
+
+1. Go to <https://files.sesync.org>, log in using your SESYNC username and
    password.
-2. Select the workspace corresponding to your data share and upload data.
+2. Open the folder corresponding to your project (i.e. `PROJECTNAME-data`)
+3. Upload data.
 
-## Syncing your data directory to a PC
+## Over SSH
 
-We are currently beta testing data share syncing. If you would like to help us
-test, please contact SESYNC's IT staff.  Our web portal has the ability to sync
-data directly to your PC similar to Dropbox. In order do to this, you will need
-to use the Pydio Desktop Client available for download at:
-<https://pyd.io/apps/pydio-sync/>
+1. Connect to SESYNC's Linux gateway with any SFTP client or via SSH using your SESYNC credentials:
+   - **Host:** ssh.sesync.org
+   - **Username:** %YOUR SESYNC USERNAME%
+   - **Password:** %YOUR SESYNC PASSWORD%
+   - **Port:** 22
+2. Change remote path to `/nfs/PROJECTNAME-name`
 
-
-
-[Using the Pydio Sync Client for Windows]({{ '/faq/syncing-data-local.html' | relative_url }})
-
-## Transfering data using the ssh gateway
-
-You can use any sftp client of your choice to connect to our ssh gateway and
-transfer data. We recomend the Filezilla client. In order to move data, you will
-need to know the name of your file share, this name is the short name (same name
-as your collab site and/or your mailing list) of your group appended with
--data. For example, if your group's data is at
-<https://files.sesync.org/pydio/ws-environmental-project>, your file share would be
-"environmental-project-data".
-
-All research file shares are available on both your linux virtual machine and on
-our ssh gateway at "/nfs/FILE_SHARE".  Using sftp from a remote site you can
-transfer data to "sftp://ssh.sesync.org/nfs/FILE_SHARE". From a linux virtual
-machine, cd "/nfs/FILE_SHARE" to access your project.
-
-[Using FileZilla to Upload Data.](https://collab.sesync.org/sites/support/Frequently%20Asked%20Questions/Using%20FileZilla%20to%20Upload%20Data.aspx)
-
-## Accessing your data from your Windows VM (<https://desktop.sesync.org>)
-
-There are two methods, you can either directly access the share on our file
-server or by mapping a drive to your file share. For sesync postdocs and staff,
-you can use this method to directly access your file share while at SESYNC or
-connected via VPN.
-
-Direct access
-: From your Windows desktop, press the start button, type
-"\\\storage.research.sesync.org\FILE_SHARE".
-
-Map a network drive
-: From your Windows desktop, click the file explorer icon in the task bar
-(folder icon). Then right-click "This PC" & choose "map network drive". In the
-"folder" space, type "\\\storage.research.sesync.org\FILE_SHARE"
+You can use any [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+client to reach our gateway server for secure data transfer.
+See our Quickstart guide on [Bulk Uploads and Downloads by SFTP]({{
+'/quickstart/Bulk-upload-download-SFTP.html' | relative_url }}) for
+recommendations and useage details.

@@ -2,7 +2,7 @@
 title: How do I sync project data to my local machine?
 category: faq
 tags:
-  - PYDIO
+  - NFS
   - data
 ---
 
