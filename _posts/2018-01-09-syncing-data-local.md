@@ -1,37 +1,38 @@
 ---
-title: How do I sync project data to my local machine?
+title: How do I sync data to my own computer?
 category: faq
 tags:
   - NFS
   - data
 ---
 
-Users can sync their project data to your local machine using the PydioSync client.
+SESYNC users can maintain local copies of data in their research data directory
+using the Nextcloud sync client. The sync client provides another way to put
+data into your research data directory, so it is accessible to colleagues with
+access to the same research data directory.
 
-**NOTE: THIS ONLY WORKS FOR WINDOWS OS AT THIS TIME**
+The first time you log in to Nextcloud, you will be prompted to install the sync
+client. This is optional. If you choose to install it at a later date, download
+the installer for Windows or macOS from
+[nextcloud.com](https://nextcloud.com/install/#install-clients).
 
-## Setting up PydioSync
+## Setup
 
-1. Download [PydioSync Desktop App](https://pydio.com/en/get-pydio/downloads/pydiosync-desktop-app)
+1. Install the [desktop client](https://nextcloud.com/install/#install-clients)
+on your Windows or macOS computer.
 
-2. Install PydioSync Desktop App and Open App
+1. Open the Nextcloud application for the first time. You will be prompted to
+configure a server.
 
-3. Click **Get Started**
-    * ![](/assets/images/PYDIOfiles/pydiosync00.PNG)
+    ![]({{ '/assets/images/nextcloud-server.png' | relative_url }}){:.doc-img}
 
-4. Configure Connection
-   * Select **HTTPS**
-   * https://files.sesync.org/pydio
-   * **Login:** Your SESYNC username
-   * **Password:** Your SESYNC password
-   
-   * ![](/assets/images/PYDIOfiles/pydiosync01.PNG)
+1. Configure the connection:
+   1. Enter `https://files.sesync.org/` for the server.
+   1. Provide your SESYNC username and password.
+   1. Customize the Server (what to sync) and the Local Folder.
 
-5. Select your group's project workspace from the drop-down menu. Click Next
-   * If you would like to only sync some of the data check **Syncronise only a subfolder of this workspace.**
-   * ![](/assets/images/PYDIOfiles/pydiosync02.PNG)
+    ![]({{ '/assets/images/nextcloud-configure.png' | relative_url }}){:.doc-img}
 
-6. Select the local destination to store the synced files. Click Next
-    * ![](/assets/images/PYDIOfiles/pydiosync03.PNG)
-    
-7. Name the Synconization. Click Next. Click **Fire the Rocket!** to start the first syncronization.
+1. Confirm that the folders you want to sync are active. Find the new green
+check-box icon (![]({{ '/assets/images/nextcloud-app-icon.png' | relative_url
+}}){:.doc-inline-img}) in your app tray, and open the Nextcloud "Settings".
