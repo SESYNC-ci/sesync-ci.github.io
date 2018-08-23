@@ -30,7 +30,7 @@ You can sync your project data to your local machine using the Nextcloud Desktop
 
 ### Nextcloud will start syncing your data down to your local machine. Click **Open Local Folder** to view the files
 
-    ![]({{ '/assets/images/nextcloud-desktop04.PNG' | relative_url }}){:.doc-img}
+    ![]({{ '/assets/images/nextcloud-desktop04.PNG' | relative_url }}){:.doc-img
 
 See the complete [Nextcloud Documentation](https://docs.nextcloud.com/) for
 additional information.
