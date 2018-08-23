@@ -1,6 +1,6 @@
 ---
 title: Syncing your project data to your local machine
-category: suickstart
+category: quickstart
 tags: 
 - NFS
 - data
