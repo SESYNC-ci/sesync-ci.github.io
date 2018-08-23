@@ -9,8 +9,8 @@ tags:
 You can sync your project data to your local machine using the Nextcloud Desktop client.
 
 ## Download links
-  * Windows: http://sesync.us/nextcloudwindows
-  * OSX: http://sesync.us/nextcloudosx
+  * Windows: <http://sesync.us/nextcloudwindows>
+  * OSX: <http://sesync.us/nextcloudosx>
 
 # Install and open the Nextcloud Desktop client
 
