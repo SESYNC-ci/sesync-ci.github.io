@@ -51,8 +51,9 @@ For instance, assuming you created a directory named "blogs" in your home direct
 
 2) Editing yaml in Rmd 
 
-At the top of the Rm header add the following 
+At the top of the Rmd header add the following 
 
+```
 md_document: 
     toc: true
     preserve_yaml: true
@@ -62,6 +63,7 @@ tags:
  - geospatial
 
 Note that we use the "R" and "geospatial" tags. You can replace these by using relevant tags.
+```
 
 3) Data path
 
