@@ -1,3 +1,23 @@
+---
+# DO NOT EDIT THE .md ON GITHUB
+# DO EDIT THE .Rmd AND knit THE .md LOCALLY
+ 
+title: "Raster Change Detection Analysis with two images"
+author: "Benoit Parmentier"
+date: "09/11/2018"
+output:
+  #html_document: 
+  #  toc: true # will make headers as table of contents at the beginning
+  #word_document: 
+  md_document: 
+    toc: true
+    preserve_yaml: true
+category: blog
+tags:
+ - R
+ - geospatial
+---
+
 -   [Raster Change analysis with Two dates: Hurricane
     Rita](#raster-change-analysis-with-two-dates-hurricane-rita)
     -   [Setting up input parameters and

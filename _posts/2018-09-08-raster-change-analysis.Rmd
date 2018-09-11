@@ -1,4 +1,7 @@
 ---
+# DO NOT EDIT THE .md ON GITHUB
+# DO EDIT THE .Rmd AND knit THE .md LOCALLY
+ 
 title: "Raster Change Detection Analysis with two images"
 author: "Benoit Parmentier"
 date: "09/11/2018"
@@ -8,6 +11,11 @@ output:
   #word_document: 
   md_document: 
     toc: true
+    preserve_yaml: true
+category: blog
+tags:
+ - R
+ - geospatial
 ---
 
 ```{r setup, include=FALSE}
