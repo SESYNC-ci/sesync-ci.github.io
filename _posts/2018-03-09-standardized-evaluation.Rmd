@@ -7,6 +7,9 @@ category: blog
 tags:
  - R
  - dplyr
+output:
+  md_document:
+    preserve_yaml: true
 ---
 
 Partway through her LTER Postdoc at SESYNC, ecologist Meghan Avolio ran into trouble manipulating her data on plant communities with `dplyr` functions. I had encouraged Meghan to modularize her scripts by writing functions for common steps in her pipeline (such as converting count data into rank-abundance curves). "You'll love writing functions!" I said wrongly.
