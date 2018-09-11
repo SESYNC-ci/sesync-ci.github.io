@@ -55,15 +55,15 @@ version control), use the **RStudio terminal** to run
 
 ```bash
 bundle install
-bundle exec jekyll build --watch --drafts --baseurl=/p/4321
+bundle exec jekyll build --drafts --baseurl=/p/4321
 ```
 
-If this fails, you probably haven't opened the RStudio project, which loads ".Renviron". Leave that process
-running until you are done (then click 🛑). If the port
-(e.g. 4321) is not available, increment by 1 and try again.
+If this fails, you probably haven't opened the RStudio project, which loads
+".Renviron". Rerun the second command to rebuild the site after changes. If the
+port (e.g. 4321) is not available, increment by 1 and try again.
 
 Next call `servr::httw('_site', port = 4321)` in the **R console**, and leave that
-running until you're done too.
+running until you're done.
 
 ## Pull Requests
 
