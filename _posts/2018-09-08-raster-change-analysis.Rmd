@@ -68,8 +68,8 @@ knitr::opts_chunk$set(
 #Note: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20170008750.pdf
 out_suffix <- "change_" #output suffix for the files and ouptut folder
 
-in_dir <- "/nfs/bparmentier-data/Data/blogs/blog1_basic_change_analysis/data"
-out_dir <- "/nfs/bparmentier-data/Data/blogs/blog1_basic_change_analysis/outputs"
+in_dir <- "/nfs/public-data/cyberhelp/blogs/raster-change-analysis"
+out_dir <- "/nfs/public-data/cyberhelp/blogs/raster-change-analysis"
 
 file_format <- ".tif" #PARAM 4
 

@@ -70,8 +70,8 @@ output suffix as identifier).
     #Note: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20170008750.pdf
     out_suffix <- "change_" #output suffix for the files and ouptut folder
 
-    in_dir <- "/nfs/bparmentier-data/Data/blogs/blog1_basic_change_analysis/data"
-    out_dir <- "/nfs/bparmentier-data/Data/blogs/blog1_basic_change_analysis/outputs"
+    in_dir <- "/nfs/public-data/cyberhelp/blogs/raster-change-analysis"
+    out_dir <- "/nfs/public-data/cyberhelp/blogs/raster-change-analysis"
 
     file_format <- ".tif" #PARAM 4
 
@@ -220,7 +220,7 @@ averages by zones.
 
     reg_sf <- st_read(file.path(in_dir,infile_reg_outline))
 
-    ## Reading layer `new_strata_rita_10282017' from data source `/nfs/bparmentier-data/Data/blogs/blog1_basic_change_analysis/data/new_strata_rita_10282017.shp' using driver `ESRI Shapefile'
+    ## Reading layer `new_strata_rita_10282017' from data source `/nfs/public-data/cyberhelp/blogs/raster-change-analysis/new_strata_rita_10282017.shp' using driver `ESRI Shapefile'
     ## Simple feature collection with 2 features and 17 fields
     ## geometry type:  MULTIPOLYGON
     ## dimension:      XY

@@ -36,6 +36,9 @@ novel tag.
 
 If you add a tag, actually **add** the tag to the [_tags folder](_tags/)!
 
+## Generate blog from Rmd
+
+
 ## Style Guide
 
 There is very little styling available through Markdown. Certain choices affect layout, however, so for consistency please:
