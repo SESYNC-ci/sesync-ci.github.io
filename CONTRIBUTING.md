@@ -44,7 +44,7 @@ In brief, you can follow this series of steps:
 
 1) Clone the repository locally
 
-First, you will need to clone the repository locally. You can place your Rmd file in the sesync-ci.github.io/_posts directory. The Jekyll convention is followed here for blog publishing so ad a date in your Rmd. 
+First, you will need to clone the repository locally. You can place your Rmd file in the sesync-ci.github.io/_posts directory. The Jekyll convention is followed here for blog publishing so add a date in your Rmd. 
 For instance, assuming you created a directory named "blogs" in your home directory, you will place your "09-11-2018-myfirstblog.Rmd" Rmd file in the following location:
 
 ~/blogs/sesync-ci.github.io/_posts/09-11-2018-myfirstblog.Rmd
