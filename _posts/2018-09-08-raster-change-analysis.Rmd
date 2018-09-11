@@ -4,7 +4,7 @@
  
 title: "Raster Change Detection Analysis with two images"
 author: "Benoit Parmentier"
-date: "09/11/2018"
+date: "11/09/2018"
 output:
   #html_document: 
   #  toc: true # will make headers as table of contents at the beginning

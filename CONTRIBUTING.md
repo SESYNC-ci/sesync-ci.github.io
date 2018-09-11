@@ -38,6 +38,56 @@ If you add a tag, actually **add** the tag to the [_tags folder](_tags/)!
 
 ## Generate blog from Rmd
 
+To generate blogs using Rmd files, you will need to generate a markdown document placed in the _posts directory with a well defined path for any figures generated when knitting the Rmd file. You will also need to add a category property to be listed in the blog section of the site. It may be useful to add relevant tags to allow cross referencing.
+
+In brief, you can follow this series of steps:
+
+1) Clone the repository locally
+
+First, you will need to clone the repository locally. You can place your Rmd file in the sesync-ci.github.io/_posts directory. The Jekyll convention is followed here for blog publishing so ad a date in your Rmd. 
+For instance, assuming you created a directory named "blogs" in your home directory, you will place your "09-11-2018-myfirstblog.Rmd" Rmd file in the following location:
+
+~/blogs/sesync-ci.github.io/_posts/09-11-2018-myfirstblog.Rmd
+
+2) Editing yaml in Rmd 
+
+At the top of the Rm header add the following 
+
+md_document: 
+    toc: true
+    preserve_yaml: true
+category: blog
+tags:
+ - R
+ - geospatial
+
+Note that we use the "R" and "geospatial" tags. You can replace these by using relevant tags.
+
+3) Data path
+
+Place any data you are using in the publicly available directory at SESYNC (this may require permissions). 
+
+4) Knitr and chunk options
+
+You will need to generate a markdown document locally using the knitr package. Add a section to set a few of the chunk options to generate a path to the images that can be used in the site building by Jekyll.
+
+This can be done by adding this code chunk:
+
+```{r, include=FALSE}
+knitr::opts_knit$set(
+  base.dir = '../',
+  base.url = '{{ site.baseurl }}/')
+knitr::opts_chunk$set(
+  fig.path = "assets/images/raster-change-analysis/"
+)
+
+```
+
+Once you added this chunk, you can knit the Rmd document locally.
+
+5) Commit and Push changes
+
+To add your new blog to cyberhelp.sesync.org you will need to commit and push all the newly created documents and directories to the repository.
 
 ## Style Guide
 
