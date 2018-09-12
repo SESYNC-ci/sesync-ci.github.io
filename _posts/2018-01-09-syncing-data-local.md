@@ -29,7 +29,8 @@ configure a server.
 1. Configure the connection:
    1. Enter `https://files.sesync.org/` for the server.
    1. Provide your SESYNC username and password.
-   1. Customize the Server (what to sync) and the Local Folder.
+   1. Customize the Server (what to sync). Your research data directory is an "external storage", so do not check the second box.
+   1. Choose the Local Folder (where to sync).
 
     ![]({{ '/assets/images/nextcloud-configure.png' | relative_url }}){:.doc-img}
 
