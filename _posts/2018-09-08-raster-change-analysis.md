@@ -1,10 +1,9 @@
 ---
 # DO NOT EDIT THE .md ON GITHUB
 # DO EDIT THE .Rmd AND knit THE .md LOCALLY
- 
-title: "Raster Change Detection Analysis with two images"
-author: "Benoit Parmentier"
-date: "09/11/2018"
+title: "Raster Change Detection Analysis with Two Images"
+author: bparment1
+date: "11/09/2018"
 output:
   #html_document: 
   #  toc: true # will make headers as table of contents at the beginning
@@ -108,11 +107,11 @@ this blog.
 
     plot(r_before)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-3-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-2-1.png)
 
     plot(r_after)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-3-2.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-2-2.png)
 
 We note that Red, Near Infrared and Short Wave Infrared (SWIR1 and
 SWIR2) offer high contrast between vegetated areas and water. These
@@ -148,7 +147,7 @@ image similar to color photography.
             stretch="hist",
             main="after")
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-4-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-3-1.png)
 
 A second useful step is to generate a False color composite. This is
 similar to a Color Infrared (CIR) photography. We generate a RGB false
@@ -173,7 +172,7 @@ on the ground.
             scale=0.6,
             stretch="hist")
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-5-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-4-1.png)
 
 Visual inspection suggests some change areas especially visible in the
 false color composite towards the coast in the South East part of the
@@ -208,7 +207,7 @@ the levelplot function from RasterVis.
               names.attr = names_panel,
               col.regions=rev(terrain.colors(255)))
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-6-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-5-1.png)
 
 Comparison of before and after NDVI images suggests a general drop in
 NDVI for the region with some additional pockets of water near the
@@ -239,7 +238,7 @@ averages by zones.
 
     plot(r_ref, "FEMA Flood Zones")
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-7-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-6-1.png)
 
     r_NDVI_s <- mask(r_NDVI_s,r_ref)
     r_NDVI_s <- stack(r_NDVI_s,r_ref)
@@ -263,7 +262,7 @@ averages by zones.
 
     bp + facet_wrap(~zone) #Generate a faceted boxplot
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-7-2.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-6-2.png)
 
 Using FEMA data, we found that on average, NDVI dropped by 0.1 in areas
 that were flooded while other areas displayed a slight increase. We also
@@ -280,11 +279,11 @@ hurricane event:
 
     plot(r_diff)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-8-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-7-1.png)
 
     histogram(r_diff)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-8-2.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-7-2.png)
 
 ### Classifying differences in impact/damage classes
 
@@ -333,7 +332,7 @@ classes are summarized in the table below:
     threshold_val <- c(1.96,1.64)
     plot(r_std)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-9-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-8-1.png)
 
     hist(r_std,
         main="Standardized difference",
@@ -341,7 +340,7 @@ classes are summarized in the table below:
     abline(v=threshold_val[1],col="red",lty=1)
     abline(v=-threshold_val[1],col="red",lty=1)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-9-2.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-8-2.png)
 
     m <- c(-1.64, 10, 0,
            -1.96, -1.64, 1,  
@@ -379,7 +378,7 @@ thresholding and reclassification to generate another impact map.
     qqnorm(values(r_std))
     abline(0, 1)
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-10-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-9-1.png)
 
 In the second procedure, we assign positive and low decreases in NDVI
 value 0 (no change), level 1 decrease in NDVI (low impact) for range
@@ -450,7 +449,7 @@ thresholds.
            fill=col_val,
            bty="n") 
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-11-1.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-10-1.png)
 
     plot(r_impact2, 
          main="Hurricane impact with classification method 2",
@@ -464,7 +463,7 @@ thresholds.
            fill=col_val,
            bty="n") 
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/raster-change-analysis/unnamed-chunk-11-2.png)
+![](/assets/images/raster-change-analysis/unnamed-chunk-10-2.png)
 
     #Save the output image of hurrican impact:
 

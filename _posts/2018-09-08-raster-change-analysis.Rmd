@@ -1,9 +1,8 @@
 ---
 # DO NOT EDIT THE .md ON GITHUB
 # DO EDIT THE .Rmd AND knit THE .md LOCALLY
- 
-title: "Raster Change Detection Analysis with two images"
-author: "Benoit Parmentier"
+title: "Raster Change Detection Analysis with Two Images"
+author: bparment1
 date: "11/09/2018"
 output:
   #html_document: 
@@ -19,7 +18,20 @@ tags:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(
+  #root.dir = '/nfs/bparmentier-data/Data/',
+  base.dir = '../',
+  base.url = '/') # add site.baseurl pending answer to https://stackoverflow.com/questions/52299423/how-to-prevent-urlencoding-of-liquid-tags
+
+#https://yihui.name/knitr/options/#other-chunk-options
+#https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github#-pages
+
+#root.dir: (NULL) the root directory when evaluating code chunks; if NULL, the #directory of the input document will be used
+knitr::opts_chunk$set(
+  echo = TRUE,
+  fig.path = "assets/images/raster-change-analysis/"
+)
+
 library(sp) # spatial/geographfic objects and functions
 library(rasterVis) # raster visualization operations
 library(raster) # raster functionalities
@@ -30,7 +42,6 @@ library(colorRamps) #contains matlab.like color palette
 library(dplyr)
 library(tidyr)
 library(ggplot2)
-
 ```
 
 ## Raster Change analysis with Two dates: Hurricane Rita
@@ -42,22 +53,6 @@ For this example, we take an image comparison approach using pair of images rath
 ### Setting up input parameters and directories
 
 First, let us set up the input directories to read in (input directory) and store outputs (output directory). It is good practice to concentrate all the variables and input parameters at the start of the script. We also create an output directory that can change for each analysis (using output suffix as identifier).
-
-```{r, include=FALSE}
-knitr::opts_knit$set(
-  #root.dir = '/nfs/bparmentier-data/Data/',
-  base.dir = '../',
-  base.url = '{{ site.baseurl }}/')
-
-#https://yihui.name/knitr/options/#other-chunk-options
-#https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github#-pages
-
-#root.dir: (NULL) the root directory when evaluating code chunks; if NULL, the #directory of the input document will be used
-knitr::opts_chunk$set(
-  fig.path = "assets/images/raster-change-analysis/"
-)
-
-```
 
 
 ```{r }
