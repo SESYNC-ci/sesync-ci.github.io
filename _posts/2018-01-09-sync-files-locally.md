@@ -1,20 +1,24 @@
 ---
-title: How do I sync data to my own computer?
-category: faq
+title: Local Sync for Research Data
+category: quickstart
 tags:
   - NFS
   - data
 ---
 
-SESYNC users can maintain local copies of data in their research data directory
-using the Nextcloud sync client. The sync client provides another way to put
-data into your research data directory, so it is accessible to colleagues with
-access to the same research data directory.
+## Nextcloud
 
-The first time you log in to Nextcloud, you will be prompted to install the sync
-client. This is optional. If you choose to install it at a later date, download
-the installer for Windows or macOS from
-[nextcloud.com](https://nextcloud.com/install/#install-clients).
+SESYNC users can maintain local copies of data in their
+[research data directory]({{ 'quickstart/research-data-directory.html'
+| relative_url}}) using the Nextcloud sync client. The sync client
+provides another way to put data into your research data directory, so
+it is accessible to colleagues with access to the same research data
+directory.
+
+The first time you log in to Nextcloud, you will be prompted to
+install the sync client. This is optional. If you choose to install it
+at a later date, download the installer for Windows or macOS from
+[nextcloud.com](https://nextcloud.com).
 
 ## Setup
 
