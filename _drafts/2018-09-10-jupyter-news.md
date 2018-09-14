@@ -1,27 +1,44 @@
 ---
-title: JupyterHub deployment
+# first short draft can go out in newsletter
+# next draft with more use case/demos can go in blog when ready
+title: Going to Jupyter from SESYNC
 category: blog
 tags:
-  - python
-author: icarroll
+  - Python
+  - infrastructure
+author:
+ - icarroll
+ - khondula
 ---
 
-JupyterHub news/blog
+The latest addition to SESYNC's cyberinfrastructure---rolling out on
+September 20^th^---is a JupyterHub gateway for Python based data
+analysis and visualization. [Project Jupyter] makes interactive
+notebooks available through your web browser, allowing data scientists
+to create and share documents that combine runnable code, its output,
+text with mathematical notation, and visualizations.
+
+As on our long-running [RStudio Server], SESYNC researchers can access
+[JupyterHub] with their current username and password and reach all the
+Center's cyberinfrastructure (research data directory, research
+home directory, database servers, and the compute cluster) from Jupyter.
+ 
+Participants at the most recent Summer Institute may recognize the
+interface from the [introduction to Python], and other users of our RStudio
+Server may find that a good starting point for trying out Jupyter.
+
+Check out the [Quick Start] guide.
 
 
- 
-SESYNC is launching a new service for SESYNC teams and researchers: a Jupyter notebook server. Like our popular RStudio server, Jupyter lab is integrated with other SESYNC computing services like databases, file storage, compute cluster, and can be accessed with the same login credentials. 
- 
-Participants at the most recent Summer Institute may recognize the interface from the Python-based lessons on [classification]() and [online data](). 
- 
+
 What will this allow users to do?
-
-*from jupyter.org*
-
-> The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
 
 How similar/different to RStudio/existing resources
 
 Screenshot of what it looks like
 
-Check out the QuickStart guide [here](). 
+
+[Project Jupyter]: https://jupyter.org
+[RStudio Server]: {{ 'quickstart/rstudio-server.html' | relative_url }}
+[introduction to Python]: {{ 'basic-Python-lesson/' | relative_url }}
+[Quick Start]: {{ 'quickstart/??.html' | }} ## FIXME
