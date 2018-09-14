@@ -13,7 +13,7 @@ directly connected to other SESYNC resources (file storage, databases, the clust
 ## Connecting
 
 Access RStudio by pointing any web browser to <https://rstudio.sesync.org/> and
-logging in with your SESYNC name and password. If you forgot your username or password, please
+logging in with your SESYNC username and password. If you forgot your username or password, please
 go to <https://pwm.sesync.org/>. If your SESYNC credentials do not give you RStudio access,
 please email {{ site.email }} and ask to enable this resource for your account or whole team.
 
