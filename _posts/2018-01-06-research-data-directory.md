@@ -41,7 +41,7 @@ icon). Then right-click "This PC" & choose "map network drive". In the "folder"
 space, type `\\\storage.research.sesync.org\PROJECTNAME-data`.
 
 For computers not on SESYNC's internal network, use a [sync
-client]({{ '/faq/syncing-data-local.html' | relative_url }}) to keep a local folder
+client]({{ 'quickstart/sync-files-locally.html' | relative_url }}) to keep a local folder
 up to date with your research data directory.
 
 ## macOS
