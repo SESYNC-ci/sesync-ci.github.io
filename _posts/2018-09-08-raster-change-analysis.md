@@ -501,8 +501,8 @@ images. This may be a topic for a new blog!
 
 -   For a general introduction to spatial data:
     <http://rspatial.org/spatial/rst/1-introduction.html>
--   For information on manupulating spatial data and plotting:
-    <https://datacarpentry.org/geospatial-workshop/>
+-   For information on manipulating, plotting or operating on spatial
+    data: <https://datacarpentry.org/geospatial-workshop/>
 -   For Geosptial teaching material from the National
     Socio-Environmental Center:
     <http://cyberhelp.sesync.org/syllabi/2018/04/02/geospatial-workshop.html>

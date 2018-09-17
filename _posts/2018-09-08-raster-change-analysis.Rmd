@@ -348,7 +348,7 @@ This blog introduced a simple change detection analysis using MOD09 product aggr
 ### References
 
 - For a general introduction to spatial data: http://rspatial.org/spatial/rst/1-introduction.html
-- For information on manupulating spatial data and plotting:
+- For information on manipulating, plotting or operating on spatial data:
 https://datacarpentry.org/geospatial-workshop/ 
 - For Geosptial teaching material from the National Socio-Environmental Center: http://cyberhelp.sesync.org/syllabi/2018/04/02/geospatial-workshop.html
 - For an example of a research study on hurricane impact: Hurricane disturbance mapping using MODIS EVI data in the southeastern Yucatán, Mexico
