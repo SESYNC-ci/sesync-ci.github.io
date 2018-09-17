@@ -76,12 +76,12 @@ You will need to generate a markdown document locally using the knitr package. A
 This can be done by adding this code chunk:
 
 ```{r, include=FALSE}
+
 knitr::opts_knit$set(
+  #root.dir = '/nfs/bparmentier-data/Data/',
   base.dir = '../',
-  base.url = '{{ site.baseurl }}/')
-knitr::opts_chunk$set(
-  fig.path = "assets/images/raster-change-analysis/"
-)
+  base.url = '/') # add site.baseurl pending answer to https://stackoverflow.com/questions/52299423/how-to-prevent-urlencoding-of-liquid-tags
+
 
 ```
 
