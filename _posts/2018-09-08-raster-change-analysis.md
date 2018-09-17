@@ -38,10 +38,10 @@ Raster Change analysis with Two dates: Hurricane Rita
 This blog provides a simple example of change detection analysis using
 remotely sensed images from two dates. To measure change, we will use a
 vegetation index (NDVI) to examine how the vegetation and surface was
-affected by the hurricane.I use two images from the MODIS Terra Sensor
+affected by the hurricane. I use two images from the MODIS Terra Sensor
 (MOD09) to examine if the impact of Hurricane Rita is visible on the
 ground. Hurricane Rita was a category 3 hurricane that made landfall on
-September 24, 2005 in the southwest Louisiana coast. The hurricane
+September 24, 2005 in the southwest of Louisiana. The hurricane
 generated a surge of more than 4 meters than resulted in flooding and in
 several areas along the coast.
 
@@ -149,12 +149,12 @@ image similar to color photography.
 
 ![](/assets/images/raster-change-analysis/unnamed-chunk-3-1.png)
 
-A second useful step is to generate a False color composite. This is
-similar to a Color Infrared (CIR) photography. We generate a RGB false
-composite which requires identifying spectral bands corresponding to red
-(band 2: SWIR), green (band 4) and blue (band 1). False Color compisites
-may be particularly are useful to detect vegetation and water presence
-on the ground.
+False color composite images can also be useful to visualize change on
+the ground. Such composite is similar to a Color Infrared (CIR)
+photography. We generate a RGB false composite by identifying spectral
+bands corresponding to red (band 2: SWIR), green (band 4) and blue (band
+1). False Color composites may be particularly are useful to detect
+vegetation and water presence on the ground.
 
     ### False color composite:
     par(mfrow=c(2,1))
@@ -176,9 +176,9 @@ on the ground.
 
 Visual inspection suggests some change areas especially visible in the
 false color composite towards the coast in the South East part of the
-study area. The next step will be to quantitavely assess where changes
-occur. We will use specific spectral bands combinations (indices) to
-focus on specific features from the ground.
+study area. The next step is to quantitavely assess where changes occur.
+We use specific spectral bands combinations (indices) to focus on
+specific features from the ground.
 
 ### Generating Indices from the original bands: NDVI
 
@@ -211,12 +211,13 @@ the levelplot function from RasterVis.
 
 Comparison of before and after NDVI images suggests a general drop in
 NDVI for the region with some additional pockets of water near the
-coast. This visual comparison is interesting but let us check with data
-from Federal Emergency Management Agency (FEMA) that mapped the area
-flooded by Rita. We use a vector file with zone=1 representing flooding
-and zone=0 no flooding. This is rasterized to produce a boxplot of the
-averages by zones.
+coast. This visual comparison is interesting but let us check results
+against data from the Federal Emergency Management Agency (FEMA) that
+mapped the area flooded by Rita. We use a vector file with zone=1
+representing flooding and zone=0 no flooding. This is rasterized to
+produce a boxplot of the averages by zones.
 
+    # Use sf package to read in the input vector file:
     reg_sf <- st_read(file.path(in_dir,infile_reg_outline))
 
     ## Reading layer `new_strata_rita_10282017' from data source `/nfs/public-data/cyberhelp/blogs/raster-change-analysis/new_strata_rita_10282017.shp' using driver `ESRI Shapefile'
@@ -227,15 +228,16 @@ averages by zones.
     ## epsg (SRID):    4269
     ## proj4string:    +proj=longlat +datum=NAD83 +no_defs
 
+    # Match projection between sf and NDVI data
     reg_sf <- st_transform(reg_sf,
-                           crs=projection(r_after_NDVI))
+                           crs=projection(r_after_NDVI)) 
     reg_sp <-as(reg_sf, "Spatial") #Convert to sp object before rasterization
-    reg_sp <- as(reg_sf,"Spatial")
+    # Use rasterize from R package:
     r_ref <- rasterize(reg_sp,
                        r_after_NDVI,
                        field="OBJECTID_3",
                        fun="min")
-
+    # Visualize reference data:
     plot(r_ref, "FEMA Flood Zones")
 
 ![](/assets/images/raster-change-analysis/unnamed-chunk-6-1.png)
@@ -251,8 +253,10 @@ averages by zones.
     ##This is not advisable for large dataset to convert from raster to data.frame
     #since it loads everything in memory!! 
 
-    data_df <- na.omit(as.data.frame(r_NDVI_s))
+    #Convert to data.frame
+    data_df <- na.omit(as.data.frame(r_NDVI_s)) #drop NA
 
+    ## Reformat data to use in the boxplot
     zonal_var_df <- gather_(data_df,key="variable",value="value",names(r_NDVI_s)[1:2])
     zonal_var_df$zone <- factor(zonal_var_df$zone,labels=c("Not flooded","Flooded"))
 
@@ -265,12 +269,12 @@ averages by zones.
 ![](/assets/images/raster-change-analysis/unnamed-chunk-6-2.png)
 
 Using FEMA data, we found that on average, NDVI dropped by 0.1 in areas
-that were flooded while other areas displayed a slight increase. We also
-see that there is larger variance in flooded areas. In many cases, we do
-not have ancillary information on the areas flooded and we need to
-generate those from the original satellite images. We present below such
-analysis using a difference image and a reclassification procedure to
-map areas into impact classes.
+that were flooded while non-flooded areas displayed a slight increase.
+We also see that there is larger variance in flooded areas. In many
+cases, we do not have ancillary information and we need to generate
+rapidly flooding areas from the original satellite images. We present
+below such analysis using a simple difference image approach with a
+reclassification procedure to map areas into impact classes.
 
 First, let's generate a difference image using NDVI before and after the
 hurricane event:
@@ -289,9 +293,9 @@ hurricane event:
 
 We will use a method often used in the scientific literature using a
 standardized difference image. We generate mean and standard deviation
-for the difference raster and reclassify the standardized difference
-image using thresholds assuming a normal distribution. The limits of
-classes are summarized in the table below:
+values to reclassify the standardized difference image using thresholds
+assuming a normal distribution. The limits of classes are summarized in
+the table below:
 
 <table>
 <thead>
@@ -366,10 +370,10 @@ classes are summarized in the table below:
 
 Let's now visualize the output and compute the area for each category.
 Results indicate that few pixels are selected as highly impacted. This
-suggests that we may be underestimating the flooded area.
+suggests that we may be underestimating the flooded areas.
 
 Options may be to change: the threshold value to 1 standard deviation or
-use different procedure to reclassify the original difference image. A
+use a different procedure to reclassify the original difference image. A
 quick qqplot suggests that our assumption that the data follows a normal
 distribution is probably unwise. We also note the shoulder in the
 histogram of distribution and the qqplot. We will use simple
@@ -380,10 +384,10 @@ thresholding and reclassification to generate another impact map.
 
 ![](/assets/images/raster-change-analysis/unnamed-chunk-9-1.png)
 
-In the second procedure, we assign positive and low decreases in NDVI
-value 0 (no change), level 1 decrease in NDVI (low impact) for range
-\[-0.3,0.1\] while level 2 decrease (higher impact from higher
-intensity).
+In the second procedure, we assign positive and low decreases to NDVI
+value 0 (no change), level 1 decrease to NDVI (low impact) for range
+\[-0.3,0.1\] while level 2 decrease to \[-10,0.3\] (higher impact from
+higher intensity).
 
 <table>
 <thead>
@@ -482,20 +486,23 @@ This blog introduced a simple change detection analysis using MOD09
 product aggregated at 1km resolution. We used two MODIS sensor images
 captured before and after hurrican Rita on the coast of Louisiana.
 Visual inspection showed evidence of changes (both in indivdiual bands
-and color composites). We also found that we are able to find
-quantitative changes, most notably a decrease in average NDVI in flooded
-areas. We used two common thresholding techniques used by researchers to
-classify the impact from a difference image (after-before) and found
-some matching with the FEMA flood map but with underestimation. The
-analysis is simple and straightforward but could be refined by using
-different thresholding and accounting for the vegetation and flood
-seasonality in the data. This would lead to more advanced topic: time
-series analysis of raster images. This may be a topic for a new blog!
+and color composites). We also found quantitative changes in NDVI, most
+notably a decrease in average NDVI in flooded areas. We used two common
+thresholding techniques used by researchers to classify the impact from
+a difference image (after-before) and found some matching with the FEMA
+flood map but with some underestimation. The analysis is simple and
+straightforward but could be refined by using different thresholding or
+other procedures. For instance, , more advanced approach can account for
+the vegetation and flood seasonality in the data. This type of analysis
+would lead to a more advanced topic: time series analysis of raster
+images. This may be a topic for a new blog!
 
 ### References
 
 -   For a general introduction to spatial data:
     <http://rspatial.org/spatial/rst/1-introduction.html>
+-   For information on manupulating spatial data and plotting:
+    <https://datacarpentry.org/geospatial-workshop/>
 -   For Geosptial teaching material from the National
     Socio-Environmental Center:
     <http://cyberhelp.sesync.org/syllabi/2018/04/02/geospatial-workshop.html>
