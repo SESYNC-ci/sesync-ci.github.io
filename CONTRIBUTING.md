@@ -35,10 +35,10 @@ checks this, so please type carefully.
 
 A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
-tags where possible (see them all in [\_tags/](_tags/)),
+tags where possible (see them all in the [\_tag folder](_tag/)),
 but also feel free to use a novel tag.
 
-If you add a tag, actually **add** the tag to the [\_tags folder](_tags/)!
+If you add a tag, actually **add** the tag to the [\_tag folder](_tag/)!
 
 ### RMarkdown Posts
 
