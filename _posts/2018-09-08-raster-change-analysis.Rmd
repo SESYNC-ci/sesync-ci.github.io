@@ -21,7 +21,7 @@ tags:
 knitr::opts_knit$set(
   #root.dir = '/nfs/bparmentier-data/Data/',
   base.dir = '../',
-  base.url = '/') # add site.baseurl pending answer to https://stackoverflow.com/questions/52299423/how-to-prevent-urlencoding-of-liquid-tags
+  base.url = '{{ site.baseurl }}/')
 
 #https://yihui.name/knitr/options/#other-chunk-options
 #https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github#-pages
@@ -29,16 +29,16 @@ knitr::opts_knit$set(
 #root.dir: (NULL) the root directory when evaluating code chunks; if NULL, the #directory of the input document will be used
 knitr::opts_chunk$set(
   echo = TRUE,
-  fig.path = "assets/images/raster-change-analysis/"
+  fig.path = 'assets/images/raster-change-analysis/'
 )
 
-library(sp) # spatial/geographfic objects and functions
+library(sp) # spatial/geographic objects and functions
 library(rasterVis) # raster visualization operations
 library(raster) # raster functionalities
 library(rgeos) #contains topological operations
 library(sf) # spatial objects classes
-library(plotrix) #various graphic functions e.g. draw.circle
-library(colorRamps) #contains matlab.like color palette
+library(plotrix) # various graphic functions e.g. draw.circle
+library(colorRamps) # contains matlab.like color palette
 library(dplyr)
 library(tidyr)
 library(ggplot2)

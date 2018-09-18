@@ -26,6 +26,7 @@ exclude:
   - CNAME
   - Gemfile.lock
   - Gemfile
+  - .Rproj.user/
   - "*.Rproj*"
   - "*.Rmd"
 theme: jekyll-theme-leap-day
