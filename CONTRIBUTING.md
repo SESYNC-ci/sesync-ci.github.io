@@ -56,8 +56,8 @@ can open the project with RStudio. Don't forget to stage the ".Rmd" AND the
 2. Place the RMarkdown document in the "\_posts" (or "\_drafts", see below)
 folder. For instance, assuming you clone the project into your home directory,
 you will place your "2000-01-01-i-survived-y2k.Rmd" file in
-"~/sesync-ci.github.io/\_posts/" and the output will be
-"~/sesync-ci.github.io/\_posts/2000-01-01-i-survived-y2k.md".
+"\~/sesync-ci.github.io/\_posts/" and the output will be
+"\~/sesync-ci.github.io/\_posts/2000-01-01-i-survived-y2k.md".
 
 3. Include additional configuration along with the category and tags to create a
 suitable Markdown document (replacing the category and tags below with suitable
