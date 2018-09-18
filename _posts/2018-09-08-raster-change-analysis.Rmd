@@ -8,8 +8,7 @@ output:
   #html_document: 
   #  toc: true # will make headers as table of contents at the beginning
   #word_document: 
-  md_document: 
-    toc: true
+  md_document:
     preserve_yaml: true
 category: blog
 tags:
@@ -233,13 +232,12 @@ histogram(r_diff)
 
 We will use a method often used in the scientific literature using a standardized difference image. We generate mean and standard deviation values to reclassify the standardized difference image using thresholds assuming a normal distribution. The limits of classes are summarized in the table below:
 
-label       Threshold min    Threshold max    value
---------   --------------   ---------------- --------
-no change      -1.64          10              0
-low impact     -1.96          -1.64           1
-high impact    -10            -1.96           2
----------  --------------   ---------------- ------
-
+label       | Threshold min | Threshold max | value
+----------- | ------------- | ------------- | --------
+no change   | -1.64         | 10            | 0
+low impact  | -1.96         | -1.64         | 1
+high impact | -10           | -1.96         | 2
+----------- | ------------- | ------------- | --------
 
 ```{r}
 
