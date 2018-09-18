@@ -35,10 +35,10 @@ checks this, so please type carefully.
 
 A tag should serve to help a reader find additional pages relevant to the one
 they are currently reading, no matter the category of those pages. Use existing
-tags where possible (see them all at [/tags](https://sesync-ci.github.io/tags)),
+tags where possible (see them all in the [\_tag folder](_tag/)),
 but also feel free to use a novel tag.
 
-If you add a tag, actually **add** the tag to the [\_tags folder](_tags/)!
+If you add a tag, actually **add** the tag to the [\_tag folder](_tag/)!
 
 ### RMarkdown Posts
 
@@ -56,8 +56,8 @@ can open the project with RStudio. Don't forget to stage the ".Rmd" AND the
 2. Place the RMarkdown document in the "\_posts" (or "\_drafts", see below)
 folder. For instance, assuming you clone the project into your home directory,
 you will place your "2000-01-01-i-survived-y2k.Rmd" file in
-"~/sesync-ci.github.io/\_posts/" and the output will be
-"~/sesync-ci.github.io/\_posts/2000-01-01-i-survived-y2k.md".
+"\~/sesync-ci.github.io/\_posts/" and the output will be
+"\~/sesync-ci.github.io/\_posts/2000-01-01-i-survived-y2k.md".
 
 3. Include additional configuration along with the category and tags to create a
 suitable Markdown document (replacing the category and tags below with suitable
