@@ -31,7 +31,7 @@ filesystem path at `/nfs/PROJECTNAME-data`. Please note, these directories won't
 appear within the `/nfs` directory until you attempt to access it (i.e. by `cd
 /nfs/PROJECTNAME-data` rather than `ls /nfs`). The path is the same on all our
 Linux systems, including virtual machines and the [RStudio Server]({{
-'/quickstart/rstudio-server.html' | relative_url }})). From a Linux shell, type
+'/quickstart/rstudio-server.html' | relative_url }}). From a Linux shell, type
 `cd /nfs/PROJECTNAME-data` to set your working directory to your research data
 directory.
 
