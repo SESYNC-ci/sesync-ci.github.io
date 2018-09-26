@@ -10,9 +10,15 @@ Once our IT staff creates a research data directory location, it's accessible
 from any Linux, macOS, or Windows machine (including Virtual Machines) that you
 have access to. Computers on the "sesync-secure" network, including desktops and
 laptops used by SESYNC postdocs and employees, can map the research data
-directory into their file viewer. Funded project participants, visitors, and
+directory into the file browser. Funded project participants, visitors, and
 staff all have access to their research data directory through our compute
 servers, a web portal, a desktop application for syncing, and SSH.
+
+For **large uploads** (i.e. more than 10GB), please use a
+[SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) client for
+faster and secure data transfer. See our Quickstart guide on [Bulk Uploads and
+Downloads by SFTP]({{'/quickstart/Bulk-upload-download-SFTP.html' | relative_url }})
+for recommendations and useage details.
 
 The "PROJECTNAME" variable referenced below is assigned by SESYNCs IT staff at
 creation. It will either be a short project title or an individual's SESYNC
@@ -57,13 +63,13 @@ up to date with your research data directory.
 
 ## Web Browser
 
-All of our data directories are accessible via your web browser---the portal
-allows you to upload, download and arrange your data on SESYNC's storage.
+All research data directories are also accessible via a web browser---this portal
+allows you to upload, download and organize your data on SESYNC's storage.
 
 1. Go to <https://files.sesync.org>, log in using your SESYNC username and
    password.
 2. Open the folder corresponding to your project (i.e. `PROJECTNAME-data`)
-3. Upload data.
+3. Upload\download\organize data.
 
 ## Over SSH
 
@@ -73,9 +79,3 @@ allows you to upload, download and arrange your data on SESYNC's storage.
    - **Password:** %YOUR SESYNC PASSWORD%
    - **Port:** 22
 2. Change remote path to `/nfs/PROJECTNAME-name`
-
-You can use any [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
-client to reach our gateway server for secure data transfer.
-See our Quickstart guide on [Bulk Uploads and Downloads by SFTP]({{
-'/quickstart/Bulk-upload-download-SFTP.html' | relative_url }}) for
-recommendations and useage details.
