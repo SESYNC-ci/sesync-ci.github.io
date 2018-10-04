@@ -72,7 +72,6 @@
     <div class="wrapper">
       {% if page.toc %}<nav><ul></ul></nav>{% endif %}
       <section>
-      {% if page.tags contains 'NFS' %}<p><blockquote>The platform at <a href="https://files.sesync.org">https://files.sesync.org</a> will be updated on <b>September 20, 2018</b>. The documentation below reflects the new software, which is operational at <a href="https://nextcloud.sesync.org">https://nextcloud.sesync.org</a>. To begin using the new platform now, substitute "nextcloud.sesync.org" for any reference  to "files.sesync.org". We welcome your <a href="mailto:cyberhelp@sesync.org">feedback</a> on the new platform.</blockquote></p>{% endif %}
         <h1>{{ page.title }}</h1>
 	{% if page.author %}
 	<p><strong>{{ page.date | date: '%B %d, %Y'}} by
