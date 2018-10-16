@@ -25,7 +25,7 @@ The maintenance Window is usually a Thursday. A list of remaining maintenance wi
 * August 23rd 2018
 * September 20th 2018
 * October 18th 2018
-* November 22nd 2018
+* November 18th 2018
 * December 20th 2018
 
 ## What happens to my scheduled jobs during the maintenance window?
