@@ -4,6 +4,7 @@ category: faq
 tags:
 - RDP
 - Windows
+- virtual-machine
 ---
 
 
