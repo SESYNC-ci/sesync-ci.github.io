@@ -40,11 +40,11 @@ directory.
 From a Windows virtual machine (e.e. at <https://desktop.sesync.org>) as well as
 desktops or laptops on the "sesync-secure" network or the VPN, you can access a
 research data directory by opening the file browser (e.g. open your Documents
-folder) and entering `\\\storage.research.sesync.org\PROJECTNAME-data` in the
+folder) and entering `\\storage.research.sesync.org\PROJECTNAME-data` in the
 address bar. For regular access, you could map a network drive letter to your
 research data directory. Click the file explorer icon in the task bar (folder
 icon). Then right-click "This PC" & choose "map network drive". In the "folder"
-space, type `\\\storage.research.sesync.org\PROJECTNAME-data`.
+space, type `\\storage.research.sesync.org\PROJECTNAME-data`.
 
 For computers not on SESYNC's internal network, use a [sync
 client]({{ 'quickstart/sync-files-locally.html' | relative_url }}) to keep a local folder
