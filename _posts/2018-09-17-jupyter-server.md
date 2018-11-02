@@ -33,7 +33,7 @@ User contributed Python packages can be installed on JupyterLab by using the
 instance, by opening a Terminal and entering:
 
 ```bash
-jdoe@juplab00:~$ pip install --user mypackage
+jsmith@juplab00:~$ pip install --user mypackage
 ```
 
 If you receive an error stating that the package cannot be installed, there is a
