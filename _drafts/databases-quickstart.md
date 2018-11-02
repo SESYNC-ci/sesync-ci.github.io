@@ -18,16 +18,16 @@ tags:
 
 This Quick Start guide will walk you through establishing a connection to a database on SESYNC's server.  Access to your pursuit's relational database on the server requires communication across a network.  Therefore, it involves a server application (PostgreSQL, MySQL) and a client application (RStudio, Jupyter, command line, etc.), and connection credentials for your particular database.
 
-Each server maintained by SESYNC is identified by its host name (for example “xyz.research.sesync.org”).  Each database on a server has a unique name (for example “abc”), and only specific users known to the server (for example “abc_user”) are allowed password protected access. These instructions are specifically for a PostgreSQL served database, but analagous instructions apply to a MySQL served database.  
+Each server maintained by SESYNC is identified by its host name (for example “xyz.research.sesync.org”).  Each database on a server has a unique name, and only specific users known to the server are allowed password protected access. These instructions are specifically for a PostgreSQL served database, but analagous instructions apply to a MySQL served database.  
 
-The configuration file (which stores host name, user name, and password) is created for each user by the Cyber Infrastructure team.  This keeps the information you don’t want to share private, and means you don’t have to constantly enter host URLs, user names, passwords.  It will look similar to this: 
+The configuration file (which stores host name, user name, and password) is created for each team by the Cyber Infrastructure staff.  This keeps the information you don’t want to share private, and means you don’t have to constantly enter host URLs, user names, and passwords.  It will look similar to this: 
 
 
 ```r
-host = xyz.research.sesync.org
-dbname = abc
-user = abc_user
-password = abc_passwd
+host = sesync-postgis01.research.sesync.org
+dbname = "name_of_your_database"
+user = "your_database_role"
+password = "password_for_your_database"
 ```
 The database client reads this file to verify your credentials.  Instructions for establishing a connection via RStudio, Jupyter, or the command line are below.  
 
@@ -37,7 +37,11 @@ The database client reads this file to verify your credentials.  Instructions fo
 
 ```r
 # load RPostgreSQL R package
-library("RPostgreSQL")
+#library("RPostgreSQL")
+
+# load RPostgres R package
+library("RPostgres")
+library("DBI")
 ```
 
 The connection can be established using:
@@ -45,30 +49,32 @@ The connection can be established using:
 
 ```r
 # open database connection 
-mydb <-  dbConnect(PostgreSQL(), dbname = 'postgresql://@/?service=abc')
+# replace "dbname" with the name of your database
+# replace "dbrole" with your group's database role
+mydb <-  DBI::dbConnect(RPostgres::Postgres(), host = "hostname", dbname = "dbname", user = "dbrole")
+
+# NOTE: The password will be retrieved from the appropriate line in the file ~/.pgpass. 
+# https://cran.r-project.org/web/packages/RPostgres/RPostgres.pdf
 ```
-Here the string given for “dbname” is a connection URI missing all connection parameters except for the database name, which tells the client where to look the rest up in the connection service file.  
-For example, see https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html
 
 Now a query can be created to retrieve data from the database:
 
 
 ```r
 # create a query
-q1 <- dbSendQuery(mydb, "select * from MyTable;")
-  # NOTE: To rerun the dbSendQuery and reassign the result, you must first clear the existing  
-  # result using the following code: dbClearResult(q1)
+# replace "MyTable" with the name of the table you want to access
+q1 <- dbGetQuery(mydb, "SELECT * FROM MyTable;")
+
+# NOTE: To rerun the dbGetQuery and reassign the result, you must first clear the existing  
+# result using the following code: dbClearResult(q1)
 ```
 
-The results of the database query can now be read into an R dataframe:
+When finished, disconnect from the database.
 
 
 ```r
-# read results into a dataframe called "df1"
-df1 <- fetch(q1, n=-1)
-
 # disconnect from the database
-dbDisonnect(mydb)
+DBI::dbDisconnect(mydb)
 ```
 
 
@@ -84,73 +90,73 @@ import pandas as pd
 
 ```
 
-
-```python
-# create an object with the connection details
-conn_str = "host={} dbname={} user={} password={}".format(host, database, user, passwd)
-
-```
-
 The connection can be established using:
 
 
 ```python
 # open database connection 
-mydb2 = psycopg2.connect(conn_str)
+mydb2 = psycopg2.connect("host=sesync-postgis01.research.sesync.org dbname=name_of_your_database user=dbrole")
+
+# NOTE: The password will be retrieved from the appropriate line in the file ~/.pgpass. 
 
 ```
 
-Now a query can be created to retrieve data from the database:
+Now a query can be created to retrieve a table from the database:
 
 
 ```python
 # create a query and read results into a dataframe
-df2 = pd.read_sql('select * from MyTable', con=mydb2)
+df2 = pd.read_sql('SELECT * FROM MyTable;', con=mydb2)
 
 ```
-
 
 
 ### Access from Command Line (bash shell)
 
-Secure connection to the server is via SSH with the following information.  
-
-
-```r
-    Host: ssh.sesync.org
-    Username: %your SESYNC username%
-    Password: %your SESYNC password%
-    Port: 22
-```
+Secure connection to the server is via SSH.
 
 
 ```r
 # type in the connection info
-ssh -p 22 username@ssh.sesync.org
+# NOTE: replace "sesync_username" with your SESYNC user name
+ssh sesync_username@ssh.sesync.org
+
+# Then type in your password when prompted.  NOTE: you won't see any typing going on so type carefully!
 ```
-Then type in your password when prompted.  NOTE: you won't see any typing going on so be careful!
+
+You should now be connected to the gateway server via SSH.  
 
 
-The connection can be established using:
+Now you need to log in to the PostgreSQL database using the host name, and group database name.
+You will need to copy the .pgpass configuration file from XXXX to the home directory on the gateway server.
+
+Then the connection can be established using:
 
 
 ```r
 # type in the postgreSQL command 
 # replace "dbname" with the name of your database
-# replace "username" with your username
-psql dbname username
+psql -h sesync-postgis01 dbname 
+
+# Then type in your password when prompted. 
+# The psql prompt will appear and look like "dbname=>".
 ```
-Then type in your password when prompted. The psql prompt will appear.
+
+You should now be connected to your database.  
 
 
-
-Now you can view data from the database:
+Now you can view contents of the database:
 
 
 ```r
 # to list all of the tables, views, and sequences in the database, type 
-\z
+\d
+
+# to view the contents of a table 
+SELECT * FROM table-name
 ```
+
+To close the connection:
 
 
 ```r
