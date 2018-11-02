@@ -36,9 +36,6 @@ The database client reads this file to verify your credentials.  Instructions fo
 
 
 ```r
-# load RPostgreSQL R package
-#library("RPostgreSQL")
-
 # load RPostgres R package
 library("RPostgres")
 library("DBI")
