@@ -57,6 +57,10 @@ tr:nth-child(even) {
     background-color: #eee;
 }
 
+tr {
+    border-color: #eee;
+}
+
 th {
     background-color: $color-primary;
     color: white;
