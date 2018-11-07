@@ -56,6 +56,8 @@ li {
 td {
    border-left-color: $color-primary-trim;
    border-right-color: $color-primary-trim;
+   border-bottom-color: $color-primary-trim;
+   border-top-color: $color-primary-trim;
    &:first-child {
        border-left-color: $color-primary-trim;
     }
