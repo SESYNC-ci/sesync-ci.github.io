@@ -53,19 +53,17 @@ li {
     margin: 0px;
 }
 
-td {
-   border-left-color: $color-primary-trim;
-   border-right-color: $color-primary-trim;
-   border-bottom-color: $color-primary-trim;
-   border-top-color: $color-primary-trim;
-   &:first-child {
-       border-left-color: $color-primary-trim;
-    }
+tr {
+    nth-child(even) {background-color: $color-light-grey}
 }
 
 th {
-    border-bottom-color: $color-primary-trim;
+    background-color: $color-primary;
+    color: white;
 }
+
+
+
 
 hr {
     background: $color-primary-trim;
