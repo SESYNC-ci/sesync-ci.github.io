@@ -57,8 +57,14 @@ tr:nth-child(even) {
     background-color: #eee;
 }
 
-tr {
-    border-color: #eee;
+td {
+    border-left-color: $color-light-grey;
+   border-right-color: $color-light-grey;
+   border-bottom-color: $color-light-grey;
+   border-top-color: $color-light-grey;
+   &:first-child {
+       border-left-color: $color-light-grey;
+    }
 }
 
 th {
