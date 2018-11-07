@@ -1,7 +1,5 @@
 ---
-output: 
-  html_document:
-    keep_md: yes
+title: "Connect to a Database"
 category: quickstart
 tags:
   - database
@@ -14,17 +12,16 @@ tags:
     
 ---
 
-# How do I connect to a SESNYC database?
-
 This Quick Start guide will walk you through establishing a connection to a database on SESYNC's server.  Access to your pursuit's relational database on the server requires communication across a network.  Therefore, it involves a server application (PostgreSQL, MySQL) and a client application (RStudio, Jupyter, command line, etc.), and connection credentials for your particular database.
 
 Each server maintained by SESYNC is identified by its host name (for example “xyz.research.sesync.org”).  Each database on a server has a unique name, and only specific users known to the server are allowed password protected access. These instructions are specifically for a PostgreSQL served database, but analagous instructions apply to a MySQL served database.  
 
-The configuration file (which stores host name, user name, and password) is created for each team by the Cyber Infrastructure staff.  This keeps the information you don’t want to share private, and means you don’t have to constantly enter host URLs, user names, and passwords.  It will look similar to this: 
+The configuration file (which stores host name, user name, and password) is created for each team by the cyberinfrastructure staff.  This keeps the information you don’t want to share private, and means you don’t have to constantly enter host URLs, user names, and passwords.  It will look similar to this: 
 
 
 ```r
-host = sesync-postgis01.research.sesync.org
+[service_name]
+host = xyz.research.sesync.org
 dbname = "name_of_your_database"
 user = "your_database_role"
 password = "password_for_your_database"
@@ -48,7 +45,7 @@ The connection can be established using:
 # open database connection 
 # replace "dbname" with the name of your database
 # replace "dbrole" with your group's database role
-mydb <-  DBI::dbConnect(RPostgres::Postgres(), host = "hostname", dbname = "dbname", user = "dbrole")
+mydb <-  DBI::dbConnect(RPostgres::Postgres(), service = 'service_name')
 
 # NOTE: The password will be retrieved from the appropriate line in the file ~/.pgpass. 
 # https://cran.r-project.org/web/packages/RPostgres/RPostgres.pdf
