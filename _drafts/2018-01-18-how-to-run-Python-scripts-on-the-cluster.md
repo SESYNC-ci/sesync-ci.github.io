@@ -6,7 +6,8 @@ tags:
  - cluster
 ---
 
-The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
+Python scripts can be sumitted by generating a shell file to sumbit the job to the SLURM cluster (see more information on SESYNC cluster and slurm here:xx)
+The shell submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
 
     #!/bin/bash
     #
@@ -46,4 +47,4 @@ __test.py__
 
 ## Tip: Editing your remote files
 
-The RStudio Server interface (accessible via your web browswer at __rstudio.sesync.org__) can recognize Python syntax and thus serve as a code editor for your files hosted on the SESYNC server. Note that it may not be possible to run the scripts in RStudio Server, since you cannot access your virtual environment from that interface.
+Jupyterlab (__jupyter.sesync.org__) can be used to edit and develop python scripts for your files hosted on the SESYNC server. Save your script as a regular .py and submit it from the shell interface within jupyterlab or via the terminal you use via ssh. 
