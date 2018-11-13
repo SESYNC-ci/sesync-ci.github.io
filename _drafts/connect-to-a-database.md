@@ -30,7 +30,7 @@ The database client reads this file to verify your credentials.
 Instructions for establishing a connection via RStudio, Jupyter, or the
 command line are below.
 
-### Access from RStudio
+### Access from RStudio Server (rstudio.sesync.org)
 
     # load RPostgres R package
     library("RPostgres")
@@ -62,7 +62,7 @@ When finished, disconnect from the database.
     # disconnect from the database
     DBI::dbDisconnect(mydb)
 
-### Access from Jupyter
+### Access from Jupyter Server (jupyter.sesync.org)
 
     # load psycopg2 Python package
     import psycopg2
@@ -96,6 +96,26 @@ When finished, disconnect from the database.
 
     # disconnect from the database
     mydb2.close()
+
+### Access from your local RStudio or Python via SSH Tunneling
+
+If you would like to use your local installation of RStudio or Python on
+your local computer, you need to establish a secure connection via SSH
+Tunneling.
+
+First in the command line, establish the connection.
+
+    ssh -L 63333:sesync-postgis01.research.sesync.org:5432 ssh.sesync.org
+
+Enter your SESYNC password when prompted.
+
+Test your connection by trying to access your database.
+
+    psql -h sesync-postgis01 -p 5432 -d %DATABASE_NAME%
+
+Now your computer is securely connected to the SESYNC server and you can
+access the database from RStudio or Python installed on your local
+computer.
 
 ### Access from Command Line (bash shell)
 
