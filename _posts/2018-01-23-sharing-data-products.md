@@ -40,4 +40,4 @@ Here are a few potential repositories to consider, resources, and tools:
 
 - White, E.P., Baldridge, E., Brym, Z.T., Locey, K.J., McGlinn, D.J. and Supp, S.R., 2013. [Nine simple ways to make it easier to (re) use your data](http://ojs.library.queensu.ca/index.php/IEE/article/view/4608). Ideas in Ecology and Evolution, 6(2).  
 
-Contact us at [{{ site.email }}](mailto://{{ site.email }}) if you want help finding an appropriate repository to make your data products accessible, discoverable, and citable.
+Contact us at <{{ site.email }}> if you want help finding an appropriate repository to make your data products accessible, discoverable, and citable.
