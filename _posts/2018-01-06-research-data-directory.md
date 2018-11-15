@@ -18,8 +18,7 @@ faster and secure data transfer. See our Quickstart guide on [Bulk Uploads and
 Downloads by SFTP]({{'/quickstart/Bulk-upload-download-SFTP.html' | relative_url }})
 for recommendations and useage details.
 
-For **postdocs and staff** at SESYNC, additional options are described on our
-[internal Wiki](https://base.sesync.org).
+For **postdocs and staff** at SESYNC, additional options are in our [internal Wiki](https://base.sesync.org).
 
 ## RStudio/Jupyter Server and other Linux Machines
 
