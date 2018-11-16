@@ -129,7 +129,7 @@ If you encounter this warning:
 GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
 ```
 
-and are bothered by it, you'll need to generate a [JEKYLL_GITHUB_TOKEN](http://www.petkovicm.com/GitHub-API-problem/), but put the line `JEKYLL_GITHUB_TOKEN='your_token_here'` in your "~/.Renviron" file rather than "~/.bash_profile".
+and are bothered by it, you'll need to generate a [JEKYLL_GITHUB_TOKEN](http://www.petkovicm.com/GitHub-API-problem/), but put the line `JEKYLL_GITHUB_TOKEN='your_token_here'` in your "\~/.Renviron" file (not your "\~/.bash_profile").
 
 ## Pull Requests
 
