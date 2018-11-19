@@ -1,5 +1,6 @@
 RMD := $(shell find _posts/ -name '*.Rmd')
-PORT = 4321
+RMD += $(shell find _drafts/ -name '*.Rmd')
+PORT ?= 4321
 export GEM_HOME = ~/.gem
 
 .PHONY: all clean

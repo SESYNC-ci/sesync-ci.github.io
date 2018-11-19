@@ -1,163 +1,272 @@
+---
+# Created by Rachael Blake and Ian Carroll on 2018-11-19
+title: Connect to a Database Server
+category: quickstart
+tags:
+  - database
+  - R
+  - Python
+  - shell
+---
+
 This Quick Start guide will walk you through establishing a connection
 to a database on SESYNC's server. Access to your pursuit's relational
-database on the server requires communication across a network.
-Therefore, it involves a server application (PostgreSQL, MySQL) and a
-client application (RStudio, Jupyter, command line, etc.), and
-connection credentials for your particular database.
+database management system (RDBMS) requires communication between a
+server application (PostgreSQL or MySQL) and a client application
+(RStudio, Jupyter, psql, etc.).
 
-Each server maintained by SESYNC is identified by its host name (for
-example “xyz.research.sesync.org”). Each database on a server has a
-unique name, and only specific users known to the server are allowed
-password protected access. These instructions are specifically for a
-PostgreSQL served database, but analagous instructions apply to a MySQL
-served database.
+Each database server maintained by SESYNC is identified by its host
+name, let's say your database is stored on a server with host name
+“pg.research.sesync.org”. Each database on a server has a unique name,
+and only specific users known to the server are allowed password
+protected access. The instructions below are specific to a PostgreSQL
+database, but analagous instructions apply to a MySQL database.
 
-The configuration file (which stores host name, user name, and password)
-is created for each team by the cyberinfrastructure staff. This keeps
-the information you don’t want to share private, and means you don’t
-have to constantly enter host URLs, user names, and passwords. It will
-look like this:
+When the Cyberinfrastructure staff creates a database, we will share a
+configuration file with the host name, user name, and password. This
+keeps the information you don’t want to share private, and means you
+don’t have to constantly enter host URLs, user names, and
+passwords. If you ever move your database, there's also only one place
+you need to update the configuration.
 
-    [service_name]
-    host=xyz.research.sesync.org
-    dbname=%DATABASE_NAME%
-    user=%YOUR_ROLE%
-    password=%PASSWORD%
+For everything below, suppose your project involves the effect of
+green spaces on urban heat islands and has the short title "Cool
+Trees". Your configuration will be in the file
+"/nfs/cooltrees-data/.pg_service.conf", and will look something like
+this (no that's not a real password):
+
+```bash
+[cooltrees]
+host=pg.research.sesync.org
+dbname=cooltrees
+user=cooltrees
+password=p3948htp3ufp4p238hncer8cfwfgnc9q37
+```
 
 NOTE: Spaces are not allowed in this file.
 
-The database client reads this file to verify your credentials.
-Instructions for establishing a connection via RStudio, Jupyter, or the
-command line are below.
+The database client reads this file to verify your
+credentials. Instructions for establishing a connection via RStudio,
+Jupyter, or the command line are below.
 
-### Access from RStudio Server (rstudio.sesync.org)
+### Access from [RStudio Server](https://rstudio.sesync.org)
 
-    # load RPostgres R package
-    library("RPostgres")
-    library("DBI")
+The [RPostgres](https://CRAN.R-project.org/package=RPostgres) package is the
+[DBI](https://CRAN.R-project.org/package=DBI) compliant library you want.
+
+```r
+library("RPostgres")
+```
+
+The connection can be established by refering the the "service" in the
+configuration file (the value between square brackets):
+
+```r
+mydb <-  dbConnect(Postgres(), service = "cooltrees")
+```
+
+NOTE: The password will be retrieved from the appropriate line in the
+file "\~/.pg_service.conf". You need to create this file by copying it
+your research data directory, or you can set the
+[PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
+environment variable to "/nfs/cooltrees-data/.pg_service.conf".
+
+Now a query can be created to retrieve data, say the `neighborhoods`
+table from your database on urban green spaces:
+
+```r
+qry <- dbGetQuery(mydb, "SELECT * FROM neighborhoods LIMIT 10")
+```
+
+The `qry` result is a `data.frame`, with values downloaded from the
+database server. You can list all available tables, if you're diving
+into a new database for the first time:
+
+```r
+dbListTables(mydb)
+```
+
+NOTE: To rerun `dbGetQuery` and reassign the result, you must first
+clear the existing result using the following code: `dbClearResult(q)`
+
+When finished, disconnect from the database.
+
+```r
+dbDisconnect(mydb)
+```
+
+### Access from [Jupyter Server](jupyter.sesync.org)
+
+The [psycopg2](https://pypi.org/project/psycopg2/) package is a
+popular wrapper for the interface to PostgreSQL databases. The
+[pandas](https://pypi.org/project/pandas/) package is used for
+manipulating tabular data in Python.
+
+```python
+import psycopg2
+import pandas as pd
+```
 
 The connection can be established using:
 
-    # open database connection 
-    mydb <-  DBI::dbConnect(RPostgres::Postgres(), service = "service_name")
+```python
+mydb = psycopg2.connect("service=cooltrees")
+```
 
 NOTE: The password will be retrieved from the appropriate line in the
-file ~/.pg\_service.conf.  
-<https://www.postgresql.org/docs/9.0/libpq-pgservice.html>
+file "\~/.pg_service.conf". You may need to copy it from your research
+data directory or set the appropriate [environment
+variable](https://www.postgresql.org/docs/9.0/libpq-pgservice.html).
 
-Now a query can be created to retrieve data from the database:
+Pandas will read the results of an SQL query of the database into a
+`DataFrame`:
 
-    # list the tables in the database
-    dbListTables(mydb)
+```python
+df = pd.read_sql('SELECT * FROM neighborhoods LIMIT 10', con=mydb)
+```
 
-    # create a query
-    q1 <- dbGetQuery(mydb, "SELECT * FROM MyTable;")
-
-Replace "MyTable" with the name of the table you want to access.  
-NOTE: To rerun the dbGetQuery and reassign the result, you must first
-clear the existing result using the following code: `dbClearResult(q1)`
-
-When finished, disconnect from the database.
-
-    # disconnect from the database
-    DBI::dbDisconnect(mydb)
-
-### Access from Jupyter Server (jupyter.sesync.org)
-
-    # load psycopg2 Python package
-    import psycopg2
-
-    # load Pandas Python pagkage for using dataframes
-    import pandas as pd
-
-The connection can be established using:
-
-    # open database connection 
-    mydb2 = psycopg2.connect("service=service_name")
-
-NOTE: The password will be retrieved from the appropriate line in the
-file ~/.pg\_service.conf.
-
-Now a query can be created to retrieve a table from the database:
-
-    # list the tables in the database
-    cur = mydb2.cursor()
-    cur.execute("""SELECT table_name FROM information_schema.tables
-           WHERE table_schema = 'public'""")
-    for table in cur.fetchall():
-        print(table)
-
-    # create a query and read results into a dataframe
-    df2 = pd.read_sql('SELECT * FROM MyTable;', con=mydb2)
-
-Replace "MyTable" with the name of the table you want to access.
+If you're diving into a new database for the first time, you may want to
+list all available tables:
+  
+```python
+cur = mydb.cursor()
+cur.execute("""
+  SELECT table_name FROM information_schema.tables
+  WHERE table_schema = 'public'""")
+for table in cur.fetchall():
+  print(table)
+```
 
 When finished, disconnect from the database.
 
-    # disconnect from the database
-    mydb2.close()
+```python
+mydb.close()
+```
 
-### Access from your local RStudio or Python via SSH Tunneling
+### Access from local RStudio or Python via SSH Tunneling
+  
+If you would like to use a local installation of RStudio or Python
+on your own computer, you need to establish a secure connection via
+SSH Tunneling. The purpose of the "tunnel" is to make a server you can
+connect to (ssh.sesync.org) route connection requests to the database
+server, which you cannot reach directly from your local RStudio or
+Python installation.
 
-If you would like to use your local installation of RStudio or Python on
-your local computer, you need to establish a secure connection via SSH
-Tunneling.
+You will need the host name from your ".pg_service.conf" file, in
+place of `pg.research.sesync.org`. Open a command prompt or
+terminal on your machine and, also supposing `jdoe` is your SESYNC user
+name, establish the tunnel with:
 
-First in the command line, establish the connection.
+```bash
+ssh -L 5433:pg.research.sesync.org:5432 jdoe@ssh.sesync.org
+```
 
-    ssh -L 63333:sesync-postgis01.research.sesync.org:5432 ssh.sesync.org
+Enter your SESYNC password when prompted. If successful, your terminal
+will display something like:
 
-Enter your SESYNC password when prompted.
+```bash
+$ ssh -L 5433:pg.research.sesync.org:5432 jdoe@ssh.sesync.org
+Ubuntu 16.04.5 LTS
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-139-generic x86_64)
 
-Test your connection by trying to access your database.
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+##############################################################################
+###                                                                        ###
+###   SESYNC SSH Gateway                                                   ###
+###   * Do not use this machine for processing                             ###
+###   * Store all data and source code in your project space /nfs/PROJECT  ###
+###   * See https://cyberhelp.sesync.org for more information              ###
+###                                                                        ###
+##############################################################################
+Last login: Fri Nov 16 14:52:20 2018 from 192.168.192.177
+jdoe@sshgw02:~$ 
+```
 
-    psql -h sesync-postgis01 -p 5432 -d %DATABASE_NAME%
+From this machine, you can use the command line client to confirm
+you have access to the database:
+  
+```bash
+psql service=cooltrees
+```
 
-Now your computer is securely connected to the SESYNC server and you can
-access the database from RStudio or Python installed on your local
-computer.
+More on `psql` below, what you really want though is to use your
+secure connection to the SESYNC database server from the RStudio or
+Python instalation on your own computer. The only thing missing is
+the connection information, so copy the
+".pg_service.conf" file to your own computer and edit the
+server information to point at the tunnel:
 
-### Access from Command Line (bash shell)
+```bash
+[cooltrees]
+host=localhost
+port=5433
+dbname=cooltrees
+user=cooltrees
+password=p3948htp3ufp4p238hncer8cfwfgnc9q37
+```
 
-Secure connection to the server is via SSH.
+On macOS, save this file in your home directory. On Windows, create
+the folder `%APPDATA%\postgresql`, and save the configuration file
+there. Establishing a connection from your local installation of
+RStudio or Python should now work as above. NOTE: Reading data from
+the database server will be slow if you are on a slow internet
+connection.
 
-    # type in the connection info
-    ssh %SESYNC_USERNAME%@ssh.sesync.org
+### Access from the Command Line
 
-NOTE: replace "%SESYNC\_USERNAME%" with your SESYNC user name.  
-Then type in your password when prompted. NOTE: you won't see any typing
-going on so type carefully!  
-You should now be connected to the gateway server via SSH.
+The `psql` command line utility is available for your use on
+ssh.sesync.org. From the Command Prompt (Windows) or Terminal (macOS)
+on your computer, the SESYNC user `jdoe` would jump on the server
+with:
 
-Now you need to log in to the PostgreSQL database using the host name,
-and group database name.  
-You will need to copy the ~/.pg\_service.conf configuration file to the
-home directory on the gateway server.
+```r
+ssh jdoe@ssh.sesync.org
+```
 
-Then the connection can be established using:
+Then type in your password when prompted--you won't see any typing
+going on so type carefully! You should now be connected to the gateway
+server via SSH.
 
-    # type in the postgreSQL command 
-    psql -h sesync-postgis01 %DATABASE_NAME% 
+Now you need to log in to the PostgreSQL database using the host name, database
+name, and database password, which is all in a ".pg_service.conf" file created
+by SESYNC staff.You may need to copy it from your research data directory or set
+the appropriate [environment
+variable](https://www.postgresql.org/docs/9.0/libpq-pgservice.html).
 
-Replace "%DATABASE\_NAME%" with the name of your database. Then type in
-your password when prompted. The psql prompt will appear and look like
-`"%DATABASE_NAME%=>"`. You should now be connected to your database.
+Launch `psql` specifying the service. Your shell will look something like:
 
-Now a query can be created to retrieve a table from the database:
+```bash
+jdoe@sshgw02:~$ psql service=cooltrees
+psql (9.5.14, server 9.3.24)
+SSL connection (protocol: TLSv1.2, cipher: DHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
 
-    # to list all of the tables, views, and sequences in the database, type 
-    \d
+cooltrees=> 
+```
+  
+The client allows "backslash commands" and SQL statements. An example
+backslash command is "\d", which describes the database.
 
-    # to view the contents of a table 
-    SELECT * FROM MyTable;
+```bash
+cooltrees=> \d
+```
 
-Replace "MyTable" with the name of the table you want to access.
+Again supposing a table `neighborhoods` exists, you could directly
+enter the SQL statement or query to print all columns of its first 10
+records.
+
+```bash
+cooltrees=> SELECT * FROM neighborhoods LIMIT 10;
+```
 
 When finished, disconnect from the database.
 
-    # to exit the psql program, type 
-    \q
+```bash
+cooltrees=> \q
+```
 
-To close the SSH connection when you are done, type exit and then press
-ENTER.  
-To close the bash shell, type exit and then press ENTER.
+To close the SSH connection when you are done, type `exit` press
+ENTER. To close the shell, simply close the Command Prompt or Terminal
+application.
