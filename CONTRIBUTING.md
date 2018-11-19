@@ -123,13 +123,13 @@ If the port (e.g. 4321) is not available, either wait for it to become available
 or configure your build tools with the argument PORT=4322, and adjust your call
 to `servr::httw` accordingly.
 
-Note that at present, there is no known way to make the following warning go away:
+If you encounter this warning:
 
 ```
 GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
 ```
 
-The [right settings](http://www.petkovicm.com/GitHub-API-problem/) need to somehow make it into the RStudio build environment.
+and are bothered by it, you'll need to generate a [JEKYLL_GITHUB_TOKEN](http://www.petkovicm.com/GitHub-API-problem/), but put the line `JEKYLL_GITHUB_TOKEN='your_token_here'` in your "\~/.Renviron" file (not your "\~/.bash_profile").
 
 ## Pull Requests
 
