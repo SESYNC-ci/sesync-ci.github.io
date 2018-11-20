@@ -78,8 +78,8 @@ You can list all available tables in your database using:
 dbListTables(mydb)
 ```  
   
-Now a query can be created to retrieve data, say the `neighborhoods`
-table, from your database on urban green spaces:
+Now a query can be created to retrieve data from, for example, the `neighborhoods`
+table in your database:
 
 ```r
 qry <- dbGetQuery(mydb, "SELECT * FROM neighborhoods LIMIT 10;")
@@ -102,7 +102,7 @@ dbDisconnect(mydb)
 The [psycopg2](https://pypi.org/project/psycopg2/) package is a
 popular wrapper for the interface to PostgreSQL databases.  The
 [pandas](https://pypi.org/project/pandas/) package is used for
-manipulating tabular data in Python.
+manipulating data frames in Python.
   
 ```python
 import psycopg2
@@ -157,7 +157,7 @@ server, which you cannot reach directly from your local RStudio or
 Python installation.  
   
 You will need the host name from your ".pg_service.conf" file, in
-place of `pg.research.sesync.org`.  For this example, suppose `jdoe` 
+place of `pg.research.sesync.org`.  For example, suppose `jdoe` 
 is your SESYNC user name.  Open a command prompt or terminal on 
 your machine and establish the tunnel with:
   
@@ -165,7 +165,7 @@ your machine and establish the tunnel with:
 ssh -L 5433:pg.research.sesync.org:5432 jdoe@ssh.sesync.org
 ```
   
-Enter your SESYNC password when prompted. If successful, your terminal
+Enter your SESYNC password when prompted.  If successful, your terminal
 will display something like:
   
 ```bash
@@ -273,7 +273,7 @@ cooltrees=> \d
 --------+-------------------+-------+-----------
  public | geography_columns | view  | postgres
  public | geometry_columns  | view  | postgres
- public | postgis_store     | table | jdoe
+ public | neighborhoods     | table | jdoe
  public | raster_columns    | view  | postgres
  public | raster_overviews  | view  | postgres
  public | spatial_system    | table | postgres
@@ -283,7 +283,7 @@ cooltrees=>
 ```
   
 Now a query can be created to retrieve data from the `neighborhoods`
-table in the database on urban green spaces.  For example, to print the first 10 records 
+table in the database.  For example, to print the first 10 records 
 and all columns of this table, you can directly enter the SQL statement:
 
 ```bash
