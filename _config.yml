@@ -7,43 +7,37 @@ copyright: |
   1 Park Place, Suite 300, Annapolis, MD 21401
 
 # Content
-collections:
-  category:
-    output: true
-    permalink: /:title/
-  tag:
-    output: true
-    permalink: /:collection/:title/
 plugins:
   - jemoji
   - jekyll-feed
+sass:
+  sass_dir: ./assets/css
 
 # Build
 repository: SESYNC-ci/sesync-ci.github.io
 exclude:
-  - README.md
-  - CONTRIBUTING.md
   - CNAME
-  - Gemfile.lock
+  - CONTRIBUTING.md
   - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
   - .Rproj.user/
   - "*.Rproj*"
   - "*.Rmd"
+  - "*.bak"
 theme: jekyll-theme-leap-day
-sass:
-  sass_dir: ./assets/css
 defaults:
   - scope:
-      path: ""
-      type: category
+      path: "*/index.md"
+      type: pages
     values:
       layout: category
   - scope:
-      path: ""
-      type: tag
+      path: "/lesson/*"
+      type: posts
     values:
-      toc: true
-      layout: tag
+      permalink: "/:slug"
   - scope:
       path: ""
       type: posts

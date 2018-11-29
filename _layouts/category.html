@@ -4,28 +4,23 @@ layout: default
 
 {{ content }}
 
-{% assign category = page.slug %}
-
-{% assign posts = site.categories[category] | where: 'sticky',true %}
-{% for post in posts %}
-<div class="sticky post {{ post.category }}">
-  <i class="fa fa-sticky-note" aria-hidden="true"></i>
-  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  {% if post.category == 'lessons' %}
-    &mdash; {{ post.excerpt | strip_html }}
-  {% endif %}
-</div>
+{% assign category = page.category %}
+{% assign grouped_posts = site.categories[category] | group_by: 'sticky' | reverse %}
+<div class="posts">
+{% for posts in grouped_posts %}
+  {% for post in posts.items %}
+    <div class="post" data-tags="[&quot;{{ post.tags | join: '&quot;,&quot;' }}&quot;]">
+      {% if post.sticky %}
+        <i class="fas fa-thumbtack" aria-hidden="true"></i>
+      {% endif %}
+      {% if post.categories contains 'blog' %}
+        {{ post.date | date: '%B %d, %Y' }} &mdash;
+      {% endif %}
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.categories contains 'lesson' %}
+        &mdash; {{ post.excerpt | strip_html }}
+      {% endif %}
+    </div>
+  {% endfor %}
 {% endfor %}
-
-{% assign posts = site.categories[category] | where: 'sticky',false %}
-{% for post in posts %}
-<div class="post {{ post.category }}">
-  {% if post.category == 'blog' %}
-    {{ post.date | date: '%B %d, %Y' }} &mdash;
-  {% endif %}
-  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  {% if post.category == 'lessons' %}
-    &mdash; {{ post.excerpt | strip_html }}
-  {% endif %}
 </div>
-{% endfor %}

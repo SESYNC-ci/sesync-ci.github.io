@@ -1,4 +1,6 @@
 ---
+# FIXME needs min height of white body, try with filtering
+# FIXME title is "false" with seo
 ---
 
 @import "{{ site.theme }}";
@@ -59,11 +61,11 @@ tr:nth-child(even) {
 
 td {
     border-left-color: $color-light-grey;
-   border-right-color: $color-light-grey;
-   border-bottom-color: $color-light-grey;
-   border-top-color: $color-light-grey;
-   &:first-child {
-       border-left-color: $color-light-grey;
+    border-right-color: $color-light-grey;
+    border-bottom-color: $color-light-grey;
+    border-top-color: $color-light-grey;
+    &:first-child {
+        border-left-color: $color-light-grey;
     }
 }
 
@@ -72,20 +74,13 @@ th {
     color: white;
 }
 
-
-
-
 hr {
     background: $color-primary-trim;
     height: 2px;
 }
 
-h1 {
-#    margin: 0 0 1em;
-}
-
-h3 {
-#    margin: 0 0 0.6em 0;
+.wrapper h2 {
+    margin: 0.6em 0;
 }
 
 nav ul li.tag-h1 a {
@@ -105,28 +100,22 @@ pre code {
     text-color: #efefef;
 }
 
-tags {
-    width: 230px;
-    position: fixed;
-    top: 220px;
-    left: 50%;
-    margin-left: 350px;
-    text-align: left;
-    h3 {
-        font-size: 18px;
-        font-family: proxima_nova_ltsemibold;
-        color: white;
-    }
-    ul {
-        font-size: 10px;
-        line-height: 20px;
-        list-style: none;
-        padding: 0px;
-    }
+.post {
+    padding: 2px 10px;
+}
+
+.tag {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0px;
     a > strong {
         font-size: 16px;
         color: $color-primary;
     }
+}
+
+.selectize-dropdown-content {
+    max-height: unset;
 }
 
 .doc-img {
@@ -138,6 +127,26 @@ tags {
 
 .doc-inline-img {
     height: 1em;
+}
+
+#tag-wrapper {
+    width: 230px;
+    position: fixed;
+    top: 220px;
+    left: 50%;
+    margin-left: 350px;
+    text-align: left;
+    h3 {
+        font-size: 18px;
+        font-family: proxima_nova_ltsemibold;
+        color: white;
+    }
+    select {
+        width: 100%;
+    }
+    .fa-lg {
+        font-size: 2em;
+    }
 }
 
 #banner {
