@@ -1,4 +1,7 @@
 ---
+# FIXME needs min height of white body, try with filtering
+# FIXME title is "false" with seo
+# FIXME lesson title is missing
 ---
 
 @import "{{ site.theme }}";
@@ -59,11 +62,11 @@ tr:nth-child(even) {
 
 td {
     border-left-color: $color-light-grey;
-   border-right-color: $color-light-grey;
-   border-bottom-color: $color-light-grey;
-   border-top-color: $color-light-grey;
-   &:first-child {
-       border-left-color: $color-light-grey;
+    border-right-color: $color-light-grey;
+    border-bottom-color: $color-light-grey;
+    border-top-color: $color-light-grey;
+    &:first-child {
+        border-left-color: $color-light-grey;
     }
 }
 
@@ -71,9 +74,6 @@ th {
     background-color: $color-primary;
     color: white;
 }
-
-
-
 
 hr {
     background: $color-primary-trim;
@@ -104,7 +104,7 @@ pre code {
     text-color: #efefef;
 }
 
-tags {
+#tag-wrapper {
     width: 230px;
     position: fixed;
     top: 220px;
@@ -116,12 +116,15 @@ tags {
         font-family: proxima_nova_ltsemibold;
         color: white;
     }
-    ul {
-        font-size: 10px;
-        line-height: 20px;
-        list-style: none;
-        padding: 0px;
+    select {
+        width: 100%;
     }
+}
+
+.tag {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0px;
     a > strong {
         font-size: 16px;
         color: $color-primary;

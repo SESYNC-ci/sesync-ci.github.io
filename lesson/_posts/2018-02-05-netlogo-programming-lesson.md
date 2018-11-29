@@ -1,0 +1,7 @@
+---
+title: NetLogo Scripting
+tags:
+ - NetLogo
+permalink: "/:slug"
+---
+{% include description.md name=page.slug %}

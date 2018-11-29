@@ -1,5 +1,5 @@
-RMD := $(shell find _posts/ -name '*.Rmd')
-RMD += $(shell find _drafts/ -name '*.Rmd')
+RMD := $(shell find . -path "*/_posts/*.Rmd")
+RMD += $(shell find . -path "*/_drafts/*.Rmd")
 PORT ?= 4321
 export GEM_HOME = ~/.gem
 

@@ -1,7 +1,8 @@
 <!doctype html>
+<!-- Originally downloaded from https://github.com/pages-themes/leap-day/blob/2c15b7c092971aa8af0e2752d562dd5ecad7d0f2/_layouts/default.html on 2017-10-09. -->
 <html lang="{{ site.lang | default: en-US }}">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24906765-5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,23 +10,25 @@
       gtag('js', new Date());
       gtag('config', 'UA-24906765-5');
     </script>
-
-    <!-- Original downloaded from https://github.com/pages-themes/leap-day/blob/2c15b7c092971aa8af0e2752d562dd5ecad7d0f2/_layouts/default.html
-    on 2017-10-09. Subsequently modified by Ian Carroll <icarroll@sesync.org>. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     {% seo %}
-    
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"/>
+    <link rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!-- Isotope by Metafizzy, https://isotope.metafizzy.com -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- selectize by Brian Reavis, http://selectize.github.io/selectize.js/ -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <script>
       (function() {
         var cx = '016537712648359583223:2mulwjpdhv8';
@@ -61,8 +64,8 @@
       <a href="{{ '/blog/' | relative_url }}" class="button">
         <strong>Blog</strong>
       </a>
-      <a href="{{ '/lessons/' | relative_url }}" class="button">
-        <strong>Lessons</strong>
+      <a href="{{ '/lesson/' | relative_url }}" class="button">
+        <strong>Lesson</strong>
       </a>
       <div id="search-box">
         <gcse:searchbox-only resultsUrl="{{ '/search.html' | relative_url }}"></gcse:searchbox-only>
@@ -72,34 +75,36 @@
     <div class="wrapper">
       {% if page.toc %}<nav><ul></ul></nav>{% endif %}
       <section>
+        {% if page.title %}
         <h1>{{ page.title }}</h1>
-	{% if page.author %}
-	<p><strong>{{ page.date | date: '%B %d, %Y'}} by
-	  <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a>
-	</strong></p>
-	{% endif %}
+        {% endif %}
+      	{% if page.author %}
+      	<p><strong>{{ page.date | date: '%B %d, %Y'}} by
+	      <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a>
+	      </strong></p>
+      	{% endif %}
         {{ content }}
       </section>
-      {% if page.tags.size > 0 %}
-      <tags>
+      <div id="tag-wrapper">
+        {% if page.tags.size > 0 %}
         <h3>Related <i class="fa fa-tags" aria-hidden="true"></i></h3>
-        <ul>
-          {% for tag in page.tags %}
-	    {% assign tag_page = site.documents | where: "slug", tag | first %}
-            <li>
-              <a href="{{ tag_page.url }}">
-                <strong>{{ tag_page.title }} </strong>
-              </a>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
-                <strong class="fa-stack-1x">{{ site.tags[tag].size | minus: 1}}
-                </strong>
-              </span>
-            </li>          
-          {% endfor %}
-        </ul>
-      </tags>
-      {% endif %}
+        {% for tag in page.tags -%}
+          <div class='tag'>
+            <a href="{{ 'tags.html?with=' | append: tag | relative_url }}">
+              <strong>{{ tag }} </strong>
+            </a>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-tag fa-stack-2x" aria-hidden="true"></i>
+              <strong class="fa-stack-1x">{{ site.tags[tag].size }}</strong>
+            </span>
+          </div>
+        {%- endfor %}
+        {% else %}
+        <h3>Filter by <i class="fa fa-tags" aria-hidden="true"></i></h3>
+        <div id="selectize-tags"></div>
+        <script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
+        {% endif %}
+      </div>
       <footer>
         <p>
           <a href="{{ site.github.repository_url }}/blob/master/{{ page.path }}"
