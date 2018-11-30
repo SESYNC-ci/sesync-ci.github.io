@@ -81,7 +81,7 @@ Now a query can be created to retrieve data from, for example, the `neighborhood
 table in your database:
 
 ```r
-qry <- dbGetQuery(mydb, "SELECT * FROM neighborhoods LIMIT 10;")
+qry <- dbGetQuery(mydb, "SELECT * FROM neighborhoods LIMIT 10")
 ```
 
 NOTE: To rerun `dbGetQuery` and reassign the result, you must first
@@ -139,7 +139,7 @@ Now a query can be created to retrieve data from the `neighborhoods`
 table in the database on urban green spaces:  
 
 ```python
-df = pd.read_sql('SELECT * FROM neighborhoods LIMIT 10;', con=mydb)
+df = pd.read_sql('SELECT * FROM neighborhoods LIMIT 10', con=mydb)
 ```
   
 Pandas reads the results of an SQL query of the database into a
@@ -225,7 +225,7 @@ connection.
 ### Access from the Command Line
 
 The `psql` command line utility is available for your use on
-ssh.sesync.org.  From the Terminal (macOS) or Bash Shell (Windows) 
+ssh.sesync.org. From the Terminal (macOS) or Bash Shell (Windows) 
 on your computer, the SESYNC user `jdoe` would access the 
 server via SSH with:
 
@@ -238,8 +238,8 @@ going on so type carefully! You should now be connected to the gateway
 server via SSH.
 
 Now you need to log in to the PostgreSQL database using the host name, database
-name, and database password.  These are all saved in a ".pg_service.conf" file created
-by SESYNC staff.  You may need to copy this file from your research 
+name, and database password. These are all saved in a ".pg_service.conf" file created
+by SESYNC staff. You may need to copy this file from your research 
 data directory or set the appropriate [environment
 variable](https://www.postgresql.org/docs/9.0/libpq-pgservice.html).
   
@@ -248,7 +248,6 @@ specifying the service by typing this command:
   
 ```bash
 psql service=cooltrees
- 
 ```
   
 You should now be connected to your database.  Your shell will look something like:  
