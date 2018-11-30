@@ -1,7 +1,7 @@
 ---
 title: eBeam Whiteboards
 tags:
-  - meeting
+  - Meeting
 ---
 
 SESYNC has installed the eBeam whitebaord capture software on all of our conference room PC's and laptops.

@@ -9,10 +9,9 @@ layout: default
 <div class="posts">
 {% for posts in grouped_posts %}
   {% for post in posts.items %}
-    <!--<div class="{{ post.tags | join: ' ' | prepend: 'post '}}">-->
     <div class="post" data-tags="[&quot;{{ post.tags | join: '&quot;,&quot;' }}&quot;]">
       {% if post.sticky %}
-        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+        <i class="fas fa-thumbtack" aria-hidden="true"></i>
       {% endif %}
       {% if post.categories contains 'blog' %}
         {{ post.date | date: '%B %d, %Y' }} &mdash;

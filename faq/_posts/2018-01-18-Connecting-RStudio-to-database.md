@@ -1,8 +1,8 @@
 ---
 title: How do I connect to a database from RStudio? 
 tags:
-  - infrastructure
-  - account
+  - Infrastructure
+  - Account
 ---
 
 

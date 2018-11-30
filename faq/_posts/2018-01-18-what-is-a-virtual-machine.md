@@ -1,7 +1,7 @@
 ---
 title: What is a virtual machine?
 tags:
-- virtual-machine
+ - Virtual Machine
 ---
 
 

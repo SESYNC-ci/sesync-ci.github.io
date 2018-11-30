@@ -1,7 +1,6 @@
 ---
 # FIXME needs min height of white body, try with filtering
 # FIXME title is "false" with seo
-# FIXME lesson title is missing
 ---
 
 @import "{{ site.theme }}";
@@ -80,12 +79,8 @@ hr {
     height: 2px;
 }
 
-h1 {
-#    margin: 0 0 1em;
-}
-
-h3 {
-#    margin: 0 0 0.6em 0;
+.wrapper h2 {
+    margin: 0.6em 0;
 }
 
 nav ul li.tag-h1 a {
@@ -104,6 +99,35 @@ pre code {
     text-color: #efefef;
 }
 
+.post {
+    padding: 2px 10px;
+}
+
+.tag {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0px;
+    a > strong {
+        font-size: 16px;
+        color: $color-primary;
+    }
+}
+
+.selectize-dropdown-content {
+    max-height: unset;
+}
+
+.doc-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.doc-inline-img {
+    height: 1em;
+}
+
 #tag-wrapper {
     width: 230px;
     position: fixed;
@@ -119,27 +143,9 @@ pre code {
     select {
         width: 100%;
     }
-}
-
-.tag {
-    font-size: 10px;
-    line-height: 20px;
-    padding: 0px;
-    a > strong {
-        font-size: 16px;
-        color: $color-primary;
+    .fa-lg {
+        font-size: 2em;
     }
-}
-
-.doc-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-
-.doc-inline-img {
-    height: 1em;
 }
 
 #banner {

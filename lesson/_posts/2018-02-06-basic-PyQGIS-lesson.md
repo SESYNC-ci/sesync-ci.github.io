@@ -2,7 +2,6 @@
 published: false
 tags:
  - Python
- - geospatial
-permalink: "/:slug"
+ - Geospatial
 ---
 {% include description.md name=page.slug %}

@@ -1,10 +1,10 @@
 ---
 title: "Making \"dataspice\" at #runconf18"
 tags:
-  - metadata
+  - Metadata
   - R
-  - reproducible-research
-  - data
+  - Reproducible Research
+  - Data
 author: khondula
 ---
 

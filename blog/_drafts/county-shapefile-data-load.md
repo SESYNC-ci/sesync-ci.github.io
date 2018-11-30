@@ -1,6 +1,6 @@
 ---
 tags:
-  - database
+  - Database
   - GIS
 authors:
   - Mike Smorul

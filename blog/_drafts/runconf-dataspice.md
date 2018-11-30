@@ -1,10 +1,10 @@
 ---
 title: Making dataspice at runconf
 tags:
-  - metadata
+  - Metadata
   - R
-  - reproducible-research
-  - data
+  - Reproducible Research
+  - Data
 author: khondula
 ---
 

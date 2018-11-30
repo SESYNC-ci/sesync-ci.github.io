@@ -1,7 +1,7 @@
 ---
 title: What support does SESYNC provide for custom virtual machines?
 tags:
-- virtual-machine
+ - Virtual Machine
 ---
 
 SESYNC has the ability to deploy custom Windows and Linux Virtual Machines for use by groups. 

@@ -2,10 +2,10 @@
 # Created by Rachael Blake and Ian Carroll on 2018-11-19
 title: Connect to a Database Server
 tags:
-  - database
+  - Database
   - R
   - Python
-  - shell
+  - Shell
 ---
 
 This Quick Start guide will walk you through establishing a connection

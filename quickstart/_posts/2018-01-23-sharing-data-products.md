@@ -1,8 +1,8 @@
 ---
 title: Share Synthesis Data Products
 tags:
- - data
- - reproducible-research
+ - Data
+ - Reproducible Research
 ---
 
 Choosing to put your data products in a long-term repository can:

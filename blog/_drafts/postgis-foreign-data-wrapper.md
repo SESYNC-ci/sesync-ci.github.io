@@ -1,7 +1,7 @@
 ---
 title: Tests using the PostgreSQL FDW and PostGIS
 tags:
-  - database
+  - Database
   - GIS
 author: msmorul
 ---

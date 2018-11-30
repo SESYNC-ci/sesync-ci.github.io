@@ -1,8 +1,8 @@
 ---
 title: "Run Python Scripts on the Cluster"
 tags:
-- Python
-- virtual Environment
+ - Python
+ - Virtual Environment
 ---
 
 ## Setting up a virtual environment

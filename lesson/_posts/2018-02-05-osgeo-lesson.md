@@ -1,7 +1,6 @@
 ---
 title: OSGeo
 tags:
- - geospatial
-permalink: "/:slug"
+ - Geospatial
 ---
 {% include description.md name=page.slug %}

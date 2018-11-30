@@ -1,8 +1,8 @@
 ---
 title: What's the procedure for having remote participants at my meeting?
 tags:
-  - meeting
-  - remote-participants
+  - Meeting
+  - Remote Participants
 ---
 
 When you submit your travel planner to our travel office, please make sure to include a list of all remote participants that will be joining your meeting.

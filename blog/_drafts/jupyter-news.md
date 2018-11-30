@@ -4,7 +4,7 @@
 title: Going to Jupyter from SESYNC
 tags:
   - Python
-  - infrastructure
+  - Infrastructure
 author:
  - icarroll
  - khondula

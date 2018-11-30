@@ -1,8 +1,8 @@
 ---
 title: Why does does my virtual machine show less memory than I requested?
 tags:
-- Windows
-- virtual-machine
+ - Windows
+ - Virtual Machine
 ---
 
 

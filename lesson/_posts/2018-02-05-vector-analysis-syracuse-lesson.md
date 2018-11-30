@@ -2,7 +2,6 @@
 published: false
 tags:
  - R
- - geospatial
-permalink: "/:slug"
+ - Geospatial
 ---
 {% include description.md name=page.slug %}

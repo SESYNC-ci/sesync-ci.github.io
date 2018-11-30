@@ -2,7 +2,7 @@
 title: Where are Shiny apps published?
 tags:
   - R
-  - shiny
+  - Shiny
 ---
 
 

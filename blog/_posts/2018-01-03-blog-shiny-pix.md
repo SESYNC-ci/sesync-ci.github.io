@@ -1,9 +1,9 @@
 ---
 title: Images for Data Exploration in RShiny Apps
 tags:
-  - dataviz
+  - Vizualization
   - R
-  - shiny
+  - Shiny
 author: khondula
 ---
 

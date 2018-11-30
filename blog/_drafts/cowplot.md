@@ -1,7 +1,7 @@
 ---
 title: Beef up your plots with cowplot
 tags:
-  - dataviz
+  - Vizualization
   - R
 author: khondula
 ---

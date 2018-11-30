@@ -1,7 +1,7 @@
 ---
 title: Writing Data Management Plans
 tags:
-  - data
+  - Data
 author: khondula
 ---
 

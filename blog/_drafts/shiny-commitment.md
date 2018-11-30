@@ -2,8 +2,8 @@
 title: So you want a website
 tags:
   - R
-  - shiny
-  - github
+  - Shiny
+  - GitHub
 author: khondula
 ---
 

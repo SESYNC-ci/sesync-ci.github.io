@@ -1,7 +1,7 @@
 ---
 title: Build a Shiny App to Browse MODIS Data
 tags:
-  - dataviz
+  - Vizualization
   - R
 author: khondula
 ---

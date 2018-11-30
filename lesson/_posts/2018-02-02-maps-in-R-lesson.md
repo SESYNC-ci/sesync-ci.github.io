@@ -2,8 +2,7 @@
 title: Maps with R
 tags:
  - R
- - geospatial
-permalink: "/maps-in-R-lesson"
+ - Geospatial
 sticky: true
 ---
 {% include description.md name=page.slug %}

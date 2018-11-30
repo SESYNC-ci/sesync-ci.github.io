@@ -1,9 +1,9 @@
 ---
 title: How do I manage my mailing list? 
 tags:
-  - infrastructure
-  - account
-  - mailing-list
+  - Infrastructure
+  - Account
+  - Mailing List
 ---
 
 

@@ -2,7 +2,7 @@
 title: Publish a Shiny App
 tags:
   - R
-  - shiny
+  - Shiny
 ---
 
 

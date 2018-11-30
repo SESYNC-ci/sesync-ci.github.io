@@ -28,7 +28,7 @@ $(document).ready(function(){
   // initialize Selectize filter
   $('#selectize-tags').selectize({
     dropdownParent: 'body',
-    placeholder: "includes tag(s)...",
+    placeholder: "posts tagged...",
     options: Array.from(
       tags.values(),
       x => {return {'text': x, 'value': x};}),

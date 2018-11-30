@@ -2,10 +2,10 @@
 title: Run Python Scripts on the Cluster
 tags:
  - Python
- - cluster
+ - Cluster
 ---
 
-Python scripts can be sumitted by generating a shell file to sumbit the job to the SLURM cluster (see more information on SESYNC cluster and slurm here:xx)
+Python scripts can be sumitted by generating a shell file to sumbit the job to the Slurm cluster (see more information on SESYNC cluster and slurm here:xx)
 The shell submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:
 
     #!/bin/bash

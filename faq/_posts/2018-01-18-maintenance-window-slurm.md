@@ -1,9 +1,9 @@
 ---
 title: What happens to my jobs during the maintenance window?
 tags:
-  - infrastructure
-  - cluster
-  - maintenance-window
+  - Infrastructure
+  - Cluster
+  - Maintenance Window
   - Slurm
 ---
 

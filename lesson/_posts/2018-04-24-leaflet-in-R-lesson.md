@@ -1,9 +1,8 @@
 ---
 title: Leaflet Maps
 tags:
- - dataviz
+ - Vizualization
  - R
- - geospatial
-permalink: "/leaflet-in-R-lesson"
+ - Geospatial
 ---
 {% include description.md name=page.slug %}

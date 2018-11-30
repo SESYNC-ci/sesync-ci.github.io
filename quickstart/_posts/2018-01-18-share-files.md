@@ -2,7 +2,7 @@
 title: Share Files and Folders with Anyone
 tags:
   - NFS
-  - data
+  - Data
 ---
 
 SESYNC researchers and staff can provide a link for external collaborators to

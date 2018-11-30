@@ -2,7 +2,7 @@
 title: Run Python Scripts on the Cluster
 tags:
  - Python
- - cluster
+ - Cluster
 ---
 
 The submission script lists the shell commands to be run from the cluster. To run Python code, the submission script can be as simple as:

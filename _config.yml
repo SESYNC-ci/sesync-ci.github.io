@@ -25,6 +25,7 @@ exclude:
   - .Rproj.user/
   - "*.Rproj*"
   - "*.Rmd"
+  - "*.bak"
 theme: jekyll-theme-leap-day
 defaults:
   - scope:
@@ -32,6 +33,11 @@ defaults:
       type: pages
     values:
       layout: category
+  - scope:
+      path: "/lesson/*"
+      type: posts
+    values:
+      permalink: "/:slug"
   - scope:
       path: ""
       type: posts

@@ -2,7 +2,7 @@
 title: "What's the difference between git, GitHub, and GitLab?"
 tags:
  - git
- - reproducible-research
+ - Reproducible Research
 ---
 
 

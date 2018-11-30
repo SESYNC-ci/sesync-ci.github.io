@@ -1,8 +1,8 @@
 ---
 title: When does SESYNC setup resources for my group? 
 tags:
-  - infrastructure
-  - account
+  - Infrastructure
+  - Account
 ---
 
 

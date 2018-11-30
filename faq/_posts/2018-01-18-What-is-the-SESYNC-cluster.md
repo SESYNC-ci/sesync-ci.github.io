@@ -1,12 +1,12 @@
 ---
 title: What is the compute cluster?
 tags:
-- cluster
+ - Cluster
 ---
 
 SESYNC's computational cluster enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data set.
 
-## Overview of the cluster and scheduler
+## Overview of the cluster and Job Scheduler
 
 The cluster is a group of 26 virtual machines with a total of 190 cores and 1.65 TB of RAM that is accessible through
 a scheduler. Using two special commands (sbatch and srun), you request the scheduler to allocate one or more compute nodes for a job.
@@ -53,4 +53,4 @@ less resources than the other cluster nodes.
 | Time Limit | Max Job Size | Node Description |
 | 1hr | 2 nodes | 4 core, 8GB memory |
 
-Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
+Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-cluster.html' | relative_url }}).

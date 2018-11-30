@@ -1,7 +1,7 @@
 ---
 title: Adventures in Windows Dynamic Memory
 tags:
-- windows
+ - Windows
 ---
 
 # {{ page.title }}

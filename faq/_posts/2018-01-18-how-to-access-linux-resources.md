@@ -1,8 +1,8 @@
 ---
 title: How do I access Linux resources?
 tags:
-  - shell
-  - ssh
+  - Shell
+  - SSH
 ---
 
 

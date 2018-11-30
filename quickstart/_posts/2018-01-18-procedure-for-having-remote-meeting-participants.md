@@ -1,8 +1,8 @@
 ---
 title: Remote Meeting Participants
 tags: 
- - meeting
- - remote-participants
+ - Meeting
+ - Remote Participants
 ---
 
 When you submit your travel planner to our travel office, please make sure to include a list of all remote participants that will be joining your meeting. You may add participants after the 8 week deadline, but we require that you notify us of all participants at least one week before the start of your meeting.

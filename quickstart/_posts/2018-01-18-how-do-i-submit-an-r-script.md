@@ -2,7 +2,7 @@
 title: Run R Scripts on the Cluster
 tags:
   - R
-  - cluster
+  - Cluster
 ---
 
 You can use SESYNC's RStudio Server to submit jobs to our cluster and view the resulting output. In the following example, you will learn how to:

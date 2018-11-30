@@ -1,9 +1,9 @@
 ---
 title: How do I access my research data directory?
 tags:
-  - data
+  - Data
   - NFS
-  - ssh
+  - SSH
 ---
 
 Navigate to <https://files.sesync.org> and log in with your SESYNC username and

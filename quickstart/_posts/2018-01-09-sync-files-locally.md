@@ -2,7 +2,7 @@
 title: Local Sync for Research Data
 tags:
   - NFS
-  - data
+  - Data
 ---
 
 ## Nextcloud

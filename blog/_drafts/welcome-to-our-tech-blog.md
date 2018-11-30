@@ -1,7 +1,7 @@
 ---
 tags:
-  - jekyll
-  - update
+  - Jekyll
+  - Update
 authors:
   - Mike Smorul
 ---

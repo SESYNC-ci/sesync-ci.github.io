@@ -1,7 +1,6 @@
 ---
 title: Relational Databases
 tags:
- - qualitative
-permalink: "/:slug"
+ - Qualitative Data
 ---
 {% include description.md name=page.slug %}

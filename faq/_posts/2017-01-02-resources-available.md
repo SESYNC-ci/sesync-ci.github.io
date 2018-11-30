@@ -1,11 +1,11 @@
 ---
 title: What resources are available?
-tags: 
-- infrastructure
-- database
-- NFS
-- Slurm
-- shell
+tags:
+ - Infrastructure
+ - Database
+ - NFS
+ - Slurm
+ - Shell
 sticky: true
 ---
 
@@ -13,20 +13,20 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 
 | Resource | URL |
 |--|--|
-| mailing list | <https://lists.sesync.org> |
-| code repository | <https://gitlab.sesync.org> |
-| research data directory | <https://files.sesync.org> |
+| Mailing List | <https://lists.sesync.org> |
+| Code Repository | <https://gitlab.sesync.org> |
+| Research Data Directory | <https://files.sesync.org> |
 | RStudio | <https://rstudio.sesync.org> |
 | Jupyter | <https://jupyter.sesync.org> |
 | Shiny Apps | <https://shiny.sesync.org> |
-| SSH gateway | ```<username>@ssh.sesync.org``` |
-| MySQL/PostgreSQL database | ```<hostname>.research.sesync.org``` |
-| Remote desktop | <https://desktop.sesync.org> |
+| SSH Gateway | ```<username>@ssh.sesync.org``` |
+| MySQL/PostgreSQL Database | ```<hostname>.research.sesync.org``` |
+| Remote Desktop | <https://desktop.sesync.org> |
 
 | Service | Description |
 |--|--|
-| Custom virtual machines | Single purpose Windows or linux virtual machine with shared account. |
-| Enterprise conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
-| Software purchasing | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
+| Custom Virtual Machines | Single purpose Windows or linux virtual machine with shared account. |
+| Enterprise Conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
+| Software Purchasing | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 
 [high-level overview]: http://sesync.us/itresearchresources

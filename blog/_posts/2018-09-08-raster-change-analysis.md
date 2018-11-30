@@ -12,7 +12,7 @@ output:
     preserve_yaml: true
 tags:
  - R
- - geospatial
+ - Geospatial
 ---
 
 
