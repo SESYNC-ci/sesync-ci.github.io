@@ -2,6 +2,7 @@
 tags:
  - NFS
  - Data
+sticky: true
 ---
 
 SESYNC provides a large, shared file store to host data for all projects.
