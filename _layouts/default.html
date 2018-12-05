@@ -3,7 +3,8 @@
 <html lang="{{ site.lang | default: en-US }}">
   <head>
     <!-- global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24906765-5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24906765-5">
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -12,7 +13,7 @@
     </script>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}     </title>
     {% seo title=false %}
     <link rel="stylesheet"
           href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"/>
@@ -45,7 +46,6 @@
         <h2>{{ site.subtitle }}</h2>
       {% endif %}
     </header>
-
     <div id="banner">
       <a href="{{ '/quickstart/' | relative_url }}" class="button">
         <strong>Quick Start</strong>
@@ -60,7 +60,6 @@
         <strong>Lesson</strong>
       </a>
     </div>
-
     <div class="wrapper">
       {% if page.toc %}<nav><ul></ul></nav>{% endif %}
       <section>

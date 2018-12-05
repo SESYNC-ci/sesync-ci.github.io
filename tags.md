@@ -13,11 +13,11 @@ order:
 ---
 
 {% for section in page.order %}
-## {{ section.heading }}
-
+<h2 id="{{ section.category }}">{{ section.heading }}</h2>
 <div class="posts">
   {% for post in site.categories[section.category] %}
-  <div class="post" data-tags="[&quot;{{ post.tags | join: '&quot;,&quot;' }}&quot;]">
+  <div class="post"
+       data-tags="[&quot;{{ post.tags | join: '&quot;,&quot;' }}&quot;]">
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </div>
   {% endfor %}

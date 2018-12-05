@@ -1,50 +1,53 @@
-$(document).ready(function(){
-
-  // ready Isotope for filtering posts on tags
-  var $posts = $('.posts').isotope({
-    itemSelector: '.post',
-    layoutMode: 'vertical'
-  });
-  function filterPosts(tags) {
-    $posts.isotope({filter: function() {
-        return tags.every(x => $(this).data('tags').has(x));
-    }});
-  }
-
-  // set of all tags (side effect: simplify subsequent tests)
-  var tags = new Set($('.post')
-    .map(function() {
-      let tags = $(this).data('tags');
-      $(this).data('tags', new Set(tags));
-      return tags;
-    })
-    .get()
-  ); // FIXME make this react to isotope, and make selectize react to this
-
-  // prep url parameter "with" for Selectize initialization
-  let queryParams = new URLSearchParams(window.location.search);
-  let queryWith = queryParams.get('with');
-
-  // initialize Selectize filter
-  $('#selectize-tags').selectize({
-    dropdownParent: 'body',
-    placeholder: "posts tagged...",
-    options: Array.from(
-      tags.values(),
-      x => {return {'text': x, 'value': x};}),
-    items: tags.has(queryWith) ? [queryWith] : [],
-  });
-
-  // initial run of filterPosts
-  var tagsControl = $('#selectize-tags')[0].selectize;
-  filterPosts(tagsControl.items);
-
-  // attatch filterPosts to selectize change
-  tagsControl.on('change', function() {filterPosts(tagsControl.items)});
-
+// ready Isotope for filtering posts on their tag set
+var $posts = $('.posts').isotope({
+  itemSelector: '.post',
+  layoutMode: 'vertical'
+});
+$('.post').each(function() {
+  var tagSet = new Set($(this).data('tags'));
+  $(this).data('tagSet', tagSet);
 });
 
-// there are item_add and other useful events
-/// https://github.com/selectize/selectize.js/blob/master/docs/events.md
+// ready Selectize user input
+$('#selectize-tags').selectize({
+  dropdownParent: 'body',
+  placeholder: "posts tagged...",
+  options: []
+});
+var tagsControl = $('#selectize-tags')[0].selectize;
 
-// try plugins, like the one giving an "x" to remove
+// update control options from result of filtering posts
+function updateOptions() {
+  var $postsLeft = $('.post:visible');
+  var tagsLeft = new Set($postsLeft.map(function() {
+    return $(this).data('tags');
+  }).toArray());
+  tagsControl.clearOptions();
+  tagsControl.addOption(Array.from(
+    tagsLeft.values(),
+    x => ({'text': x, 'value': x})
+  ));
+}
+$posts.on('arrangeComplete', updateOptions);
+  
+// function that Selectize will trigger to filter posts and set options
+function filterPosts(tags) {
+  $posts.isotope({filter: function() {
+    return tags.every(x => $(this).data('tagSet').has(x));
+  }});
+}
+tagsControl.on('change', function() {
+  tagsControl.close();
+  tagsControl.blur();
+  filterPosts(tagsControl.items);
+});
+
+// initial run
+var queryParams = new URLSearchParams(window.location.search);
+var queryWith = queryParams.get('with');
+updateOptions();
+if (queryWith !== null) {
+  tagsControl.addItem(queryWith, false);
+}
+
+// FIXME getting close on delete is requiring selectize mods
