@@ -6,7 +6,7 @@ tags:
 
 # {{ page.title }}
 
-SESYNC's virtual machines are setup to use dynamic memory. What this means is that your virtual machine will
+SESYNC's Windows virtual machines are setup to use dynamic memory. What this means is that your virtual machine will
 show different memory usage based on its current usage, however you still have access to the full amount we allocated to you.  
 
 Example  
@@ -14,7 +14,7 @@ Example
 ----------
 
 For example, SESYNC may allocate up to 64GB for your virtual machine, however when you connect
-to your machine you may only see a fraction of that if you run 'free' or in the windows task manager.
+to your machine you may only see a fraction of that in the windows task manager.
 When your processing starts and requests memory, your allocation will automatically increase up to the
 limit that we've allocated for you.  
 
