@@ -7,7 +7,7 @@ tags:
 # {{ page.title }}
 
 SESYNC's Windows virtual machines are setup to use dynamic memory. What this means is that your virtual machine will
-show different memory usage based on its current usage, however you will still have access to the full amount we allocated to you.  
+show different memory usage based on its current usage, however, you will still have access to the full amount we allocated to you.  
 
 Example  
 
