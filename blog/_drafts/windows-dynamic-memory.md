@@ -14,7 +14,7 @@ Example
 ----------
 
 For example, SESYNC may allocate up to 64GB for your virtual machine, however, when you connect
-to your machine you may only see a fraction of that in the windows task manager.
+to your machine you may only see a fraction of that in the Windows task manager.
 When your processing starts and requests memory, your allocation will automatically increase up to the
 limit that we've allocated for you.  
 
