@@ -5,14 +5,11 @@ tags:
 author: BillSchenk
 ---
 
-# {{ page.title }}
-
 SESYNC's Windows virtual machines are setup to use dynamic memory. What this means is that your virtual machine will
 show different memory usage based on its current usage, however, you will still have access to the full amount we allocated to you.  
 
-Example  
-
-----------
+Example
+-------
 
 For example, SESYNC may allocate up to 64GB for your virtual machine, however, when you connect
 to your machine you may only see a fraction of that in the Windows task manager.
@@ -31,9 +28,8 @@ from idle virtual machines to busy ones. If we didn't use dynamic memory, during
 virtual machines would just be occupying memory that may be needed by other groups. This wastes the memory
 itself and power needed to keep the memory online.
 
-Does this mean memory may not be available for me?  
-
------------------------------------------------------
+Does this mean memory may not be available for me? 
+--------------------------------------------------
 
 Theoretically if every virtual machine requested to use its maximum allowed memory at the same time this could happen.
 In practice this doesn't happen (and never has) because SESYNC staff closely monitors our virtual cluster resources and
