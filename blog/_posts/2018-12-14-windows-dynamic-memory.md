@@ -2,6 +2,7 @@
 title: Adventures in Windows Dynamic Memory
 tags:
  - Windows
+author: BillSchenk
 ---
 
 # {{ page.title }}
