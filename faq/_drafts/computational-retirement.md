@@ -5,8 +5,6 @@ tags:
  - infrastructure
 ---
 
-SESYNC computational resources are available to users for approximately 1 year after your last group meeting.
+SESYNC computational resources are available to pursuit participants for approximately 1 year after the final meeting.
 
-SESYNC Cyberinfrastructure staff will reach out to Group PI's prior to their last scheduled meeting to plan a **Closeout Meeting**. In the meeting, CI staff will discuss your currently allocated computational resources and plan a retirement and transfer process for your group's data and computational resources. Our staff can also help you identify a long-term repository for your data.
-
-Please contact cyberhelp@sesync.org with any questions.
+The cyberinfrastructure staff will participate in an **Exit Meeting** with the PI's during the project's final meeting at SESYNC. At that time, we will review the data and computational resources allocated to the project and agree on a plan to transfer these to other service providers identified by the PIs. The cyberinfrastructure staff can help identify a [long-term repository for data]({{ 'quickstart/sharing-data-products.html' | relative_url }}) and other service providers. Please email <{{ site.email }}> with any questions.
