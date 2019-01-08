@@ -3,6 +3,7 @@ title: Should I use GitHub or SESYNC's GitLab?
 tags:
  - git
  - GitHub
+ - GitLab
 ---
 
 If you already have projects on GitHub that you are working on, we prefer that you continue to use
