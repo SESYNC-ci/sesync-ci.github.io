@@ -2,6 +2,7 @@
 title: Create Projects on GitLab
 tags: 
   - git
+  - GitLab
 ---
 
 
