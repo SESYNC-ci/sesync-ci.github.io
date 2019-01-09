@@ -62,7 +62,7 @@ You can find your output in the files window of RStudio. Look for `.out` (and ma
 
 ## Submitting MATLAB jobs
 
-Save your MATLAB script, we'll assume is is named `sampleMATLAB.m` in the same place as your `submit.sh` file.
+Save your MATLAB script, we'll assume it is named `sampleMATLAB.m` in the same place as your `submit.sh` file.
 
 Create your `submit.sh` file with the following:
 ```
