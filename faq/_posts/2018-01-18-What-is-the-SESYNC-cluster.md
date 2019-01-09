@@ -53,4 +53,4 @@ less resources than the other cluster nodes.
 | Time Limit | Max Job Size | Node Description |
 | 1hr | 2 nodes | 4 core, 8GB memory |
 
-Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-cluster.html' | relative_url }}).
+Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
