@@ -6,6 +6,7 @@ tags:
  - Slurm
  - R
  - Shell
+ - MATLAB
 ---
 
 You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through rstudio. The workflow for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will be written out to a file called slurm-[jobID].out and errors go to slurm-[jobID].err.
@@ -19,7 +20,7 @@ The general process to submit your code (aka, job) to the cluster is as follows:
 
 ## Connect via the ssh gateway
 
-Login to SESYNC's ssh gateway at `ssh.sesync.org` (click (here)[link to Linux resource page] if you need to know how to do that). 
+Login to SESYNC's ssh gateway at `ssh.sesync.org` [click here](https://cyberhelp.sesync.org/faq/how-to-access-linux-resources.html) if you need to know how to do that). 
 
 Create a file called `submit.sh` using your favorite editor (nano, pico, vi, etc.). For example: `$ nano submit.sh` Type and save the following in the file:
 ```
@@ -39,7 +40,7 @@ Check your job's output by using `$ ls` to find the `.out` (and maybe `.err`) fi
 
 ## Connect via RStudio server
 
-Connect to the RStudio server at `rstudio.sesync.org` For more information, (see)[link to rstudio page]. Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the (rslurm package documatation)[link] and/or this (example)[blog post]. Let's assume for now your R script is called `myRcode.R`
+Connect to the RStudio server at `rstudio.sesync.org` For more information, [see](https://cyberhelp.sesync.org/quickstart/rstudio-server.html). Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the [rslurm package documatation](https://cran.r-project.org/web/packages/rslurm/index.html). Let's assume for now your R script is called `myRcode.R`
 
 Create a new file in the RStudio editor (File -> New File -> Text File). Save it as `submit.sh` in the same folder as `myRcode.R`. Type and save the following:
 ```
@@ -58,6 +59,23 @@ Submit this script to the cluster at the command prompt: `$ sbatch submit.sh`. B
 Check your job's status at the command prompt: `$ squeue`
 
 You can find your output in the files window of RStudio. Look for `.out` (and maybe `.err`) files with your job number and open them from there (they will be plain text). You can also check your job's output in the terminal window, using `$ ls` to find the file(s) containing your job number. View the output with an editor or the `less` command. For example, if your job number were 1234, `$ less slurm-1234.out`
+
+## Submitting MATLAB jobs
+
+Save your MATLAB script, we'll assume is is named `sampleMATLAB.m` in the same place as your `submit.sh` file.
+
+Create your `submit.sh` file with the following:
+```
+#!/bin/bash
+#
+#SBATCH -n1
+
+module load matlab
+
+matlab -nodisplay < sampleMATLAB.m
+```
+
+From the ssh gateway, submit the script with the command prompt: `$ sbatch submit.sh`
 
 
 ## For more information
