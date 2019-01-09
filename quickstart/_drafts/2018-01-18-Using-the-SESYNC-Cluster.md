@@ -72,7 +72,7 @@ Create your `submit.sh` file with the following:
 
 /usr/local/MATLAB/R2018b/bin/matlab -nodisplay < sampleMATLAB.m
 ```
-or update their ~/.profile to include:
+or update your ~/.profile to include:
 `export PATH=$PATH:/usr/local/MATLAB/R2018b/bin/matlab`
 
 and the `submit.sh` file only needs:
@@ -81,7 +81,7 @@ and the `submit.sh` file only needs:
 #
 #SBATCH -n1
 
-/usr/local/MATLAB/R2018b/bin/matlab -nodisplay < sampleMATLAB.m
+matlab -nodisplay < sampleMATLAB.m
 ```
 
 From the ssh gateway, submit the script with the command prompt: `$ sbatch submit.sh`
