@@ -21,25 +21,7 @@ The Stata software is available on a Linux server at "stata.sesync.org",
 which is only accessible to other servers on the SESYNC network. Our
 RStudio server can be accessed from the web, at
 <https://rstudio.sesync.org>, and that machine can access the server
-running Stata. The first step is to create an SSH key pair to automate
-"logging in" to the server running Stata.
-
-1.  Login at <https://rstudio.sesync.org>
-2.  Go to "Tools" > "Global Options" > "Git/SVN"
-3.  Select "Create RSA Key", leave the password fields empty, and choose
-    "Create"
-4.  Click "Accept"/"Okay"/"Continue"/"Close" until the pop-up windows go
-    away
-5.  Execute the following two commands in the R console:
-
-<!-- -->
-
-    system('cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys')
-    system('ssh-keyscan -t ecdsa -H stata.sesync.org >> ~/.ssh/known_hosts')
-
-Those familiar wih SSH authentication may doubt these instructions. The
-"trick" is that user home directories are portable on SESYNC's
-virtualized infrastructure.
+running Stata. 
 
 Using the `RStata` package
 --------------------------
