@@ -4,7 +4,7 @@ order:
  - [quickstart, Quick Starts]
  - [faq, FAQs]
  - [blog, Blog Posts]
- - [lessons, Lessons]
+ - [lesson, Lessons]
 ---
 
 <div id="fullpage">
@@ -26,7 +26,8 @@ order:
     <div class="preview-wrapper">
       {% capture category_page %}/{{ cat }}/{% endcapture %}
       <div class="preview more">
-        <a href="{{ category_page | relative_url }}"><p>view all...</p><h2>{{category[1]}}</h2></a>
+        <a href="{{ category_page | relative_url }}"><p>view all...</p>
+        <h2>{{ category[1] }}</h2></a>
       </div>
       {% assign posts = site.categories[cat] %}
       {% for post in posts %}
