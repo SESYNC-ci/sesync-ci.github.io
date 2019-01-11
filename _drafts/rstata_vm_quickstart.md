@@ -25,7 +25,7 @@ running Stata. The first step is to create an SSH key pair to automate
 "logging in" to the server running Stata.
 
 1.  Login at <https://rstudio.sesync.org>
-2.  Go to "Tools" &gt; "Global Options" &gt; "Git/SVN"
+2.  Go to "Tools" > "Global Options" > "Git/SVN"
 3.  Select "Create RSA Key", leave the password fields empty, and choose
     "Create"
 4.  Click "Accept"/"Okay"/"Continue"/"Close" until the pop-up windows go
@@ -45,18 +45,18 @@ Using the `RStata` package
 --------------------------
 
 The [RStata](https://cran.r-project.org/package=RStata) package
-facilitates sending input and receiving output from the Stata program.
+facilitates sending input and receiving output from the Stata program.  
 The package documentation describes communicating with Stata software
 installed on the same machine as R, but is conveniently written to also
-allow communication with a remote installation. The package require two
+allow communication with a remote installation.  The package require two
 pieces of user input: the "path" to the Stata executable and the Stata
-version number. From our RStudio server, these options should be set as
+version number.  From our RStudio server, these options should be set as
 follows.
 
     library(RStata)
 
-    options(RStata.StataPath='ssh stata.sesync.org /usr/local/stata14/stata')
-    options(RStata.StataVersion=14)
+    options(RStata.StataPath='ssh -q stata.sesync.org /usr/local/stata15/stata')
+    options(RStata.StataVersion=15)
 
 To confirm that the options are correctly set, use the `stata` function
 to send the one-line command requesting Stata to print its version:
@@ -65,10 +65,10 @@ to send the one-line command requesting Stata to print its version:
 
 The `stata` function alternatively accepts the name of a Stata ".do"
 file, which will be much more efficient than running multiple
-one-liners. The `?stata` help describes how to use `data.in` and
+one-liners.  The `?stata` help describes how to use `data.in` and
 `data.out` arguments to handle data transmission, but we strongly
-discourage their use. Instead, have both R and Stata read and write data
-to a location on our network file system. Both servers have access to
+discourage their use.  Instead, have both R and Stata read and write data
+to a location on our network file system.  Both servers have access to
 the same data directories.
 
 Here is a simple ".do" file that demonstrates reading and writing to the
@@ -107,6 +107,7 @@ following:
     # read result back into R
     from_stata <- read_dta('/nfs/public-data/training/census5_summary.dta')
     head(from_stata)
+
 
 Added benefit: use your SSH key on GitLab/GitHub
 ------------------------------------------------
