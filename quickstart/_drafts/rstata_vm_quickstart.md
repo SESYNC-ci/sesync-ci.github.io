@@ -1,6 +1,5 @@
 ---
 title: How to execute Stata commands from SESYNC's RStudio Server
-category: quickstart
 tags:
   - RStata
   - Stata
