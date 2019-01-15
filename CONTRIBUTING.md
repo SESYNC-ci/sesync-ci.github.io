@@ -26,9 +26,9 @@ My blog post about open data for reproducible research in Python.
 
 ### Category
 
-Posts are divided into a handful of categories, corresponding to the style of
+Posts (and drafts) are divided into a handful of categories, corresponding to the style of
 information delivery rather than the topic. The category is determined by the
-parent folder of the "\_posts" folder containing a file. The current categories
+parent folder of the "\_posts" (or "\_drafts") folder containing a file. The current categories
 are:
 
 ```
@@ -59,11 +59,11 @@ As a general guide for creating posts from RMarkdown, follow these steps:
 can open the project with RStudio. Don't forget to stage the ".Rmd" AND the
 ".md" output, commit, and push your changes to GitHub.
 
-2. Place the RMarkdown document in the "\_posts" (or "\_drafts", see below)
-folder. For instance, assuming you clone the project into your home directory,
+2. Place the RMarkdown document in the categorized "\_posts" (or "\_drafts")
+folder. For instance, assuming you clone the project into your home directory while working on a new blog,
 you will place your "2000-01-01-i-survived-y2k.Rmd" file in
-"\~/sesync-ci.github.io/\_posts/" and the output will be
-"\~/sesync-ci.github.io/\_posts/2000-01-01-i-survived-y2k.md".
+"\~/sesync-ci.github.io/blog\_posts/" and the output will be
+"\~/sesync-ci.github.io/blog\_posts/2000-01-01-i-survived-y2k.md".
 
 3. Include additional configuration along with the category and tags to create a
 suitable Markdown document (replacing the category and tags below with suitable
