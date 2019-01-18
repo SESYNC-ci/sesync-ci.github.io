@@ -64,11 +64,9 @@ configuration file) can be established using:
 mydb <-  dbConnect(Postgres(), service = "cooltrees")
 ```
   
-NOTE: The password will be retrieved from the appropriate line in the
-file "\~/.pg_service.conf". You need to create this file by copying it
-from your research data directory, or you can set the
+The password will be retrieved from the configuration file if RStudio knows where to look. The first place checked is in your home directory (i.e. looking for a file "\~/.pg_service.conf"). After that, the location specified by the
 [PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
-environment variable to "/nfs/cooltrees-data/.pg_service.conf".
+environment variable is checked. For a version-controlled RStudio project, the best practice is to add the line `PGSERVICEFILE=/nfs/cooltrees-data/.pg_service.conf` to a plain text file named ".Renviron". After doing that, close and reopen your project to read in the environment variable.
 
 Now a query can be created to retrieve data, say the `neighborhoods`
 table from your database on urban green spaces:
