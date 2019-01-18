@@ -6,6 +6,7 @@ tags:
   - R
   - Python
   - Shell
+  - SSH
 ---
 
 This Quick Start guide will walk you through establishing a connection
@@ -65,16 +66,16 @@ mydb <-  dbConnect(Postgres(), service = "cooltrees")
 ```
   
 The password will be retrieved from the configuration file if RStudio knows where
-to look. The first place checked is in your home directory (i.e. looking for a
-file "\~/.pg_service.conf"). After that, the location specified by the
-[PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
-environment variable is checked. For a version controlled RStudio project, the best
+to look. The first place checked is in your home directory (i.e. it looks for the
+file "\~/.pg_service.conf"). After that, it looks for the file in the location 
+specified by the [PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
+environment variable. For a version controlled RStudio project, the best
 practice is to add the line `PGSERVICEFILE=/nfs/cooltrees-data/.pg_service.conf` to
 a plain text file named ".Renviron" in the project's root directory. After doing that,
 close and reopen your project to read in the environment variable.
 
-Now a query can be created to retrieve data, say the `neighborhoods`
-table from your database on urban green spaces:
+If you're looking at a database for the first time, you may want to list all the 
+tables in the database:
 
 ```r
 dbListTables(mydb)
