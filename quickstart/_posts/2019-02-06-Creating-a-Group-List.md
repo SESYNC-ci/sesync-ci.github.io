@@ -1,10 +1,9 @@
 ---
-title: Creating a Group List
-
+title: Creating a Group List 
 tags:
   - list
   - Sympa
-  ---
+---
 
 ## Navigate to lists.sesync.org in a Web Browser
 
