@@ -1,5 +1,5 @@
 ---
-title: So you want a website
+title: Sharing your RShiny app
 tags:
   - R
   - Shiny
@@ -7,12 +7,21 @@ tags:
 author: khondula
 ---
 
-This blog is about some possibilities and things to consider if you are interested in creating a website or tool for exploring data and models. It is important to consider your goals, level of commitment, and skillset. Tools like RShiny simplify making web applications, but hosting a website for that shiny application requires a longer term commitment. 
+RShiny and related packages have lowered the bar for making web applications in R without requring knowledge of the languages of web browsers (CSS, Javascript, HTML). This also means that sharing your app usually requires finding a platform that can run R code. Here are some (non mutually exclusive) options to consider for making your Shiny apps available on the web. 
 
-Interactive graphics, like leaflet maps, dygraphs, timelines from timevis, rendered notebooks (jupyter or Rmarkdown) produce HTML files that can be hosted on GitHub. Enabling the "GitHub pages" option will make your HTML page accessible at a url based on your github repository name. For example, https://amoeba.github.io/dataspice-example/. Link to example htmlwidgets? Once rendered to HTML, these files do not need to run any R code but can have a level of interactivity such as pop-ups, zooming, etc. that only requires a web browser. 
+1. Share the code on GitHub
 
-(image sequence of how to enable github pages). 
+Putting your app code and any associated files (data, images, etc.) in a GitHub repository makes your app avaialble for anyone with R installed to run it from their local R session by using the [runGitHub](https://github.com/rstudio/shiny_example) function in the shiny package or downloading the repository. As with any GitHub repository, this also means you can also "release" a version of the app to [get a citable DOI using Zenodo](https://guides.github.com/activities/citable-code/). 
 
-The "server" component of shiny apps uses R code to control the appearance of the app, i.e. to run R code based on user inputs and selections. So running a shiny app requires it to be hosted somewhere that can understand and run R code - this is your own computer when you click "run app" in RStudio. But you can't "export" a whole shiny app as an HTML file, so if you want to make your shiny app available to others, it requires figuring out where that R code will run. 
+2. Host a live version on shinyapps.io
 
-Who is your audience? Shiny app code can be hosted on github and R users can run your app in their own session using `runGitHub()`. For non-R users, apps can be hosted on shinyapps.io for free, depending on the amount of traffic received (maxes out at xx views per month). SESYNC's shiny server can be used for prototyping but it is not a long-term home. 
+Whereas SESYNC's shiny server is only designed for prototyping and testing, RStudio's [shinyapps.io](http://www.shinyapps.io/) is available as a longer term solution. There is a free tier that allows limited web traffic (up to 5 applications and 25 hours per month), and pay plans that offer more traffic, apps, and support. Hosting on other cloud services like [AWS](https://www.r-bloggers.com/shiny-server-on-aws/) or [Digital Ocean](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/) will require more configuration but can also be used to run your app.
+
+3. Publish HTML websites 
+
+Another possibility is sharing visualizations or reports as rendered HTML pages that don't require R code to run. For example, [interactive visualizations](https://www.htmlwidgets.org/showcase_leaflet.html) like the output from leaflet maps, dygraphs, timevis, or [R Markdown](https://rmarkdown.rstudio.com/) can be saved as HTML files that can be opened up in a web browser like Firefox or Chrome. They can also be hosted on GitHub as websites based on the repository name by [enabling the GitHub pages option](https://guides.github.com/features/pages/) in the repository Settings. 
+
+4. Speed up your app
+
+The first step to making your app faster is to figure out where the bottlenecks are. RStudio's Shiny website has several in depth articles on how to improve performance through [plot caching](http://shiny.rstudio.com/articles/plot-caching.html) and [load testing](https://rstudio.github.io/shinyloadtest/), but a few initial steps to take are to: a) do as much filtering and summarizing data outside of shiny as possible, and b) save large data frames as [feather](https://blog.rstudio.com/2016/03/29/feather/) files instead of csv to read them in faster. 
+
