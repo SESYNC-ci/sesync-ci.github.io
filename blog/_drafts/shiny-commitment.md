@@ -7,7 +7,7 @@ tags:
 author: khondula
 ---
 
-RShiny and related packages have lowered the bar for making web applications in R without requring knowledge of the languages of web browsers (CSS, Javascript, HTML). This also means that sharing your app usually requires finding a platform that can run R code. Here are some (non mutually exclusive) options to consider for making your Shiny apps available on the web. 
+RShiny and related packages have lowered the bar for making web applications in R without requring knowledge of the languages of web browsers (CSS, Javascript, HTML). This also means that sharing your app usually requires finding a platform that can run R code. Here are some (non-mutually exclusive!) options to consider for making your Shiny apps available on the web. 
 
 1. Share the code on GitHub
 
