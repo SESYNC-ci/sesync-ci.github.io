@@ -15,35 +15,31 @@ database management system (RDBMS) requires communication between a
 server application (PostgreSQL or MySQL) and a client application
 (RStudio, Jupyter, psql, etc.).
 
-Each database server maintained by SESYNC is identified by its host
-name, let's say your database is stored on a server with host name
-“pg.research.sesync.org”. Each database on a server has a unique name,
+Each database maintained by SESYNC resides on a given host identified with
+ “<HOSTNAME>.research.sesync.org”. Each database on a server has a unique name,
 and only specific users known to the server are allowed password
 protected access. The instructions below are specific to a PostgreSQL
 database, but analagous instructions apply to a MySQL database.
 
 When the Cyberinfrastructure staff creates a database, we will share a
-configuration file with the host name, user name, and password. This
+configuration file with the host's name, user name, and password. This
 keeps the information you don’t want to share private, and means you
 don’t have to constantly enter host URLs, user names, and
 passwords. If you ever move your database, there's also only one place
 you need to update the configuration.
 
-For everything below, suppose your project involves the effect of
-green spaces on urban heat islands and has the short title "Cool
-Trees". Your configuration will be in the file
-"/nfs/cooltrees-data/.pg_service.conf", and will look something like
-this (no that's not a real password):
+Configuration will be stored in the file
+"/nfs/<PROJECTNAME>-data/.pg_service.conf" as:
 
 ```bash
-[cooltrees]
-host=pg.research.sesync.org
-dbname=cooltrees
-user=cooltrees
-password=p3948htp3ufp4p238hncer8cfwfgnc9q37
+[<SERVICE>]
+host=<HOSTNAME>.research.sesync.org
+dbname=<DBNAME>
+user=<PROJECT>
+password=<PASSWORD>
 ```
 
-NOTE: Spaces are not allowed in this file.
+NOTE: By default, "<SERVICE>", "<DBNAME>", and "<PROJECT>" will all be the same. Spaces are not allowed in this file.
 
 The database client reads this file to verify your
 credentials. Instructions for establishing a connection via RStudio,
@@ -62,7 +58,7 @@ The connection to the "service" (the value between square brackets in the
 configuration file) can be established using:
   
 ```r
-mydb <-  dbConnect(Postgres(), service = "cooltrees")
+mydb <-  dbConnect(Postgres(), service = "<SERVICE>")
 ```
   
 The password will be retrieved from the configuration file if RStudio knows where
@@ -70,7 +66,7 @@ to look. The first place checked is in your home directory (i.e. it looks for th
 file "\~/.pg_service.conf"). After that, it looks for the file in the location 
 specified by the [PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
 environment variable. For a version controlled RStudio project, the best
-practice is to add the line `PGSERVICEFILE=/nfs/cooltrees-data/.pg_service.conf` to
+practice is to add the line `PGSERVICEFILE=/nfs/<PROJECT>-data/.pg_service.conf` to
 a plain text file named ".Renviron" in the project's root directory. After doing that,
 close and reopen your project to read in the environment variable.
 
@@ -112,13 +108,17 @@ import pandas as pd
 The connection can be established using:
   
 ```python
-mydb = psycopg2.connect("service=cooltrees")
+mydb = psycopg2.connect("service=<SERVICE>")
 ```
   
-NOTE: The password will be retrieved from the appropriate line in the
-file "\~/.pg_service.conf". You may need to copy it from your research
-data directory or set the appropriate [environment
-variable](https://www.postgresql.org/docs/9.0/libpq-pgservice.html).
+NOTE: The password will be retrieved from the configuration file at the path specified
+by the [PGSERVICEFILE](https://www.postgresql.org/docs/9.0/libpq-pgservice.html)
+environment variable. You can set this variable to the correct path in your Jupyter notebook by running
+a cell that contains:
+
+```python
+%env PGSERVICEFILE=/nfs/<PROJECT>-data/.pg_service.conf
+```
 
 Pandas will read the results of an SQL query of the database into a
 `DataFrame`:
@@ -164,20 +164,19 @@ connect to (ssh.sesync.org) route connection requests to the database
 server, which you cannot reach directly from your local RStudio or
 Python installation.
 
-You will need the host name from your ".pg_service.conf" file, in
-place of `pg.research.sesync.org`.  For example, suppose `jdoe` 
-is your SESYNC user name.  Open a command prompt or terminal on 
+You will need the host name from your ".pg_service.conf" file, but "<USERNAME>" below refers
+to your SESYNC username. Open a command prompt or terminal on 
 your machine and establish the tunnel with:
   
 ```bash
-ssh -L 5433:pg.research.sesync.org:5432 jdoe@ssh.sesync.org
+ssh -L 5433:<HOSTNAME>.research.sesync.org:5432 <USERNAME>@ssh.sesync.org
 ```
 
 Enter your SESYNC password when prompted. If successful, your terminal
 will display something like:
   
 ```bash
-$ ssh -L 5433:pg.research.sesync.org:5432 jdoe@ssh.sesync.org
+$ ssh -L 5433:<HOSTNAME>.research.sesync.org:5432 <USERNAME>@ssh.sesync.org
 Ubuntu 16.04.5 LTS
 Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-139-generic x86_64)
 
@@ -193,14 +192,14 @@ Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-139-generic x86_64)
 ###                                                                        ###
 ##############################################################################
 Last login: Fri Nov 16 14:52:20 2018 from 192.168.192.177
-jdoe@sshgw02:~$ 
+<USERNAME>@sshgw02:~$ 
 ```
   
 From this machine, you can use the command line client to confirm
 you have access to the database:
   
 ```bash
-psql service=cooltrees
+PGSERVICEFILE=/nfs/<PROJECT>-data/.pg_service.conf psql service=<SERVICE>
 ```
 
 More on `psql` below, what you really want though is to use your
@@ -211,12 +210,12 @@ the connection information, so copy the
 server information to point at the tunnel:
 
 ```bash
-[cooltrees]
+[<SERVICE>]
 host=localhost
 port=5433
-dbname=cooltrees
-user=cooltrees
-password=p3948htp3ufp4p238hncer8cfwfgnc9q37
+dbname=<DBNAME>
+user=<PROJECT>
+password=<PASSWORD>
 ```
 
 On macOS, save this file in your home directory. On Windows, create
@@ -230,11 +229,11 @@ connection.
 
 The `psql` command line utility is available for your use on
 ssh.sesync.org. From the Terminal (macOS) or Bash Shell (Windows) 
-on your computer, the SESYNC user `jdoe` would access the 
+on your computer, the SESYNC user "<USERNAME>" would access the 
 server via SSH with:
 
 ```r
-ssh jdoe@ssh.sesync.org
+ssh <USERNAME>@ssh.sesync.org
 ```
 
 Then type in your password when prompted--you won't see any typing
@@ -243,26 +242,25 @@ server via SSH.
 
 Now you need to log in to the PostgreSQL database using the host name, database
 name, and database password. These are all saved in a ".pg_service.conf" file created
-by SESYNC staff. You may need to copy this file from your research 
-data directory or set the appropriate [environment
+by SESYNC staff. You need to set the [environment
 variable](https://www.postgresql.org/docs/9.0/libpq-pgservice.html).
   
 Then the connection can be established by launching `psql` and 
 specifying the service by typing this command: 
   
 ```bash
-psql service=cooltrees
+PGSERVICEFILE=/nfs/<PROJECT>-data/.pg_service.conf psql service=<SERVICE>
 ```
   
 You should now be connected to your database.  Your shell will look something like:  
   
 ```bash
-jdoe@sshgw02:~$ psql service=cooltrees
+<USERNAME>@sshgw02:~$ psql service=<SERVICE>
 psql (9.5.14, server 9.3.24)
 SSL connection (protocol: TLSv1.2, cipher: DHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
 Type "help" for help.
 
-cooltrees=> 
+<DBNAME>=> 
 ```
   
 The `psql` utility allows "backslash commands" and SQL statements.  For example
@@ -274,7 +272,7 @@ if you typed
 a description of the database is printed.  Your shell will look something like:    
   
 ```bash
-cooltrees=> \d
+<DBNAME>=> \d
                List of relations
  Schema |       Name        | Type  |   Owner
 --------+-------------------+-------+-----------
@@ -286,7 +284,7 @@ cooltrees=> \d
  public | spatial_system    | table | postgres
 (6 rows)
 
-cooltrees=>
+<DBNAME>=>
 ```
 
 Again supposing a table `neighborhoods` exists, you could directly
@@ -300,7 +298,7 @@ SELECT * FROM neighborhoods LIMIT 10;
 Your shell will look something like:  
   
 ```bash
-cooltrees=> SELECT * FROM neighborhoods LIMIT 10;
+<DBNAME>=> SELECT * FROM neighborhoods LIMIT 10;
  id |            name             | city_id | admin1_id | country_id | region_id
 ----+-----------------------------+---------+-----------+------------+-----------
   1 | Western Addition            |         |           |            | WAD
@@ -315,7 +313,7 @@ cooltrees=> SELECT * FROM neighborhoods LIMIT 10;
  10 | South Amherst               |         |           |            | SAM
 (10 rows)
 
-cooltrees=>
+<DBNAME>=>
 ```
   
 When finished, disconnect from the database by typing:
