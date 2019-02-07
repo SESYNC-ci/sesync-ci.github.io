@@ -1,5 +1,5 @@
 ---
-title: Creating a Group List 
+title: Creating an Email Group List 
 tags:
   - list
   - Sympa
