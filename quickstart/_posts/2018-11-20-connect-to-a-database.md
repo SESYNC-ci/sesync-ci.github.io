@@ -29,7 +29,7 @@ passwords. If you ever move your database, there's also only one place
 you need to update the configuration.
 
 Configuration will be stored in the file
-"/nfs/<PROJECTNAME>-data/.pg_service.conf" as:
+"/nfs/\<PROJECTNAME\>-data/.pg_service.conf" as:
 
 ```bash
 [<SERVICE>]
@@ -39,7 +39,7 @@ user=<PROJECT>
 password=<PASSWORD>
 ```
 
-NOTE: By default, "<SERVICE>", "<DBNAME>", and "<PROJECT>" will all be the same. Spaces are not allowed in this file.
+NOTE: By default, "\<SERVICE\>", "\<DBNAME\>", and "\<PROJECT\>" will all be the same. Spaces are not allowed in this file.
 
 The database client reads this file to verify your
 credentials. Instructions for establishing a connection via RStudio,
