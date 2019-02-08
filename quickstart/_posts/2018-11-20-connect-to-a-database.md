@@ -16,7 +16,7 @@ server application (PostgreSQL or MySQL) and a client application
 (RStudio, Jupyter, psql, etc.).
 
 Each database maintained by SESYNC resides on a given host identified with
- “<HOSTNAME>.research.sesync.org”. Each database on a server has a unique name,
+ `<HOSTNAME>.research.sesync.org`. Each database on a server has a unique name,
 and only specific users known to the server are allowed password
 protected access. The instructions below are specific to a PostgreSQL
 database, but analagous instructions apply to a MySQL database.
@@ -29,7 +29,7 @@ passwords. If you ever move your database, there's also only one place
 you need to update the configuration.
 
 Configuration will be stored in the file
-"/nfs/\<PROJECTNAME\>-data/.pg_service.conf" as:
+`/nfs/<PROJECT>-data/.pg_service.conf` as:
 
 ```bash
 [<SERVICE>]
@@ -39,7 +39,7 @@ user=<PROJECT>
 password=<PASSWORD>
 ```
 
-NOTE: By default, "\<SERVICE\>", "\<DBNAME\>", and "\<PROJECT\>" will all be the same. Spaces are not allowed in this file.
+NOTE: By default, `<SERVICE>`, `<DBNAME>`, and `<PROJECT>` will all be the same. Spaces are not allowed in this file.
 
 The database client reads this file to verify your
 credentials. Instructions for establishing a connection via RStudio,
@@ -164,7 +164,7 @@ connect to (ssh.sesync.org) route connection requests to the database
 server, which you cannot reach directly from your local RStudio or
 Python installation.
 
-You will need the host name from your ".pg_service.conf" file, but "<USERNAME>" below refers
+You will need the host name from your ".pg_service.conf" file, but `<USERNAME>` below refers
 to your SESYNC username. Open a command prompt or terminal on 
 your machine and establish the tunnel with:
   
@@ -229,7 +229,7 @@ connection.
 
 The `psql` command line utility is available for your use on
 ssh.sesync.org. From the Terminal (macOS) or Bash Shell (Windows) 
-on your computer, the SESYNC user "<USERNAME>" would access the 
+on your computer, the SESYNC user `<USERNAME>` would access the 
 server via SSH with:
 
 ```r
