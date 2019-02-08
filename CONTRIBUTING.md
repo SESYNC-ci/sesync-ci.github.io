@@ -105,8 +105,9 @@ layout, however, so for consistency please:
 
 - **Headings:** Use `##` level headings for top-level sections of a post. A
   `# {{ page.title }}` is automatically included at the top of all posts.
-- When referencing a variable, always write it like "%VARIABLE%".
-- Use "%PROJECT%" for the stub name assigned to a project, e.g. "/nfs/%PROJECT%-data/".
+- When referencing a variable, always write it like `<VARIABLE>`, and always inside "\`" (backticks)
+  for preformatted text.
+- Only use `<PROJECT>` for the stub name assigned to a project, e.g. `/nfs/<PROJECT>-data/`.
 - That's it for now...
 
 ![](https://imgs.xkcd.com/comics/strunk_and_white.png)
