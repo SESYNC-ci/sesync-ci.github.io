@@ -23,5 +23,5 @@ Another possibility is sharing visualizations or reports as rendered HTML pages 
 
 4. Speed up your app
 
-The first step to making your app faster is to figure out where the bottlenecks are. RStudio's Shiny website has several in depth articles on how to improve performance through [plot caching](http://shiny.rstudio.com/articles/plot-caching.html) and [load testing](https://rstudio.github.io/shinyloadtest/), but a few initial steps to take are to: a) do as much filtering and summarizing data outside of shiny as possible, and b) save large data frames as [feather](https://blog.rstudio.com/2016/03/29/feather/) files instead of csv to read them in faster. 
+Your audience will have a more satisfying user experience if your app isn't unnecessarily slow to loads or displays changes. If you are looking to make improvements, the first step is to figure out where the bottlenecks are. RStudio's Shiny website has several in depth articles on how to improve performance through [plot caching](http://shiny.rstudio.com/articles/plot-caching.html) and [load testing](https://rstudio.github.io/shinyloadtest/), but a few initial steps to take are to: a) do as much filtering and summarizing data outside of shiny as possible, and b) save really large data files as [feather](https://blog.rstudio.com/2016/03/29/feather/) files instead of csv to read them in faster. 
 
