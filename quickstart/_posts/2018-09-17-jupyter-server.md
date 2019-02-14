@@ -27,12 +27,12 @@ the features of the JupyterLab IDE, check out the complete
 ## Python Packages
 
 User contributed Python packages can be installed on JupyterLab by using the
-"pip" utility from the Terminal. To avoid a permission error, please use the
-"--user" flag. User `jsmith` would install a package called "mypackage", for
-instance, by opening a Terminal and entering:
+"pip" or "pip3" utility from the Terminal, depending on whether you are
+using a Python 2 or Python 3 kernel. To avoid a permission error, please use the
+`--user` flag. For instance, using the Terminal launched from Jupyter:
 
 ```bash
-jsmith@juplab00:~$ pip install --user mypackage
+<USERNAME>@juplab00:~$ pip3 install --user <PACKAGE>
 ```
 
 If you receive an error stating that the package cannot be installed, there is a
