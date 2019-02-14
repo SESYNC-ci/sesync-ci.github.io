@@ -9,7 +9,7 @@ author: khondula
 
 RShiny and related packages have lowered the bar for making web applications in R without requring knowledge of the languages of web browsers (CSS, Javascript, HTML). This also means that sharing your app usually requires finding a platform that can run R code. Here are some (non-mutually exclusive!) options to consider for making your Shiny apps available on the web. 
 
- ## 1. Share the code on GitHub
+## 1. Share the code on GitHub
  
  Putting your app code and any associated files (data, images, etc.) in a GitHub repository makes your app available for anyone with R installed to run it from their local R session by using the [runGitHub](https://github.com/rstudio/shiny_example) function in the shiny package or downloading the repository. As with any GitHub repository, this also means you can also "release" a version of the app to [get a citable DOI using Zenodo](https://guides.github.com/activities/citable-code/). 
 
