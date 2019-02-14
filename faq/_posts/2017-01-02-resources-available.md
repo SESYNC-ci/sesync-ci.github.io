@@ -30,9 +30,9 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Software Purchasing     | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 
 [high-level overview]: http://sesync.us/itresearchresources
-[Mailing List]: { '/quickstart/Creating-an-Email-Group-List.html' | relative_url }
-[Code Repository]: { '/quickstart/creating-a-new-git-project.html' | relative_url }  
-[Research Data Directory]: { '/quickstart/Creating-an-Email-Group-List.html' | relative_url }
-[RStudio]: { '/quickstart/rstudio-server.html' | relative_url }
-[Jupyter]: { '/quickstart/jupyter-server.html' | relative_url }
-[MySQL/PostgreSQL Database]: { '/quickstart/connect-to-a-database.html' | relative_url }
+[Mailing List]: {{ '/quickstart/Creating-an-Email-Group-List.html' | relative_url }}
+[Code Repository]: {{ '/quickstart/creating-a-new-git-project.html' | relative_url }} 
+[Research Data Directory]: {{ '/quickstart/Creating-an-Email-Group-List.html' | relative_url }}
+[RStudio]: {{ '/quickstart/rstudio-server.html' | relative_url }}
+[Jupyter]: {{ '/quickstart/jupyter-server.html' | relative_url }}
+[MySQL/PostgreSQL Database]: {{ '/quickstart/connect-to-a-database.html' | relative_url }}
