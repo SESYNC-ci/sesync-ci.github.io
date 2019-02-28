@@ -24,12 +24,14 @@ at a later date, download the installer for Windows or macOS from
 1. Install the [desktop client](https://nextcloud.com/install/#install-clients)
 on your Windows or macOS computer.
 
-1. Open the Nextcloud application for the first time. You will be prompted to
+    ![]({{ '/assets/images/nextcloud1.png' | relative_url }}){:.doc-img}
+
+2. Open the Nextcloud application for the first time. You will be prompted to first Log in, and then
 configure a server.
 
-    ![]({{ '/assets/images/nextcloud-server.png' | relative_url }}){:.doc-img}
+    ![]({{ '/assets/images/nextcloud3.png' | relative_url }}){:.doc-img}
 
-1. Configure the connection:
+3. Configure the connection:
    1. Enter `https://files.sesync.org/` for the server.
    1. Provide your SESYNC username and password.
    1. Customize the Server (what to sync). Your research data directory is an "external storage", so do not check the second box.
