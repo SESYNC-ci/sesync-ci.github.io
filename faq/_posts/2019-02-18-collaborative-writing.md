@@ -1,5 +1,5 @@
 ---
-title: What resources exist collaborative writing?
+title: What resources exist for collaborative writing?
 tags:
   - LaTeX
   - Markdown
