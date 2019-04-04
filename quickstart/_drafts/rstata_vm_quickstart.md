@@ -19,14 +19,21 @@ example, a user logged into our [RStudio](https://rstudio.sesync.org) or
 [Jupyter](https://jupyter.sesync.org) servers can open a terminal and execute
 `ssh stata.sesync.org` to reach the server with the Stata software.
 
+The first time you `ssh` to this or any server, you will be asked to confirm the
+remote machine's identity. **Do this even if you only plan to use the RStata package**.
+
 ```
 <USERNAME>@rstudio03$ ssh stata.sesync.org
+The authenticity of host 'stata.sesync.org (192.168.195.133)' can't be established.
+ED25519 key fingerprint is SHA256:JoNXMs5Zxu2wWcOYs4ZtjHqrHGYpw6yjq+DNBMRnFB8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'stata.sesync.org,192.168.195.133' (ED25519) to the list of known hosts.
 Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-143-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
-Last login: Tue Jan 15 10:08:54 2019 from 192.168.192.133
+Last login: Thu Apr  4 10:50:22 2019 from 192.168.195.138
 <USERNAME>@stata00:~$
 ```
 
