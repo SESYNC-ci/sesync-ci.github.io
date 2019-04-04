@@ -12,8 +12,8 @@ SESYNC offers private git hosting through [our GitLab server](https://gitlab.ses
 
 There are two types of projects you can create in GitLab, personal and group projects.
 
-* Personal projects are good for individual code testing, or if you have projects that you will likely not share with others. Postdocs, SESYNC staff members should look at using these types of projects.
-* Group projects are projects that are not owned by any one individual, but rather by an entire group of people. We recommend group projects for our working groups and if you have unit-wide collaborations within SESYNC (ie, IT Staff). To work in a group, click the groups tab, then select the group you want to create a project in.
+* Personal projects are good for individual code testing, or if you have projects that you will likely not share with others. SESYNC postdocs, fellows, and staff should look at using these types of projects.
+* Group projects are projects that are not owned by any one individual, but rather by an entire group of people. We recommend group projects for our working groups and for units within SESYNC (e.g., the IT staff are in a group on GitLab with several shared projects). To work in a group, click the group's tab, then select the group under which you want to create a project.
 
 To create a project, click the new project either from the dashboard when you login for a personal project, or by clicking new project under a group for a group project. Enter the name, description and wether you want the project private, internal or public. Click create to finish creating your project.
 
@@ -48,3 +48,26 @@ Under "Select members to invite", start typing the name of your collegues and a 
 Click 'Add users' at the bottom when you have finished. The next time your collegue logs in they will see the project in their dashboard.
 
 ![](/assets/images/adding_people_git.png)
+
+##. 4. (Optional) Switch from HTTPS to SSH
+
+HTTPS and SSH are two different protocols that let you securely push (pull) commits to (from) a remote git repository. HTTPS requires a username and password to authenticate, while SSH works with paired public and private cryptographic keys. You can use either one, but setting up an SSH key pair means never having to enter a username and password.
+
+You can generate a key pair for any machine onto which you will clone your repository, but SESYNC makes it especially easy to use the SSH protocol for projects cloned to our RStudio Server from GitLab or GitHub.
+
+1.  Login to <https://rstudio.sesync.org>
+2.  Select "Tools" > "Global Options" > "Git/SVN"
+3.  Choose "View public key"
+4.  Copy the key to your clipboard and
+    "Accept"/"Okay"/"Continue"/"Close" all the windows
+5.  Login to your remote git repository to add your public key:
+    -   <https://gitlab.sesync.org>: click on your avatar (upper
+        right) > "Settings" > "SSH Keys" > (Go To Step 6) >
+        "Add key"
+    -   <https://github.com>: click on your avatar (upper right) >
+        "Settings" > "SSH and GPG keys" > "New SSH key"
+6.  Paste the key in the larger box (leave the smaller box blank to use a default title or label)
+7.  Open every *existing* RStudio project you've previously cloned from GitLab/GitHub, and substitute the new repository URL (it begins with `git@`) for `<URL>` in the R command `system('git remote set-url origin <URL>')`.
+
+That's it! You should be able to push and pull between your local git
+repository on <https://rstudio.sesync.org> and the remote git repository on GitLab/GitHub.
