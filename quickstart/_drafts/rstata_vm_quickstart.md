@@ -1,125 +1,146 @@
 ---
-title: How to execute Stata commands from SESYNC's RStudio Server
+title: Command-line Stata (from RStudio Server)
 tags:
   - RStata
   - Stata
   - Virtual Machine
 ---
 
+To support existing data analysis pipelines that use the Stata software, SESYNC
+has purchased a Stata license and created a dedicated virtual machine for remote
+use by affiliated researchers. This quick start guide explains the essential
+steps for evaluating Stata commands from SESYNC's RStudio server.
 
-To support existing data analysis pipelines that use the Stata software,
-SESYNC has purchased a Stata license and created a dedicated virtual
-machine for its remote use by affiliated researchers. This "how to"
-explains the essential steps that users should take in order to evaluate
-Stata commands from SESYNC's RStudio server.
+## Stata Server
 
-Communication between servers
------------------------------
+Stata is installed on a Linux server with address "stata.sesync.org", that
+affiliated researchers can access through a terminal/console using SSH. For
+example, a user logged into our [RStudio](https://rstudio.sesync.org) or
+[Jupyter](https://jupyter.sesync.org) servers can open a terminal and execute
+`ssh stata.sesync.org` to reach the server with the Stata software.
 
-The Stata software is available on a Linux server at "stata.sesync.org",
-which is only accessible to other servers on the SESYNC network. Our
-RStudio server can be accessed from the web, at
-<https://rstudio.sesync.org>, and that machine can access the server
-running Stata. 
+```
+<USERNAME>@rstudio03$ ssh stata.sesync.org
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-143-generic x86_64)
 
-Using the `RStata` package
---------------------------
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+Last login: Tue Jan 15 10:08:54 2019 from 192.168.192.133
+<USERNAME>@stata00:~$
+```
 
-The [RStata](https://cran.r-project.org/package=RStata) package
-facilitates sending input and receiving output from the Stata program.  
-The package documentation describes communicating with Stata software
-installed on the same machine as R, but is conveniently written to also
-allow communication with a remote installation.  The package require two
-pieces of user input: the "path" to the Stata executable and the Stata
-version number.  From our RStudio server, these options should be set as
-follows.
+With your terminal now connected to this server, launch the console version of
+Stata for interactive user by calling `stata`. As on all our compute platforms,
+your [research data directory]({{ "quickstart/research-data-directory.html" |
+relative_url }}) is accessible from the Stata console.
 
-    library(RStata)
+```
+<USERNAME>@stata00:~$ stata
 
-    options(RStata.StataPath='ssh -q stata.sesync.org /usr/local/stata15/stata')
-    options(RStata.StataVersion=15)
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   15.1   Copyright 1985-2017 StataCorp LLC
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+                                      College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+Single-user Stata perpetual license:
+       Serial number:  ************
+         Licensed to:  University of Maryland-SESYNC
+                       1 Park Pl Suite 300 Annapolis MD 21401
+
+Notes:
+      1.  Unicode is supported; see help unicode_advice.
+
+. exit
+<USERNAME>@stata00:~$
+```
+
+## `RStata` Package
+
+The [RStata](https://cran.r-project.org/package=RStata) package facilitates
+using R to send input and receive output from Stata. The package documentation
+describes communicating with Stata software installed on the same machine as R,
+but is conveniently written to also allow communication with a remote
+installation.
+
+For the time being, you need a patched version of the RStata package in order to
+use it sucessfully on SESYNC's servers. Use [devtools]() to install the RStata
+package:
+
+```r
+library(devtools)
+install_github('lbraglia/RStata', ref = github_pull(8))
+```
+
+The package require configuration of two options: the "path" to the
+Stata executable and the Stata version number. From our RStudio server, these
+options should be set as follows.
+
+```r
+library(RStata)
+
+options(RStata.StataPath='ssh -q stata.sesync.org /usr/local/stata15/stata')
+options(RStata.StataVersion=15)
+```
 
 To confirm that the options are correctly set, use the `stata` function
 to send the one-line command requesting Stata to print its version:
 
-    stata('version')
+```r
+stata('version')
+````
 
-The `stata` function alternatively accepts the name of a Stata ".do"
+The `stata` function alternatively accepts the path to a Stata ".do"
 file, which will be much more efficient than running multiple
-one-liners.  The `?stata` help describes how to use `data.in` and
+one-liners. The `?stata` help describes how to use `data.in` and
 `data.out` arguments to handle data transmission, but we strongly
-discourage their use.  Instead, have both R and Stata read and write data
-to a location on our network file system.  Both servers have access to
+discourage their use. Instead, have both R and Stata read and write data
+to a location on our network file system. Both servers have access to
 the same data directories.
 
 Here is a simple ".do" file that demonstrates reading and writing to the
 "public-data" path on the network file system.
 
-    use /nfs/public-data/training/census5
-    tabulate region
-    collapse marriage_rate divorce_rate median_age
-    save /nfs/public-data/training/census5_summary, replace
+```stata
+use /nfs/public-data/training/census5
+tabulate region
+collapse marriage_rate divorce_rate median_age
+save /nfs/public-data/training/census5_summary, replace
+```
 
 Assuming this file is saved as "example.do" in the working directory,
 you can execute it from R using the `stata` function.
 
-    stata('example.do')
+```r
+stata('example.do')
+```
 
 The `haven` package handles reading and writing Stata's native `.dta`
 files, for both recent and older versions of the Stata software. A
 complete pipeline making use of R and Stata could look like the
 following:
 
-    install.packages("haven")
-    library(haven)
+```r
+library(haven)
 
-    # read data into R
-    to_stata <- read.csv('/nfs/public-data/training/census5.csv')
+# read data into R
+to_stata <- read.csv('/nfs/public-data/training/census5.csv')
 
-    # process the to_stata data.frame in R
-    # ...
+# process the to_stata data.frame in R
+# ...
 
-    # save data to network file system
-    write_dta(to_stata, '/nfs/public-data/training/census5.dta')
+# save data to network file system
+write_dta(to_stata, '/nfs/public-data/training/census5.dta')
 
-    # continue processing in Stata
-    stata('example.do')
+# continue processing in Stata
+stata('example.do')
 
-    # read result back into R
-    from_stata <- read_dta('/nfs/public-data/training/census5_summary.dta')
-    head(from_stata)
-
-
-Added benefit: use your SSH key on GitLab/GitHub
-------------------------------------------------
-
-The SSH key pair you created to authenticate between our RStudio and
-Stata servers can be used for passwordless authentication on all your
-favorite remote git repositories! Follow the steps below to start using
-SSH rather than HTTPS along with your username and password to push and
-pull git commits.
-
-1.  Login to <https://rstudio.sesync.org>
-2.  Select "Tools" > "Global Options" > "Git/SVN"
-3.  Choose "View public key"
-4.  Copy the key to your clipboard and
-    "Accept"/"Okay"/"Continue"/"Close" all the windows
-5.  Login to your remote git repository to add your public key:
-    -   <https://github.com>: click on your avatar (upper right) >
-        "Settings" > "SSH and GPG keys" > "New SSH key"
-    -   <https://gitlab.sesync.org>: click on your avatar (upper
-        right) > "Settings" > "SSH Keys" > (Go To Step 6) >
-        "Add key"
-6.  Paste the key in the larger box, copy the last part that is formated
-    like an e-mail address to use as the title or label
-7.  Change the URL for your remote git repository
-    -   Get the URL from GitHub/GitLab for SSH (it begins with `git@`)
-    -   Use the URL in the command
-        `system('git remote set-url origin URL')`.
-
-That's it! You should be able to push and pull between your git
-repository on <https://rstudio.sesync.org> and the remote repository.
-While your SSH key pair is shared across all your repositories on
-<https://rstudio.sesync.org>, you'll need to update the URL for each
-existing repository that you cloned using HTTPS to use passwordless
-authentication.
+# read result back into R
+from_stata <- read_dta('/nfs/public-data/training/census5_summary.dta')
+head(from_stata)
+```
