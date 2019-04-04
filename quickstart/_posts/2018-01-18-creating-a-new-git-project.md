@@ -3,12 +3,13 @@ title: Create Projects on GitLab
 tags: 
   - git
   - GitLab
+  - SSH
 ---
 
-
-SESYNC offers private git hosting through our GitLab server at [](https://gitlab.sesync.org). When you connect to gitlab using your sesync name and password, you'll see a dashboard of recent activity on projects that you are part of. If this is your first time connecting, it may be a little quiet.
+SESYNC offers private git hosting through [our GitLab server](https://gitlab.sesync.org). When you connect to our GitLab Community Edition (CE) instance using your SESYNC username and password, you'll see a dashboard of recent activity on projects that you are part of. If this is your first time connecting, it may be a little quiet.
 
 ## 1. Create a project
+
 There are two types of projects you can create in GitLab, personal and group projects.
 
 * Personal projects are good for individual code testing, or if you have projects that you will likely not share with others. Postdocs, SESYNC staff members should look at using these types of projects.
@@ -18,26 +19,27 @@ To create a project, click the new project either from the dashboard when you lo
 
 * Private - projects are available only to group members and/or additional select prople
 * Internal - projects can be seen by any sesync researcher or workshop participant. (You probably don't want this)
-* Public - projects are available to anyone on the internet. If you want to share your code with outsiders, use this. Alternatively, you may want to look at github for public services.
+* Public - projects are available to anyone on the internet. If you want to share your code with outsiders, use this. Alternatively, you may want to use GitHub for public respositories.
 
-Your project is now created and you can load files into it. Follow the instructions to manually load data, or follow one of our tutorials such as [How do I create an R Studio Project from Git](http://cyberhelp.sesync.org/faq/create-rstudio-from-git.html)
+Your project is now created and you can load files into it. Follow the instructions to manually load data, or follow one of our tutorials such as [How do I create an RStudio Project with git?](http://cyberhelp.sesync.org/faq/create-rstudio-from-git.html)
 
 ![](/assets/images/new-project.png)
 ![](/assets/images/setting_up.png)
 ![](/assets/images/empty_git_repository.png)
 
 ## 2. Navigating your Project
-after your project is created, you can use the links on your project page to browse activity and files in your project as seen below.
+
+After your project is created, you can use the links on your project page to browse activity and files in your project as seen below.
 
 ![](/assets/images/git_repository.png)
 
 ## 3. Sharing your project
 
-#### Sharing your gitlab project with collaborators requires that collaborators have a SESYNC account. Please contact cyberhelp@sesync.org if your collaborator needs an account.
+**Privately sharing your GitLab project with collaborators requires that collaborators have a SESYNC account. Please contact cyberhelp@sesync.org if your collaborator needs an account.**
 
 From the dashboard of your project, click the 'Settings' link, then click 'Members'. You can share your project with new people by clicking the 'new project member' button.
 
-In the Choose people you want to share with, start typing the name of your collegues and they should appear. If they do not, they probably haven't logged in to gitlab yet. Drop them a quick e-mail asking them to login so you can grant access. You can shoose the level of access from the choices below.
+Under "Select members to invite", start typing the name of your collegues and a matching account name should appear. If they do not, they probably haven't logged in to gitlab.sesync.org yet. Drop them a quick e-mail asking them to login so you can grant access. You can shoose the level of access from the choices below.
 
 * Guest - Your collegue can browse and create a local copy of all code, but cannot make any changes
 * Developer - Your collegue can contribute code to this project (You probably want this for most group members)
