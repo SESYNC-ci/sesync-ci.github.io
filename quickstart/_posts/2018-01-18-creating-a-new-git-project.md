@@ -8,7 +8,7 @@ tags:
 
 SESYNC offers private git hosting through [our GitLab server](https://gitlab.sesync.org). When you connect to our GitLab Community Edition (CE) instance using your SESYNC username and password, you'll see a dashboard of recent activity on projects that you are part of. If this is your first time connecting, it may be a little quiet.
 
-## 1. Create a project
+## Create a Project
 
 There are two types of projects you can create in GitLab, personal and group projects.
 
@@ -27,13 +27,13 @@ Your project is now created and you can load files into it. Follow the instructi
 ![](/assets/images/setting_up.png)
 ![](/assets/images/empty_git_repository.png)
 
-## 2. Navigating your Project
+## Navigate your Project
 
 After your project is created, you can use the links on your project page to browse activity and files in your project as seen below.
 
 ![](/assets/images/git_repository.png)
 
-## 3. Sharing your project
+## Project Sharing
 
 **Privately sharing your GitLab project with collaborators requires that collaborators have a SESYNC account. Please contact cyberhelp@sesync.org if your collaborator needs an account.**
 
@@ -49,7 +49,7 @@ Click 'Add users' at the bottom when you have finished. The next time your colle
 
 ![](/assets/images/adding_people_git.png)
 
-##. 4. (Optional) Switch from HTTPS to SSH
+## (Optional) Switch from HTTPS to SSH
 
 HTTPS and SSH are two different protocols that let you securely push (pull) commits to (from) a remote git repository. HTTPS requires a username and password to authenticate, while SSH works with paired public and private cryptographic keys. You can use either one, but setting up an SSH key pair means never having to enter a username and password.
 
