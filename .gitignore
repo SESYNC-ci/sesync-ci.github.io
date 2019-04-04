@@ -1,6 +1,10 @@
+# RStudio
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Jekyll
 .bundle
 _site
+Gemfile.lock
