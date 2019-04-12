@@ -84,7 +84,7 @@ library(devtools)
 install_github('lbraglia/RStata', ref = github_pull(8))
 ```
 
-The package require configuration of two options: the "path" to the
+The package requires configuration of two options: the "path" to the
 Stata executable and the Stata version number. From our RStudio server, these
 options should be set as follows.
 
@@ -107,17 +107,17 @@ file, which will be much more efficient than running multiple
 one-liners. The `?stata` help describes how to use `data.in` and
 `data.out` arguments to handle data transmission, but we strongly
 discourage their use. Instead, have both R and Stata read and write data
-to a location on our network file system. Both servers have access to
-the same data directories.
+to a location on our network file system [files.sesync.org](https://files.sesync.org/index.php/login). 
+Both servers have access to the same data directories.
 
-Here is a simple ".do" file that demonstrates reading and writing to the
-"public-data" path on the network file system.
+Here is a simple ".do" file that demonstrates reading and writing to your 
+project's path `<PROJECT>-data` on the network file system.
 
 ```stata
-use /nfs/public-data/training/census5
-tabulate region
-collapse marriage_rate divorce_rate median_age
-save /nfs/public-data/training/census5_summary, replace
+use /nfs/<PROJECT>-data/training/census
+tabulate TRACT
+collapse RENTER_OCC OWNER_OCC MED_AGE
+save /nfs/<PROJECT>-data/training/census_summary, replace
 ```
 
 Assuming this file is saved as "example.do" in the working directory,
@@ -133,21 +133,25 @@ complete pipeline making use of R and Stata could look like the
 following:
 
 ```r
+library(RStata)
 library(haven)
 
+options(RStata.StataPath='ssh -q stata.sesync.org /usr/local/stata15/stata')
+options(RStata.StataVersion=15)
+
 # read data into R
-to_stata <- read.csv('/nfs/public-data/training/census5.csv')
+to_stata <- read.csv('/nfs/<PROJECT>-data/training/census.csv')
 
 # process the to_stata data.frame in R
 # ...
 
 # save data to network file system
-write_dta(to_stata, '/nfs/public-data/training/census5.dta')
+write_dta(to_stata, '/nfs/<PROJECT>-data/training/census.dta')
 
 # continue processing in Stata
 stata('example.do')
 
 # read result back into R
-from_stata <- read_dta('/nfs/public-data/training/census5_summary.dta')
+from_stata <- read_dta('/nfs/<PROJECT>-data/training/census_summary.dta')
 head(from_stata)
 ```
