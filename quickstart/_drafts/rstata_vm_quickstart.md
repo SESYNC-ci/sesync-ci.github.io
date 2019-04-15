@@ -4,19 +4,20 @@ tags:
   - RStata
   - Stata
   - Virtual Machine
+  - SSH
 ---
 
 To support existing data analysis pipelines that use the Stata software, SESYNC
 has purchased a Stata license and created a dedicated virtual machine for remote
 use by affiliated researchers. This quick start guide explains the essential
-steps for evaluating Stata commands from SESYNC's RStudio server.
+steps for evaluating Stata commands over SSH or from SESYNC's RStudio server.
 
 ## Stata Server
 
 Stata is installed on a Linux server with address "stata.sesync.org", that
 affiliated researchers can access through a terminal/console using SSH. For
-example, a user logged into our [RStudio](https://rstudio.sesync.org) or
-[Jupyter](https://jupyter.sesync.org) servers can open a terminal and execute
+example, a user logged into our [RStudio](https://rstudio.sesync.org),
+[Jupyter](https://jupyter.sesync.org), or [gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}) servers can open a terminal and execute
 `ssh stata.sesync.org` to reach the server with the Stata software.
 
 The first time you `ssh` to this or any server, you will be asked to confirm the
@@ -24,21 +25,21 @@ remote machine's identity. **Do this even if you only plan to use the RStata pac
 
 ```
 <USERNAME>@rstudio03$ ssh stata.sesync.org
-The authenticity of host 'stata.sesync.org (192.168.195.133)' can't be established.
-ED25519 key fingerprint is SHA256:JoNXMs5Zxu2wWcOYs4ZtjHqrHGYpw6yjq+DNBMRnFB8.
+The authenticity of host 'stata.sesync.org (192.168.***.***)' can't be established.
+ED25519 key fingerprint is SHA256:*******************************************.
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'stata.sesync.org,192.168.195.133' (ED25519) to the list of known hosts.
+Warning: Permanently added 'stata.sesync.org,192.168.***.***' (ED25519) to the list of known hosts.
 Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-143-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
-Last login: Thu Apr  4 10:50:22 2019 from 192.168.195.138
+Last login: Thu Apr  4 10:50:22 2019 from 192.168.***.***
 <USERNAME>@stata00:~$
 ```
 
 With your terminal now connected to this server, launch the console version of
-Stata for interactive user by calling `stata`. As on all our compute platforms,
+Stata for interactive use by calling `stata`. As on all our compute platforms,
 your [research data directory]({{ "quickstart/research-data-directory.html" |
 relative_url }}) is accessible from the Stata console.
 
@@ -67,7 +68,7 @@ Notes:
 <USERNAME>@stata00:~$
 ```
 
-## `RStata` Package
+## RStata Package
 
 The [RStata](https://cran.r-project.org/package=RStata) package facilitates
 using R to send input and receive output from Stata. The package documentation
@@ -107,7 +108,7 @@ file, which will be much more efficient than running multiple
 one-liners. The `?stata` help describes how to use `data.in` and
 `data.out` arguments to handle data transmission, but we strongly
 discourage their use. Instead, have both R and Stata read and write data
-to a location on our network file system [files.sesync.org](https://files.sesync.org/index.php/login). 
+to a location on our network file system, accessible at [files.sesync.org](https://files.sesync.org/index.php/login). 
 Both servers have access to the same data directories.
 
 Here is a simple ".do" file that demonstrates reading and writing to your 
