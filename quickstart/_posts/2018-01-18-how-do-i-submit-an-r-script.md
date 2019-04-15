@@ -13,8 +13,6 @@ You can use SESYNC's RStudio Server to submit jobs to our cluster and view the r
 * Submit your job for execution
 * Look for the results
 
-The code described below is available from GitHub at: [](https://github.com/SESYNC-ci/r-slurm-sample)
-
 Once you are familiar with the process shown here, you may want to check our examples of the different ways to run code in parallel on the cluster: [](https://github.com/SESYNC-ci/cluster-parallel-examples)
 
 ## 1. Create a simple R script
