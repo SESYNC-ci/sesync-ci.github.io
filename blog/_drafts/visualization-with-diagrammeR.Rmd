@@ -12,7 +12,7 @@ output:
 always_allow_html: yes
 ---
 
-Have you ever needed to create a visualization of a research process or statistical model that isn't directly plotted from data?  The R package [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) makes it much easier to create high quality figures and diagrams in situations like these.  Both Graphviz and Mermaid libraries are implemented in DiagrammeR, and I'll give and example of each below. For exporting/printing/saving your diagrams, the package [DiagrammeRsvg](https://github.com/rich-iannone/DiagrammeRsvg) can be useful.  
+Have you ever needed to create a visualization of a research process or statistical model that isn't directly plotted from data?  The R package [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) makes it much easier to create high quality figures and diagrams in situations like these.  Both [Graphviz](https://www.graphviz.org/) and [Mermaid](https://mermaidjs.github.io/) libraries are implemented in DiagrammeR, and I'll give and example of each below. For exporting/printing/saving your diagrams, the package [DiagrammeRsvg](https://github.com/rich-iannone/DiagrammeRsvg) can be useful.  
 
 
 ## Research provenance example
