@@ -12,12 +12,74 @@ output:
 always_allow_html: yes
 ---
 
-Have you ever needed to create a visualization of a research process or statistical model that isn't directly plotted from data?  The R package [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) makes it much easier to create high quality figures and diagrams in situations like these.  Both [Graphviz](https://www.graphviz.org/) and [Mermaid](https://mermaidjs.github.io/) libraries are implemented in DiagrammeR, and I'll give and example of each below. For exporting/printing/saving your diagrams, the package [DiagrammeRsvg](https://github.com/rich-iannone/DiagrammeRsvg) can be useful.  
+Have you ever needed to create a visualization of a research process or statistical model that isn't directly plotted from data?  The R package [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) makes it much easier to create high quality figures and diagrams in situations like these.  
+
+There are three main ways to use the DiagrammeR package.  
+
+1) The package contains R functions that help you [create a diagram](http://rich-iannone.github.io/DiagrammeR/graph_creation.html).  These include `create_graph` for defining the structure of your diagram, and `render_graph` for printing your diagram in the RStudio viewer.  With `render_graph` you can also output your graph in DOT (graph description language).  
+
+2) DOT is also used by [Graphviz](https://www.graphviz.org/), which is implemented in DiagrammeR.  Diagrams specified with Graphviz must pass a valid diagram specification in DOT to the function `grViz()`.  At the minimum, you will need graph, node, and edge statements (see example below).  
+
+3) The [mermaid](https://mermaidjs.github.io/) library is also implemented in DiagrammeR.  Diagrams specified with mermaid must pass a valid diagram specification to the function `mermaid()`.  You must begin by specifying `graph` in this function (see example below).  
+
+For exporting/printing/saving your diagrams, the package [DiagrammeRsvg](https://github.com/rich-iannone/DiagrammeRsvg) can be useful.  You can also use the Export functionality in RStudio to save graphs.  
 
 
-## Research provenance example
 ```{r}
 library(DiagrammeR)
+```
+
+## example using DiagrammeR functions
+
+A simple diagram:
+```{r}
+
+# define nodes dataframe
+nodes <- create_node_df(n = 4, 
+                        type = "lower",
+                        style = "filled",
+                        color = "teal", 
+                        shape = "circle", 
+                        data = c(3.5, 2.6, 9.4, 2.7))
+
+# define edges datagrame
+edges <- create_edge_df(from = c(1, 2, 3, 3),
+                        to = c(2, 4, 4, 2))
+
+# create graph
+my_graph <- create_graph(nodes_df = nodes, edges_df = edges)
+
+# print graph
+render_graph(my_graph)
+
+```
+
+
+## Research provenance example using Graphviz
+I've found it easiest and most customizable to create diagrams using Graphviz. 
+
+A simple diagram:
+```{r}
+
+grViz("digraph{
+         
+       graph[rankdir = LR]  
+         
+       node[shape = rectangle, style = filled]  
+       A[label = 'Figure']
+       B[label = 'Analysis.R']
+       C[label = 'Data.csv']
+
+       edge[color = black]
+       B -> A
+       C -> B
+
+       }")
+
+```
+
+A more complex diagram, specifying difference colors for some nodes, and using subgraph clustering.  
+```{r}
 
 grViz("digraph{
          
@@ -70,21 +132,45 @@ grViz("digraph{
 Adapted from a more detailed "real life" example located in this research [data package](https://knb.ecoinformatics.org/view/urn:uuid:64e28478-7964-4fcb-b002-49a7915fbe4e).  
 
 
-## Structural equation model example
+## Structural equation model example using mermaid
+It's also pretty easy to create diagrams in mermaid, but it seems lightly less customizable.  
+
+A simple diagram:
 ```{r}
+
+mermaid("
+         graph LR
+         A[Nutrients]
+            A-->B[Phytoplankton]
+            B-->B1[Mussels]
+        ")
+
+```
+
+A more complex diagram specifying colors and shapes for nodes, and labels for edges.
+```{r}
+
 mermaid("
          graph BT
-         A[Salinity]
+         A((Salinity))
             A-->B(Barnacles)
-            B-.->|-0.18|B1(Mussels)
-            A-- 0.31 -->B1
+            B-.->|-0.10|B1{Mussels}
+            A-- 0.30 -->B1
             
          C[Air Temp]
             C-->B
             C-.->E(Macroalgae)
                E-->B1
-            C== 0.35 ==>B1
+            C== 0.89 ==>B1
+
+            style A fill:#FFF, stroke:#333, stroke-width:4px
+            style B fill:#9AA, stroke:#9AA, stroke-width:2px
+            style B1 fill:#879, stroke:#333, stroke-width:1px
+            style C fill:#ADF, stroke:#333, stroke-width:2px
+            style E fill:#9C2, stroke:#9C2, stroke-width:2px
+
         ")
 
 ```
-Klinger & Blake (in prep.)
+Adapted from Klinger & Blake (in prep.)
+
