@@ -22,7 +22,7 @@ order:
   </div>
   {% for category in page.order  %}
   {% assign cat = category[0] %}
-  <div id="{{ cat }}" class="section">
+  <div id="{{ cat }}" class="section" data-tooltip="{{ category[1] }}">
     <div class="preview-wrapper">
       {% capture category_page %}/{{ cat }}/{% endcapture %}
       <div class="preview more">
