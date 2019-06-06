@@ -133,7 +133,7 @@ Adapted from a more detailed "real life" example located in this research [data 
 
 
 ## Structural equation model example using mermaid
-It's also pretty easy to create diagrams in mermaid, but it seems lightly less customizable.  
+It's also pretty easy to create diagrams in mermaid, but it seems slightly less customizable.  
 
 A simple diagram:
 ```{r}

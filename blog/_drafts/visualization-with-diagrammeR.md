@@ -13,7 +13,7 @@ always_allow_html: yes
 ---
 
 Have you ever needed to create a visualization of a research process or
-statistical model that isn't directly plotted from data? The R package
+statistical model that isn’t directly plotted from data? The R package
 [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) makes
 it much easier to create high quality figures and diagrams in situations
 like these.
@@ -45,6 +45,12 @@ graphs.
 
     library(DiagrammeR)
 
+    ## Registered S3 methods overwritten by 'ggplot2':
+    ##   method         from 
+    ##   [.quosures     rlang
+    ##   c.quosures     rlang
+    ##   print.quosures rlang
+
 example using DiagrammeR functions
 ----------------------------------
 
@@ -72,12 +78,12 @@ A simple diagram:
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-990d2d42d3813e004ce4">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"2\" \n  \"2\"->\"4\" \n  \"3\"->\"4\" \n  \"3\"->\"2\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-914e096f53b936f981af">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"2\" \n  \"2\"->\"4\" \n  \"3\"->\"4\" \n  \"3\"->\"2\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 Research provenance example using Graphviz
 ------------------------------------------
 
-I've found it easiest and most customizable to create diagrams using
+I’ve found it easiest and most customizable to create diagrams using
 Graphviz.
 
 A simple diagram:
@@ -99,7 +105,7 @@ A simple diagram:
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-fdaeff33f2190074a899">{"x":{"diagram":"digraph{\n         \n       graph[rankdir = LR]  \n         \n       node[shape = rectangle, style = filled]  \n       A[label = \"Figure\"]\n       B[label = \"Analysis.R\"]\n       C[label = \"Data.csv\"]\n\n       edge[color = black]\n       B -> A\n       C -> B\n\n       }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-a22ae0dd5ccf070a544d">{"x":{"diagram":"digraph{\n         \n       graph[rankdir = LR]  \n         \n       node[shape = rectangle, style = filled]  \n       A[label = \"Figure\"]\n       B[label = \"Analysis.R\"]\n       C[label = \"Data.csv\"]\n\n       edge[color = black]\n       B -> A\n       C -> B\n\n       }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 A more complex diagram, specifying difference colors for some nodes, and
 using subgraph clustering.
@@ -152,17 +158,17 @@ using subgraph clustering.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-a415dd71c2f70b091928">{"x":{"diagram":"digraph{\n         \n       graph[rankdir = LR]  \n         \n       node[shape = rectangle, style = filled]  \n       \n       node[fillcolor = Coral, margin = 0.2]\n       A[label = \"Figure 1: Map\"]\n       B[label = \"Figure 2: Metrics\"]\n       \n       node[fillcolor = Cyan, margin = 0.2]\n       C[label = \"Figures.Rmd\"]\n       \n       node[fillcolor = Violet, margin = 0.2]\n       D[label = \"Analysis_1.R\"]\n       E[label = \"Analysis_2.R\"]\n                  \n       subgraph cluster_0 {graph[shape = rectangle]; \n                           style = rounded; bgcolor = Gold; \n                           label = \"Data Source 1\"\n                                      \n                           node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25];\n                           F[label = \"my_dataframe_1.csv\"];\n                           G[label = \"my_dataframe_2.csv\"]\n                           }    \n                           \n       subgraph cluster_1 {graph[shape = rectangle]; \n                           style = rounded; bgcolor = Gold; \n                           label = \"Data Source 2\"\n                                      \n                           node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25];\n                           H[label = \"my_dataframe_3.csv\"];\n                           I[label = \"my_dataframe_4.csv\"]\n                           } \n                  \n       edge[color = black, arrowhead = vee, arrowsize = 1.25]\n       C -> {A B}\n       D -> C\n       E -> C\n       F -> D\n       G -> D\n       H -> E\n       I -> E\n                  \n       }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-667a3d01184ed7875826">{"x":{"diagram":"digraph{\n         \n       graph[rankdir = LR]  \n         \n       node[shape = rectangle, style = filled]  \n       \n       node[fillcolor = Coral, margin = 0.2]\n       A[label = \"Figure 1: Map\"]\n       B[label = \"Figure 2: Metrics\"]\n       \n       node[fillcolor = Cyan, margin = 0.2]\n       C[label = \"Figures.Rmd\"]\n       \n       node[fillcolor = Violet, margin = 0.2]\n       D[label = \"Analysis_1.R\"]\n       E[label = \"Analysis_2.R\"]\n                  \n       subgraph cluster_0 {graph[shape = rectangle]; \n                           style = rounded; bgcolor = Gold; \n                           label = \"Data Source 1\"\n                                      \n                           node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25];\n                           F[label = \"my_dataframe_1.csv\"];\n                           G[label = \"my_dataframe_2.csv\"]\n                           }    \n                           \n       subgraph cluster_1 {graph[shape = rectangle]; \n                           style = rounded; bgcolor = Gold; \n                           label = \"Data Source 2\"\n                                      \n                           node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25];\n                           H[label = \"my_dataframe_3.csv\"];\n                           I[label = \"my_dataframe_4.csv\"]\n                           } \n                  \n       edge[color = black, arrowhead = vee, arrowsize = 1.25]\n       C -> {A B}\n       D -> C\n       E -> C\n       F -> D\n       G -> D\n       H -> E\n       I -> E\n                  \n       }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
-Adapted from a more detailed "real life" example located in this
+Adapted from a more detailed “real life” example located in this
 research [data
 package](https://knb.ecoinformatics.org/view/urn:uuid:64e28478-7964-4fcb-b002-49a7915fbe4e).
 
 Structural equation model example using mermaid
 -----------------------------------------------
 
-It's also pretty easy to create diagrams in mermaid, but it seems
-lightly less customizable.
+It’s also pretty easy to create diagrams in mermaid, but it seems
+slightly less customizable.
 
 A simple diagram:
 
@@ -175,7 +181,7 @@ A simple diagram:
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-cdd179737668b2dfdc5c">{"x":{"diagram":"\n         graph LR\n         A[Nutrients]\n            A-->B[Phytoplankton]\n            B-->B1[Mussels]\n        "},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-7a9b90f383296b2a90b8">{"x":{"diagram":"\n         graph LR\n         A[Nutrients]\n            A-->B[Phytoplankton]\n            B-->B1[Mussels]\n        "},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 A more complex diagram specifying colors and shapes for nodes, and
 labels for edges.
@@ -203,6 +209,6 @@ labels for edges.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-58e19ef3643a2c771abb">{"x":{"diagram":"\n         graph BT\n         A((Salinity))\n            A-->B(Barnacles)\n            B-.->|-0.10|B1{Mussels}\n            A-- 0.30 -->B1\n            \n         C[Air Temp]\n            C-->B\n            C-.->E(Macroalgae)\n               E-->B1\n            C== 0.89 ==>B1\n\n            style A fill:#FFF, stroke:#333, stroke-width:4px\n            style B fill:#9AA, stroke:#9AA, stroke-width:2px\n            style B1 fill:#879, stroke:#333, stroke-width:1px\n            style C fill:#ADF, stroke:#333, stroke-width:2px\n            style E fill:#9C2, stroke:#9C2, stroke-width:2px\n\n        "},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-0898073c66cc90ed45e2">{"x":{"diagram":"\n         graph BT\n         A((Salinity))\n            A-->B(Barnacles)\n            B-.->|-0.10|B1{Mussels}\n            A-- 0.30 -->B1\n            \n         C[Air Temp]\n            C-->B\n            C-.->E(Macroalgae)\n               E-->B1\n            C== 0.89 ==>B1\n\n            style A fill:#FFF, stroke:#333, stroke-width:4px\n            style B fill:#9AA, stroke:#9AA, stroke-width:2px\n            style B1 fill:#879, stroke:#333, stroke-width:1px\n            style C fill:#ADF, stroke:#333, stroke-width:2px\n            style E fill:#9C2, stroke:#9C2, stroke-width:2px\n\n        "},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 Adapted from Klinger & Blake (in prep.)
