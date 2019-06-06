@@ -4,6 +4,7 @@ tags:
   - Vizualization
   - R
   - Shiny
+  - Qualitative Data
 author: khondula
 ---
 
