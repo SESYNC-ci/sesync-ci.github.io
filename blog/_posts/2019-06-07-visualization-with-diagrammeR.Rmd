@@ -1,6 +1,6 @@
 ---
 # DO NOT EDIT THE .md ON GITHUB
-# DO EDIT THE .Rmd AND knit THE .md LOCALLY
+# DO EDIT THE .Rmd AND then run BUILD ALL
 title: Creating visualizations with DiagrammeR
 tags:
   - Visualization
