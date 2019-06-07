@@ -64,8 +64,8 @@ render_graph(my_graph)
 ```
 
 <div class="figure">
-<!--html_preserve--><div id="htmlwidget-b120a92bfe03c92d5e5f" style="width:504px;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b120a92bfe03c92d5e5f">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"2\" \n  \"2\"->\"4\" \n  \"3\"->\"4\" \n  \"3\"->\"2\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-7787aeec1cd221592973" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7787aeec1cd221592973">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [style = \"filled\", color = \"teal\", shape = \"circle\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"2\" \n  \"2\"->\"4\" \n  \"3\"->\"4\" \n  \"3\"->\"2\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">plot of chunk unnamed-chunk-2</p>
 </div>
 
@@ -169,8 +169,8 @@ grViz("digraph{
 ```
 
 <div class="figure">
-<!--html_preserve--><div id="htmlwidget-3061f3ada1d3d1fde31d" style="width:504px;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3061f3ada1d3d1fde31d">{"x":{"diagram":"digraph{\n\n      graph[rankdir = LR]\n  \n      node[shape = rectangle, style = filled]\n  \n      node[fillcolor = Coral, margin = 0.2]\n      A[label = \"Figure 1: Map\"]\n      B[label = \"Figure 2: Metrics\"]\n  \n      node[fillcolor = Cyan, margin = 0.2]\n      C[label = \"Figures.Rmd\"]\n  \n      node[fillcolor = Violet, margin = 0.2]\n      D[label = \"Analysis_1.R\"]\n      E[label = \"Analysis_2.R\"]\n  \n      subgraph cluster_0 {\n        graph[shape = rectangle]\n        style = rounded\n        bgcolor = Gold\n    \n        label = \"Data Source 1\"\n        node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25]\n        F[label = \"my_dataframe_1.csv\"]\n        G[label = \"my_dataframe_2.csv\"]\n      }\n  \n      subgraph cluster_1 {\n         graph[shape = rectangle]\n         style = rounded\n         bgcolor = Gold\n    \n         label = \"Data Source 2\"\n         node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25]\n         H[label = \"my_dataframe_3.csv\"]\n         I[label = \"my_dataframe_4.csv\"]\n      }\n  \n      edge[color = black, arrowhead = vee, arrowsize = 1.25]\n      C -> {A B}\n      D -> C\n      E -> C\n      F -> D\n      G -> D\n      H -> E\n      I -> E\n      \n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-bc1224e1bb5b26914ee7" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bc1224e1bb5b26914ee7">{"x":{"diagram":"digraph{\n\n      graph[rankdir = LR]\n  \n      node[shape = rectangle, style = filled]\n  \n      node[fillcolor = Coral, margin = 0.2]\n      A[label = \"Figure 1: Map\"]\n      B[label = \"Figure 2: Metrics\"]\n  \n      node[fillcolor = Cyan, margin = 0.2]\n      C[label = \"Figures.Rmd\"]\n  \n      node[fillcolor = Violet, margin = 0.2]\n      D[label = \"Analysis_1.R\"]\n      E[label = \"Analysis_2.R\"]\n  \n      subgraph cluster_0 {\n        graph[shape = rectangle]\n        style = rounded\n        bgcolor = Gold\n    \n        label = \"Data Source 1\"\n        node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25]\n        F[label = \"my_dataframe_1.csv\"]\n        G[label = \"my_dataframe_2.csv\"]\n      }\n  \n      subgraph cluster_1 {\n         graph[shape = rectangle]\n         style = rounded\n         bgcolor = Gold\n    \n         label = \"Data Source 2\"\n         node[shape = rectangle, fillcolor = LemonChiffon, margin = 0.25]\n         H[label = \"my_dataframe_3.csv\"]\n         I[label = \"my_dataframe_4.csv\"]\n      }\n  \n      edge[color = black, arrowhead = vee, arrowsize = 1.25]\n      C -> {A B}\n      D -> C\n      E -> C\n      F -> D\n      G -> D\n      H -> E\n      I -> E\n      \n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">plot of chunk unnamed-chunk-6</p>
 </div>
 
@@ -185,18 +185,17 @@ A simple diagram:
 
 
 ```r
-my_graph4 <- mermaid("
-                     graph LR
-                     A[Nutrients]
-                     A-->B[Phytoplankton]
-                     B-->B1[Mussels]
-                     ")
-my_graph4
+mermaid("
+        graph LR
+        A[Nutrients]
+        A-->B[Phytoplankton]
+        B-->B1[Mussels]
+        ")
 ```
 
 <div class="figure">
-<!--html_preserve--><div id="htmlwidget-12439a82343338ef56d0" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-12439a82343338ef56d0">{"x":{"diagram":"\n                     graph LR\n                     A[Nutrients]\n                     A-->B[Phytoplankton]\n                     B-->B1[Mussels]\n                     "},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-163b1a8b823383ebb73b" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-163b1a8b823383ebb73b">{"x":{"diagram":"\n        graph LR\n        A[Nutrients]\n        A-->B[Phytoplankton]\n        B-->B1[Mussels]\n        "},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">plot of chunk unnamed-chunk-7</p>
 </div>
 
@@ -227,8 +226,8 @@ mermaid("
 ```
 
 <div class="figure">
-<!--html_preserve--><div id="htmlwidget-6d8d6b8a7e2ee6008e06" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6d8d6b8a7e2ee6008e06">{"x":{"diagram":"\n        graph BT\n        A((Salinity))\n        A-->B(Barnacles)\n        B-.->|-0.10|B1{Mussels}\n        A-- 0.30 -->B1\n\n        C[Air Temp]\n        C-->B\n        C-.->E(Macroalgae)\n        E-->B1\n        C== 0.89 ==>B1\n\n        style A fill:#FFF, stroke:#333, stroke-width:4px\n        style B fill:#9AA, stroke:#9AA, stroke-width:2px\n        style B1 fill:#879, stroke:#333, stroke-width:1px\n        style C fill:#ADF, stroke:#333, stroke-width:2px\n        style E fill:#9C2, stroke:#9C2, stroke-width:2px\n\n        "},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-a8055a5228b96f8fbd79" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a8055a5228b96f8fbd79">{"x":{"diagram":"\n        graph BT\n        A((Salinity))\n        A-->B(Barnacles)\n        B-.->|-0.10|B1{Mussels}\n        A-- 0.30 -->B1\n\n        C[Air Temp]\n        C-->B\n        C-.->E(Macroalgae)\n        E-->B1\n        C== 0.89 ==>B1\n\n        style A fill:#FFF, stroke:#333, stroke-width:4px\n        style B fill:#9AA, stroke:#9AA, stroke-width:2px\n        style B1 fill:#879, stroke:#333, stroke-width:1px\n        style C fill:#ADF, stroke:#333, stroke-width:2px\n        style E fill:#9C2, stroke:#9C2, stroke-width:2px\n\n        "},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">plot of chunk unnamed-chunk-8</p>
 </div>
 

@@ -159,13 +159,12 @@ It's also pretty easy to create diagrams in mermaid, but it seems slightly less 
 A simple diagram:
 
 ```{r}
-my_graph4 <- mermaid("
-                     graph LR
-                     A[Nutrients]
-                     A-->B[Phytoplankton]
-                     B-->B1[Mussels]
-                     ")
-my_graph4
+mermaid("
+        graph LR
+        A[Nutrients]
+        A-->B[Phytoplankton]
+        B-->B1[Mussels]
+        ")
 ```
 
 A more complex diagram specifying colors and shapes for nodes, and labels for edges.
