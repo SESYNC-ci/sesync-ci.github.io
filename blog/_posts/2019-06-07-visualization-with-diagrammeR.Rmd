@@ -25,7 +25,7 @@ There are three main ways to use the DiagrammeR package.
 For exporting/printing/saving your diagrams, the package [DiagrammeRsvg](https://github.com/rich-iannone/DiagrammeRsvg) can be useful.  You can also use the Export functionality in RStudio to save graphs.  
 
 
-```{r}
+```{r, message=FALSE}
 library(DiagrammeR) ; library(DiagrammeRsvg) ; library(rsvg) 
 ```
 
@@ -42,7 +42,7 @@ nodes <- create_node_df(n = 4,
                         shape = "circle", 
                         data = c(3.5, 2.6, 9.4, 2.7))
 
-# define edges datagrame
+# define edges dataframe
 edges <- create_edge_df(from = c(1, 2, 3, 3),
                         to = c(2, 4, 4, 2))
 
@@ -83,6 +83,7 @@ my_graphviz <- grViz("digraph{
                      
                      }")
 
+my_graphviz
 ```
 
 A GraphViz object requires a few more steps to save as an image file, such as a PNG:
