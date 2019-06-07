@@ -6,13 +6,16 @@ export GEM_HOME = ~/.gem
 .PHONY: all clean
 
 all: Gemfile.lock $(RMD:%.Rmd=%.md)
-	bundle exec jekyll build --drafts --baseurl=/p/$(PORT)
+	bundle exec jekyll build --drafts --baseurl=/p/78120b81
 
 Gemfile.lock:
 	bundle install
 
-%.md: %.Rmd
-	Rscript --vanilla -e "knitr::knit('$<', '$@')"
+%.md: %.Rmd | _data
+	scripts/knit.R "$<" "$@"
+
+_data:
+	mkdir "$@"
 
 clean:
 	rm -rf _site

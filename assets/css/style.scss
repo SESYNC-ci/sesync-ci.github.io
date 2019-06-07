@@ -34,6 +34,28 @@ body {
     background-image: unset;
     background-color: $color-grey;
     font-size: 16px;
+
+    .wrapper {
+        h2 {
+            margin: 0.6em 0;
+        }
+        section {
+            background: #fff;
+        }
+    }
+
+    .figure script+p.caption {
+        display: none;
+    }
+    
+    p > img {
+        margin: auto;
+        display: block;
+    }
+    
+    .html-widget {
+        margin: auto;
+    }
 }
 
 footer {
@@ -75,10 +97,6 @@ th {
 hr {
     background: $color-primary-trim;
     height: 2px;
-}
-
-.wrapper h2 {
-    margin: 0.6em 0;
 }
 
 nav ul li.tag-h1 a {

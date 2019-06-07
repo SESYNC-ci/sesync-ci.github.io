@@ -66,13 +66,13 @@ names(r_after) <- c("Red","NIR","Blue","Green","SWIR1","SWIR2","SWIR3")
 plot(r_before)
 ```
 
-![plot of chunk unnamed-chunk-2]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-2-1.png)
 
 ```r
 plot(r_after)
 ```
 
-![plot of chunk unnamed-chunk-2]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-2-2.png)
+![plot of chunk unnamed-chunk-2]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-2-2.png)
 
 We note that Red, Near Infrared and Short Wave Infrared (SWIR1 and SWIR2) offer high contrast between vegetated areas and water. These bands also display changes in areas near the coast.
 
@@ -104,7 +104,7 @@ plotRGB(r_after,
         main="after")
 ```
 
-![plot of chunk unnamed-chunk-3]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-3-1.png)
 
 False color composite images can also be useful to visualize change on the ground. Such composite is similar to a Color Infrared (CIR) photography. We generate a RGB false composite by identifying spectral bands corresponding to red (band 2: SWIR), green (band 4) and blue (band 1). False Color composites may be particularly are useful to detect vegetation and water presence on the ground. 
 
@@ -127,7 +127,7 @@ plotRGB(r_after,
         stretch="hist")
 ```
 
-![plot of chunk unnamed-chunk-4]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-4-1.png)
 
 Visual inspection suggests some change areas especially visible in the false color composite towards the coast in the South East part of the study area. The next step is to quantitavely assess where changes occur. We use specific spectral bands combinations (indices) to focus on specific features from the ground. 
 
@@ -145,7 +145,7 @@ names(r_before)
 ```
 
 ```
-## [1] "Red"   "NIR"   "Blue"  "Green" "SWIR1" "SWIR2" "SWIR3"
+[1] "Red"   "NIR"   "Blue"  "Green" "SWIR1" "SWIR2" "SWIR3"
 ```
 
 ```r
@@ -159,7 +159,7 @@ levelplot(r_NDVI_s,
           col.regions=rev(terrain.colors(255)))
 ```
 
-![plot of chunk unnamed-chunk-5]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-5-1.png)
 
 Comparison of before and after NDVI images suggests a general drop in NDVI for the region with some additional pockets of water near the coast. This visual comparison is interesting but let  us check results against data from the Federal Emergency Management Agency (FEMA) that mapped the area flooded by Rita. We use a vector file with zone=1 representing flooding and zone=0 no flooding. This is rasterized to produce a boxplot of the averages by zones.
 
@@ -170,13 +170,13 @@ reg_sf <- st_read(file.path(in_dir,infile_reg_outline))
 ```
 
 ```
-## Reading layer `new_strata_rita_10282017' from data source `/nfs/public-data/cyberhelp/blogs/raster-change-analysis/new_strata_rita_10282017.shp' using driver `ESRI Shapefile'
-## Simple feature collection with 2 features and 17 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -93.92921 ymin: 29.47236 xmax: -91.0826 ymax: 30.49052
-## epsg (SRID):    4269
-## proj4string:    +proj=longlat +datum=NAD83 +no_defs
+Reading layer `new_strata_rita_10282017' from data source `/nfs/public-data/cyberhelp/blogs/raster-change-analysis/new_strata_rita_10282017.shp' using driver `ESRI Shapefile'
+Simple feature collection with 2 features and 17 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: -93.92921 ymin: 29.47236 xmax: -91.0826 ymax: 30.49052
+epsg (SRID):    4269
+proj4string:    +proj=longlat +datum=NAD83 +no_defs
 ```
 
 ```r
@@ -193,7 +193,7 @@ r_ref <- rasterize(reg_sp,
 plot(r_ref, "FEMA Flood Zones")
 ```
 
-![plot of chunk unnamed-chunk-6]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-6]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-6-1.png)
 
 ```r
 r_NDVI_s <- mask(r_NDVI_s,r_ref)
@@ -203,7 +203,7 @@ ncell(r_NDVI_s) #Ok not too big, let's coerce the raster into data.frame
 ```
 
 ```
-## [1] 34568
+[1] 34568
 ```
 
 ```r
@@ -225,7 +225,7 @@ bp <- ggplot(zonal_var_df, aes(x=variable, y=value)) +
 bp + facet_wrap(~zone) #Generate a faceted boxplot
 ```
 
-![plot of chunk unnamed-chunk-6]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-6-2.png)
+![plot of chunk unnamed-chunk-6]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-6-2.png)
 
 Using FEMA data, we found that on average, NDVI dropped by 0.1 in areas that were flooded while non-flooded areas displayed a slight increase. We also see that there is larger variance in flooded areas. In many cases, we do not have ancillary information and we need to generate rapidly flooding areas from the original satellite images. We present below such analysis using a simple difference image approach with a reclassification procedure to map areas into impact classes.
 
@@ -238,13 +238,13 @@ r_diff <- r_NDVI_s$after - r_NDVI_s$before
 plot(r_diff)
 ```
 
-![plot of chunk unnamed-chunk-7]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-7]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-7-1.png)
 
 ```r
 histogram(r_diff)
 ```
 
-![plot of chunk unnamed-chunk-7]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-7-2.png)
+![plot of chunk unnamed-chunk-7]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-7-2.png)
 
 ### Classifying differences in impact/damage classes
 
@@ -268,7 +268,7 @@ threshold_val <- c(1.96,1.64)
 plot(r_std)
 ```
 
-![plot of chunk unnamed-chunk-8]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-8-1.png)
 
 ```r
 hist(r_std,
@@ -278,7 +278,7 @@ abline(v=threshold_val[1],col="red",lty=1)
 abline(v=-threshold_val[1],col="red",lty=1)
 ```
 
-![plot of chunk unnamed-chunk-8]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-8-2.png)
+![plot of chunk unnamed-chunk-8]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-8-2.png)
 
 ```r
 m <- c(-1.64, 10, 0,
@@ -292,10 +292,10 @@ freq(r_ref)
 ```
 
 ```
-##      value count
-## [1,]     0  9849
-## [2,]     1 11064
-## [3,]    NA 13655
+     value count
+[1,]     0  9849
+[2,]     1 11064
+[3,]    NA 13655
 ```
 
 ```r
@@ -303,11 +303,11 @@ freq(r_impact1)
 ```
 
 ```
-##      value count
-## [1,]     0 19061
-## [2,]     1   510
-## [3,]     2   968
-## [4,]    NA 14029
+     value count
+[1,]     0 19061
+[2,]     1   510
+[3,]     2   968
+[4,]    NA 14029
 ```
 
 Let's now visualize the output and compute the area for each category. Results indicate that few pixels are selected as highly impacted. This suggests that we may be underestimating the flooded areas. 
@@ -320,7 +320,7 @@ qqnorm(values(r_std))
 abline(0, 1)
 ```
 
-![plot of chunk unnamed-chunk-9]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-9]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-9-1.png)
 
 In the second procedure, we assign positive and low decreases to NDVI value 0 (no change), level 1 decrease to NDVI (low impact) for range [-0.3,0.1] while level 2 decrease to [-10,0.3] (higher impact from higher intensity).
 
@@ -346,11 +346,11 @@ freq(r_impact2)
 ```
 
 ```
-##      value count
-## [1,]     0 15087
-## [2,]     1  3338
-## [3,]     2  2114
-## [4,]    NA 14029
+     value count
+[1,]     0 15087
+[2,]     1  3338
+[3,]     2  2114
+[4,]    NA 14029
 ```
 
 ```r
@@ -370,7 +370,7 @@ legend('topright',
        bty="n") 
 ```
 
-![plot of chunk unnamed-chunk-10]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-10-1.png)
 
 ```r
 plot(r_impact2, 
@@ -386,7 +386,7 @@ legend('topright',
        bty="n") 
 ```
 
-![plot of chunk unnamed-chunk-10]({{ site.baseurl }}/assets/images/raster-change-analysis/unnamed-chunk-10-2.png)
+![plot of chunk unnamed-chunk-10]({{ site.baseurl }}/assets/images/blog/raster-change-analysis/unnamed-chunk-10-2.png)
 
 ```r
 #Save the output image of hurrican impact:

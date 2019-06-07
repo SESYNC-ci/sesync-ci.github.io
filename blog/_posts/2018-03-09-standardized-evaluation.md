@@ -29,8 +29,8 @@ plots %>%
 ```
 
 ```
-##    avg
-## 1 2.25
+   avg
+1 2.25
 ```
 
 An **incorrect** attempt at such a function is:
@@ -52,13 +52,13 @@ level_mean_nope(plots, 'Plot', 2, 'Cover')
 ```
 
 ```
-## Warning in mean.default(value): argument is not numeric or logical:
-## returning NA
+Warning in mean.default(value): argument is not numeric or logical:
+returning NA
 ```
 
 ```
-##   avg
-## 1  NA
+  avg
+1  NA
 ```
 
 What's worse than the warning is that the answer given, `NA`, is wrong! Without the `summarize` part, the result would still not be what you'd expect, and there would be no warning at all.
@@ -98,8 +98,8 @@ level_mean_nse(plots, Plot, 2, Cover)
 ```
 
 ```
-##    avg
-## 1 2.25
+   avg
+1 2.25
 ```
 
 See how it works? The application of `filter` ended up equivalent to `filter(plots, Plot == 2)`. Sound good enough? Feel free to stop reading if you want to skip the lecture.
@@ -123,8 +123,8 @@ data %>%
 ```
 
 ```
-##    avg
-## 1 2.25
+   avg
+1 2.25
 ```
 
 With that working, wrap it up in `level_mean <- function(data, factor, level, value) {...}` and you are good to go.

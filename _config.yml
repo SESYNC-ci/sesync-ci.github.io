@@ -22,6 +22,8 @@ exclude:
   - Gemfile.lock
   - Makefile
   - README.md
+  - scripts/
+  - cache/
   - .Rproj.user/
   - "*.Rproj*"
   - "*.Rmd"
