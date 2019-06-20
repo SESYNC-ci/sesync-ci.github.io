@@ -12,7 +12,7 @@ The window is calculated each month by adding 9 days to Microsoft's [Patch Tuesd
 This allows us to marshal patches released that month from Microsoft, Red Hat, Ubuntu and our other vendors and have enough time
 to get our systems prepared to reboot for that month's window.
 
-The maintenance Window is usually a Thursday. A list of remaining maintenance windows for 2018 are listed below:
+The maintenance Window is usually a Thursday. A list of remaining maintenance windows for 2019 are listed below:
 
 * February 21st, 2019
 * March 28th, 2019
