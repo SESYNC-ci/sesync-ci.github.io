@@ -2,6 +2,7 @@
 title: Writing Data Management Plans
 tags:
   - Data
+ - Reproducible Research
 author: khondula
 ---
 
