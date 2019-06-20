@@ -51,7 +51,7 @@ A few other data management resources and tools:
 
 - [GitHub](https://github.com/) repositories can be assigned DOIs through [Zenodo](https://guides.github.com/activities/citable-code/).  However, GitHub is not considered a persistent long-term archive for models and code products.  You will want to find a more permanent home for your code such as one of the other repositories above.  Some types of modeling communities may have specialized repositories, such as [Open ABM](https://www.openabm.org/models) for agent-based models.
 
-- Several journals specialize in data publications such as [Scientific Data](http://www.nature.com/sdata/), and [Earth System Science Data](http://www.earth-system-science-data.net/), whereas other journals have specialized article formats for this type of manuscript, such as [Ecology data papers](http://esajournals.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1939-9170/resources/data_paper_inst_ecy.html). 
+- Several journals specialize in data publications such as [Scientific Data](http://www.nature.com/sdata/), and [Earth System Science Data](http://www.earth-system-science-data.net/), whereas other journals have specialized article formats for this type of manuscript, such as [Ecology data papers](http://esajournals.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1939-9170/resources/data_paper_inst_ecy.html). Read about these and a few more examples on the [CyBlog](https://cyberhelp.sesync.org/blog/data-papers.html)
 
 - The Ecological Society of America has a list of resources and tools for data sharing [here](https://www.esa.org/esa/science/data-sharing/resources-and-tools/)
 
