@@ -14,18 +14,17 @@ to get our systems prepared to reboot for that month's window.
 
 The maintenance Window is usually a Thursday. A list of remaining maintenance windows for 2018 are listed below:
 
-* January 18th 2018
-* February 22nd 2018
-* March 22nd 2018
-* April 19th 2018
-* May 17th 2018
-* June 21st 2018
-* July 19th 2018
-* August 23rd 2018
-* September 20th 2018
-* October 18th 2018
-* November 15th 2018
-* December 20th 2018
+*February 21st, 2019
+* March 28th, 2019
+* April 18th, 2019
+* May 23rd, 2019
+* June 20th, 2019
+* July 18th, 2019
+* August 22nd, 2019
+* September 19th, 2019
+* October 17th, 2019
+* November 21st, 2019
+* December 19th, 2019
 
 ## What happens to my scheduled jobs during the maintenance window?
 
