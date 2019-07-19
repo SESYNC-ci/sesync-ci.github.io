@@ -2,6 +2,7 @@
 title: Publishing Data Papers
 tags:
   - Reproducible Research
+  - Publish Data
 author: khondula
 ---
 
