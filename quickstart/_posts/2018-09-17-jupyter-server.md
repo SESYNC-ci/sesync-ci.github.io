@@ -72,6 +72,11 @@ all shared data here. Examples of data types that should be placed here include
 csv files, landsat imagery, hdf5 data files--anything that makes sense to have
 only a single copy, with access shared by your project members.
 
+Note that to connect to the  research data directory, you will need to create a symlink to your root project directory by opening the terminal jupyter and typing:
+`ln -s /nfs/PROJECTNAME-data PROJECTNAME-data`
+
+See the [FAQ](https://cyberhelp.sesync.org/faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html) for more information.
+
 ## Dealing with Data
 
 Since everyone will be working off of the same set of code, there are three
