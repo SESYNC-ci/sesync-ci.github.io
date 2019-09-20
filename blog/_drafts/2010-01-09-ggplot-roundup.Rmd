@@ -11,6 +11,10 @@ output:
     preserve_yaml: true
 ---
 
+```{r include = FALSE}
+library(ggplot2)
+```
+
 Tweaking figures for presentations or publications can be a tedious process, especially when I always need a reminder on "how to use greek letters or subscripts in y-axis", "remove legend", and "r pch". Here are a collection of some `ggplot2` functions and arguments that I find particularly useful and want to remember. 
 
 ### Getting oriented with proper axes
@@ -24,6 +28,7 @@ Within an `xlab()` or `ylab()` function, use `expression(paste())` to use specia
 
 * Customize date axes with `scale_x_date()`
 * Rotate axis labels 90 degrees and right justify using the layer `theme(axis.text.x = element_text(angle = 90, hjust = 1))`
+* Display axis tick labels as percentages with `scale_y_continuous(labels = scales::percent)`. To round the percentages to the nearest whole number, use `scale_y_continuous(labels = scales::percent_format(accuracy = 1))`.
 
 ### Show me the data!
 
@@ -42,6 +47,33 @@ Within an `xlab()` or `ylab()` function, use `expression(paste())` to use specia
 * Zoom in without losing outlier data points using `coord_cartesian()`
 
 * Alternatively, lose the outliers on a boxplot with `geom_boxplot(outlier.shape = NA)`
+
+### Special text and labels
+
+* To display a statistic like $R^2 = 0.75$ on a plot, it is better to code the value of $R^2$ as a variable rather than manually typing it in. Here is how you can do this with ggplot's `annotate()` function. You will need to include `parse = TRUE` as an argument so that the string is converted to a plotmath expression.
+
+```{r fig.height=3, fig.width=3}
+set.seed(222)
+mydata <- data.frame(x = 1:10, y = 1:10 + rnorm(10, sd = 2))
+fit <- lm(y ~ x, data = mydata)
+rsq_label <- paste('R^2 == ', round(summary(fit)$r.squared, 2))
+
+ggplot(mydata, aes(x = x, y = y)) +
+  geom_point(size = 2) +
+  geom_smooth(method = 'lm', se = FALSE, size = 1.5) +
+  annotate(geom = 'text', x = -Inf, y = Inf, label = rsq_label, hjust = 0, vjust = 1, parse = TRUE)
+```
+
+* To put text labels exactly in the corner or on the edge of the plot area, you can use `Inf` or `-Inf` as coordinate values. This is also illustrated in the example above. Note that you have to change the `hjust` and `vjust` arguments as well. 
+
+* If you have a faceted plot there are a lot of ways to customize the labels that appear along the facet margins. To use expressions in the facet labels you can use `label_parsed`. Notice that you have to format the labels as expressions, which includes replacing spaces with `~`.
+
+```{r}
+mydata <- data.frame(y = 1:10, variable = c('Flux~(g~m^-2~s^-1)', 'Mass~(g)'))
+ggplot(mydata, aes(y = y)) + 
+  geom_boxplot() +
+  facet_wrap(~ variable, labeller = label_parsed)
+```
 
 ### Putting it all together
 
@@ -73,3 +105,16 @@ save_plot("figure.png", figure, ncol = 2, nrow = 2, base_aspect_ratio = 1.3)
 ```
 
 As I haven't determined anything particulary bovine-related in the package, I'm pretty sure the name references the [author's](https://github.com/clauswilke) initials. 
+
+* If you want a "stealth mode" plot that is all black with white lines and text, there is no built-in theme in ggplot and it's oddly hard to find a good white-on-black theme in any of the add-on packages that have customized themes.
+
+The best one I have found is written by Jon Lefcheck and can be sourced directly from GitHub:
+
+```{r warning=FALSE}
+source('https://gist.githubusercontent.com/jslefche/eff85ef06b4705e6efbc/raw/736d3dc9fe71863ea62964d9132fded5e3144ad7/theme_black.R')
+
+mydata <- data.frame(x=runif(100), y=runif(100), gp=letters[1:5])
+ggplot(mydata,aes(x = x,y = y, color = gp)) + 
+  geom_line() + 
+  theme_black()
+```
