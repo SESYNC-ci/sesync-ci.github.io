@@ -6,6 +6,7 @@ tags:
  - NFS
  - Slurm
  - SSH
+ - Zotero
 sticky: true
 ---
 
@@ -28,6 +29,7 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Custom Virtual Machines | Single purpose Windows or linux virtual machine with shared account. |
 | Enterprise Conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
 | Software Purchasing     | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
+| Reference Management    | Zotero groups with unlimited storage. |
 
 [high-level overview]: http://sesync.us/itresearchresources
 [Mailing List]: {{ '/quickstart/Creating-an-Email-Group-List.html' | relative_url }}
