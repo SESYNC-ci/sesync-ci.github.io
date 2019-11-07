@@ -2,7 +2,9 @@
 # DO NOT EDIT THE .md ON GITHUB
 # DO EDIT THE .Rmd AND knit THE .md LOCALLY
 title: ggplot tricks not to forget about
-author: khondula
+author: 
+ - khondula
+ - qread
 tags:
  - ggplot
  - dataviz
@@ -40,6 +42,7 @@ use special characters. Use brackets (`[]`) for subscript, the caret
     arguments values and labels:
 
 <!-- -->
+
       scale_shape_manual(values = c(21, 24), 
                          name = element_blank(),
                          labels = c("Landsat", "Sentinel2"))
@@ -65,19 +68,12 @@ use special characters. Use brackets (`[]`) for subscript, the caret
 -   To display a statistic like *R*<sup>2</sup> = 0.75 on a plot, it is
     better to code the value of *R*<sup>2</sup> as a variable rather
     than manually typing it in. Here is how you can do this with
-<<<<<<< HEAD
-    ggplot's `annotate()` function. You will need to include
-=======
     ggplot’s `annotate()` function. You will need to include
->>>>>>> 67c208c03c7593c27d17b07a824261fb3f1dc961
     `parse = TRUE` as an argument so that the string is converted to a
     plotmath expression.
 
 <!-- -->
-<<<<<<< HEAD
-=======
 
->>>>>>> 67c208c03c7593c27d17b07a824261fb3f1dc961
     set.seed(222)
     mydata <- data.frame(x = 1:10, y = 1:10 + rnorm(10, sd = 2))
     fit <- lm(y ~ x, data = mydata)
@@ -88,7 +84,7 @@ use special characters. Use brackets (`[]`) for subscript, the caret
       geom_smooth(method = 'lm', se = FALSE, size = 1.5) +
       annotate(geom = 'text', x = -Inf, y = Inf, label = rsq_label, hjust = 0, vjust = 1, parse = TRUE)
 
-![](2010-01-09-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 -   To put text labels exactly in the corner or on the edge of the plot
     area, you can use `Inf` or `-Inf` as coordinate values. This is also
@@ -102,16 +98,13 @@ use special characters. Use brackets (`[]`) for subscript, the caret
     with `~`.
 
 <!-- -->
-<<<<<<< HEAD
-=======
 
->>>>>>> 67c208c03c7593c27d17b07a824261fb3f1dc961
     mydata <- data.frame(y = 1:10, variable = c('Flux~(g~m^-2~s^-1)', 'Mass~(g)'))
     ggplot(mydata, aes(y = y)) + 
       geom_boxplot() +
       facet_wrap(~ variable, labeller = label_parsed)
 
-![](2010-01-09-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 ### Putting it all together
 
@@ -147,21 +140,12 @@ There is also a handy function for saving this type of plot to a file:
 
     save_plot("figure.png", figure, ncol = 2, nrow = 2, base_aspect_ratio = 1.3)
 
-<<<<<<< HEAD
-As I haven't determined anything particulary bovine-related in the
-package, I'm pretty sure the name references the
-[author's](https://github.com/clauswilke) initials.
-
--   If you want a "stealth mode" plot that is all black with white lines
-    and text, there is no built-in theme in ggplot and it's oddly hard
-=======
 As I haven’t determined anything particulary bovine-related in the
 package, I’m pretty sure the name references the
 [author’s](https://github.com/clauswilke) initials.
 
 -   If you want a “stealth mode” plot that is all black with white lines
     and text, there is no built-in theme in ggplot and it’s oddly hard
->>>>>>> 67c208c03c7593c27d17b07a824261fb3f1dc961
     to find a good white-on-black theme in any of the add-on packages
     that have customized themes.
 
@@ -175,4 +159,4 @@ directly from GitHub:
       geom_line() + 
       theme_black()
 
-![](2010-01-09-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-6-1.png)

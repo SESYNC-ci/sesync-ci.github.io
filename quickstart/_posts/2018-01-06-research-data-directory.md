@@ -14,7 +14,7 @@ The **directory name** will be based off your project's short-title.
 In the examples below, we use the short title `cooltrees` for a hypothetical
 project about urban green spaces.
 
-For **postdocs and staff** at SESYNC, additional options are in our [internal Wiki](https://redmine.sesync.org).
+For **postdocs and staff** at SESYNC, additional options are in our [internal Wiki](https://gitlab.sesync.org/it-staff/public-wiki/wikis/home).
 
 ## Web Browser
 
