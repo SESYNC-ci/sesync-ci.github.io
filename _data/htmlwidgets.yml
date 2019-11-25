@@ -1,5 +1,5 @@
 - name: htmlwidgets
-  version: '1.3'
+  version: 1.5.1
   src: htmlwidgets/www
   meta: ~
   script: htmlwidgets.js
