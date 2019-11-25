@@ -14,10 +14,10 @@ You can use SESYNC's RStudio Server to submit jobs to our cluster and view the r
 * Submit your job for execution
 * Look for the results
 
-Once you are familiar with the process shown here, you may want to check our examples of the different ways to run code in parallel on the cluster: [](https://github.com/SESYNC-ci/cluster-parallel-examples)
+Once you are familiar with the process shown here, you may want to check our examples of the different ways to [run code in parallel](https://github.com/SESYNC-ci/cluster-parallel-examples) on the cluster.  You may also want to check out the [rslurm](http://cyberhelp.sesync.org/rslurm/index.html) package for submitting R code to a slurm cluster.  
 
 ## 1. Create a simple R script
-Before you begin, download the example data file from Data Carpentry at [](https://github.com/datacarpentry/datacarpentry/raw/master/data/biology/surveys.csv). Place it in your current directory. The file contains observations on the weight of several species of small mamals across 24 survey plots.
+Before you begin, download the `surveys.csv` data file from [Data Carpentry](https://github.com/datacarpentry/datacarpentry/raw/master/data/biology/). Place it in your current directory. The file contains observations on the weight of several species of small mamals across 24 survey plots.
 
 * In the "Console" window in RStudio, run:
 

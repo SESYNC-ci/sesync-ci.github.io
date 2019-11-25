@@ -20,4 +20,4 @@ Once connected to ssh.seysnc.org, you can do any of the following:
 3. Connect via ssh at the command prompt to your dedicated linux VM to use processing resources there (contact SESYNC staff at cyberhelp@sesync.org if you need a linux VM)
 
 ### Other ways to connect
-You can also access linux resources via the terminal windows in [RStudio](rstudio.sesync.org) or [Jupyter](jupyter.sesync.org).  When you log in to either of these compuing environments, you do the equivalent to logging to the ssh gateway, so you don't have to use the steps above, but rather can simply transfer data, run scripts, etc.  
+You can also access linux resources via the terminal windows in [RStudio](rstudio.sesync.org) or [Jupyter](jupyter.sesync.org).  When you log in to either of these compuing environments, you do the equivalent to logging in to the ssh gateway, so you don't have to use the steps above, but rather can simply transfer data, run scripts, etc.  
