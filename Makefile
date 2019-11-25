@@ -6,7 +6,7 @@ export GEM_HOME = ~/.gem
 .PHONY: all clean
 
 all: Gemfile.lock $(RMD:%.Rmd=%.md)
-	bundle exec jekyll build --drafts --baseurl=/p/78120b81
+	bundle exec jekyll build --drafts --baseurl=/p/bc64f24f
 
 Gemfile.lock:
 	bundle install

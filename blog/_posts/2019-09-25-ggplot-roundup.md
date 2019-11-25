@@ -84,7 +84,7 @@ use special characters. Use brackets (`[]`) for subscript, the caret
       geom_smooth(method = 'lm', se = FALSE, size = 1.5) +
       annotate(geom = 'text', x = -Inf, y = Inf, label = rsq_label, hjust = 0, vjust = 1, parse = TRUE)
 
-![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](/assets/images/unnamed-chunk-4-1.png)
 
 -   To put text labels exactly in the corner or on the edge of the plot
     area, you can use `Inf` or `-Inf` as coordinate values. This is also
@@ -104,7 +104,7 @@ use special characters. Use brackets (`[]`) for subscript, the caret
       geom_boxplot() +
       facet_wrap(~ variable, labeller = label_parsed)
 
-![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](/assets/images/unnamed-chunk-5-1.png)
 
 ### Putting it all together
 
@@ -159,4 +159,4 @@ directly from GitHub:
       geom_line() + 
       theme_black()
 
-![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](/assets/images/unnamed-chunk-6-1.png)
