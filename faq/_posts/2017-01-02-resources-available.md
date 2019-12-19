@@ -30,6 +30,7 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Enterprise Conferencing | Skype for Business meetings with video, presentation sharing, and conference telephone line. |
 | Software Purchasing     | Licenses for Matlab, Stata, ArcGIS, MaxQDA, NVIVO, and additional software can be purchased on request. |
 | Reference Management    | Zotero groups with unlimited storage. |
+| Slurm Cluster           | High-performance computing cluster for running parallel jobs. Integrated with R through the [rslurm package]. |
 
 [high-level overview]: http://sesync.us/itresearchresources
 [Mailing List]: {{ '/quickstart/Creating-an-Email-Group-List.html' | relative_url }}
@@ -38,3 +39,4 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 [RStudio]: {{ '/quickstart/rstudio-server.html' | relative_url }}
 [Jupyter]: {{ '/quickstart/jupyter-server.html' | relative_url }}
 [MySQL/PostgreSQL Database]: {{ '/quickstart/connect-to-a-database.html' | relative_url }}
+[rslurm package]: http://cyberhelp.sesync.org/rslurm/
