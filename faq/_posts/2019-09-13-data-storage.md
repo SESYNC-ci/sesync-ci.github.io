@@ -1,6 +1,5 @@
 ---
 title: "How much data can I store in my research data directory?"
-author: qread
 tags:
  - NFS
  - Infrastructure

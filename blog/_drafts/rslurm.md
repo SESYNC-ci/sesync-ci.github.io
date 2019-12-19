@@ -6,7 +6,7 @@ tags:
 author: qread
 ---
 
-(insert slurm logo image here)
+![rslurm logo](/assets/images/logo_slurm.svg)
 
 This blog post will teach you how to use the `rslurm` package to parallelize your code by walking you through a quick example.
 
@@ -29,6 +29,8 @@ The basic steps we need to take to do a job in `rslurm` are:
 Let's go through each step.
 
 ### Set up the parameter values
+
+We need to create a data frame where each column is a parameter and each row is an iteration. Let's say we have 
 
 ### Create a list of needed objects
 
