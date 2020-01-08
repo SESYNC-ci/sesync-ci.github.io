@@ -8,7 +8,7 @@ author: qread
 
 <img src="/assets/images/logo_slurm.svg" align="right" width=250px>
 
-This blog post will teach you how to use the `rslurm` package to parallelize your code by walking you through a quick example.
+This blog post will walk you through a quick example of how to use the `rslurm` package to parallelize your code.
 
 ## What is rslurm?
 
@@ -23,17 +23,27 @@ Let's take a look at how we could use `rslurm` to speed up the analysis.
 The basic steps we need to take to do a parallel job in `rslurm` are:
 
 - Create a function that we want to call many times in parallel.
-- Put the parameter values in a data frame where each row is a set of values to use for a single iteration.
+- Set up a data frame of parameter values where each row is a set of values to use for a single iteration.
 - Create a list of all the other R objects (and optionally, packages) we need to run the code within each iteration.
 - Call `slurm_apply()` to run the parallel job.
-- Check the job status to see whether it ran successfully.
+- Check the job status to see whether the job ran successfully.
 - Extract job output and (optionally) clean up any temporary files that the job created.
 
 Let's go through each step.
 
 ### Create a function to call in parallel
 
-### Set up the parameter values
+When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with the root mean squared error (RMSE). A lower RMSE means the model did a better job at prediction. We want to find the combination of tuning parameters that yields the lowest RMSE. 
+
+In this example, we are fitting a type of machine learning model called random forest. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting.
+
+Here is a function that takes tuning parameters as arguments (and the data used to fit the model), then fits a machine learning model using 10-fold cross-validation. Within each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction error across all 10 folds to return a single value of the model's RMSE.
+
+```
+insert here
+```
+
+### Set up a data frame of the parameter values
 
 We need to create a data frame where each column is an argument to our function and each row is an iteration.
 
@@ -43,7 +53,7 @@ The R function `expand.grid()` is often useful here. Let's test out two tuning p
 my_pars <- expand.grid(interaction.depth = 1:3, n.trees = c(50, 100, 150))
 ```
 
-### Create a list of needed objects
+### Create a list of needed R objects and packages
 
 When you run an R script in parallel, you are creating a separate R environment for each of the tasks. You need to make sure that each environment has all the R objects needed to do the task. In this case you would need to make sure the environment contains the needed data and packages. By default, all the currently loaded packages are loaded within each of the task environments but you need to pass all objects explicitly. You can also specify just the packages you absolutely need if you want to speed things up slightly by avoiding loading a lot of unnecessary packages within each task.
 
@@ -61,7 +71,7 @@ needed_packages <- c('foo')
 
 ### Call slurm_apply() to run the parallel job
 
-Now we put it all together with a call to `slurm_apply()`. In addition to passing the function name, the parameter data frame, the objects, and the packages, we can also specify how many nodes to split the job across.
+Now we put it all together with a call to `slurm_apply()`. In addition to passing the function name, the parameter data frame, the objects, and the packages, we can also specify how many nodes to split the job across. Optionally, you could pass additional options to `slurm_apply()` to specify things like the maximum memory and time allocation for the job, but that isn't necessary for this relatively small job that we don't anticipate hogging a lot of resources.
 
 ```
 my_job <- slurm_apply()
@@ -69,13 +79,13 @@ my_job <- slurm_apply()
 
 ### Check job status
 
-As the job is running we can call `get_job_status()` to see how things are going. This is an example of what it would look like while the job is ongoing:
+As the job is running we can call `get_job_status()` to see how things are going. This is an example of what the output returned by `get_job_status(my_job)` would look like while the job is ongoing:
 
 ```
 insert here
 ```
 
-If the job is completed the call to `get_job_status()` would look like this:
+If the job has finished running, the output returned by `get_job_status(my_job)` would look like this:
 
 ```
 insert here
@@ -83,7 +93,7 @@ insert here
 
 ### Extract job output and clean up temporary files
 
-Once your job is complete you can pull the output back into your R environment using `get_slurm_out()`:
+Once your job is complete, you can pull the output back into your R environment using `get_slurm_out()`:
 
 ```
 output <- get_slurm_out(my_job)
@@ -95,10 +105,18 @@ In this case we get something like this:
 insert here
 ```
 
-Make sure you save the output as `.RData` or write to a CSV! Once you've done this you can delete the temporary directory that contains some files created by `rslurm`:
+Make sure you save the output as `.RData` or write to a CSV! 
+
+```
+write.csv(output, 'the_output.csv')
+```
+
+Once you've saved the output, you can delete the temporary directory that contains some files created by `rslurm`. The temporary directory is created in the working directory from which you called `slurm_apply()` and has the prefix `_rslurm`. It is not strictly necessary to do the cleanup, but if you are running lots of Slurm jobs, your working directory will eventually get cluttered with temporary files. Luckily, `rslurm` makes cleanup a snap!
 
 ```
 cleanup_files(my_job)
 ```
 
-You've successfully run a parallel job with the `rslurm` package!
+All cleaned up!
+
+Congratulations, you've successfully run a parallel job with the `rslurm` package!
