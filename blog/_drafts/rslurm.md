@@ -70,7 +70,7 @@ atus_sample[,1:6]
 
 If you are interested in working further with ATUS data, the R package [atus](https://cran.r-project.org/web/packages/atus/index.html) contains the full ATUS data for all years between 2003 and 2016.
 
-
+![daily activities](/assets/images/activities.jpg)
 
 Let's go through each step of using `rslurm` to fit a model to these data to predict individuals' sex.
 
@@ -175,6 +175,10 @@ my_job <- slurm_apply(f = tune_model, params = tune_grid, jobname = 'tune_RF', n
 The message returned indicates that the job submitted to the cluster without any initial errors.
 
 Off we go! 
+
+![random forest diagram](/assets/images/Random_forest_diagram_complete.png)
+
+*Random forests work by combining the results from many decision trees to achieve a single best classification.*
 
 ### Check job status
 
