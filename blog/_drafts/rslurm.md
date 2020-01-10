@@ -37,7 +37,7 @@ A dataset that SESYNC users might be interested in is the [American Time Use Sur
 
 We might be interested in whether we can predict demographic characteristics of individuals if we know how they spend their time. In this example, we predict individuals' sex (male or female) given the number of minutes per day they spend on 17 groups of activities, using a subset of the ATUS data consisting of 5000 individuals.
 
-You can download the toy dataset used in this example [here](assets/files/atus_sample.csv). Load all necessary packages and read the CSV into R:
+You can download the toy dataset used in this example [here](/assets/files/atus_sample.csv). Load all necessary packages and read the CSV into R:
 
 ```
 library(rslurm)
