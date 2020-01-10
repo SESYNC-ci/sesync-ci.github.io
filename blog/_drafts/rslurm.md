@@ -35,27 +35,48 @@ A dataset that SESYNC users might be interested in is the [American Time Use Sur
 
 We might be interested in whether we can predict demographic characteristics of individuals if we know how they spend their time. In this example, we predict individuals' sex (male or female) given the number of minutes per day they spend on 17 groups of activities, using a subset of the ATUS data consisting of 5000 individuals.
 
-For this example, the toy dataset is available here. Load all necessary packages and read the data into R:
+For this example, the toy dataset is available as a CSV in the `public-data` folder on SESYNC's NFS file server. Load all necessary packages and read the CSV into R:
 
 ```
 library(rslurm)
 library(tidyverse)
 library(caret)
 
-atus_sample <- read_csv()
+atus_sample <- read_csv('/nfs/public-data/training/atus_sample.csv')
 ```
 
-If you are interested in working with this dataset further, the R package `atus` contains the full ATUS data for all years between 2003 and 2016.
+Here we have data on how 5000 people spent a day, with the number of minutes each person spent on 17 different activities, and their sexes. Here are the first few rows and columns.
+
+```
+atus_sample[,1:6]
+
+# A tibble: 5,000 x 6
+#    sex    caring_for_household_members caring_for_non_household_members consumer_purchases eating_and_drinking education
+#    <chr>                         <dbl>                            <dbl>              <dbl>               <dbl>     <dbl>
+#  1 female                            0                                0                  0                 133       460
+#  2 female                          176                                0                 13                  60         0
+#  3 female                            0                                0                 90                  70         0
+#  4 male                              0                                0                  0                 105         0
+#  5 female                           63                                0                  3                   5         0
+#  6 female                            0                                0                 60                 200         0
+#  7 male                             60                                0                 10                   0       120
+#  8 female                           55                                0                 45                  51         0
+#  9 female                            0                                0                  0                  15         0
+# 10 male                              0                                0                  0                  30         0
+# … with 4,990 more rows
+```
+
+If you are interested in working further with ATUS data, the R package `atus` contains the full ATUS data for all years between 2003 and 2016.
 
 Let's go through each step of using `rslurm` to fit a model to these data to predict individuals' sex.
 
 ### Create a function to call in parallel
 
-When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with the prediction accuracy. An accuracy of 0.5 would be no better than random chance, and an accuracy of 1 would mean that the model predicts every individual's sex correctly. We want to find the combination of tuning parameters that yields the highest accuracy. 
+When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with a simple one: the prediction accuracy. An accuracy of 0.5 would be no better than random chance, and an accuracy of 1 would mean that the model predicts every individual's sex correctly. We want to find the combination of tuning parameters that yields the highest accuracy. 
 
 In this example, we are fitting a type of machine learning model called random forest, implemented in the `caret` R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
 
-Here is a function that takes tuning parameters as arguments (and the data used to fit the model), then fits a machine learning model using 10-fold cross-validation. Within each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction error across all 10 folds to return a single value of the model's RMSE.
+Here is a function that takes a single set of tuning parameters and a random seed as arguments, then fits a random forest model to predict sex from activity times. We specify 10-fold cross-validation, so that for each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction accuracy across all 10 folds to return a single value of the model's accuracy.
 
 ```
 tune_model <- function(interaction.depth, n.trees, n.minobsinnode, random_seed) {
@@ -100,6 +121,20 @@ Let's add a column with a preset random seed for each run so that our results ar
 tune_grid$random_seed <- 555 + 1:nrow(tune_grid)
 ```
 
+Note that now the column names of `tune_grid` are exactly the same as the argument names of `tune_model()`. This means that `rslurm` can go through the `tune_grid` data frame row by row, each time using the parameter values from that row as arguments to `tune_model()`. If the names do not match, `rslurm` will throw an error! 
+
+```
+head(tune_grid)
+
+#   interaction.depth n.trees n.minobsinnode random_seed
+# 1                 1      50              5         556
+# 2                 2      50              5         557
+# 3                 3      50              5         558
+# 4                 1     100              5         559
+# 5                 2     100              5         560
+# 6                 3     100              5         561
+```
+
 ### Create a list of needed R objects and packages
 
 When you run an R script in parallel, you are creating a separate R environment for each of the tasks. You need to make sure that each environment has all the R objects needed to do the task. In this case you would need to make sure the environment contains the needed data and packages. By default, all the currently loaded packages are loaded within each of the task environments but you need to pass all objects explicitly. You can also specify just the packages you absolutely need if you want to speed things up slightly by avoiding loading a lot of unnecessary packages within each task.
@@ -110,7 +145,7 @@ For this example we need to make sure the data to fit the model is passed along,
 data_names <- c('atus_sample')
 ```
 
-We can also specify only the needed packages so that `rslurm` does not have to copy all the packages you happen to have loaded into your current R environment into each of the task environments.
+We can also specify only the needed packages so that `rslurm` does not have to copy all the packages you happen to have loaded into your current R environment into each of the task environments. The only package required here is `caret`.
 
 ```
 needed_packages <- c('caret')
@@ -118,37 +153,71 @@ needed_packages <- c('caret')
 
 ### Call slurm_apply() to run the parallel job
 
-Now we put it all together with a call to `slurm_apply()`. In addition to passing the function name, the parameter data frame, the objects, and the packages, we can also specify how many nodes to split the job across. 
+Now we put it all together with a call to `slurm_apply()`. We specify the function name, the parameter data frame, a descriptive job name, the objects, and the packages. We also request the number of nodes to split the job across (only one is needed for this example) and how many CPUs per node. We request 4 CPUs, meaning that this job will run about 4x faster than if you fit all the models sequentially.
 
-For this example, we pass the option `partition = 'sesynctest'` to `rslurm` which will send the job to run on one of the two nodes set aside for quick test jobs. The test nodes have only 4 CPUs apiece, while the other nodes have 8, which is why we specify `cpus_per_node = 4.` Jobs on test nodes will terminate after one hour.
+Just for the purposes of this example, we pass the option `partition = 'sesynctest'` to `rslurm` which will send the job to run on one of the two nodes set aside for quick test jobs. The test nodes have only 4 CPUs apiece, while the other nodes have 8, which is why we specify `cpus_per_node = 4` (otherwise we could specify as many as eight CPUs if we are requesting a single node). Jobs on test nodes will terminate after one hour.
 
 Optionally, you could pass additional options to `slurm_apply()` to specify things like the maximum memory and time allocation for the job, but that isn't necessary for this relatively small job that we don't anticipate hogging a lot of resources.
+
+Putting that all together, here is our call:
 
 ```
 my_job <- slurm_apply(f = tune_model, params = tune_grid, jobname = 'tune_RF', nodes = 1, cpus_per_node = 4,
                       add_objects = data_names, pkgs = needed_packages, slurm_options = list(partition = 'sesynctest'))
+					  
+# Submitted batch job 361735
 ```
+
+The message returned indicates that the job submitted to the cluster without any initial errors.
+
+Off we go! 
 
 ### Check job status
 
-As the job is running we can call `get_job_status()` to see how things are going. This is an example of what the output returned by `get_job_status(my_job)` would look like while the job is ongoing:
+As the job is running we can call `get_job_status()` to see how things are going. Below is an example of what the output returned by `get_job_status(my_job)` would look like while the job is ongoing. The job has been running for 48 seconds.
 
 ```
-insert here
+$completed
+[1] FALSE
+
+$queue
+     JOBID PARTITION    NAME  USER ST TIME NODES NODELIST.REASON.
+1 361735_0 sesynctes tune_RF qread  R 0:48     1             pn22
+
+$log
+_rslurm_tune_RF/slurm_0.out 
+                         "" 
+
+attr(,"class")
+[1] "slurm_job_status"
 ```
 
 If the job has finished running, the output returned by `get_job_status(my_job)` would look like this:
 
 ```
-insert here
+$completed
+[1] TRUE
+
+$queue
+[1] JOBID            PARTITION        NAME             USER             ST               TIME             NODES            NODELIST.REASON.
+<0 rows> (or 0-length row.names)
+
+$log
+_rslurm_tune_RF/slurm_0.out 
+                         "" 
+
+attr(,"class")
+[1] "slurm_job_status"
 ```
+
+If you are following along with this example code, the job should take around 5 minutes to run.
 
 ### Extract job output and clean up temporary files
 
-Once your job is complete, you can read the output back into your R environment using `get_slurm_out()`:
+Once you have used `get_job_status()` to verify that your job finished without any errors, you can read the output back into your R environment using `get_slurm_out()`:
 
 ```
-output <- get_slurm_out(my_job)
+tune_output <- get_slurm_out(my_job)
 ```
 
 In this case we get a list where each element is a fitted model object:
