@@ -11,7 +11,7 @@ tags:
  - SSH
 ---
 
-You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through RStudio. The workflow for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will be written out to a file called `slurm-[jobID].out` and errors go to `slurm-[jobID].err`.
+SESYNC provides a high-performance computing cluster for memory-intensive and time-intensive computing tasks. ([FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }})) You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through RStudio. The workflow for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will be written out to a file called `slurm-[jobID].out` and errors go to `slurm-[jobID].err`.
 
 The first part of this quickstart guide explains in general how to connect to the server and submit jobs, via the ssh gateway or the RStudio server. The second part of the guide gives specific examples showing how to submit jobs in R, Python, and MATLAB. 
 

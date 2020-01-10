@@ -4,7 +4,7 @@ tags:
  - Cluster
 ---
 
-SESYNC's computational cluster enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data set.
+SESYNC's computational cluster ([see quickstart page]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }})) enables users to run medium-to-large scale analyses by distributing multiple, independent tasks across many computers. This setup is ideal for tasks that require applying the same algorithm or a parameter set over independent units in a large data set.
 
 ## Overview of the cluster and Job Scheduler
 
