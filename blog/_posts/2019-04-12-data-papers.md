@@ -2,7 +2,9 @@
 title: Publishing Data Papers
 tags:
   - Reproducible Research
-  - Publish Data
+  - Data Publication
+  - Data
+  - Data Management
 author: khondula
 ---
 

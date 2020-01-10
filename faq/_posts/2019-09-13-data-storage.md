@@ -4,6 +4,8 @@ author: qread
 tags:
  - NFS
  - Infrastructure
+ - Data
+ - Data Management
 ---
 
 
