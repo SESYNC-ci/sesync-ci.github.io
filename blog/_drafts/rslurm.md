@@ -14,10 +14,7 @@ This blog post will walk you through a quick example of how to use the `rslurm` 
 
 SESYNC has a high-performance computing cluster which allows users to run lots of code quickly by splitting it up into many small parallel tasks and running them all at once on different processors. Many people in the SESYNC community could benefit from using the cluster to run big R jobs quickly. Unfortunately, submitting jobs to a cluster typically requires the user to know how to write shell scripts, which many SESYNC folks are unfamilar with. To fix that, the SESYNC data science team developed the `rslurm` package -- problem solved! Now, SESYNC users can run big parallel jobs directly from the RStudio server. The code has similar syntax to an `apply` statement in R, so it will look familiar to users, and the whole workflow can be packaged inside a single R script -- no pesky shell scripts cluttering things up! To read more about the `rslurm` package, visit [the rslurm package website](http://cyberhelp.sesync.org/rslurm/). 
 
-<figure>
-<img src="/assets/images/parallelcomputer.jpg" align="left" width=250px> 
-<figcaption>High-performance computer. Photo courtesy of Argonne National Lab.</figcaption>
-</figure>
+<img src="/assets/images/parallelcomputer.jpg" align="left" width=300px> 
 
 ## rslurm in action
 
@@ -40,14 +37,14 @@ A dataset that SESYNC users might be interested in is the [American Time Use Sur
 
 We might be interested in whether we can predict demographic characteristics of individuals if we know how they spend their time. In this example, we predict individuals' sex (male or female) given the number of minutes per day they spend on 17 groups of activities, using a subset of the ATUS data consisting of 5000 individuals.
 
-For this example, the toy dataset is available as a CSV in the `public-data` folder on SESYNC's NFS file server. Load all necessary packages and read the CSV into R:
+You can download the toy dataset used in this example [here](assets/files/atus_sample.csv). Load all necessary packages and read the CSV into R:
 
 ```
 library(rslurm)
 library(tidyverse)
 library(caret)
 
-atus_sample <- read_csv('/nfs/public-data/training/atus_sample.csv')
+atus_sample <- read_csv('atus_sample.csv')
 ```
 
 Here we have data on how 5000 people spent a day, with the number of minutes each person spent on 17 different activities, and their sexes. Here are the first few rows and columns.
@@ -72,6 +69,8 @@ atus_sample[,1:6]
 ```
 
 If you are interested in working further with ATUS data, the R package [atus](https://cran.r-project.org/web/packages/atus/index.html) contains the full ATUS data for all years between 2003 and 2016.
+
+
 
 Let's go through each step of using `rslurm` to fit a model to these data to predict individuals' sex.
 
