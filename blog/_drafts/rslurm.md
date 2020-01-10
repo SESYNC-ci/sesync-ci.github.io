@@ -14,9 +14,14 @@ This blog post will walk you through a quick example of how to use the `rslurm` 
 
 SESYNC has a high-performance computing cluster which allows users to run lots of code quickly by splitting it up into many small parallel tasks and running them all at once on different processors. Many people in the SESYNC community could benefit from using the cluster to run big R jobs quickly. Unfortunately, submitting jobs to a cluster typically requires the user to know how to write shell scripts, which many SESYNC folks are unfamilar with. To fix that, the SESYNC data science team developed the `rslurm` package -- problem solved! Now, SESYNC users can run big parallel jobs directly from the RStudio server. The code has similar syntax to an `apply` statement in R, so it will look familiar to users, and the whole workflow can be packaged inside a single R script -- no pesky shell scripts cluttering things up! To read more about the `rslurm` package, visit [the rslurm package website](http://cyberhelp.sesync.org/rslurm/). 
 
+<figure>
+<img src="/assets/images/parallelcomputer.jpg" align="left" width=250px> 
+<figcaption>High-performance computer. Photo courtesy of Argonne National Lab.</figcaption>
+</figure>
+
 ## rslurm in action
 
-A common task that would take a long time to run sequentially but is easy to parallelize is finding the best values for tuning parameters for a machine learning model. This can become a very computing-intensive task because you often need to test many possible combinations of tuning parameter values. Within each combination of parameter values you might need to run a 10-fold cross validation, which in itself takes a lot of computing time since each cross-validation requires fitting 10 models. So if you have three tuning parameters to optimize, with only five different values for each parameter, you will end up with $5^3$ or 125 cross-validations, or 1250 models to fit. Even if each model fit takes only 10 seconds that's at least 3 hours. 
+A common task that would take a long time to run sequentially but is easy to parallelize is finding the best values for tuning parameters for a machine learning model. This can become a very computing-intensive task because you often need to test many possible combinations of tuning parameter values. Within each combination of parameter values you might need to run a 10-fold cross validation, which in itself takes a lot of computing time since each cross-validation requires fitting 10 models. So if you have three tuning parameters to optimize, with only five different values for each parameter, you will end up with 5<sup>3</sup> or 125 cross-validations, or 1250 models to fit. Even if each model fit takes only 10 seconds that's at least 3 hours. 
 
 Let's take a look at how we could use `rslurm` to speed up the task. 
 
@@ -66,7 +71,7 @@ atus_sample[,1:6]
 # … with 4,990 more rows
 ```
 
-If you are interested in working further with ATUS data, the R package `atus` contains the full ATUS data for all years between 2003 and 2016.
+If you are interested in working further with ATUS data, the R package [atus](https://cran.r-project.org/web/packages/atus/index.html) contains the full ATUS data for all years between 2003 and 2016.
 
 Let's go through each step of using `rslurm` to fit a model to these data to predict individuals' sex.
 
@@ -74,7 +79,7 @@ Let's go through each step of using `rslurm` to fit a model to these data to pre
 
 When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with a simple one: the prediction accuracy. An accuracy of 0.5 would be no better than random chance, and an accuracy of 1 would mean that the model predicts every individual's sex correctly. We want to find the combination of tuning parameters that yields the highest accuracy. 
 
-In this example, we are fitting a type of machine learning model called random forest, implemented in the `caret` R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
+In this example, we are fitting a type of machine learning model called random forest, implemented in the [caret](https://topepo.github.io/caret/) R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
 
 Here is a function that takes a single set of tuning parameters and a random seed as arguments, then fits a random forest model to predict sex from activity times. We specify 10-fold cross-validation, so that for each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction accuracy across all 10 folds to return a single value of the model's accuracy.
 
@@ -107,7 +112,7 @@ We need to create a data frame where each column is an argument to our function 
 
 Let's test out three tuning parameters, the complexity of each tree `interaction.depth`, the number of trees in the random forest `n.trees`, and the minimum number of individuals on either side of a split in one of our trees `n.minobsinnode`. There is an additional "shrinkage" or learning rate parameter which we will hold constant for this example.
 
-Use the R function `expand.grid()` to make a data frame with each possible combination of 3 possible values for each of the 3 parameters. That means we will have 3^3 or 27 models to fit. Each of the 27 actually requires 10 models to be fit because of our 10-fold cross-validation.
+Use the R function `expand.grid()` to make a data frame with each possible combination of 3 possible values for each of the 3 parameters. That means we will have 3<sup>3</sup> or 27 models to fit. Each of the 27 actually requires 10 models to be fit because of our 10-fold cross-validation.
 
 ```
 tune_grid <- expand.grid(interaction.depth = 1:3,
