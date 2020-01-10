@@ -3,6 +3,8 @@ title: "How much data can I store in my research data directory?"
 tags:
  - NFS
  - Infrastructure
+ - Data
+ - Data Management
 ---
 
 

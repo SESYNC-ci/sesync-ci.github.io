@@ -3,7 +3,9 @@ title: Publish Synthesis Data Products
 tags:
  - Data
  - Reproducible Research
- - Publish Data
+ - Data Publication
+ - Data Management
+ - Metadata
 ---
 
 Choosing to publish your data products in a long-term repository can:
