@@ -6,7 +6,7 @@ tags:
  - machine learning
  - random forest
  - parallel
-author: qread
+author: qdread
 ---
 
 This blog post will walk you through a quick example of how to use the `rslurm` package to parallelize your code.

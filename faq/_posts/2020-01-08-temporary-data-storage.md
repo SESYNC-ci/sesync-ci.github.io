@@ -1,6 +1,5 @@
 ---
 title: "Where should I store temporary files created by Slurm cluster jobs?"
-author: qread
 tags:
  - Cluster
  - NFS
