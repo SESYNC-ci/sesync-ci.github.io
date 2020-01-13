@@ -9,7 +9,7 @@ tags:
 author: qread
 ---
 
-<img src="/assets/images/logo_slurm.svg" align="right" width=250px>
+![rslurm](/assets/images/logo_slurm.svg)
 
 This blog post will walk you through a quick example of how to use the `rslurm` package to parallelize your code.
 
@@ -17,7 +17,7 @@ This blog post will walk you through a quick example of how to use the `rslurm` 
 
 SESYNC has a high-performance computing cluster which allows users to run lots of code quickly by splitting it up into many small parallel tasks and running them all at once on different processors. Many people in the SESYNC community could benefit from using the cluster to run big R jobs quickly. Unfortunately, submitting jobs to a cluster typically requires the user to know how to write shell scripts, which many SESYNC folks are unfamilar with. To fix that, the SESYNC data science team developed the `rslurm` package -- problem solved! Now, SESYNC users can run big parallel jobs directly from the RStudio server. The code has similar syntax to an `apply` statement in R, so it will look familiar to users, and the whole workflow can be packaged inside a single R script -- no pesky shell scripts cluttering things up! To read more about the `rslurm` package, visit [the rslurm package website](http://cyberhelp.sesync.org/rslurm/). 
 
-<img src="/assets/images/parallelcomputer.jpg" align="left" width=300px> 
+![HPC picture](/assets/images/parallelcomputer.jpg)
 
 ## rslurm in action
 
