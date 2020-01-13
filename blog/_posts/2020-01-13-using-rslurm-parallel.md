@@ -9,9 +9,9 @@ tags:
 author: qread
 ---
 
-![rslurm](/assets/images/logo_slurm.svg)
-
 This blog post will walk you through a quick example of how to use the `rslurm` package to parallelize your code.
+
+![rslurm](/assets/images/logo_slurm.svg)
 
 ## What is rslurm?
 
