@@ -6,7 +6,7 @@ tags:
 author: khondula
 ---
 
-Synthesis research involves assembling multiple data sets from differences sources. Integrating those data into a format that facilitates exploration, visualization, and eventual analysis can be one of the time consuming and tedious parts of the research process--however careful attention and a little bit of strategy at early stages can pay huge dividends later on. 
+Synthesis research involves assembling multiple data sets from different sources. Integrating those data into a format that facilitates exploration, visualization, and eventual analysis is often the most time-consuming and tedious part of the research process--however, careful attention and a little bit of strategy at early stages can pay huge dividends later on. 
 
 ![thinking](assets/images/db-thinking.png)
 
