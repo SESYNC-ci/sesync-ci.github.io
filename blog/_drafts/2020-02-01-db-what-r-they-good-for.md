@@ -8,6 +8,8 @@ author: khondula
 
 Synthesis research involves assembling multiple data sets from differences sources. Integrating those data into a format that facilitates exploration, visualization, and eventual analysis can be one of the time consuming and tedious parts of the research process--however careful attention and a little bit of strategy at early stages can pay huge dividends later on. 
 
+![thinking](assets/images/db-thinking.png)
+
 A common question that inevitably arises when faced with compiling such heterogeneous data is: "do I need a database?" For researchers that are used to dealing with flat files like .csv or Excel spreadsheets, the overhead and time investment of setting up a formal relational database may seem daunting--especially if it requires hosting on a server and learning new software or programming languages like SQL. Whereas leveraging the *principles* of database design will be beneficial for most any data workflow, we don't necessarily recommend setting up a database for every project--many analyses can be handled just as smoothly by joining tabular data stored in multiple 'tidy' spreadsheets, and using packages designed for spatial analysis, dates and times, text data, and/or large files. This post is intended to help navigate that decision as you craft your workflow and figure out whether you want to make use of SESYNC's database server. For this purpose, the term "database" means a relational database management system where data is structured in tables and accessed and manipulated through Structured Query Language (SQL).
 
 Here are some aspects to consider:
