@@ -6,18 +6,19 @@ tags:
 ---
 
 
-SESYNC linux resources are deployed on a private network at SESYNC and are accessed via our ssh gateway at ssh.sesync.org.  These resources include RStudio, Jupyter lab, and our compute cluster.  Please DO NOT run your computational processing on the ssh gateway, it has limited memory and processing power.  
+SESYNC Linux resources are deployed on a private network at SESYNC and are accessed via our ssh gateway at ssh.sesync.org.  These resources include RStudio, Jupyter lab, and our compute cluster.  Please DO NOT run your computational processing on the ssh gateway, it has limited memory and processing power. Instead, use the ssh gateway to submit jobs to SESYNC's compute cluster or to connect to your virtual machine.
 
 ## Connecting to the ssh gateway
-1. Use an ssh client (we recommend [PUTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/))
+1. Use an ssh client (we recommend [PUTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)), but other options are available.
 2. Enter ssh.sesync.org as your Host Name and click Open
 
 ![Connect with PUTTY](/assets/images/ssh1.png)
 
 Once connected to ssh.seysnc.org, you can do any of the following:
 1. Transfer data to your research storage space (using, e.g., scp, wget, sftp, curl)
-2. Submit a script to the compute cluster with [R](https://cyberhelp.sesync.org/quickstart/how-do-i-submit-an-r-script.html) or [Python](https://cyberhelp.sesync.org/quickstart/how-to-run-Python-scripts-on-the-cluster.html)
-3. Connect via ssh at the command prompt to your dedicated linux VM to use processing resources there (contact SESYNC staff at cyberhelp@sesync.org if you need a linux VM)
+2. Submit a script to [the compute cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}) with R or Python.
+3. Start an [interactive job]({{ 'faq/interactive-slurm-jobs.html' | relative_url }}) on the compute cluster, so that you can still type commands interactively into the prompt while accessing the greater memory and processing power of the cluster nodes.
+4. Connect via ssh at the command prompt to your dedicated linux VM to use processing resources there (contact SESYNC staff at cyberhelp@sesync.org if you need a linux VM)
 
 ### Other ways to connect
-You can also access linux resources via the terminal windows in [RStudio](rstudio.sesync.org) or [Jupyter](jupyter.sesync.org).  When you log in to either of these compuing environments, you do the equivalent to logging in to the ssh gateway, so you don't have to use the steps above, but rather can simply transfer data, run scripts, etc.  
+You can also access linux resources via the terminal windows in [RStudio](rstudio.sesync.org) or [Jupyter](jupyter.sesync.org).  When you log in to either of these computing environments, you do the equivalent to logging in to the ssh gateway, so you don't have to use the steps above, but rather can simply transfer data, run scripts, etc.  
