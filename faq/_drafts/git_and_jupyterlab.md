@@ -21,7 +21,7 @@ See our quickstart instructions [here](https://cyberhelp.sesync.org/quickstart/c
 2. open Terminal window: Files -> New Launcher -> Terminal
 3. type `git clone <url_of_your_repository>`  (get the url from your GitHub/GitLab repository page)  
   
-Note: we suggest you use SSH for the URL; if you're not sure if you've set up SSH authentication, see these
+Note: We suggest you use SSH for the URL to avoid having to repeatedly enter your log-in credentials.  If you're not sure if you've set up SSH authentication, see these
 [GitHub instructions](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
 
 
