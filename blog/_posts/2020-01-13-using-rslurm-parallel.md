@@ -4,7 +4,6 @@ tags:
  - Slurm
  - R
  - machine learning
- - random forest
  - parallel
 author: qdread
 ---
@@ -81,9 +80,9 @@ Let's go through each step of using `rslurm` to fit a model to these data to pre
 
 When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with a simple one: the prediction accuracy. An accuracy of 0.5 would be no better than random chance, and an accuracy of 1 would mean that the model predicts every individual's sex correctly. We want to find the combination of tuning parameters that yields the highest accuracy. 
 
-In this example, we are fitting a type of machine learning model called random forest, implemented in the [caret](https://topepo.github.io/caret/) R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
+In this example, we are fitting a type of machine learning model called gradient boosting machine (GBM), implemented in the [caret](https://topepo.github.io/caret/) R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
 
-Here is a function that takes a single set of tuning parameters and a random seed as arguments, then fits a random forest model to predict sex from activity times. We specify 10-fold cross-validation, so that for each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction accuracy across all 10 folds to return a single value of the model's accuracy.
+Here is a function that takes a single set of tuning parameters and a random seed as arguments, then fits a GBM model to predict sex from activity times. We specify 10-fold cross-validation, so that for each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction accuracy across all 10 folds to return a single value of the model's accuracy.
 
 ```
 tune_model <- function(interaction.depth, n.trees, n.minobsinnode, random_seed) {
@@ -112,7 +111,7 @@ tune_model <- function(interaction.depth, n.trees, n.minobsinnode, random_seed) 
 
 We need to create a data frame where each column is an argument to our function and each row is an iteration.
 
-Let's test out three tuning parameters, the complexity of each tree `interaction.depth`, the number of trees in the random forest `n.trees`, and the minimum number of individuals on either side of a split in one of our trees `n.minobsinnode`. There is an additional "shrinkage" or learning rate parameter which we will hold constant for this example.
+Let's test out three tuning parameters, the complexity of each tree `interaction.depth`, the number of trees `n.trees`, and the minimum number of individuals on either side of a split in one of our trees `n.minobsinnode`. There is an additional "shrinkage" or learning rate parameter which we will hold constant for this example.
 
 Use the R function `expand.grid()` to make a data frame with each possible combination of 3 possible values for each of the 3 parameters. That means we will have 3<sup>3</sup> or 27 models to fit. Each of the 27 actually requires 10 models to be fit because of our 10-fold cross-validation.
 
@@ -169,7 +168,7 @@ Optionally, you could pass additional options to `slurm_apply()` to specify thin
 Putting that all together, here is our call:
 
 ```
-my_job <- slurm_apply(f = tune_model, params = tune_grid, jobname = 'tune_RF', nodes = 1, cpus_per_node = 4,
+my_job <- slurm_apply(f = tune_model, params = tune_grid, jobname = 'tune_GBM', nodes = 1, cpus_per_node = 4,
                       add_objects = data_names, pkgs = needed_packages, slurm_options = list(partition = 'sesynctest'))
 					  
 # Submitted batch job 361735
@@ -179,9 +178,9 @@ The message returned indicates that the job submitted to the cluster without any
 
 Off we go! 
 
-![random forest diagram](/assets/images/Random_forest_diagram_complete.png)
+![boosting diagram](/assets/images/Boosting.png)
 
-*Random forests work by combining the results from many decision trees to achieve a single best classification.*
+*Boosting refers to generating a weighted average of a number of decision trees, and iterating the process repeatedly.*
 
 ### Check job status
 
@@ -192,11 +191,11 @@ $completed
 [1] FALSE
 
 $queue
-     JOBID PARTITION    NAME  USER ST TIME NODES NODELIST.REASON.
-1 361735_0 sesynctes tune_RF qread  R 0:48     1             pn22
+     JOBID PARTITION    NAME   USER ST TIME NODES NODELIST.REASON.
+1 361735_0 sesynctes tune_GBM qread  R 0:48     1             pn22
 
 $log
-_rslurm_tune_RF/slurm_0.out 
+_rslurm_tune_GBM/slurm_0.out 
                          "" 
 
 attr(,"class")
@@ -214,7 +213,7 @@ $queue
 <0 rows> (or 0-length row.names)
 
 $log
-_rslurm_tune_RF/slurm_0.out 
+_rslurm_tune_GBM/slurm_0.out 
                          "" 
 
 attr(,"class")
@@ -295,4 +294,6 @@ Congratulations, you've successfully run a parallel job with the `rslurm` packag
 - [caret package tutorial](https://topepo.github.io/caret/)
 - [FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) 
 - [Quickstart: the SESYNC cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }})
-- [An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/), PDF of a book that has a great R-based introduction to statistical learning methods including random forest
+- [An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/), PDF of a book that has a great R-based introduction to statistical learning methods, including tree-based methods like GBM.
+
+*post edited 25 Feb 2020, thanks Varsha for pointing out incorrect description of which model is being used.*
