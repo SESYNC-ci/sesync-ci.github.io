@@ -17,7 +17,7 @@ Here are some aspects to consider:
 
 **How big?** 
 
-Perhaps the most common need that motivates database use is scalability, based on encountering limitations on file size or memory usage. Certain file types have size limits, such as a maximum number of rows for MS Excel files, or you may be trying  to use more than the amount of data that can be loaded into memory at once in a program like RStudio. Sometimes these issues can be resolved by using slightly different functions for reading in files (e.g. `fread` vs. `read.csv` in R), running code on SESYNC's RStudio server or [compute cluster](https://cyberhelp.sesync.org/faq/interactive-slurm-jobs.html) (which have much more memory than a typical laptop), or by [parallelizing code](https://cyberhelp.sesync.org/blog/using-rslurm-parallel.html) to run as separate tasks. Databases have essentially no inherent size limitations and only read requested parts of data into memory. 
+Perhaps the most common need that motivates database use is scalability, based on encountering limitations on file size or memory usage. Certain file types have size limits, such as a maximum number of rows for MS Excel files, or you may be trying  to use more than the amount of data that can be loaded into memory at once in a program like RStudio. Sometimes these issues can be resolved by using slightly different functions for reading in files (e.g. `fread` vs. `read.csv` in R), running code on SESYNC's RStudio server or [compute cluster](https://cyberhelp.sesync.org/faq/interactive-slurm-jobs.html) (which have much more memory than a typical laptop), or by [parallelizing code](https://cyberhelp.sesync.org/blog/using-rslurm-parallel.html) to run as separate tasks. Databases have essentially no inherent software-imposed size limitations and only read requested parts of data into memory. 
 
 **Collaborating**
 
@@ -25,7 +25,11 @@ When multiple people are using data at the same time, it can be confusing and er
 
 **Following the rules**
 
-Setting up a database requires precisely defining the type of data that goes into each column of a table (e.g. text vs numeric, only unique values, no null values) and it will strictly enforce those constraints. Although this means you can't conveniently represent missing data as "NA" in a column of numbers, this guaranteed reliability can help prevent and catch bugs in your workflow. Another criteria that can be specified is how data in columns of different tables relate to each other. This aspect is particularly useful when there are many hierarchical or varying units of analysis to be joined such as data about individuals, households, counties, and schools. 
+Setting up a database requires precisely defining the type of data that goes into each column of a table (e.g. text vs numeric, only unique values, no null values) and it will strictly enforce those constraints. Although this means you can't conveniently represent missing data as "NA" in a column of numbers, this guaranteed reliability can help prevent and catch bugs in your workflow. 
+
+**Nested Data**
+
+Another criteria that can be specified is how data in columns of different tables relate to each other. This aspect is particularly useful when there are many nested, hierarchical, or varying units of analysis to be joined such as data about individuals, households, counties, and schools. A properly designed database will force you to be explicit in identifying those levels in multilevel data and the relationships between them. Such explicit identification can expose and clarify unanswered questions and even suggest analytic avenues that may otherwise have remained opaque.
 
 **Space and time queries**
 
