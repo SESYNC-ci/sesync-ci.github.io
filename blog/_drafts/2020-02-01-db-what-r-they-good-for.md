@@ -36,7 +36,7 @@ Another criteria that can be specified is how data in columns of different table
 Most database systems can execute standard mathematical operations within SQL queries, but PostgreSQL can also peform functions on geometric and timestamp data types such as calculating the area of a polygon or the duration of a time interval between two dates. Using the extension PostGIS with a PostgreSQL database also enables the use of geographic data (e.g. shapefiles, rasters) and spatial queries such as selecting all points within a certain buffer distance of another object. 
 
 
-If your Pursuit wants to set up a database, email cyberhelp@sesync.org to get the process started. The data science team is available to iterate and consult on designing the structure of tables and how to efficiently populate them. Reach out early and often so we can help avoid bottlenecks and develop an appropriate data management strategy!
+If your Pursuit team wants to set up a database, email cyberhelp@sesync.org to get the process started. The data science team is available to iterate and consult on designing the structure of tables and how to efficiently populate them. Reach out early and often so we can help avoid bottlenecks and develop an appropriate data management strategy!
 
 
 See also:
