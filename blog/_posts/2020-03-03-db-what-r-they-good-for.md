@@ -1,8 +1,10 @@
 ---
-title: Databases what are they good for
+title: Databases, huh? What are they good for
 tags:
   - Reproducible Research
   - data
+  - SQL
+  - Database
 author: khondula
 ---
 
