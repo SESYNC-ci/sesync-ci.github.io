@@ -1,5 +1,5 @@
 ---
-title: Databases, huh? What are they good for
+title: Databases, huh? What are they good for?
 tags:
   - Reproducible Research
   - data
