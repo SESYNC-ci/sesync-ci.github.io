@@ -16,15 +16,16 @@ library(DiagrammeR) ; library(DiagrammeRsvg) ; library(rsvg)
 diagram1 <- grViz("digraph {
                     
                   graph[layout = dot, overlap = true, fontsize = 16, rankdir = TB,
-                        outputorder = edgesfirst]
+                        outputorder = edgesfirst, ranksep = 0.5, nodesep = 0.5]
                   
-                  node[shape = oval, style = filled, fontname = Helvetica, color = black]
-                  node[fillcolor = PowderBlue, margin = 0.2]
+                  node[style = filled, fontname = Helvetica, color = black]
+                  
+                  node[shape = octagon, fillcolor = LightCyan, margin = 0.2]
                   A[label = 'RStudio']
                   B[label = 'JupyterLab']
-                  E[label = 'Virtual Machine']
+                  E[label = 'Virtual \nMachine']
                   
-                  node[fillcolor = LightSalmon, margin = 0.2]
+                  node[shape = oval, fillcolor = yellowGreen, margin = 0.2]
                   C[label = 'HPC Cluster']
                   D[label = 'SSH/Linux \ncommand line']
 
@@ -35,8 +36,11 @@ diagram1 <- grViz("digraph {
                   G[label = 'User Research \nHome \n(for code)']
                   H[label = 'Group Data \nDirectory \n(for data)']
                   
-                  node[shape = oval, fillcolor = YellowGreen, margin = 0.2]
+                  node[shape = oval, fillcolor = LightCyan, margin = 0.2]
                   I[label = 'Nextcloud']
+                  
+                  node[color = invis, fillcolor = invis, margin = 0.2]
+                  YY[label = '']
 
                   edge[color = black, arrowhead = vee, arrowsize = 1.25, penwidth = 1.75]
                   A -> F
@@ -47,6 +51,7 @@ diagram1 <- grViz("digraph {
                   G -> H
                   E -> H
                   I -> H
+
                  
                   {rank = same; A -> B -> C -> D [color=invis]}
                   {rank = same; G -> H [color=invis]}
@@ -55,6 +60,8 @@ diagram1 <- grViz("digraph {
     
             }")
    
+#[headport = w]
+#C:e -> F [constraint=false]
 ```
 
 
