@@ -1,0 +1,65 @@
+---
+title: "Cyber Resources <br>User Diagram"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(DiagrammeR) ; library(DiagrammeRsvg) ; library(rsvg)
+```
+
+---
+
+```{r, include=FALSE}
+# from Rachael and Quentin's brainstorm on 3/9/2020
+diagram1 <- grViz("digraph {
+                    
+                  graph[layout = dot, overlap = true, fontsize = 16, rankdir = TB,
+                        outputorder = edgesfirst]
+                  
+                  node[shape = oval, style = filled, fontname = Helvetica, color = black]
+                  node[fillcolor = PowderBlue, margin = 0.2]
+                  A[label = 'RStudio']
+                  B[label = 'JupyterLab']
+                  E[label = 'Virtual Machine']
+                  
+                  node[fillcolor = LightSalmon, margin = 0.2]
+                  C[label = 'HPC Cluster']
+                  D[label = 'SSH/Linux \ncommand line']
+
+                  node[shape = plaintext, fillcolor = invis, margin = 0.2]
+                  F[label = 'SESYNC Login']
+                  
+                  node[shape = square, fillcolor = Orchid, margin = 0.2]
+                  G[label = 'User Research \nHome \n(for code)']
+                  H[label = 'Group Data \nDirectory \n(for data)']
+                  
+                  node[shape = oval, fillcolor = YellowGreen, margin = 0.2]
+                  I[label = 'Nextcloud']
+
+                  edge[color = black, arrowhead = vee, arrowsize = 1.25, penwidth = 1.75]
+                  A -> F
+                  B -> F
+                  C -> F
+                  D -> F
+                  F -> G
+                  G -> H
+                  E -> H
+                  I -> H
+                 
+                  {rank = same; A -> B -> C -> D [color=invis]}
+                  {rank = same; G -> H [color=invis]}
+                  {rank = same; E -> I [color=invis]}
+
+    
+            }")
+   
+```
+
+
+```{r}
+diagram1          
+```
+
+
