@@ -10,7 +10,15 @@ SESYNC's [Slurm compute cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' |
 
 ## Starting an interactive job
 
-First, you need to connect to the SSH server. On Windows machines, you can do this from PowerShell, but if you want to use applications with a graphical interface (such as displaying R plots in real time), you will need to use a third-party client such as PuTTY (see [this FAQ on accessing Linux resources]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}) for how to do that).
+First, you need to open a terminal window and connect to the SSH server. On Windows machines, if you want to use applications with a graphical interface (such as displaying R plots in real time), you will need to use a third-party client such as [PuTTY](https://www.putty.org/) or [MobaXTerm](https://mobaxterm.mobatek.net). See [this FAQ on accessing Linux resources]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}) for help on getting the client set up.
+
+Log into the server by typing
+
+```
+ssh (your username goes here)@ssh.sesync.org
+```
+
+into the terminal prompt, and then entering your password when prompted.
 
 Next, start an interactive job. This is done with the shell command `salloc`, which requests an allocation of one or more cluster nodes. A typical interactive job request could be as simple as:
 
