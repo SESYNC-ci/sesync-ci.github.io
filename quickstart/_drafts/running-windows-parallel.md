@@ -31,7 +31,7 @@ Save this script to somewhere on your research data directory. In this example i
 
 # Running the script on the Winanalytics VM
 
-- First log into the winanalytics machine at [desktop.sesync.org].
+- First log into the winanalytics machine at [desktop.sesync.org](https://desktop.sesync.org).
 - Open Windows PowerShell (you can click on the icon in the toolbar in the lower left near the start menu button).
 - If needed, map your research data directory to a network drive (default name for the drive is `Z:`). You can either do this by (1) following [these directions]({{ '/quickstart/research-data-directory.html' | relative_url }}) under the heading "Windows VM" or (2) by typing the following into the PowerShell prompt: 
 
