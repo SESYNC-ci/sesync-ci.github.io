@@ -1,14 +1,14 @@
 ---
-title: Running code in parallel on a Windows virtual machine
+title: Run Code in Parallel on a Windows Virtual Machine
 tags:
   - Virtual Machine
   - Windows
   - parallel
 ---
 
-If you have a program that runs only on Windows systems, and you would like to run the program in parallel, it is not possible to use SESYNC's [Slurm cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}). However, it is possible to take advantage of SESYNC's Winanalytics [virtual machine]({{ '/faq/what-is-a-virtual-machine.html' | relative_url }}) , which has multiple cores and much more available RAM than the typical laptop. You will need to write a little bit of code in PowerShell, which is Windows' shell scripting languge and is fairly similar to Bash scripting. Here is a quick walkthrough of how to do this.
+If you have a program that runs only on Windows systems, and you would like to run the program in parallel, it is not possible to use SESYNC's [Slurm cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}). However, it is possible to take advantage of SESYNC's Winanalytics [virtual machine]({{ '/faq/what-is-a-virtual-machine.html' | relative_url }}), which has multiple cores and much more available RAM than the typical laptop. You will need to write a little bit of code in PowerShell, which is Windows' shell scripting languge and is fairly similar to Bash scripting. Here is a quick walkthrough of how to do this.
 
-# Writing a PowerShell script to run multiple processes in parallel
+## Writing a PowerShell script to run multiple processes in parallel
 
 PowerShell scripting language provides a construction called a "[workflow](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11)?redirectedfrom=MSDN)" in which you can write a loop that is executed in parallel. This FAQ does not go into great detail about how to write PowerShell scripts, but the following is a basic template that you can modify to create a simple script that will run multiple instances of the same program in parallel, each time taking a different file as input. *(Borrowed from [this StackOverflow answer](https://stackoverflow.com/a/56963199/2854608) by user js2010)*
 
@@ -29,7 +29,7 @@ run_in_parallel
 
 Save this script to somewhere on your research data directory. In this example it is saved in a subdirectory called `scripts`.
 
-# Running the script on the Winanalytics VM
+## Running the script on the Winanalytics VM
 
 - First log into the winanalytics machine at [desktop.sesync.org](https://desktop.sesync.org).
 - Open Windows PowerShell (you can click on the icon in the toolbar in the lower left near the start menu button).
