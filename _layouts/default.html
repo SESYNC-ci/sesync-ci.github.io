@@ -69,7 +69,21 @@
         {% endif %}
       	{% if page.author %}
       	<p><strong>{{ page.date | date: '%B %d, %Y'}} by
-	      <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a>
+		  {% for author in page.author %}
+			{% unless forloop.first %}
+				, 
+			{% endunless %}
+			{% assign author_name = site.data.authors[author] %}
+			  {% if author_name %}
+				  {% if author_name.github == "NA" %}
+					<a rel="author" href="{{ author_name.site }}" title="{{ author_name.full_name }}">{{ author_name.full_name }}</a>
+				  {% else %}
+					<a rel="author" href="https://github.com/{{ author_name.github }}" title="{{ author_name.full_name }}">{{ author_name.full_name }}</a>
+				  {% endif %}
+			  {% else %}
+				    <a rel="author" href="https://github.com/{{ author }}" title="{{ author }}">{{ author }}</a>
+			  {% endif %}
+		  {% endfor %}
 	      </strong></p>
       	{% endif %}
         {{ content }}

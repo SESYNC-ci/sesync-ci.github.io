@@ -3,7 +3,7 @@ title: "Google Dataset Search: A very helpful and definitely not evil tool for f
 tags:
  - data
  - reproducible research
-author: Rachel Mason
+author: rmason
 ---
 
 Even though Google has attracted its fair share of controversy, I have to admit Google's got to where they are because their tools are pretty good. Recently I stumbled across another of their tools I'm finding really useful: the [Google Dataset Search](https://datasetsearch.research.google.com/).
