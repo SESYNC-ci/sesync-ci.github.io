@@ -2,6 +2,11 @@ qdread:
   full_name: Quentin Read
   github: qdread
   site: http://quentinread.com/
+  
+ qread:
+  full_name: Quentin Read
+  github: qdread
+  site: http://quentinread.com/
 
 khondula:
   full_name: Kelly Hondula
@@ -14,6 +19,11 @@ itcarroll:
   site: https://itcarroll.github.io/
 
 rblake:  
+  full_name: Rachael Blake
+  github: reblake
+  site: http://www.rachaeleblake.com/
+  
+reblake:  
   full_name: Rachael Blake
   github: reblake
   site: http://www.rachaeleblake.com/
@@ -30,6 +40,6 @@ BillSchenk:
 
 rmason:  
   full_name: Rachel Mason
-  github: NA
+  github: rachelemason
   site: https://www.sesync.org/users/rmason
   
