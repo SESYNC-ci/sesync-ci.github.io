@@ -273,6 +273,7 @@ Here are some pages with helpful advice on using the SESYNC cluster.
 - [FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) 
 - [Homepage of the rslurm package](http://cyberhelp.sesync.org/rslurm/)
 - [FAQ: Do I have to use the cluster?]({{ '/faq/Do-I-have-to-use-the-cluster.html' | relative_url }}) 
+- [FAQ: What are common options for Slurm jobs, and how do I set them?]({{ '/faq/common-options-for-slurm-jobs.html' | relative_url }}) 
 - [FAQ: How can I work around the cluster's scheduled maintenance outages?]({{ '/faq/maintenance-window-slurm.html' | relative_url }})
 - [FAQ: Where can I store temporary files created by cluster jobs?]({{ '/faq/temporary-data-storage.html' | relative_url }})
 
