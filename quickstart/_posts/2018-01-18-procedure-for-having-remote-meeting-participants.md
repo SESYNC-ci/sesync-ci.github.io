@@ -28,3 +28,5 @@ Send our IT Staff ({{ site.email }}) a request which contains the following:
 
 Our IT staff will send you and your participants a meeting invite which will contain a link for connecting to the meeting. If requested, we will test with all participants who have not used our video conference system in the past. 
 On the day of your meeting, please use the link in your calendar invitation to join the meeting.
+
+For tips on making your virtual meetings more secure, please see our [FAQ](https://cyberhelp.sesync.org/faq/virtual-meeting-security.html).
