@@ -52,8 +52,6 @@ As promised above, here is a table with the SESYNC-specific options that we have
 | --cpus-per-task | -c | `-c 4` | How many processors are needed for a single task (if a single task needs a lot of memory, you may need more than one processor per task) | yes |
 | --mail-type | *none* | `--mail-type=END,FAIL` | A list of events that will cause the job to send you an email, usually when it finishes or is killed. | no |
 
-- 
-
 ## For more information
 
 - [Quickstart: Using the SESYNC cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }})
