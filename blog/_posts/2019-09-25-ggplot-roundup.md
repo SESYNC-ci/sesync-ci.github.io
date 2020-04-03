@@ -4,7 +4,7 @@
 title: ggplot tricks not to forget about
 author: 
  - khondula
- - qread
+ - qdread
 tags:
  - ggplot
  - dataviz

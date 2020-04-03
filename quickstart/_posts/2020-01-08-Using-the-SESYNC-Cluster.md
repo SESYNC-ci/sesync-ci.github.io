@@ -9,6 +9,7 @@ tags:
  - MATLAB
  - Python
  - SSH
+sticky: true
 ---
 
 SESYNC provides a high-performance computing cluster for memory-intensive and time-intensive computing tasks. ([FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }})) You can connect to the cluster through our ssh gateway service running at ssh.sesync.org or by submitting jobs through RStudio. The workflow for using a cluster is a little bit different from a typical run in R or python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output from your script will be written out to a file called `slurm-[jobID].out` and errors go to `slurm-[jobID].err`.
@@ -272,6 +273,7 @@ Here are some pages with helpful advice on using the SESYNC cluster.
 - [FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) 
 - [Homepage of the rslurm package](http://cyberhelp.sesync.org/rslurm/)
 - [FAQ: Do I have to use the cluster?]({{ '/faq/Do-I-have-to-use-the-cluster.html' | relative_url }}) 
+- [FAQ: What are common options for Slurm jobs, and how do I set them?]({{ '/faq/common-options-for-slurm-jobs.html' | relative_url }}) 
 - [FAQ: How can I work around the cluster's scheduled maintenance outages?]({{ '/faq/maintenance-window-slurm.html' | relative_url }})
 - [FAQ: Where can I store temporary files created by cluster jobs?]({{ '/faq/temporary-data-storage.html' | relative_url }})
 
