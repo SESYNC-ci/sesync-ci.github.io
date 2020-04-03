@@ -9,7 +9,7 @@
   package: ~
   all_files: yes
 - name: viz
-  version: '0.3'
+  version: 1.8.2
   src: htmlwidgets/lib/viz
   meta: ~
   script: viz.js
@@ -29,60 +29,10 @@
   package: ~
   all_files: yes
 - name: grViz-binding
-  version: 1.0.1
+  version: 1.0.5
   src: htmlwidgets
   meta: ~
   script: grViz.js
-  stylesheet: ~
-  head: ~
-  attachment: ~
-  package: ~
-  all_files: no
-- name: d3
-  version: 3.3.8
-  src: htmlwidgets/lib/d3
-  meta: ~
-  script: d3.min.js
-  stylesheet: ~
-  head: ~
-  attachment: ~
-  package: ~
-  all_files: yes
-- name: dagre
-  version: 0.4.0
-  src: htmlwidgets/lib/dagre-d3
-  meta: ~
-  script: dagre-d3.min.js
-  stylesheet: ~
-  head: ~
-  attachment: ~
-  package: ~
-  all_files: yes
-- name: mermaid
-  version: 0.3.0
-  src: htmlwidgets/lib/mermaid
-  meta: ~
-  script: dist/mermaid.slim.min.js
-  stylesheet: dist/mermaid.css
-  head: ~
-  attachment: ~
-  package: ~
-  all_files: yes
-- name: chromatography
-  version: '0.1'
-  src: htmlwidgets/lib/chromatography
-  meta: ~
-  script: chromatography.js
-  stylesheet: ~
-  head: ~
-  attachment: ~
-  package: ~
-  all_files: yes
-- name: DiagrammeR-binding
-  version: 1.0.1
-  src: htmlwidgets
-  meta: ~
-  script: DiagrammeR.js
   stylesheet: ~
   head: ~
   attachment: ~
