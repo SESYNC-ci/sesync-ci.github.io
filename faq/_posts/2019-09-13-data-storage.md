@@ -12,13 +12,20 @@ tags:
 
 ### How much space will I need for my data?
 
-There's big data, and then there's *BIG* data! Data storage needs depend on the types of data you are working with, and SESYNC users vary greatly in their data needs. SESYNC's `/nfs` filesystem is where the [research data directories](https://cyberhelp.sesync.org/quickstart/research-data-directory.html) for SESYNC projects and for individual users are hosted &mdash; this is what you are accessing when you log into [https://files.sesync.org](files.sesync.org). 
+There's big data, and then there's *BIG* data! Data storage needs depend on the types of data you are working with, and SESYNC users vary greatly in their data needs. SESYNC's `/nfs` filesystem is where the [research data directories]({{'/quickstart/research-data-directory.html' | relative_url }}) for SESYNC projects and for individual users are hosted &mdash; this is what you are accessing when you log into [files.sesync.org](https://files.sesync.org). 
 
 The filesystem has a large data storage capacity. Even so, users still need to be cognizant of how much data they are storing on the filesystem to avoid maxing out the storage and compromising other people's work. We recommend that groups have a general idea of their data storage needs and discuss it with a member of the data science team if they have any concerns about being able to store all the data they need on SESYNC's filesystem.
 
 ![no parking](/assets/images/noparking.jpg)
 
 One thing that project participants should be aware of is that SESYNC is not set up to be a data repository. We do not have the resources to store data over the long term that is not actively being used for a project. Please avoid using the filesystem to park data!  
+
+### What about my home directory?
+
+Users also have a home directory located at `/research-home/yourusername`. This directory is only for storing code including scripts and packages, *not* for data! There is only enough space for each SESYNC user to store just a few GB in their home directory. **Please avoid uploading data to your home directory.** Your home directory is the default working directory when you log into the [RStudio server]({{'/quickstart/rstudio-server.html' | relative_url }}) or the [Jupyter Server]({{'/quickstart/jupyter-server.html' | relative_url }}), which is great for running your scripts, but requires you to navigate to the research data directory before uploading data. You can do this either with a [symlink]({{'faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}) or, in RStudio, by clicking on the "Go to directory" button in the Files tab and typing the name of your research data directory in the dialog box that opens. See image below for the location of the 
+tricky-to-find button, which has an ellipsis on it.
+
+![go to directory in RStudio](/assets/images/rstudio_files_tab.png) 
 
 ### What kinds of data take up the most space?
 

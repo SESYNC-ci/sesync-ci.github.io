@@ -37,8 +37,17 @@ of the server once you've logged in. The path will be like `/nfs/cooltrees-data`
 note, these directories won't appear within the `/nfs` directory unless you recently
 navigated there (i.e. `cd /nfs/cooltrees-data` will work even when `ls /nfs` does not
 show the directory). The path is the same on all our Linux systems, including virtual
-machines, the [RStudio Server]({{'/quickstart/rstudio-server.html' | relative_url }}),
+machines, the [RStudio Server]({{'/quickstart/rstudio-server.html' | relative_url }}), 
 and the [Jupyter Server]({{'/quickstart/jupyter-server.html' | relative_url }}).
+
+When you log into the RStudio or Jupyter server, your default working directory is your home
+directory. You can navigate to the research data directory either by using a 
+[symlink]({{'faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}) 
+or, in RStudio, by clicking on the "Go to directory" button in the Files tab and typing
+`/nfs/cooltrees-data` into the dialog box that opens. See image below for the location of the 
+tricky-to-find button, which has an ellipsis on it.
+
+![go to directory in RStudio](/assets/images/rstudio_files_tab.png)
 
 ## Windows VM
 
