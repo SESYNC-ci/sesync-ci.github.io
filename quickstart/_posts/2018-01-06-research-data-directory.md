@@ -47,7 +47,7 @@ or, in RStudio, by clicking on the "Go to directory" button in the Files tab and
 `/nfs/cooltrees-data` into the dialog box that opens. See image below for the location of the 
 tricky-to-find button, which has an ellipsis on it.
 
-![go to directory in RStudio](/assets/images/rstudio_files_tab.png)
+![go to directory in RStudio](/assets/images/rstudio_files_tab.PNG)
 
 ## Windows VM
 
