@@ -7,6 +7,7 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 
 library(DiagrammeR) ; library(DiagrammeRsvg) ; library(rsvg)
+library(igraph) ; library(png) ; library(visNetwork) 
 ```
 
 ---
@@ -69,4 +70,72 @@ diagram1 <- grViz("digraph {
 diagram1          
 ```
 
+---
+
+```{r, include=FALSE}
+# make node dataframe
+edges <- data.frame(from = c("n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08"),
+                    to = c("n05", "n05", "n05", "n05", "n08", "n09", "n09", "n09")
+                    # type = c(),
+                    # weight = c()
+                    )
+
+# make edge dataframe
+nodes <- data.frame(id = c("n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09"),
+                    type_label = c("RStudio", "JupyterLab", "HPC Cluster", "SSH/Linux command line", 
+                                   "SESYNC login", "Virtual Machine", "Nextcloud", 
+                                   "User Research\nHome\n(for code)", "Group Data\nDirectory\n(for data)"),
+                    type_image = c("Cloud & Server", "Cloud & Server", "Server", "Server", 
+                                   "no_image", "Cloud & Server", "Cloud",
+                                   "Drive", "Drive"),
+                    size_rel = c(50,50,50,50,40,40,40,50,20)
+                    )
+
+vis_nodes <- nodes
+vis_edges <- edges
+
+vis_nodes$shape  <- "dot"  
+vis_nodes$shadow <- TRUE # Nodes will drop shadow
+vis_nodes$label  <- viz_nodes$type_label # Node label
+vis_nodes$size   <- vis_nodes$size_rel # Node size
+# vis.nodes$borderWidth <- 2 # Node border width
+
+# vis.nodes$color.background <- c("slategrey", "tomato", "gold")[nodes$media.type]
+# vis.nodes$color.border <- "black"
+# vis.nodes$color.highlight.background <- "orange"
+# vis.nodes$color.highlight.border <- "darkred"
+
+vis_nodes$group <- vis_nodes$type_image 
+
+
+img_1 <- readPNG("./_site/assets/images/drive_png.png")
+img_2 <- readPNG("./_site/assets/images/cartoon_cloud.png")
+
+```
+
+```{r, include=FALSE}
+# igraph version
+net <- graph_from_data_frame(d=edges, vertices=nodes, directed=T) # creates igraph object
+# V(net)$raster <- list(img_1, img_2)[V(net)$type_label]
+V(net)$raster <- rasters[V(net)$type_image]
+```
+
+```{r, include=FALSE}
+plot(net, edge.arrow.size=.4, vertex.label=V(net)$type_label, vetex.label.color="black",
+     vertex.shape="raster")
+```
+
+```{r, include=FALSE}
+# visNetwork version
+visnet3 <- visNetwork(vis_nodes, vis_edges, width="100%", height="400px")
+visnet3 <- visGroups(visnet3, groupname = "Cloud & Server", shape = "flower",
+                     color = list(background = "lightgreen", border="black"))
+visnet3 <- visGroups(visnet3, groupname = "Server", shape = "server",       
+                     color = list(background = "tomato", border="black"))
+visnet3 <- visGroups(visnet3, groupname = "Cloud", shape = "cloud",   
+                     color = list(background = "orange", border="black"))
+visnet3 <- visGroups(visnet3, groupname = "Drive", shape = "drive",   
+                     color = list(background = "pink", border="black"))
+visLegend(visnet3, main="Legend", position="right", ncol=1) 
+```
 
