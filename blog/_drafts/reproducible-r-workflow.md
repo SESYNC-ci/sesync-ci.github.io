@@ -14,6 +14,8 @@ Your workflow, as defined in [this tidyverse blog post](https://www.tidyverse.or
 
 Now that we're on the same page, here are some good ideas for your workflow for R and RStudio. Some tips are SESYNC-specific and some are generally applicable to any time you use R or RStudio. 
 
+For each topic, I've included a "broke" (not recommended practice), "woke" (not bad), and "bespoke" (best practice!) way to do it.
+
 ## Saving your work
 
 ### Broke: saving your entire workspace
