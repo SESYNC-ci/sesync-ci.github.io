@@ -9,7 +9,7 @@ Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the
 
 ![oh-places](/assets/images/oh-places.jpg)
 
-As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, neighborhoods. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other or with spatially-explicit environmental data; i.e. a common column to use for joining data tables. 
+As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other or with spatially-explicit environmental data; i.e. a common column to use for joining data tables. 
 
 ## Census geographies
 
