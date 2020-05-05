@@ -5,14 +5,15 @@ tags:
 author: khondula
 ---
 
-Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the country, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population change for any given location within the country may require getting acquainted with some nuanced jargon. This post is to introduce some concepts to help you get started. 
+Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
 
 ![oh-places](/assets/images/oh-places.jpg)
 
+As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, neighborhoods. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other or with spatially-explicit environmental data; i.e. a common column to use for joining data tables. 
 
 ## Census geographies
 
-Check out the diagram of geographic relationships to see how different spatial units relate to each other. 
+The diagram below depicts relationships between different spatial units used in Census data sets: 
 
 ![census-geog-relationships](/assets/images/census-geog.jpg)
 
@@ -72,5 +73,7 @@ Although the official population count occurs only every 10 years, the census ca
 
 * [Population estimates Terms and Definitions](https://www.census.gov/programs-surveys/popest/guidance-geographies/terms-and-definitions.html)
 * [Population estimates FAQ](https://www.census.gov/programs-surveys/popest/about/faq.html)
-* [TIGERWEB](https://tigerweb.geo.census.gov/tigerweb/)
-* R packages by Kyle Walker: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
+* [TIGERWEB](https://tigerweb.geo.census.gov/tigerweb/) Interactive maps of census geographies
+* R packages by Kyle Walker for accessing census data: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
+
+[^1] e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
