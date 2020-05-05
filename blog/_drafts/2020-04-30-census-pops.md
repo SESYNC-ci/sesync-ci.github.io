@@ -7,7 +7,6 @@ author: khondula
 
 Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the country, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population change for any given location within the country may require getting acquainted with some nuanced jargon. This blog is to introduce some concepts to help you get started. 
 
-
 ![oh-places](/assets/images/oh-places.jpg)
 
 
@@ -30,9 +29,25 @@ wget -r -np zip ftp://ftp2.census.gov/geo/tiger/TIGER2019/CBSA/
 
 Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). Look [here](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf "understanding place primer") for a primer on understanding what a Place is and how it is defined according to the census.
 
-These spatial data are also available as a Web Mapping Service, which means they can be added to custom maps e.g. [Leaflet](https://leafletjs.com/) with the folliwing
+These spatial data are also available as a Web Mapping Service, which means they can be added to custom maps e.g. [Leaflet](https://leafletjs.com/) maps in R with the following code:
 
-https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_wms.html
+```
+library(leaflet)
+
+tiger_wms_url <- "https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer"
+
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -76.5, lat = 38.97, zoom = 8) %>%
+  addWMSTiles(
+    tiger_wms_url,
+    layers = c("Metropolitan Statistical Areas",
+               "Metropolitan Statistical Areas Labels"),
+    options = WMSTileOptions(format = "image/png", transparent = TRUE)
+  )
+```
+
+The `addWMSTiles()` function must include the url specifyubg the location of the [map server](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb) as well as which layers should be shown, eg. from the list [here](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). 
 
 ## Intercensal data
 
