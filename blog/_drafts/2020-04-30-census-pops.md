@@ -5,7 +5,7 @@ tags:
 author: khondula
 ---
 
-Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the country, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population change for any given location within the country may require getting acquainted with some nuanced jargon. This blog is to introduce some concepts to help you get started. 
+Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the country, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population change for any given location within the country may require getting acquainted with some nuanced jargon. This post is to introduce some concepts to help you get started. 
 
 ![oh-places](/assets/images/oh-places.jpg)
 
@@ -47,11 +47,11 @@ leaflet() %>%
   )
 ```
 
-The `addWMSTiles()` function must include the url specifyubg the location of the [map server](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb) as well as which layers should be shown, eg. from the list [here](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). 
+The `addWMSTiles()` function must include the url specifying the location of the [map server](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb) as well as which layers should be shown, eg. from the list [here](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). 
 
 ## Intercensal data
 
-Although the official population count occurs only every 10 years, the census calculates estimates of populations for the between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed separately for the years 2000-2010 and 2010-2018. Note that some data for some levels are only available starting after 2010. In addition to just population numbers, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and internation migration. 
+Although the official population count occurs only every 10 years, the census calculates estimates of populations for the between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed separately for the years 2000-2010 and 2010-2018. Note that some data for some levels are only available starting after 2010. In addition to population totals, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and international migration. 
 
 | Level  | Description | years |
 |--------|-------------|-------|
