@@ -8,7 +8,7 @@ author: khondula
 Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the country, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population change for any given location within the country may require getting acquainted with some nuanced jargon. This blog is to introduce some concepts to help you get started. 
 
 
-![oh-places](/assets/images/oh-places.jpg | width=75)
+![oh-places](/assets/images/oh-places.jpg)
 
 
 ## Census geographies
