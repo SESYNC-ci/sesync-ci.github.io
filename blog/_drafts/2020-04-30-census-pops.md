@@ -7,7 +7,7 @@ author: khondula
 
 Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
 
-<img src="/assets/images/oh-places.jpg" alt="oh-places" width="200" align="right"/>
+<img src="/assets/images/oh-places.jpg" alt="oh-places" width="200" align="left"/>
 
 As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other, with census data provided at that scale, or with spatially-explicit environmental data; a common column to use for joining data tables. 
 
@@ -70,8 +70,7 @@ Although the official population count occurs only every 10 years, the census ca
 
 For example, SESYNC falls within all 3 of the incorporated place Annapolis city, Anne Arundel county, and the Baltimore-Columbia-Towson metropolitan area. The population estimates for these 3 levels of aggregation are each an order of magnitude greater!
 
-![pop-ests](/assets/images/annapolis-pops.png)
-
+<img src="/assets/images/annapolis-pops.png" alt="oh-places" width="300"/>
 
 ## Resources
 
