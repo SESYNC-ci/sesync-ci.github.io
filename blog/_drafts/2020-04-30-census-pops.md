@@ -70,7 +70,7 @@ Although the official population count occurs only every 10 years, the census ca
 
 For example, SESYNC falls within all 3 of the incorporated place Annapolis city, Anne Arundel county, and the Baltimore-Columbia-Towson metropolitan area. The population estimates for these 3 levels of aggregation are each an order of magnitude greater!
 
-<img src="/assets/images/annapolis-pops.png" alt="oh-places" width="300"/>
+<img src="/assets/images/annapolis-pops.png" alt="oh-places" width="500"/>
 
 ## Resources
 
