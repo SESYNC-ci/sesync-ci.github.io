@@ -7,9 +7,9 @@ author: khondula
 
 Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
 
-![oh-places](/assets/images/oh-places.jpg)
+<img src="/assets/images/oh-places.jpg" alt="oh-places" width="75" alight="right"/>
 
-As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other or with spatially-explicit environmental data; i.e. a common column to use for joining data tables. 
+As an authoratative resource on data about people and the economomy in the U.S., Census geographies can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other, with census data provided at that scale, or with spatially-explicit environmental data; a common column to use for joining data tables. 
 
 ## Census geographies
 
@@ -52,7 +52,7 @@ The `addWMSTiles()` function must include the url specifying the location of the
 
 ## Intercensal data
 
-Although the official population count occurs only every 10 years, the census calculates estimates of populations for the between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed separately for the years 2000-2010 and 2010-2018. Note that some data for some levels are only available starting after 2010. In addition to population totals, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and international migration. 
+Although the official population count occurs only every 10 years, the census calculates estimates of populations for the in-between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed as separate data tables by decade. Note that some data for some levels are only available starting after 2010. In addition to population totals, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and international migration. 
 
 | Level  | Description | years |
 |--------|-------------|-------|
@@ -67,6 +67,10 @@ Although the official population count occurs only every 10 years, the census ca
 | 310    | Metropolitan/Micropolitan Statistical Area | 2000, 2010&ndash;2019 |
 | 314    | Metropolitan Division | 2010&ndash;2019 |
 | 330    | Combined statistical area | 2010&ndash;2019 |
+
+For example, SESYNC falls within all 3 of the incorporated place Annapolis city, Anne Arundel county, and the Baltimore-Columbia-Towson metropolitan area. The population estimates for these 3 levels of aggregation are each an order of magnitude greater!
+
+![pop-ests](/assets/images/annapolis-pops.png)
 
 
 ## Resources
