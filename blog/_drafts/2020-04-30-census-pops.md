@@ -5,11 +5,11 @@ tags:
 author: khondula
 ---
 
-Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify population trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
+Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify patterns or trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
 
 <img src="/assets/images/oh-places.jpg" alt="oh-places" width="250"/>
 
-As an authoratative resource on data about people and the economomy in the U.S., Census data can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other, with census data provided at that scale (e.g. from the [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html), or with spatially-explicit environmental data.
+As an authoratative resource on data about people and the economy in the U.S., the Census can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining datasets either with each other, with census data provided at that scale (e.g. from the [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html), or with spatially-explicit environmental data.
 
 ## Census geographies
 
@@ -40,15 +40,13 @@ leaflet() %>%
   addTiles() %>%
   setView(lng = -76.5, lat = 38.97, zoom = 8) %>%
   addWMSTiles(
-    tiger_wms_url,
+    baseUrl = tiger_wms_url,
     layers = c("Metropolitan Statistical Areas",
                "Metropolitan Statistical Areas Labels"),
-    options = WMSTileOptions(format = "image/png", transparent = TRUE)
-  )
+    options = WMSTileOptions(format = "image/png", transparent = TRUE))
 ```
 
 The `addWMSTiles()` function must include the url specifying the location of the [map server](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb) as well as which layers should be shown, eg. from the list [here](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). 
-
 
 ## Intercensal data
 
@@ -68,13 +66,13 @@ Although the official population count occurs only every 10 years, the census ca
 | 314    | Metropolitan Division | 2010&ndash;2019 |
 | 330    | Combined statistical area | 2010&ndash;2019 |
 
-For example, SESYNC falls within all 3 of the incorporated place Annapolis city, Anne Arundel county, and the Baltimore-Columbia-Towson metropolitan area. The population estimates for these 3 levels of aggregation are each an order of magnitude greater!
+So, if you want to know how the population is changing where you live, the answer might depend on which spatial scale you use. For example, SESYNC falls within all 3 of: Annapolis city (an incorporated place), Anne Arundel county, and the Baltimore-Columbia-Towson metropolitan area. The population estimates for these 3 levels of aggregation are different orders of magnitude, and whereas they all show increasing trends, Annapolis has leveled off in the past few years. 
 
 <img src="/assets/images/annapolis-pops.png" alt="oh-places" width="500"/>
 
 Data from other Census programs, such as the ACS, also publish data at multiple spatial scales (detailed [here](https://www.census.gov/programs-surveys/acs/geography-acs/geography-boundaries-by-year.html)). ACS data from 2009 onwards (as well as population estimates from either 1990, 2000, 2010, or 2010 onward) are conveniently accessible through Kyle Walker's R package [tidycensus](https://walker-data.com/tidycensus/articles/basic-usage.html). 
 
-## Resources
+## More Resources
 
 * [Population estimates Terms and Definitions](https://www.census.gov/programs-surveys/popest/guidance-geographies/terms-and-definitions.html)
 * [Population estimates FAQ](https://www.census.gov/programs-surveys/popest/about/faq.html)
