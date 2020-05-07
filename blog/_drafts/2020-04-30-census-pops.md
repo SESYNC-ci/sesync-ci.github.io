@@ -9,7 +9,7 @@ Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the
 
 <img src="/assets/images/oh-places.jpg" alt="oh-places" width="250"/>
 
-As an authoratative resource on data about people and the economomy in the U.S., Census data can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other, with census data provided at that scale, or with spatially-explicit environmental data; i.e. a common column to use for joining data tables. 
+As an authoratative resource on data about people and the economomy in the U.S., Census data can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining these datasets either with each other, with census data provided at that scale (e.g. from the [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html), or with spatially-explicit environmental data.
 
 ## Census geographies
 
@@ -21,11 +21,10 @@ Although there is a strictly nested hierarchy between blocks, tracts, counties, 
 
 Spatial data defining these regions is available on the [Census website](https://www.census.gov/geographies/mapping-files.html) along with a [guide](https://www.census.gov/programs-surveys/geography/guidance/tiger-data-products-guide.html) on the various products available through the Topologically Integrated Geographic Encoding and Referencing division -- a.k.a TIGER shapefiles. 
 
-You can programmatically download these data from the Census [FTP site](https://www2.census.gov/geo/tiger/), for example to download and unzip the files for 2019 Core-based statistical areas:
+You can programmatically download these data from the Census [FTP site](https://www2.census.gov/geo/tiger/), for example to download and unzip the files for 2019 [Core-based statistical areas](https://www2.census.gov/geo/maps/metroarea/us_wall/Sep2018/CBSA_WallMap_Sep2018.pdf) (i.e. cities):
 
 ```
 wget -r -np zip ftp://ftp2.census.gov/geo/tiger/TIGER2019/CBSA/
-  find . -name "*.zip" -exec unzip {} -d CBSA \;
 ```
 
 Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). Look [here](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf "understanding place primer") for a primer on understanding what a Place is and how it is defined according to the census.
@@ -50,9 +49,10 @@ leaflet() %>%
 
 The `addWMSTiles()` function must include the url specifying the location of the [map server](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb) as well as which layers should be shown, eg. from the list [here](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). 
 
+
 ## Intercensal data
 
-Although the official population count occurs only every 10 years, the census calculates estimates of populations for the in-between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed as separate data tables by decade. Note that some data for some levels are only available starting after 2010. In addition to population totals, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and international migration. 
+Although the official population count occurs only every 10 years, the census calculates estimates of populations for the in-between years. These intercensal datasets are provided through the [Population and Housing Unit Estimates](https://www.census.gov/programs-surveys/popest/data/tables.html) program, and are listed as separate data tables by decade. Note that some data for some levels are only available starting after 2010. In addition to population totals, these [datasets](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-metro-and-micro-statistical-areas.html) also include information about the components of change such as number of births and deaths, net domestic and international migration.
 
 | Level  | Description | years |
 |--------|-------------|-------|
@@ -72,11 +72,13 @@ For example, SESYNC falls within all 3 of the incorporated place Annapolis city,
 
 <img src="/assets/images/annapolis-pops.png" alt="oh-places" width="500"/>
 
+Data from other Census programs, such as the ACS, also publish data at multiple spatial scales (detailed [here](https://www.census.gov/programs-surveys/acs/geography-acs/geography-boundaries-by-year.html)). ACS data from 2009 onwards (as well as population estimates from either 1990, 2000, 2010, or 2010 onward) are conveniently accessible through Kyle Walker's R package [tidycensus](https://walker-data.com/tidycensus/articles/basic-usage.html). 
+
 ## Resources
 
 * [Population estimates Terms and Definitions](https://www.census.gov/programs-surveys/popest/guidance-geographies/terms-and-definitions.html)
 * [Population estimates FAQ](https://www.census.gov/programs-surveys/popest/about/faq.html)
-* [TIGERWEB](https://tigerweb.geo.census.gov/tigerweb/) Interactive maps of census geographies
+* [TIGERWEB](https://tigerweb.geo.census.gov/tigerweb/), an interactive maps of census geographies
 * R packages by Kyle Walker for accessing census data: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
 
 [^1] e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
