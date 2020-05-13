@@ -27,7 +27,7 @@ You can programmatically download these data from the Census [FTP site](https://
 wget -r -np zip ftp://ftp2.census.gov/geo/tiger/TIGER2019/CBSA/
 ```
 
-Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). Look [here](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf "understanding place primer") for a primer on understanding what a Place is and how it is defined according to the census.
+Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). It may also be important to recognize whether scales are defined statistically or based on legal boundaries, e.g. *incorporated places* versus *census designated places*[^2].
 
 These spatial data are also available as a Web Mapping Service, which means they can be added to custom maps e.g. [Leaflet](https://leafletjs.com/) maps in R with the following code:
 
@@ -82,3 +82,4 @@ Data from other Census programs, such as the ACS, also publish data at multiple 
 * R packages by Kyle Walker for accessing census data: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
 
 [^1]: e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
+[^2]: [A primer on understanding "Place"](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf) in Census Bureau Data Products
