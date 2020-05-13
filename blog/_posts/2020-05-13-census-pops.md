@@ -81,4 +81,4 @@ Data from other Census programs, such as the ACS, also publish data at multiple 
 * [TIGERWEB](https://tigerweb.geo.census.gov/tigerweb/), an interactive maps of census geographies
 * R packages by Kyle Walker for accessing census data: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
 
-[^1] e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
+[^1]: e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
