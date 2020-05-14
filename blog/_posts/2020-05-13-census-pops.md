@@ -5,11 +5,11 @@ tags:
 author: khondula
 ---
 
-Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify patterns or trends for any given location within the country may require getting acquainted with some nuanced jargon[^1]. This post is to introduce some concepts to help you get started. 
+Every 10 years, the U.S. Census Bureau conducts a nationwide survey to count the number of people in the nation, which is known as The Decennial Census. Although seemingly a straightforward concept, using these data to appropriately quantify patterns or trends[^1] for any given location within the country may require getting acquainted with some nuanced jargon. This post is to introduce some concepts to help you get started. 
 
 <img src="/assets/images/oh-places.jpg" alt="oh-places" width="250"/>
 
-As an authoratative resource on data about people and the economy in the U.S., the Census can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) and accompanying spatial data provided by the Census provide a reference for combining datasets either with each other, with census data provided at that scale (e.g. from the [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html), or with spatially-explicit environmental data.
+As an authoratative resource on data about people and the economy in the U.S., the Census can be very useful for helping to synthesize data for socio-environmnetal problems. Countless spatially-explicit social datasets provide information at either point locations or at the level of counties, cities, tracts, and other units defined by the Census. Unique [codes](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html)[^2] and accompanying spatial data provided by the Census provide a reference for combining datasets either with each other, with census data provided at that scale (e.g. from the [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html)), or with spatially-explicit environmental data.
 
 ## Census geographies
 
@@ -17,9 +17,9 @@ The diagram below depicts relationships between different spatial units used in 
 
 ![census-geog-relationships](/assets/images/census-geog.jpg)
 
-Although there is a strictly nested hierarchy between blocks, tracts, counties, etc., there are also almost twice as many(!) other named spatial scales either defined by or recognized by the Census that don't fall neatly into that structure. Cities, for example, can span state boundaries, and Places that fall under the jurisdiction of a governing body may contain portions of one or more county. 
+Although there is a strictly nested hierarchy between blocks, tracts, counties, etc., there are also almost twice as many(!) other named spatial scales either defined by or recognized by the Census that don't fall neatly into that structure. Cities, for example, can span state boundaries, and Places that fall under the jurisdiction of a governing body may contain portions of one or more counties. 
 
-Spatial data defining these regions is available on the [Census website](https://www.census.gov/geographies/mapping-files.html) along with a [guide](https://www.census.gov/programs-surveys/geography/guidance/tiger-data-products-guide.html) on the various products available through the Topologically Integrated Geographic Encoding and Referencing division -- a.k.a TIGER shapefiles. 
+Spatial data defining these regions are available on the [Census website](https://www.census.gov/geographies/mapping-files.html) along with a [guide](https://www.census.gov/programs-surveys/geography/guidance/tiger-data-products-guide.html) on the various products available through the Topologically Integrated Geographic Encoding and Referencing division (a.k.a TIGER shapefiles). 
 
 You can programmatically download these data from the Census [FTP site](https://www2.census.gov/geo/tiger/), for example to download and unzip the files for 2019 [Core-based statistical areas](https://www2.census.gov/geo/maps/metroarea/us_wall/Sep2018/CBSA_WallMap_Sep2018.pdf) (i.e. cities):
 
@@ -27,7 +27,7 @@ You can programmatically download these data from the Census [FTP site](https://
 wget -r -np zip ftp://ftp2.census.gov/geo/tiger/TIGER2019/CBSA/
 ```
 
-Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). It may also be important to recognize whether scales are defined statistically or based on legal boundaries, e.g. *incorporated places* versus *census designated places*[^2].
+Keep in mind that the number, names, and spatial extent of these areas change over time. For detailed information on individual changes, check out [Geographic Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.html). It may also be important to recognize whether scales are defined statistically or based on legal boundaries, e.g. "incorporated places" versus "census designated places"[^3].
 
 These spatial data are also available as a Web Mapping Service, which means they can be added to custom maps e.g. [Leaflet](https://leafletjs.com/) maps in R with the following code:
 
@@ -82,4 +82,5 @@ Data from other Census programs, such as the ACS, also publish data at multiple 
 * R packages by Kyle Walker for accessing census data: [tidycensus](http://walker-data.com/tidycensus/) and [tigris](https://github.com/walkerke/tigris)
 
 [^1]: e.g. considering effects of the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
-[^2]: [A primer on understanding "Place"](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf) in Census Bureau Data Products
+[^2]: Besides geographic identifiers, the Census Bureau also uses or defines codes for classifying businesses, products, functional status of geographic entities, and more as described [here](https://www.census.gov/library/reference/code-lists.html).
+[^3]: [A primer on understanding "Place"](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf) in Census Bureau Data Products
