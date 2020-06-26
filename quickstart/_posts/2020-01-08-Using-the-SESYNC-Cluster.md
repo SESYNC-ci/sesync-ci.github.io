@@ -47,17 +47,17 @@ Check your job's output by using `$ ls` to find the `.out` (and maybe `.err`) fi
 
 ## Connect via RStudio server
 
-Connect to the RStudio server at `rstudio.sesync.org`. For more information, [see](https://cyberhelp.sesync.org/quickstart/rstudio-server.html). Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the [rslurm package documatation](https://cran.r-project.org/web/packages/rslurm/index.html). Let's assume for now your R script is called `myRcode.R`.
+Connect to the RStudio server at `rstudio.sesync.org`. For more information, [see the RStudio quickstart](https://cyberhelp.sesync.org/quickstart/rstudio-server.html). Write or load the R code you wish to submit to the cluster and save it in a file. For more information on writing code that makes optimal use of the cluster, please see the [rslurm package documentation](https://cran.r-project.org/web/packages/rslurm/index.html). Let's assume for now your R script is called `myRcode.R`.
 
 Create a new file in the RStudio editor (File -> New File -> Text File). Save it as `submit.sh` in the same folder as `myRcode.R`. Type and save the following:
 ```
 #!/bin/bash
 #
-#SBATCH -n1
+#SBATCH -n 1
 
 Rscript --vanilla myRcode.R
 ```
-This script tells tells the scheduler and linux that this is a shell script and should be run using the bash shell ( #!/bin/bash ), using one CPU (-n1) and that it should launch your R script with default configuration settings (Rscript --vanilla myRcode.R).
+This script tells tells the scheduler and linux that this is a shell script and should be run using the bash shell (`#!/bin/bash`), using one CPU (`-n 1`) and that it should launch your R script with default configuration settings (`Rscript --vanilla myRcode.R`).
 
 Open the terminal in RStudio (Tools -> Terminal -> New Terminal).
 
