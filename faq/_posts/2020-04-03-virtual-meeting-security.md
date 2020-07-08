@@ -3,6 +3,7 @@ title: How can I secure my virtual meeting?
 tags:
  - Meeting
  - Remote Participants
+ - Zoom
 ---
 
 Use of video conference platforms has exploded now that we are all working from home.  
