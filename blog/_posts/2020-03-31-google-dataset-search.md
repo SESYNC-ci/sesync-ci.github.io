@@ -1,8 +1,8 @@
 ---
 title: "Google Dataset Search: A very helpful and definitely not evil tool for finding data"
 tags:
- - data
- - reproducible research
+ - Data
+ - Reproducible Research
 author: rmason
 ---
 

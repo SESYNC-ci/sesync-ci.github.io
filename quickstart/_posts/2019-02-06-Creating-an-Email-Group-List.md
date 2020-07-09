@@ -1,7 +1,7 @@
 ---
 title: Creating an Email Group List 
 tags:
-  - list
+  - List
   - Sympa
 ---
 

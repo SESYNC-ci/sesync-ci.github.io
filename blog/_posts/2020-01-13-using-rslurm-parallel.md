@@ -3,8 +3,8 @@ title: Using the rslurm package to run code in parallel
 tags:
  - Slurm
  - R
- - machine learning
- - parallel
+ - Machine Learning
+ - Parallel
 author: qdread
 ---
 

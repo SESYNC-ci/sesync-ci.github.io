@@ -3,7 +3,7 @@ title: Run Code in Parallel on a Windows Virtual Machine
 tags:
   - Virtual Machine
   - Windows
-  - parallel
+  - Parallel
 ---
 
 If you have a program that runs only on Windows systems, and you would like to run the program in parallel, it is not possible to use SESYNC's [Slurm cluster]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}). However, it is possible to take advantage of SESYNC's Winanalytics [virtual machine]({{ '/faq/what-is-a-virtual-machine.html' | relative_url }}), which has multiple cores and much more available RAM than the typical laptop. You will need to write a little bit of code in PowerShell, which is Windows' shell scripting languge and is fairly similar to Bash scripting. Here is a quick walkthrough of how to do this.
