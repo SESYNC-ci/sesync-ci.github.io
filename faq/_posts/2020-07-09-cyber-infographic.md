@@ -8,4 +8,4 @@ author: Rachael Blake
 ---
 
 
-<img src="/assets/images/Cyber_Infographic_V9.pdf" width="250"/>
+<img src="/assets/images/SESYNC-Cyber-Resources-Infographic-300dpi.png" width="250"/>
