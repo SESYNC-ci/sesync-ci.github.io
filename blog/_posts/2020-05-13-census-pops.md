@@ -1,7 +1,7 @@
 ---
 title: "Oh, the Places You Can Get Census Population Data For!"
 tags:
- - data
+ - Data
 author: khondula
 ---
 
