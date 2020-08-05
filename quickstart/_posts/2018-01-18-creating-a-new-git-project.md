@@ -15,7 +15,9 @@ There are two types of projects you can create in GitLab, personal and group pro
 * Personal projects are good for individual code testing, or if you have projects that you will likely not share with others. SESYNC postdocs, fellows, and staff should look at using these types of projects.
 * Group projects are projects that are not owned by any one individual, but rather by an entire group of people. We recommend group projects for our working groups and for units within SESYNC (e.g., the IT staff are in a group on GitLab with several shared projects). To work in a group, click the group's tab, then select the group under which you want to create a project.
 
-To create a project, click the new project either from the dashboard when you login for a personal project, or by clicking new project under a group for a group project. Enter the name, description and wether you want the project private, internal or public. Click create to finish creating your project.
+If your SESYNC group does not yet have a GitLab group, you might want to create one. Creating a GitLab group has two main advantages: It helps you keep multiple repositories for your group's project organized in one place, and it can also help you deal with permissions more easily by giving multiple people access to multiple projects all at once. See [GitLab's documentation on groups](https://docs.gitlab.com/ee/user/group/) for more information about groups and how to create one on GitLab.
+
+To create a project, click the new project either from the dashboard when you login for a personal project, or by clicking new project under a group for a group project. Enter the name, description and whether you want the project private, internal or public. Click create to finish creating your project.
 
 * Private - projects are available only to group members and/or additional select prople
 * Internal - projects can be seen by any sesync researcher or workshop participant. (You probably don't want this)
@@ -37,15 +39,16 @@ After your project is created, you can use the links on your project page to bro
 
 **Privately sharing your GitLab project with collaborators requires that collaborators have a SESYNC account. Please contact cyberhelp@sesync.org if your collaborator needs an account.**
 
-From the dashboard of your project, click the 'Settings' link, then click 'Members'. You can share your project with new people by clicking the 'new project member' button.
+From the dashboard of your project, click 'Members'. You can share your project with new members or groups under the "Invite member" or "Invite group" tabs.
 
-Under "Select members to invite", start typing the name of your collegues and a matching account name should appear. If they do not, they probably haven't logged in to gitlab.sesync.org yet. Drop them a quick e-mail asking them to login so you can grant access. You can shoose the level of access from the choices below.
+Under "Search for members to update or invite", start typing the name of your colleagues and a matching account name should appear. If they do not, they probably haven't logged in to gitlab.sesync.org yet. Drop them a quick e-mail asking them to login so you can grant access. You can shoose the level of access from the choices below.
 
-* Guest - Your collegue can browse and create a local copy of all code, but cannot make any changes
-* Developer - Your collegue can contribute code to this project (You probably want this for most group members)
-* Master - Person can fully control, configure, invite more people to project (You probably want to add SESYNC staff as masters so we can help you)
+* Guest - Your colleague can browse and create a local copy of all code, but cannot make any changes
+* Reporter - Similar to a Guest with a few extra permissions to create issues and requests
+* Developer - Your colleague can contribute code to this project (You probably want this for most group members)
+* Maintainer - Person can fully control, configure, invite more people to project (You probably want to add SESYNC staff as maintainers so we can help you)
 
-Click 'Add users' at the bottom when you have finished. The next time your collegue logs in they will see the project in their dashboard.
+Click 'Add users' at the bottom when you have finished. The next time your collegue logs in they will see the project in their dashboard. 
 
 ![](/assets/images/adding_people_git.png)
 
@@ -71,3 +74,6 @@ You can generate a key pair for any machine onto which you will clone your repos
 
 That's it! You should be able to push and pull between your local git
 repository on <https://rstudio.sesync.org> and the remote git repository on GitLab/GitHub.
+
+*Bonus tip*: You can also set up an SSH key on your local machine, if you want to work locally instead of on the RStudio server. 
+See the [FAQ on setting up SSH keys]({{ 'faq/set-up-gitlab-ssh-key.html' | relative_url }}) for more details.
