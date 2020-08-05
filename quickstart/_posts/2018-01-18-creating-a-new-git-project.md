@@ -48,7 +48,7 @@ Under "Search for members to update or invite", start typing the name of your co
 * Developer - Your colleague can contribute code to this project (You probably want this for most group members)
 * Maintainer - Person can fully control, configure, invite more people to project (You probably want to add SESYNC staff as maintainers so we can help you)
 
-Click 'Add users' at the bottom when you have finished. The next time your collegue logs in they will see the project in their dashboard. 
+Click 'Invite' at the bottom when you have finished. The next time your collegue logs in they will see the project in their dashboard. 
 
 ![](/assets/images/adding_people_git.png)
 
