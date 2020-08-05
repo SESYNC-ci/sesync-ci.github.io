@@ -38,7 +38,7 @@ You might also want to set up SSH push/pull access on your local machine. This w
 2. Select "Tools" > "Global Options" > "Git/SVN"
 3. Choose "Create RSA key."
 4. Save the RSA key to the suggested directory. On a Windows machine this will probably be `C:\Users\<your username>\.ssh\id_rsa`. You do not need to include a passphrase.
-5. Navigate to the directory where you saved the key (it may be a hidden folder so you will need to type in the file path in your file explorer) and open the `id_rsa` file.
+5. Copy the key to your clipboard. (If you closed the window with the key, you can get back to it by navigate to the directory where you saved the key. It may be a hidden folder so you will need to type in the file path in your file explorer. Open the `id_rsa` file there.)
 6. Follow steps 5 through 7 from above to add the key to GitLab or GitHub.
 
 ![](/assets/images/rsakeyscreenshot.PNG)
