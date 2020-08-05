@@ -9,7 +9,7 @@ author: rblake
 
 Over the last few months, many people have conducted instructional courses virtually and shared their experiences [online].  In that respect, our reflections below on what we learned conducting a virtual course this summer are not ground-breaking.  We provide them for those who attended the course, for our future selves, and anyone else interested in our specific instructional circumstances. 
 
-###Our instructional set-up: 
+### Our instructional set-up: 
 
 - online syllabus with links to course information and all lesson materials 
 - each lesson completely in text form as a website
@@ -28,23 +28,24 @@ Over the last few months, many people have conducted instructional courses virtu
 
 ### What didn't quite work as expected:
 
-- We offered a technology testing opportunity 5 days in advance, but literally no one called in.  However, there were issues throughout the week with software installation, connection issues, other questions about technology that could have been solved in advance. 
-- Participants didn't attend office hours to review exercises or ask questions as much as we expected.  Therefore, it was really difficult to understand whether students actually engaged with the lesson materials or not.  We expected these office hours to function as "collaborative debugging sessions" but no one brought their "bugs".  
-- Participants didn't fill out the polls for what lesson exercises they wanted to cover in office hours.  We therefore stopped putting out the polls, but after the course received feedback that participants expected us to walk through the exercises.  In-person, we used to use stickies (one sticky for positive comments, one sticky for struggles that day).  
+- We offered a technology testing opportunity 5 days in advance, but literally no one called in.  However, there were issues throughout the week with software installation, connection issues, other questions about technology that should have been solved in advance. 
+- Participants didn't attend office hours to review exercises or ask questions as much as we expected.  Therefore, it was really difficult to understand whether participants actually engaged with the lesson materials or not.  We expected these office hours to function as "collaborative debugging sessions" but participants didn't bring their "bugs".  
+- Participants didn't fill out the polls for what lesson exercises they wanted to cover in office hours.  We therefore stopped putting out the polls, but after the course received feedback that participants expected us to walk through the exercises.   
+- During in-person courses, we used to use daily stickies (one sticky for positive comments, one sticky for struggles that day).  We created daily channels in Slack, but did not have a good way to assessing participants on a daily basis.
 - After the course, we received the feedback that it was unclear how to apply the lesson material to their own project.  We provided ample office hours time, and participants didn't ask us this during office hours.  
-- Participants didn't block off the entire week for this course, as we had expected them to.  This made it incredibly difficult to foster a community among participants, because many people did not call in to the "all participants" parts of the course.  
-- Most participants kept their video off a lot.  This did not foster community, and made it hard to read participants (no non-verbal communication).   
+- Participants didn't block off the entire week for this course, as we had expected them to.  This made it incredibly difficult to foster a community among participants, because many people did not call in to the "all participants" course meetings.  
+- Most participants kept their video off most of the time.  This did not foster community, was inconsiderate of their instructors and fellow participants, and made it hard to read participants (no non-verbal communication).   
 
 ### What can we do differently next time:
 
-- Make acceptance to the course contingent on agreeing to a participants code of conduct that will address the issues outlined above.
-- Require everyone to keep their video on at all times during course video calls
+- Make acceptance to the course contingent on agreeing to a participant code of conduct that will address the issues outlined above.  This combines strategies from the [Carpentries] and [Central Queensland University].  
+- Require everyone to keep their video on at all times during course video calls.  
 - Find a way to assess participant learning everyday in the absence of sticky note feedback.  
 
 
 [online]: https://docs.carpentries.org/topic_folders/hosts_instructors/resources_for_online_workshops.html#
-
-
+[Carpentries]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
+[Central Queensland University]: https://www.youtube.com/watch?v=MzsJyOkxqv8
 
 
 
