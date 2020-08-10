@@ -1,6 +1,6 @@
 ---
-title: Data APIs in Python
+title: Data APIs in R
 tags:
- - Python
+ - R
 ---
 {% include description.md name=page.slug %}
