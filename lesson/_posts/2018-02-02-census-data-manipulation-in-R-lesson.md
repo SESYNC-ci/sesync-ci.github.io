@@ -1,5 +1,5 @@
 ---
-title: tidyr & dplyr
+title: Tidy Data in R
 tags:
  - R
 sticky: true
