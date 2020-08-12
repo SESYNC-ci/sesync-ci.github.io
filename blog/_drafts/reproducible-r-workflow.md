@@ -6,7 +6,7 @@ tags:
 author: qread
 ---
 
-A lot of SESYNCers use R (often through RStudio on rstudio.sesync.org). A lot of SESYNCers are interested in making their research as reproducible as possible. A lot of SESYNCers also want to save time and make life easier for themselves. Here are some good ideas for how you can make your R workflow smoother, easier for you and anyone you ask to help you, and more in line with reproducible science best practices! Sound good? Read on!
+A lot of people at SESYNC use R (often through RStudio on rstudio.sesync.org), are interested in making their research as reproducible as possible, and want to save time and make life easier for themselves. That's why I wrote this blog post with some ideas for how you can make your R workflow smoother, easier for you and anyone you ask to help you, and more in line with reproducible science best practices! Sound good? Read on!
 
 ## Wait, what's a workflow?
 
@@ -31,11 +31,11 @@ It's easy to set the global RStudio options to not save your workspace by defaul
 
 {% include captionedimage.html url="/assets/images/rstudio_global_options.PNG" description="<small><i>RStudio global options to not save and restore workspaces</i></small>" %}
 
-If you are running your R script from the command line, type `Rscript --no-save --no-restore my_script.R` will also tell R not to save or restore any workspaces.
+If you are running your R script from the command line, type `Rscript --no-save --no-restore my_script.R` will also tell R not to save or restore any workspaces when your script runs.
 
 ### Woke: saving individual R objects
 
-Obviously you do want to save your progress especially if you ran a very computationally intensive process that you don't want to repeat. It isn't always easy to export things to a CSV. Instead of saving the whole workspace, it is better to identify the object(s) you want to save and save them individually.
+Even if it's a bad idea to save your entire workspace, it's good to be able to save your progress. This is especially true if you ran a very computationally intensive process that you don't want to repeat. It isn't always easy to export things to a CSV. Instead of saving the whole workspace, it is better to identify the object(s) you want to save and save them individually.
 
 You can save individual R objects easily by using the `save()` function and specifying the names of the objects and the file to write to (usually with the extension `.RData`). For example,
 
@@ -51,7 +51,7 @@ load('my_awesome_output.RData')
 
 ### Bespoke: using RStudio projects in conjunction with saving objects
 
-RStudio includes a feature called "projects" as a way to keep your work in R organized. It is best explained by Hadley Wickham in [the project chapter of his book R for Data Science](https://r4ds.had.co.nz/workflow-projects.html). The basic idea is to keep all the scripts and history associated with one of your real-life projects in one place as an R project. You can switch between them easily. Typically people associate each project with its own version control (i.e., git) repository. I won't go into too much detail on how to set up projects in RStudio &mdash; read the [RStudio documentation](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) and the [book chapter](https://r4ds.had.co.nz/workflow-projects.html)!
+RStudio includes a feature called "projects" as a way to keep your work in R organized. It is best explained by Hadley Wickham in [the project chapter of his book R for Data Science](https://r4ds.had.co.nz/workflow-projects.html). The basic idea is to keep all the scripts and history associated with one of your real-life projects in one place as an R project. You can switch between them easily. Typically people associate each project with its own version control (i.e., git) repository. I won't go into too much detail on how to set up projects in RStudio --- read the [RStudio documentation](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) and the [book chapter](https://r4ds.had.co.nz/workflow-projects.html)!
 
 ## Accessing files in different directories
 
@@ -64,7 +64,7 @@ setwd('Z:/data')
 data <- read.csv('my_awesome_data.csv')
 ```
 
-Unfortunately this is not a great practice because it changes things outside the R script which is problematic because it can affect and possibly break other scripts. This is bad enough if only you are running the script, but if anyone else wants to run your code or help you debug it, it will affect their system as well. They probably don't have the same directory structure as you do anyway, so the `read.csv` will return an error. (And don't even get me started on scripts that start with `rm(list = ls())`, if you really want to ruin someone's day.)
+Unfortunately this is not a great practice because it changes the R environment. This is problematic because it can affect and possibly break other scripts. This is bad enough if you are the only person who will run the script, but if anyone else wants to run your code or help you debug it, it will affect their system as well. They probably don't have the same directory structure as you do anyway, so the `read.csv` will return an error. (And don't even get me started on scripts that start with `rm(list = ls())`, if you really want to ruin someone's day.)
 
 ### Woke: using explicit file paths
 
@@ -86,7 +86,36 @@ is_local <- dir.exists('Q:/')
 data_dir <- ifelse(is_local, 'Q:', '/nfs/qread-data')
 ```
 
-Now my script can run either on my own machine or on the remote server without any modification! *(This is Q's solution but others may have other ideas.)*
+Now my script can run either on my own machine or on the remote server without any modification!
+
+Another helpful tip is to use a [symlink]({{ '/faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}) to create a path to your data directory within your project folder.
+
+## Creating a reproducible analysis pipeline
+
+### Broke: using opaque variable names and no comments
+
+If you use variable names that aren't clear and informative, and don't comment the code, "future you" or anyone else reading your script will have a tough time.
+
+```
+n <- sum(data$status == 0)
+```
+
+No one would know what this means, and you probably won't even remember a few weeks from now!
+
+### Woke: using good variable names and commenting your code
+
+Use consistently formatted and informative variable names. Some prefer `snake_case` and others `camelCase` for formatting variable names --- [this thread shows that there are a lot of differing opinions](https://stackoverflow.com/questions/1944910/what-is-your-preferred-style-for-naming-variables-in-r). It's up to you, but consistency is important to minimize typos and errors caused by entering the wrong variable name. 
+It's crucial to annotate your code with comments, too. 
+
+```
+n_dead_trees <- sum(tree_data$status == 0) # Count the number of dead trees
+```
+
+Now the code is pretty much self-explanatory, but we even include a comment to make things doubly clear.
+
+### Bespoke: using RMarkdown to create a document with text, images, and code
+
+RStudio is not only good for writing plain R scripts. You can also create RMarkdown documents which let you combine R code, output, images, and text into a nicely formatted document! This is great for two things: you can richly annotate your analysis, making it easier for you to revisit it later, or you can communicate your results to others! Check out [our lesson on RMarkdown]({{ 'interactive-rmarkdown-lesson' | relative_url }}) to get started, if you haven't used RMarkdown before. 
 
 
 
