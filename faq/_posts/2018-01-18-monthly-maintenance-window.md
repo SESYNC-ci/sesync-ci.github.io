@@ -14,7 +14,7 @@ to get our systems prepared to reboot for that month's window.
 
 The maintenance Window is usually a Thursday. Check the 
 [list of upcoming maintenance window dates](https://wiki.umiacs.umd.edu/umiacs/index.php/MonthlyMaintenanceWindow) 
-from University of Maryland IT to see the dates of the next few scheduled outages.
+from University of Maryland's Institute for Advanced Computer Studies to see the dates of the next few scheduled outages.
 
 ## What happens to my scheduled jobs during the maintenance window?
 
