@@ -12,19 +12,9 @@ The window is calculated each month by adding 9 days to Microsoft's [Patch Tuesd
 This allows us to marshal patches released that month from Microsoft, Red Hat, Ubuntu and our other vendors and have enough time
 to get our systems prepared to reboot for that month's window.
 
-The maintenance Window is usually a Thursday. A list of remaining maintenance windows for 2019 are listed below:
-
-* February 21st, 2019
-* March 28th, 2019
-* April 18th, 2019
-* May 23rd, 2019
-* June 20th, 2019
-* July 18th, 2019
-* August 22nd, 2019
-* September 19th, 2019
-* October 17th, 2019
-* November 21st, 2019
-* December 19th, 2019
+The maintenance Window is usually a Thursday. Check the 
+[list of upcoming maintenance window dates](https://wiki.umiacs.umd.edu/umiacs/index.php/MonthlyMaintenanceWindow) 
+from University of Maryland's Institute for Advanced Computer Studies to see the dates of the next few scheduled outages.
 
 ## What happens to my scheduled jobs during the maintenance window?
 
