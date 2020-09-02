@@ -17,6 +17,9 @@ There are many technological solutions out there, but figuring out what the opti
 
 ### Video Calls
  - Zoom
+ - WebEx
+ - Skype
+ - GoToMeeting
  
 ### Messaging
  - Slack
