@@ -14,7 +14,7 @@ There are many technological solutions out there, but figuring out what the opti
 
 # What tech is available and what have other SESYNC teams been using?
 
-* The asterisk indicates at least one SESYNC team is using this technology solution.
+Note: The asterisk(*) indicates at least one SESYNC team is using this technology solution.
 
 ### Video Calls
  - Zoom*
@@ -37,21 +37,23 @@ There are many technological solutions out there, but figuring out what the opti
 ### Project/Workflow Management
  - [Open Science Framework](https://osf.io/)*
  - [Whole Tale](https://wholetale.org/)
- - [GitHub](http://https://github.com)*  
+ - [GitHub](https://github.com)*  
+ - [GitLab](https://gitlab.com)*
  - [Trello](https://trello.com/)
  - [Asana](https://asana.com/)
 
+
 # How might my team effectively use these tech solutions? 
 
-### Completely non-technical team
- - Use pen and paper.
+### Completely non-technical team 
+ - Use pen and paper and the USPS.
 
-### Team in between 
- - Use Zoom and texting.
+### Team willing to use some technological solutions
+ - Use Zoom for meetings, Google Docs for editing files, and phone calls for additional communication.
  
-### Technologically comfortable team
- - Use OSF to manage project, Google Drive to share/edit docs, Slack to chat, and Zoom to video conference 
-
+### Technologically savvy team
+ - Use GitHub to manage project, Google Drive to share/edit docs, Slack to chat, and Zoom to video conference. 
+ 
   
 # Anecdotes from SESYNC teams
  - _Asynchronous collaboration has been useful - it has been difficult to move from Google Drive to Microsoft Teams, but the asynchronous aspect works well._ - Systems of Systems Pursuit
