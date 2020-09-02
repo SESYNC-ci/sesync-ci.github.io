@@ -32,6 +32,7 @@ There are many technological solutions out there, but figuring out what the opti
  
 ### Project/Workflow Management
  - [Open Science Framework](https://osf.io/)
+ - [Whole Tale](https://wholetale.org/)
 
 # How might my team effectively use these tech solutions? 
 
@@ -50,6 +51,6 @@ There are many technological solutions out there, but figuring out what the opti
 
  - _We had good success using Slack and Zoom to teach a course this summer.  We also used pre-recorded videos for asynchronous information delivery._ - SESYNC Data Science Team
  
- 
+ - _A combination of short Zoom meetings with discussion in Google Docs to refine research questions proved useful.  Team member did not engage on Zoom meetings, but lots of engagement on the Google Docs._ - Diversity in Eco-Function Pursuit 
  
  
