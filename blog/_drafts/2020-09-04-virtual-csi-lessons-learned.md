@@ -54,6 +54,7 @@ Over the last few months, many people have conducted instructional courses virtu
 
 ### What can we do differently next time:
 
+- Offer technology testing closer to the first day of the course.  While this doesn't give time to solve many technical problems, it may garner more participation/troubleshooting if closer to the course time.
 - Better assess participant learning continuously throughout the course.  In particular, daily assessments to replace sticky note feedback, and assessment of participants understanding of the application of lesson material to their on-going/future work.  
 - Use probing questions about the day's lesson material that require answers from all participants during Zoom calls.  Have participants put their answers in the Zoom chat, Slack, or even a Google Doc.  Wait until all participants have answered befor continuing the discussion.  
 - Strongly encourage everyone to keep their video on at all times during course video calls to foster community and a colleagial atmosphere.  
