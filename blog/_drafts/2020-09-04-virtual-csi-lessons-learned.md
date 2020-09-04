@@ -37,7 +37,7 @@ Over the last few months, many people have conducted instructional courses virtu
 
 <figure>
   <img src="/assets/images/SI_Projects_2020.jpg" />
-  <figcaption>_Snapshots of team projects from Summer Institute 2020._</figcaption>
+  <figcaption>Snapshots of team projects from Summer Institute 2020.</figcaption>
 </figure>
 
 ### What didn't quite work as expected:
