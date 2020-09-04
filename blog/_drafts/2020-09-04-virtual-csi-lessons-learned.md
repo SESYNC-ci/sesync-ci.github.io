@@ -36,7 +36,7 @@ Over the last few months, many people have conducted instructional courses virtu
 - several teams met with one another on their own time to discuss potentially overlapping research...great!
 
 <figure>
-  <img src="{{site.url}}/assets/images/SI_Projects_2020.jpg" />
+  <img src="/assets/images/SI_Projects_2020.jpg" />
   <figcaption>Snippets of team projects from Summer Institute 2020.</figcaption>
 </figure>
 
