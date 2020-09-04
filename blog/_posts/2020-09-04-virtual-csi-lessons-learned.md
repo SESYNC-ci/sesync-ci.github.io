@@ -39,7 +39,8 @@ Over the last few months, many people have conducted instructional courses virtu
   <img src="/assets/images/SI_Projects_2020.jpg" />
   <figcaption>Snapshots of team projects from Summer Institute 2020.</figcaption>
 </figure>
-
+  
+    
 ### What didn't quite work as expected:
 
 - We offered a technology testing opportunity 5 days in advance, but no one called in.  However, there were issues throughout the week with software installation, connection issues, other questions about technology that should have been solved in advance. 
