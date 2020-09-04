@@ -29,8 +29,8 @@ Video calls allow you to meet virtually and see the other participants via video
 
 Messaging can be an important alternate way to communicate, both during and between video calls.
 
- - Slack*
- - Microsoft Teams*
+ - [Slack*](https://slack.com/)
+ - [Microsoft Teams*](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software)
  - Consider Whattsapp or texting* (if your team members are comfortable sharing their phone numbers)
  - Also consider phone calls* (again, only if your team is willing to share their phone numbers)
  
@@ -38,10 +38,11 @@ Messaging can be an important alternate way to communicate, both during and betw
 
 Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  
 
- - Google Drive*
- - Microsoft Teams*
- - Box
- - Dropbox*
+ - [Etherpad](https://etherpad.org/)
+ - [Google Drive*](https://www.google.com/intl/en/drive/)
+ - [Microsoft Teams*](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software)
+ - [Box](https://www.box.com/)
+ - [Dropbox*](https://www.dropbox.com/)
  
 ### Project/Workflow Management
 
@@ -59,6 +60,7 @@ Managing tasks and deadlines can be aided by using project management solutions.
 "Whiteboard" technology can aid in brainstorming or diagramming exercises in an all-virtual setting.  
 
  - [MURAL](https://www.mural.co/)
+
 
 # How might my team effectively use these tech solutions? 
 
