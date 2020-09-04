@@ -50,6 +50,8 @@ Over the last few months, many people have conducted instructional courses virtu
 - Participants didn't block off the entire week for this course, as we had expected them to.  This made it incredibly difficult to foster a community among participants, because many people did not call in to the "all participants" course meetings.  
 - Most participants kept their video off most of the time.  This did not foster community, was inconsiderate of their instructors and fellow participants, and made it hard to read participants (no non-verbal communication).   
 
+![](/assets/images/improvement.png)
+
 ### What can we do differently next time:
 
 - Better assess participant learning continuously throughout the course.  In particular, daily assessments to replace sticky note feedback, and assessment of participants understanding of the application of lesson material to their on-going/future work.  
