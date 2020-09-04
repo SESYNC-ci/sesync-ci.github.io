@@ -9,7 +9,7 @@ author: rblake
 
 Over the last few months, many people have conducted instructional courses virtually and shared their experiences [online].  In that respect, our reflections below on what we learned conducting a virtual course this summer are not ground-breaking.  We provide them for those who attended the course, for our future selves, and anyone else interested in our specific instructional circumstances. 
 
-<img src="Summer_Institute_2020.png" height="50%" width="100%" />
+![](/assets/images/Summer_Institute_2020.png)
 
 ### Our instructional set-up: 
 
