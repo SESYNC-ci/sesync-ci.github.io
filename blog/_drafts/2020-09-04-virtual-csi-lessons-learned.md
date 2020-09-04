@@ -35,6 +35,8 @@ Over the last few months, many people have conducted instructional courses virtu
 - teams that were already somewhat established made a lot of progress (some of the newer teams less progress in the virtual format)
 - several teams met with one another on their own time to discuss potentially overlapping research...great!
 
+![](/assets/images/SI_Projects_2020.jpg)
+
 ### What didn't quite work as expected:
 
 - We offered a technology testing opportunity 5 days in advance, but no one called in.  However, there were issues throughout the week with software installation, connection issues, other questions about technology that should have been solved in advance. 
