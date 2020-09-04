@@ -9,9 +9,11 @@ author: rblake
 
 Over the last few months, many people have conducted instructional courses virtually and shared their experiences [online].  In that respect, our reflections below on what we learned conducting a virtual course this summer are not ground-breaking.  We provide them for those who attended the course, for our future selves, and anyone else interested in our specific instructional circumstances. 
 
+<img src="Summer_Institute_2020.png" height="50%" width="100%" />
+
 ### Our instructional set-up: 
 
-- online syllabus with links to course information and all lesson materials 
+- [online syllabus] with links to course information, all lesson materials, and pre-course information 
 - each lesson completely in text form as a website
 - series of short live-coding videos to supplement (not replace) each lesson
 - computational "lab" provided to participants via web-brower log-in
@@ -53,6 +55,7 @@ Over the last few months, many people have conducted instructional courses virtu
 
 
 [online]: https://docs.carpentries.org/topic_folders/hosts_instructors/resources_for_online_workshops.html#
+[online syllabus]: http://sesync.us/si
 [Carpentries]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
 [Central Queensland University]: https://www.youtube.com/watch?v=MzsJyOkxqv8
 
