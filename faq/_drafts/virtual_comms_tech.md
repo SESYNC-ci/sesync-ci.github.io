@@ -1,6 +1,7 @@
 ---
 title: "Technological Options for Virtual Team Communication"
 tags:
+ - Remote Participants
  - Zoom
  - Slack
 author: rblake
