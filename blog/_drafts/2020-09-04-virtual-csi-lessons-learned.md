@@ -35,7 +35,10 @@ Over the last few months, many people have conducted instructional courses virtu
 - teams that were already somewhat established made a lot of progress (some of the newer teams less progress in the virtual format)
 - several teams met with one another on their own time to discuss potentially overlapping research...great!
 
-![](/assets/images/SI_Projects_2020.jpg)
+<figure>
+  <img src="{{site.url}}/assets/images/SI_Projects_2020.jpg" />
+  <figcaption>Snippets of team projects from Summer Institute 2020.</figcaption>
+</figure>
 
 ### What didn't quite work as expected:
 
