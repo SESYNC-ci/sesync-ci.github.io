@@ -11,7 +11,7 @@ Over the last few months, many people have conducted instructional courses virtu
 
 ![](/assets/images/Summer_Institute_2020.png)
 
-### Our instructional set-up: 
+### Our instructional set-up for the [2020 Computational Summer Institute]: 
 
 - [online syllabus] with links to course information, all lesson materials, and pre-course information 
 - each lesson completely in text form as a website
@@ -26,7 +26,7 @@ Over the last few months, many people have conducted instructional courses virtu
 ### What worked as expected: 
 
 - combination of tools for collaborative virtual work was successful (Slack, Zoom, etc.)
-- participants introducted themselves on the Slack #welcome channel, and made some connections across teams
+- participants introduced themselves on the Slack #welcome channel, and made some connections across teams
 - teams liked using Slack to chat during the course; it proved a productive tool
 - participants used Slack to ask questions of the instructors or tell instructors of problems with lessons
 - recording office hours in Zoom allowed those with slower/intermittent internet connections to view the videos later
@@ -49,8 +49,8 @@ Over the last few months, many people have conducted instructional courses virtu
 - Participants didn't fill out the polls for what lesson exercises they wanted to cover in office hours.  We therefore stopped putting out the polls, but after the course received feedback that participants expected us to walk through the exercises.   
 - During in-person courses, we used to use daily stickies (one sticky for positive comments, one sticky for struggles that day).  We created daily channels in Slack, but did not have a good way of assessing participants on a daily basis.
 - After the course, we received the feedback that it was unclear how to apply the lesson material to their own project.  We provided ample office hours time, and participants didn't ask us this during office hours.  
-- Participants didn't block off the entire week for this course, as we had expected them to.  This made it incredibly difficult to foster a community among participants, because many people did not call in to the "all participants" course meetings.  
-- Most participants kept their video off most of the time.  This did not foster community, was inconsiderate of their instructors and fellow participants, and made it hard to read participants (no non-verbal communication).   
+- A few participants didn't block off the entire week for this course, as we had expected them to when the course was advertised.  This made it difficult to foster a community among participants, because the "all participants" course meetings did not benefit from the input of everyone.  
+- A lot of participants kept their video off most of the time.  This did not foster community, and inhibited non-verbal communication with instructors and fellow participants.  It also made it really hard for the instructors to get to know the participants.  
 
 ![](/assets/images/improvement.png)
 
@@ -68,6 +68,6 @@ Over the last few months, many people have conducted instructional courses virtu
 [online syllabus]: http://sesync.us/si
 [Carpentries]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
 [Central Queensland University]: https://www.youtube.com/watch?v=MzsJyOkxqv8
-
+[2020 Computational Summer Institute]: https://www.sesync.org/opportunities/short-courses/summer-institute-on-cyberinfrastructure-for-socio-environmental
 
 
