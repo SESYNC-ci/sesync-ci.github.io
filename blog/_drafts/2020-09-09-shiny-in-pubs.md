@@ -22,7 +22,7 @@ Instead of linking to a "live" version of an app on a server, consider directing
 
 ## Publish underlying data
 
-Datasets used in your application should also have their own DOI, obtained from an appropriate DOI-issuing repository such as FigShare, Zenodo, Dryad, or a domain-specific repository[^5]. Although a minimal amount of data can be stored along with the code in a GitHub repository, hosting the data in an appropriate repository will enable greater re-use, visibility, and ahderence to metadata standards. 
+Datasets used in your application should also have their own DOI, obtained from an appropriate DOI-issuing repository such as FigShare, Zenodo, Dryad, or a domain-specific repository[^5]. Although a minimal amount of data can be stored along with the code in a GitHub repository, hosting the data in an appropriate repository will enable greater re-use, visibility, and adherence to metadata standards. 
  
 
 [^1]: See [this post](https://cyberhelp.sesync.org/blog/shiny-sharing.html) to learn about getting your app on the web to begin with.
