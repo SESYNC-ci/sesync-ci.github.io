@@ -56,7 +56,7 @@ These are focused on academic personal sites but could be used for other purpose
 
 ## Example sites that use GitHub Pages
 
-- [The SESYNC Cyberhelp website]! 
+- The SESYNC Cyberhelp website! 
   + [link to site](https://cyberhelp.sesync.org)
   + [link to source code on GitHub](https://github,com/SESYNC-ci/sesync-ci.github.io)
   + Check out the [readme document](https://github.com/SESYNC-ci/sesync-ci.github.io/blob/master/README.md) for the structure and [contributing instructions](https://github.com/SESYNC-ci/sesync-ci.github.io/blob/master/CONTRIBUTING.md) for more about how we modify content.
