@@ -23,15 +23,16 @@ To sync changes to the application between your working directory (which we will
 ## Managing package dependencies
 To make sure all packages your application needs are installed on the SESYNC shiny server, please follow these steps.
 
-1. Create a dependencies.R file in your project. This R script should verify that each required package is installed and exceeds the minimum package version requirement. Specify the version of the package used in your development as the minimum version. Missing or out of date packages must be installed by the script and then loaded. Here is such a script that requires the "dplyr", "raster", and "ggplot2" packages.
+1. Create a dependencies.R file in your project. This R script should verify that each required package is installed and exceeds the minimum package version requirement. Specify the version of the package used in your development as the minimum version. Missing or out of date packages must be installed by the script and then loaded. Here is such a script that requires the "dplyr", "raster",  "leaflet", and "ggplot2" packages. For development versions of packages or those not on CRAN, provide the repository address in the format `username/repo` 
 
 ```
 # List the package and version as below
 dependencies <- read.csv(textConnection("
-  Package,     Min.Version
-  dplyr,       0.5.0
-  raster,      2.5.8
-  ggplot2,     2.0.1
+  Package,     Min.Version, repo
+  dplyr,       0.5.0,
+  raster,      2.5.8,
+  leaflet,     2.0.0.9000, rstudio/leaflet
+  ggplot2,     2.0.1,
   "), stringsAsFactors = FALSE, strip.white = TRUE)
 
 ## No changes necessary below. ##
@@ -48,13 +49,14 @@ pkgs <- merge(dependencies, pkgs, by="Package", all.x=TRUE)
 pkgs <- pkgs[mapply(compareVersion, pkgs$Min.Version, pkgs$Version) > 0, ]
 
 # Install missing and newer packages
-cran <- pkgs[pkgs$source=='CRAN', ]
-null <- lapply(cran$Package, install.packages)
-github <- pkgs[pkgs$source=='github', ]
-null <- lapply(cran$Package, devtools::install_github)
+cran <- pkgs[is.na(pkgs$repo), ]
+lapply(cran$Package, install.packages)
+github <- pkgs[!is.na(pkgs$repo), ]
+lapply(github$repo, devtools::install_github)
 
 # Require dependencies [optional]
 lapply(dependencies$Package, require, character.only=TRUE)
 ```
+
 
 2. Add "source(dependencies.R)" to the top of your __app.R__ single-file Shiny script.
