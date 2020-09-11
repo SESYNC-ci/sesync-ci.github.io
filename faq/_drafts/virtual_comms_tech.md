@@ -9,7 +9,7 @@ author: rblake
   
 In our all-virtual work world now, it can be very useful to have multiple ways of communicating with your team.  Having multiple lines of communication can provide for all people to have input in a way they are comfortable with, and foster asynchronous collaboration.  It also makes the work of your team more transparent to all participants.  
 
-There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few examples of how teams or SESYNC staff has effectively used these tech solutions.
+There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few examples of how teams or SESYNC staff have effectively used these tech solutions.  If you'd like more details and examples, please see our quickstart [XXX]().
 
 ----------------------------
 
@@ -19,7 +19,7 @@ Note: The asterisk(*) indicates at least one SESYNC team is using this technolog
 
 ### Video Calls
 
-Video calls allow you to meet virtually and see the other participants via video.  Most also allow participation via phone (without video) as well.  
+Video calls allow you to meet virtually and see the other participants via video.  Most also allow participation via phone (without video) as well.  Check out features such as call length, group calling, screen sharing, and recording that might be useful to your team. 
 
  - Zoom*
  - WebEx
@@ -28,16 +28,16 @@ Video calls allow you to meet virtually and see the other participants via video
  
 ### Messaging
 
-Messaging can be an important alternate way to communicate, both during and between video calls.
+Messaging can be an important alternate way to communicate, both during and between video calls.  Consider whether or not team members are comfortable using their personal cellphone for texting or messaging.  Be sure to discuss expected responsiveness to messages.  
 
  - [Slack*](https://slack.com/)
  - [Microsoft Teams*](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software)
- - Consider Whattsapp or texting* (if your team members are comfortable sharing their phone numbers)
- - Also consider phone calls* (again, only if your team is willing to share their phone numbers)
+ - Consider Whattsapp or texting* (if your team members are comfortable sharing their personal cellphone phone numbers)
+ - Also consider phone calls* (again, only if your team is willing to share their personal cellphone phone numbers)
  
 ### Document Creation/Editing/Storage
 
-Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  
+Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  In addition to the storage we provide at [files.sesync.org](files.sesync.org), these solutions include options such as simultaneous document editing, cloud storage, and document history.  
 
  - [Etherpad](https://etherpad.org/)
  - [Google Drive*](https://www.google.com/intl/en/drive/)
@@ -47,7 +47,7 @@ Storing and sharing documents in one centralized place is important in collabora
  
 ### Project/Workflow Management
 
-Managing tasks and deadlines can be aided by using project management solutions.  
+Managing tasks and deadlines can be aided by using project management solutions.  Capabilities and options vary widely but can include workflow development/documentation, assignment of tasks to team members, setting deadlines for tasks, tracking progress towards completion of a task, and discussion of issues. 
 
  - [Open Science Framework](https://osf.io/)*
  - [Whole Tale](https://wholetale.org/)
@@ -58,22 +58,14 @@ Managing tasks and deadlines can be aided by using project management solutions.
 
 ### Brainstorming/Diagramming
 
-"Whiteboard" technology can aid in brainstorming or diagramming exercises in an all-virtual setting.  
+"Whiteboard" technology can aid in brainstorming or diagramming exercises in an all-virtual setting.  These solutions attempt to replace drawing on a whiteboard with markers in physical space.  
 
  - [MURAL](https://www.mural.co/)
 
 
 # How might my team effectively use these tech solutions? 
 
-### Minimally technical team 
- - Use email, and track changes in MSWord. Use phone calls, maybe with multiple team members. 
-
-### Team willing to use some technological solutions
- - Use Zoom for meetings, Google Docs for editing files, and phone calls for additional communication.
- 
-### Technologically savvy team
- - Use GitHub to manage project, Google Drive to share/edit docs, Slack to chat, and Zoom to video conference. 
- 
+Please see our [quickstart]() for deep dives into effectively using suite of solutions throughout your team's project.  
   
 # Anecdotes from SESYNC teams
  - _Asynchronous collaboration has been useful - it has been difficult to move from Google Drive to Microsoft Teams, but the asynchronous aspect works well._ - Systems of Systems Pursuit
@@ -82,9 +74,4 @@ Managing tasks and deadlines can be aided by using project management solutions.
  
  - _A combination of short Zoom meetings with discussion in Google Docs to refine research questions proved useful.  Team members did not engage on Zoom meetings, but lots of engagement on the Google Docs._ - Diversity in Eco-Function Pursuit 
  
-# Looking for more detailed tips on how to engage your team virtually? 
-
-Check out our XXXXX on the cyberhelp website.  
-
-
-
+ - _Trello has helped us to manage our work plan in advance of our workshop._ - Urban Nature Latin America Workshop 
