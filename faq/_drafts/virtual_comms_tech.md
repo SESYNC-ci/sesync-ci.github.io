@@ -64,7 +64,7 @@ Managing tasks and deadlines can be aided by using project management solutions.
 
 # How might my team effectively use these tech solutions? 
 
-Please see our [quickstart]() for deep dives into effectively using a suite of solutions throughout your team's project.  
+Please see our related [quickstart](https://cyberhelp.sesync.org/quickstart/) for deep dives into effectively using a suite of solutions throughout your team's project.  
   
 # Anecdotes from SESYNC teams
  - _Asynchronous collaboration has been useful - it has been difficult to move from Google Drive to Microsoft Teams, but the asynchronous aspect works well._ - Systems of Systems Pursuit
