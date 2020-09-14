@@ -2,7 +2,7 @@
 title: Jupyter Server
 tags:
  - Python
- sticky: true
+sticky: true
 ---
 
 SESYNC provides access to remote JupyterLab sessions via a web browser. The
