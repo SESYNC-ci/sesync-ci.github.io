@@ -61,6 +61,7 @@ Managing tasks and deadlines can be aided by using project management solutions.
 "Whiteboard" technology can aid in brainstorming or diagramming exercises in an all-virtual setting.  These solutions attempt to replace drawing on a whiteboard with markers in physical space.  
 
  - [MURAL](https://www.mural.co/)
+ - [Jamboard](https://edu.google.com/products/jamboard/?modal_active=none)
 
 # How might my team effectively use these tech solutions? 
 
