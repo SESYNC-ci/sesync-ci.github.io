@@ -21,10 +21,10 @@ Note: The asterisk(*) indicates at least one SESYNC team is using this technolog
 
 Video calls allow you to meet virtually and see the other participants via video.  Most also allow participation via phone (without video) as well.  Check out features such as call length, group calling, screen sharing, and recording that might be useful to your team. 
 
- - Zoom*
- - WebEx
- - Skype
- - GoToMeeting
+ - [Zoom*](https://zoom.us/)
+ - [WebEx](https://www.webex.com/)
+ - [Skype](https://www.skype.com/en/)
+ - [GoToMeeting](https://www.goto.com/meeting)
  
 ### Messaging
 
