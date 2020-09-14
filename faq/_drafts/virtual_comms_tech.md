@@ -9,7 +9,7 @@ author: rblake
   
 In our all-virtual work world now, it can be very useful to have multiple ways of communicating with your team.  Having multiple lines of communication can provide for all people to have input in a way they are comfortable with, and foster asynchronous collaboration.  It also makes the work of your team more transparent to all participants.  
 
-There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few examples of how teams or SESYNC staff have effectively used these tech solutions.  If you'd like more details and examples, please see our quickstart [XXX]().
+There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few examples of how teams or SESYNC staff have effectively used these tech solutions.  
 
 ----------------------------
 
@@ -37,7 +37,7 @@ Messaging can be an important alternate way to communicate, both during and betw
  
 ### Document Creation/Editing/Storage
 
-Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  In addition to the storage we provide at [files.sesync.org](files.sesync.org), these solutions include options such as simultaneous document editing, cloud storage, and document history.  
+Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  In addition to the storage we provide at [files.sesync.org](files.sesync.org), some of these solutions include options such as simultaneous document editing, cloud storage, and document history.  
 
  - [Etherpad](https://etherpad.org/)
  - [Google Drive*](https://www.google.com/intl/en/drive/)
@@ -62,10 +62,9 @@ Managing tasks and deadlines can be aided by using project management solutions.
 
  - [MURAL](https://www.mural.co/)
 
-
 # How might my team effectively use these tech solutions? 
 
-Please see our [quickstart]() for deep dives into effectively using suite of solutions throughout your team's project.  
+Please see our [quickstart]() for deep dives into effectively using a suite of solutions throughout your team's project.  
   
 # Anecdotes from SESYNC teams
  - _Asynchronous collaboration has been useful - it has been difficult to move from Google Drive to Microsoft Teams, but the asynchronous aspect works well._ - Systems of Systems Pursuit
