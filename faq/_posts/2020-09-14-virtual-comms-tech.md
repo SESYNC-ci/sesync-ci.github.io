@@ -1,5 +1,5 @@
 ---
-title: "Technological Options for Virtual Team Communication"
+title: "What technological options exist for virtual team communication?"
 tags:
  - Remote Participants
  - Zoom
