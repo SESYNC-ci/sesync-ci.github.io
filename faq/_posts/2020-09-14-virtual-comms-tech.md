@@ -9,7 +9,7 @@ author: rblake
   
 In our all-virtual work world now, it can be very useful to have multiple ways of communicating with your team.  Having multiple lines of communication can provide for all people to have input in a way they are comfortable with, and foster asynchronous collaboration.  It also makes the work of your team more transparent to all participants.  
 
-There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few examples of how teams or SESYNC staff have effectively used these tech solutions.  
+There are many technological solutions out there, but figuring out what the options are, and how to use them effectively in combination may be more difficult.  Here we list some tech options, and provide a few anecdotes from SESYNC teams or staff who have used these tech solutions.  
 
 ----------------------------
 
