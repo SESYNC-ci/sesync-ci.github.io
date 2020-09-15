@@ -13,7 +13,7 @@ There are many technological solutions out there, but figuring out what the opti
 
 ----------------------------
 
-# What tech is available and what have other SESYNC teams been using?
+## What tech is available and what have other SESYNC teams been using?
 
 Note: The asterisk(*) indicates at least one SESYNC team is using this technology solution.
 
@@ -63,11 +63,11 @@ Managing tasks and deadlines can be aided by using project management solutions.
  - [MURAL](https://www.mural.co/)
  - [Jamboard](https://edu.google.com/products/jamboard/?modal_active=none)
 
-# How might my team effectively use these tech solutions? 
+## How might my team effectively use these tech solutions? 
 
 Please see our related [quickstart](https://cyberhelp.sesync.org/quickstart/) for deep dives into effectively using a suite of solutions throughout your team's project.  
   
-# Anecdotes from SESYNC teams
+## Anecdotes from SESYNC teams
  - _Asynchronous collaboration has been useful - it has been difficult to move from Google Drive to Microsoft Teams, but the asynchronous aspect works well._ - Systems of Systems Pursuit
 
  - _We had good success using Slack and Zoom to teach a course this summer.  We also used pre-recorded videos for asynchronous information delivery._ - SESYNC Data Science Team
