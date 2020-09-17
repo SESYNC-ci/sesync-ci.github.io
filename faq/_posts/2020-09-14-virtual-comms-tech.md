@@ -4,6 +4,10 @@ tags:
  - Remote Participants
  - Zoom
  - Slack
+ - Zotero
+ - GitLab
+ - GitHub
+ - Meeting
 author: rblake
 ---
   
