@@ -44,7 +44,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
  
 ## Team Urban Trees
 
-<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250" border="10"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  <br>
+<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250" hspace="20"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  <br>
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -69,7 +69,7 @@ Manage communication on sub-projects; keep everyone connected/informed but not o
  
 ## Team Global Fisheries 
 
-<img align="left" src="/assets/images/Fisheries-people.jpg" width="250" border="10"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.  <br>
+<img align="left" src="/assets/images/Fisheries-people.jpg" width="250" hspace="20"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.  <br>
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
