@@ -13,7 +13,7 @@ author: rblake
 ---
 
 
-How might my team effectively use tech solutions to streamline collaborative work throughout our project?  We frequently get asked about the nitty gritty of virtual collaboration throughout the duration of a synthesis project. These deep dives into how your team might utilize tech solutions in different phases of your project provide a few examples.  Please note that these are just examples and your mileage may vary, however, a few key points apply broadly.  
+How might my team effectively use tech solutions to streamline collaborative work?  We frequently get asked about the nitty gritty of virtual collaboration throughout the duration of a synthesis project. These deep dives into how your team might utilize tech solutions in different phases of your project provide a few examples.  Please note that these are just examples and your mileage may vary, however, a few key points apply broadly.  
 
 - Provide redundancy; anticipate using a combination of tools to meet each of your team’s needs
 
@@ -31,7 +31,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
-| Create team cohesion and trust, and learn about your team members’ expertise and capabilities | Use an ice breaker or team building exercise (ex: https://symondsresearch.com/icebreakers-for-online-teaching/) |
+| Create team cohesion and trust, and learn about your team members’ expertise and capabilities | Use an ice breaker or team building exercise; [examples from Symond's research](https://symondsresearch.com/icebreakers-for-online-teaching/) |
 | Team members introduce themselves and have topical conversations | Set up a Slack workspace with a “welcome” channel for intros; create other custom channels as your team needs |
 | Develop team goals with shared expectations | Use Etherpad, Google Docs, or other online collaborative editing document |
 | Keep momentum going | Use recurring Zoom meetings; make use of breakout rooms feature to have dedicated discussions but be careful to share conclusions with entire team |
@@ -43,7 +43,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
  
 ## Team Urban Trees
 
-<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  <br>
+<kbd><img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250"/></kbd>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  <br>
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
