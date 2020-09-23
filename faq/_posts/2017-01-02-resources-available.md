@@ -10,11 +10,10 @@ tags:
 sticky: true
 ---
 
-SESYNC has an extensive set of computing resources and expertiese available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the tables below for a quick reference. **Direct all questions to {{ site.email }}.**
+SESYNC has an extensive set of computing resources and expertise available for researchers. Download a [high-level overview] of all services and support SESYNC offers for general information, or scan the tables below for a quick reference. **Direct all questions to {{ site.email }}.** 
 
 | Resource                     | URL                                  |
 |------------------------------|--------------------------------------|
-| [Mailing List]               | <https://lists.sesync.org>           |
 | [Code Repository]            | <https://gitlab.sesync.org>          |
 | [Research Data Directory]    | <https://files.sesync.org>           |
 | [RStudio]                    | <https://rstudio.sesync.org>         |
@@ -23,6 +22,8 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | SSH Gateway                  | ```<USERNAME>@ssh.sesync.org```      |
 | [MySQL/PostgreSQL Database]  | ```<HOSTNAME>.research.sesync.org``` |
 | Remote Desktop               | <https://desktop.sesync.org>         |
+
+To set up a mailing list for your group, we recommend using [Google Groups](https://support.google.com/groups/).
 
 | Service                 | Description |
 |-------------------------|-------------|
@@ -33,7 +34,6 @@ SESYNC has an extensive set of computing resources and expertiese available for 
 | Slurm Cluster           | High-performance computing cluster for running parallel jobs. Integrated with R through the [rslurm package]. |
 
 [high-level overview]: http://sesync.us/itresearchresources
-[Mailing List]: {{ '/quickstart/Creating-an-Email-Group-List.html' | relative_url }}
 [Code Repository]: {{ '/quickstart/creating-a-new-git-project.html' | relative_url }} 
 [Research Data Directory]: {{ '/quickstart/research-data-directory.html' | relative_url }}
 [RStudio]: {{ '/quickstart/rstudio-server.html' | relative_url }}
