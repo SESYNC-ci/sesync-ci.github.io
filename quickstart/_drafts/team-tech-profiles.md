@@ -43,7 +43,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
  
 ## Team Urban Trees
 
-<img src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250" style="display: inline-block; margin: 0"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.
+<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -55,7 +55,7 @@ Resolving particular tasks/issues virtually | Use video/phone call technology th
  
 ## Team Sustainable Groundwater 
 
-<img src="/assets/images/groundwater.png" height="250" style="display: inline-block; margin: 0"/>  This team had three meetings at SESYNC already and they are in the midst of writing two manuscripts. They both rely on the new synthesized dataset their team produced, which they are intending to publish independently and cite in both papers. A different combination of team members is involved in each paper, and the PIs are working on a policy brief for state agencies. One of the PIs is also working with a few team members to outline a proposal that would fund some follow-up studies to collect data that would help address research gaps identified in the project. During in-person meetings at SESYNC, the team had developed a productive work routine, but now the PIs are unsure how to tell whether progress is being made or if momentum has been lost.
+<img align="left" src="/assets/images/groundwater.png" height="250"/>  This team had three meetings at SESYNC already and they are in the midst of writing two manuscripts. They both rely on the new synthesized dataset their team produced, which they are intending to publish independently and cite in both papers. A different combination of team members is involved in each paper, and the PIs are working on a policy brief for state agencies. One of the PIs is also working with a few team members to outline a proposal that would fund some follow-up studies to collect data that would help address research gaps identified in the project. During in-person meetings at SESYNC, the team had developed a productive work routine, but now the PIs are unsure how to tell whether progress is being made or if momentum has been lost.
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -68,7 +68,7 @@ Manage communication on sub-projects; keep everyone connected/informed but not o
  
 ## Team Global Fisheries 
 
-<img src="/assets/images/Fisheries-people.jpg" width="250" style="display: inline-block; margin: 0"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.
+<img align="left" src="/assets/images/Fisheries-people.jpg" width="250"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
