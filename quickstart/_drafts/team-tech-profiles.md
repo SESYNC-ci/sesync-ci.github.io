@@ -27,7 +27,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
 
 ## Team Agriculture Sustainability 
 
-<img align="left" src="/assets/images/agriculture-sustainability.jpg" width="250" height="250"/>  This team was scheduled to have their first Pursuit meeting at SESYNC in September. Most of the team members hadn’t met each other before, so the PIs were really looking forward to getting to know the 6 other team members through conversations over dinner and some site-seeing around Annapolis. In their first meeting, the team was planning on narrowing down their case study selection (based on feedback in proposal reviews) and deciding between two commonly used modeling approaches from different fields for a substantial part of the data analysis. Since re-strategizing for an online meeting, the PIs are having a hard time assessing whether the level of commitment and enthusiasm for the project has changed—some team members only respond to emails after a few reminders and another has new teaching responsibilities that might interfere with scheduled meeting times.
+<img align="left" src="/assets/images/agriculture-sustainability.jpg" width="250" height="250"/>  This team was scheduled to have their first Pursuit meeting at SESYNC in September. Most of the team members hadn’t met each other before, so the PIs were really looking forward to getting to know the 6 other team members through conversations over dinner and some site-seeing around Annapolis. In their first meeting, the team was planning on narrowing down their case study selection (based on feedback in proposal reviews) and deciding between two commonly used modeling approaches from different fields for a substantial part of the data analysis. Since re-strategizing for an online meeting, the PIs are having a hard time assessing whether the level of commitment and enthusiasm for the project has changed—some team members only respond to emails after a few reminders and another has new teaching responsibilities that might interfere with scheduled meeting times.  
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -43,7 +43,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
  
 ## Team Urban Trees
 
-<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.
+<img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -55,7 +55,7 @@ Resolving particular tasks/issues virtually | Use video/phone call technology th
  
 ## Team Sustainable Groundwater 
 
-<img align="left" src="/assets/images/groundwater.png" height="250"/>  This team had three meetings at SESYNC already and they are in the midst of writing two manuscripts. They both rely on the new synthesized dataset their team produced, which they are intending to publish independently and cite in both papers. A different combination of team members is involved in each paper, and the PIs are working on a policy brief for state agencies. One of the PIs is also working with a few team members to outline a proposal that would fund some follow-up studies to collect data that would help address research gaps identified in the project. During in-person meetings at SESYNC, the team had developed a productive work routine, but now the PIs are unsure how to tell whether progress is being made or if momentum has been lost.
+<img align="left" src="/assets/images/groundwater.png" height="250"/>  This team had three meetings at SESYNC already and they are in the midst of writing two manuscripts. They both rely on the new synthesized dataset their team produced, which they are intending to publish independently and cite in both papers. A different combination of team members is involved in each paper, and the PIs are working on a policy brief for state agencies. One of the PIs is also working with a few team members to outline a proposal that would fund some follow-up studies to collect data that would help address research gaps identified in the project. During in-person meetings at SESYNC, the team had developed a productive work routine, but now the PIs are unsure how to tell whether progress is being made or if momentum has been lost.  
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
@@ -68,19 +68,15 @@ Manage communication on sub-projects; keep everyone connected/informed but not o
  
 ## Team Global Fisheries 
 
-<img align="left" src="/assets/images/Fisheries-people.jpg" width="250"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.
+<img align="left" src="/assets/images/Fisheries-people.jpg" width="250"/>  This team has collaborators from six time zones across the Global South – a strength that they leveraged for acquiring detailed datasets and necessary expertise across their focal study areas, but definitely a weakness when it comes to scheduling meetings. The PIs have started trading off leading meetings based on who it is a “normal” time for, however attempting to find the meeting time that works for the most people inevitably seems to leave out the same two people. A few of the team members also often have unpredictable interruptions during meetings, either from limited internet bandwidth or needing to help children with online classes.  
 
 | Issue/Goal | Technology Solution |
 | :--------- | :------------------ |
-| Asynchronous composition/editing of documents/manuscripts | Use Google Docs 
-Consider offline ways of collaborative writing to accommodate those without stable internet; working on smaller text sections over email, for example | 
+| Asynchronous composition/editing of documents/manuscripts | Use Google Docs <br> Consider offline ways of collaborative writing to accommodate those without stable internet; working on smaller text sections over email, for example | 
 | Asynchronous coding | Use git and GitLab/GitHub | 
-| Asynchronous transparent communication | Use Slack; utilize Slack channels to organize discussion around each topic/sub-project/paper   
-Use Whatsapp; widely used even in areas without stable internet; utilize groups to organize topical conversations  
-Use email to share meeting notes or manuscript drafts; especially useful for including those without reliable internet connections |
+| Asynchronous transparent communication | Use Slack; utilize Slack channels to organize discussion around each topic/sub-project/paper <br><br> Use Whatsapp; widely used even in areas without stable internet; utilize groups to organize topical conversations <br><br> Use email to share meeting notes or manuscript drafts; especially useful for including those without reliable internet connections |
 | Assistance in scheduling meetings | Use polling with good support for timezones (when2meet, whenisgood, Doodle, etc.) and world clock (e.g. timeanddate.com) | 
-| Share burden of early morning/late night meeting times | Rotate meeting time/day because not all team members can attend at the same time  
-Consider more frequent meetings within similar time zones, and fewer all-group meetings across all time zones  
+| Share burden of early morning/late night meeting times | Rotate meeting time/day because not all team members can attend at the same time <br><br> Consider more frequent meetings within similar time zones, and fewer all-group meetings across all time zones  
 
 ---------------- 
 
