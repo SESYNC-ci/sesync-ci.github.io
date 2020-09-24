@@ -13,7 +13,6 @@ author:
  - khondula
 ---
 
-
 How might my team effectively use tech solutions to streamline collaborative work?  We frequently get asked about the nitty gritty of virtual collaboration throughout the duration of a synthesis project. These deep dives into how your team might utilize tech solutions in different phases of your project provide a few examples.  Please note that these are just examples and your mileage may vary, however, a few key points apply broadly.  
 
 - Provide redundancy; anticipate using a combination of tools to meet each of your team’s needs
@@ -24,9 +23,11 @@ How might my team effectively use tech solutions to streamline collaborative wor
 
 - Remain flexible; be willing to try different technology arrangements; if it’s not working for your team, switch it up
 
+**Disclaimer:** No actual SESYNC pursuit teams were contacted or used to create the faux teams below.  Any resemblance to a specific pursuit team is purely coincidental.  
+
 ---------------- 
 
-## Team Agriculture Sustainability 
+## Team Environmental Agriculture 
 
 <img align="left" src="/assets/images/agriculture-sustainability.jpg" width="250" height="250"/>  This team was scheduled to have their first Pursuit meeting at SESYNC in September. Most of the team members hadn’t met each other before, so the PIs were really looking forward to getting to know the 6 other team members through conversations over dinner and some site-seeing around Annapolis. In their first meeting, the team was planning on narrowing down their case study selection (based on feedback in proposal reviews) and deciding between two commonly used modeling approaches from different fields for a substantial part of the data analysis. Since re-strategizing for an online meeting, the PIs are having a hard time assessing whether the level of commitment and enthusiasm for the project has changed—some team members only respond to emails after a few reminders and another has new teaching responsibilities that might interfere with scheduled meeting times.  <br>
 
@@ -42,7 +43,7 @@ How might my team effectively use tech solutions to streamline collaborative wor
 
 ---------------- 
  
-## Team Urban Trees
+## Team City Parks
 
 <img align="left" src="/assets/images/city-bench-oak-tree.jpg" width="250" height="250" hspace="20"/>  This team was planning on having their third pursuit meeting over the summer, where they were going to integrate data analysis that team members had been working on independently. They wanted to re-run some code on an updated data set, but had been running into some problems because the new data is formatted differently and someone had identified a few bugs in one of the workflows. The team has had some turnover in participants since their first meeting, and a few different postdocs and graduate students have been involved at various stages of the project, so it’s difficult to keep track of who has the latest updated version of files and why some changes were made.  <br>
 
@@ -54,7 +55,7 @@ Resolving particular tasks/issues virtually | Use video/phone call technology th
 
 ---------------- 
  
-## Team Sustainable Groundwater 
+## Team Healthy Groundwater 
 
 <img align="left" src="/assets/images/groundwater.png" height="250"/>  This team had three meetings at SESYNC already and they are in the midst of writing two manuscripts. They both rely on the new synthesized dataset their team produced, which they are intending to publish independently and cite in both papers. A different combination of team members is involved in each paper, and the PIs are working on a policy brief for state agencies. One of the PIs is also working with a few team members to outline a proposal that would fund some follow-up studies to collect data that would help address research gaps identified in the project. During in-person meetings at SESYNC, the team had developed a productive work routine, but now the PIs are unsure how to tell whether progress is being made or if momentum has been lost.  <br>
 
