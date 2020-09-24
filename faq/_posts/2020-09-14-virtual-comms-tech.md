@@ -66,6 +66,7 @@ Managing tasks and deadlines can be aided by using project management solutions.
 
  - [MURAL](https://www.mural.co/)
  - [Jamboard](https://edu.google.com/products/jamboard/?modal_active=none)
+ - [Zoom](https://support.zoom.us/hc/en-us/articles/205677665-Sharing-a-whiteboard)
 
 ## How might my team effectively use these tech solutions? 
 
