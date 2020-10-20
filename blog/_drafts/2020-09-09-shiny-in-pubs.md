@@ -1,5 +1,5 @@
 ---
-title: "Linking to RShiny apps in publications"
+title: "Only you can prevent link rot"
 tags:
  - Shiny
  - R
