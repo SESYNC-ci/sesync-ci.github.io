@@ -19,3 +19,19 @@ number of nodes x number of hours of the eeio job before optimization
 number of nodes x number of hours of the eeio job after optimization
 average GHG intensity of electricity generation in Maryland
 equivalent power consumption and GHG emissions for comparable activities (driving a car, streaming Netflix)
+
+Numbers so far
+==============
+
+Optimized code: Extra setup script ran on 1 processor for 1066 seconds. Then the uncertainty analysis took 29 seconds to run 100 iterations. (232 processor seconds, so 2.32 seconds per iteration)
+
+Unoptimized code: No extra setup script. Then the uncertainty analysis took 158 seconds to run 3 iterations, and 2756 seconds to run 100 iterations. (22048 processor seconds, so 220.48 seconds per iteration)
+
+Calculation:
+
+`((2756*8*100)-(29*8*100 + 1066))/3600`
+
+Result: 606 processor-hours saved
+Optimized code ran 6:45 processor-hours
+Unoptimized code ran 612:30 processor-hours
+
