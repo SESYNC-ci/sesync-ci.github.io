@@ -14,7 +14,7 @@ author: khondula
 
 The average half life for a typical URL is 2 years, meaning that any link you come across in a journal article has a high probability of bringing you to a "content not found" 404 error. Investigations of this phenomenon, dubbed "link rot", find around 30-40% of web links in published articles are inaccessible[^2]. This is a predictable outcome given that websites undergo periodic reorganization, researchers move institutions, and hardware gets replaced. Some content is incidentally preserved through automated archive engines, however this does not apply to material that is copyrighted, behind paywalls, or websites that include code to prevent indexing. And for dynamic websites like Shiny apps, archive engines can only capture the design of the landing page not their interactive elements. 
 
-## Content drift
+### Content drift
 
 Website content is also constantly changing, so there is always some degree of uncertainty whether the information at a given URL is the same as what was intended to be referenced. A 1999 study showed that 50% of websites ending in `.com` substantially change content every 11 days, and 50% of `.gov` pages change within 4 months, and a more recent study in 2016 found that 75% of references to web content in scientific articles linked to content that was changed from when it was referenced[^3]. If a dataset was downloaded from an online web portal, it may not be possible to tell whether the underlying data was updated since it was used.    
 
