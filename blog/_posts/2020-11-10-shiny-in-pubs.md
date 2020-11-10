@@ -6,7 +6,11 @@ tags:
 author: khondula
 ---
 
+<<<<<<< HEAD
 ![](/assets/images/only-you.jpg){: align="left" style="padding-right: 25px" width="250px" alt="smokey-psa"} Links to content on the web are increasingly common in published papers&emdash; sometimes as cited references, but more often appearing elsewhere in the article. This includes links to web applications, such as those created with RShiny, where readers can explore data, models, and visualizations of results presented in a manuscript through dynamic content and interactive websites created by the authors. Web applications may even be the main focus of a paper, such as description of software like a decision support tool. Although interactive content and visualizations have great potential to enhance communication and engagement around the topic of an article, current practice has raised alarm as a significant step backwards in the trajectory of scientific publishing because of the amount of information that is likely to become inaccessible or lost within a relatively short period of time[^1]. Read on if you are considering linking to a Shiny app in a publication!
+=======
+Links to content on the web are increasingly common in published papers&mdash; sometimes as cited references, but more often appearing elsewhere in the article. This includes links to web applications, such as those created with RShiny, where readers can explore data, models, and visualizations of results presented in a manuscript through dynamic content and interactive websites created by the authors. Web applications may even be the main focus of a paper, such as description of software like a decision support tool. Although interactive content and visualizations have great potential to enhance communication and engagement around the topic of an article, current practice has raised alarm as a significant step backwards in the trajectory of scientific publishing because of the amount of information that is likely to become inaccessible or lost within a relatively short period of time[^1]. Read on if you are considering linking to a Shiny app in a publication!
+>>>>>>> 5ce783b264d324fd226813b421b0e1e5569383f9
 
 ## The Problem 
 
