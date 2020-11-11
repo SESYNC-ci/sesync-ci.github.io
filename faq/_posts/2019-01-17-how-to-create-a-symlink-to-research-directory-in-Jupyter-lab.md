@@ -28,4 +28,3 @@ file.symlink(from = '/nfs/cooltrees-data/', to = 'data')
 
 More details and context can also be found in this blog post about [reproducible R workflows](https://cyberhelp.sesync.org/blog/reproducible-r-workflow.html).  
 
-
