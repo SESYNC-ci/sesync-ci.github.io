@@ -6,7 +6,7 @@ tags:
 ---
 
 
-To publish a R shiny application on the SESYNC server, your files will need to be copied from your working directory to the shiny-apps-data shared folder (__/nfs/shiny-apps-data on RStudio Server__). Please contact SESYNC IT staff if you would like to host an app on SESYNC's Shiny Server.
+To publish a R shiny application on the SESYNC server, your files will need to be copied from your working directory to the shiny-apps-data shared folder (__/nfs/shiny-apps-data on RStudio Server__). Please contact SESYNC IT staff if you would like to host an app on SESYNC's Shiny Server for the duration of your project's lifecycle.
 
 ## Synchronizing changes between development and published version
 To sync changes to the application between your working directory (which we will call the _development version_ of the app) and shiny-apps-data (the _published version_), it is recommended that you use GitLab. Here are the basic steps:
