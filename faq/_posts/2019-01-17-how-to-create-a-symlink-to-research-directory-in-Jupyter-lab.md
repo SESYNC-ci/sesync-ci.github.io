@@ -1,8 +1,10 @@
 ---
-title: How to create a symlink to a research directory in Jupyter lab?
+title: How to create a symlink to a research directory in Jupyter lab or RStudio server?
 tags:
   - Python
   - Jupyter
+  - R
+  - RStudio
   - NFS
   - Data
 ---
