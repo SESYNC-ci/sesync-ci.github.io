@@ -14,7 +14,7 @@ To access and see your data directory for Jupyter or RStudio, it is best practic
 To access and view the files in your data directory from the side data console in Jupyter lab, you need to first set a symlink to your research data directory.  To do this, open a terminal tab from the Launcher. Then type the following command in the terminal to set the symlink.  Be sure to replace the ficticious team name "cooltrees" with the short name of your project.  
 
 ```
-ln -s /nfs/cooltrees-data cooltrees-data
+ln -s /nfs/cooltrees-data data
 ```
 Once this is set, you will be able to navigate to your research data directory from the data console in Jupyter lab.  This will show you same files you see when logging in to Nextcloud via the web browser. 
 
