@@ -3,7 +3,8 @@ title: Create Projects on GitLab
 tags: 
   - git
   - GitLab
-  - SSH
+  - SSH 
+  - RStudio
 ---
 
 SESYNC offers private git hosting through [our GitLab server](https://gitlab.sesync.org). When you connect to our GitLab Community Edition (CE) instance using your SESYNC username and password, you'll see a dashboard of recent activity on projects that you are part of. If this is your first time connecting, it may be a little quiet.

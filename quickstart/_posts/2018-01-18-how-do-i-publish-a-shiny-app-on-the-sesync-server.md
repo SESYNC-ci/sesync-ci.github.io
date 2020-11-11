@@ -59,4 +59,4 @@ lapply(dependencies$Package, require, character.only=TRUE)
 ```
 
 
-2\. Add "source(dependencies.R)" to the top of your __app.R__ single-file Shiny script.
+  2\. Add "source(dependencies.R)" to the top of your __app.R__ single-file Shiny script.

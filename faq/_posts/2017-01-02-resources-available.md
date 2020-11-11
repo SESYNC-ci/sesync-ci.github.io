@@ -7,6 +7,8 @@ tags:
  - Slurm
  - SSH
  - Zotero
+ - RStudio
+ - Jupyter
 sticky: true
 ---
 
