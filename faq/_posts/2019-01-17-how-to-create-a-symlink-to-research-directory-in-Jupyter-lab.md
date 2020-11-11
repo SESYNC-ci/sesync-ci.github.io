@@ -14,4 +14,4 @@ To do this, open a terminal notebook in Jupyter lab. The command to set the syml
 ln -s /nfs/PROJECTNAME-data PROJECTNAME-data
 ```
 
-Once this is set, you will be able to navigate to your research data directory from the data console in Jupyter lab, as well as, in R Studio.
+Once this is set, you will be able to navigate to your research data directory from the data console in Jupyter lab, as well as in the files tab in R Studio. This will show you same files you see when logging in to Nextcloud via the web browser.   
