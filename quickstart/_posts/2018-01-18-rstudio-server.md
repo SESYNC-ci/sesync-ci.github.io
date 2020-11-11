@@ -3,6 +3,7 @@ title: RStudio Server
 tags:
   - R
   - NFS
+  - RStudio
 sticky: true
 ---
 

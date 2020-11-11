@@ -3,6 +3,7 @@ title: Command-line Stata (from RStudio Server)
 tags:
   - RStata
   - Stata
+  - RStudio
   - Virtual Machine
   - SSH
 ---

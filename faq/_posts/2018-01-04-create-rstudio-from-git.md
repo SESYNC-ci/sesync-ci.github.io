@@ -3,6 +3,7 @@ title: How do I create an RStudio project with git?
 tags:
   - R
   - git
+  - RStudio
 ---
 
 RStudio projects are folders that contain project files and a special .Rproj file. To link an RStudio project with a git repository, follow these steps:
