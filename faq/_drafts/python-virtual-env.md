@@ -87,7 +87,7 @@ This will pop open a new tab/window, and you'll click "Stop My Server".
   
 Jupyter lab will then ask if you'd like to restart your server; click Restart.   
   
-<img align="left" width="300" height="100" src="/assets/images/server_not_running.PNG">
+<img align="left" width="450" height="105" src="/assets/images/server_not_running.PNG">
   
 Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up.   
   
