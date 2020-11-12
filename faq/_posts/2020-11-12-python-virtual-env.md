@@ -60,7 +60,7 @@ pipenv shell
 
 Next, add the kernel by running the following code.  Give your kernel a name and a display name of your choosing by replacing <"kernel name"> and <"My Official Kernel Name">. 
 
-```{}
+```
 python -m ipykernel install --user --name=<"kernel name"> --display-name=<"My Official Kernel Name">
 ```
 
