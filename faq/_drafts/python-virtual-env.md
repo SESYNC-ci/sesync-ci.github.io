@@ -87,11 +87,11 @@ This will pop open a new tab/window, and you'll click "Stop My Server".
 
 Jupyter lab will then ask if you'd like to restart your server; click Restart. 
 
-<img align="left" width="300" height="300" src="/assets/images/server_not_running.PNG">
+<img align="left" width="300" height="150" src="/assets/images/server_not_running.PNG">
 
 Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up. 
 
-<img align="left" width="400" height="400" src="/assets/images//assets/images/new-kernel.PNG">
+<img align="left" width="400" height="400" src="/assets/images/new-kernel.PNG">
 
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
