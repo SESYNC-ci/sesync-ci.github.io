@@ -5,7 +5,7 @@ tags:
  - Reproducible Research
 ---
 
-Collaborative coding can benefit from having everyone use the same computing environment, including the same versions of packages, data, and code.  In Python, this can be done using virtual environments.  You can create a virtual environment for each project or analysis, as long as they are in different directories.  On SESYNC's Jupyter server, it takes a little set-up to start using virtual envrionments.  
+Collaborative coding can benefit from having everyone use the same computing environment, including the same versions of packages, data, and code.  In Python, this can be done using virtual environments.  You can create a virtual environment for each project or analysis, as long as they are in different directories.  On SESYNC's Jupyter server, it takes a little set-up to start using virtual environments.  
 
 -----
 
