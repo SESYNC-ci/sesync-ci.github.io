@@ -9,7 +9,8 @@ Collaborative coding can benefit from having everyone use the same computing env
 
 -----
 
-### 1)
+### 1) Make a Pipfile
+
 A Pipfile stores the information about your virtual environment and the dependencies of your project.  It replaces the requirements.txt file that can be used in Python projects.  If you have a Pipfile already, use the terminal to change to the directory containing your Pipfile, and run this code to see the path to your virtual environment.  
 
 ```
@@ -22,7 +23,8 @@ If you don't have a Pipfile, change to the directory where you would like to cre
 pipenv install
 ```
 
-### 2)
+### 2) Check for ipykernel
+
 Take a look at the contents of the Pipfile, and see if it includes ipykernel.  You can view this file by typing `cat Pipfile` in your terminal, or by opening it through your file browser with any text editor.  Your Pipfile will look something like
 
 ```
@@ -46,18 +48,20 @@ If your Pipfile doesn't include ipykernel, run this code (it may take a few minu
 pipenv install ipykernel
 ```
 
-### 3) 
+### 3) Activate!
+
 Then you can activate your virtual environment by running
 
 ```
 pipenv shell
 ```
 
-### 4) 
-Next, add the kernel by running the following code.  Give your kernal a name and a display name of your choosing by replacing <"kernal name"> and <"My Official Kernal Name">. 
+### 4) Name your environment and make it available
 
-```{python}
-python -m ipykernel install --user --name=<"kernal name"> --display-name=<"My Official Kernel Name">
+Next, add the kernel by running the following code.  Give your kernel a name and a display name of your choosing by replacing <"kernel name"> and <"My Official Kernel Name">. 
+
+```{}
+python -m ipykernel install --user --name=<"kernel name"> --display-name=<"My Official Kernel Name">
 ```
 
 Confirm that you've added the kernel by running
@@ -76,10 +80,11 @@ Available kernels:
   python2        /usr/local/share/jupyter/kernels/python2
 ```
 
-### 5) 
-Now, you'll need to stop your current jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel.    
+### 5) Restart server
+
+Now, you'll need to stop your current Jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel.    
   
-<img align="left" width="500" height="500" src="/assets/images/hub-control.PNG">
+<img width="500" height="500" src="/assets/images/hub-control.PNG">
   
 This will pop open a new tab/window, and you'll click "Stop My Server".   
   
@@ -87,19 +92,20 @@ This will pop open a new tab/window, and you'll click "Stop My Server".
   
 Jupyter lab will then ask if you'd like to restart your server; click Restart.   
   
-<img align="left" width="450" height="105" src="/assets/images/server_not_running.PNG">
+<img height="105" src="/assets/images/server_not_running.PNG">
   
 Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up.   
   
-<img align="left" width="500" height="300" src="/assets/images/new-kernel.PNG">
+<img height="300" src="/assets/images/new-kernel.PNG">
   
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
-### 6) 
-If you would like to delete your kernel at any point, run the following (replacing kernelname with the name of your kernel).
+### 6) Delete when finished
+
+If you would like to delete your kernel at any point, run the following (replacing test-kernel with the name of your kernel).
 
 ```
-jupyter kernelspec uninstall kernelname
+jupyter kernelspec uninstall test-kernel
 ```
 
 It will ask you to confirm the deletion by typing `y` or cancel the deletion by typing `N`.  
