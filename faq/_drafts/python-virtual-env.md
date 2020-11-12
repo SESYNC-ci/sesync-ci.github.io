@@ -80,6 +80,7 @@ Available kernels:
 Now, you'll need to stop your current jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel.  
 
 ![](/assets/images/hub-control.PNG){: align="left" style="padding-right: 25px" height="400px" width="400px" }
+<img align="left" width="100" height="100" src="/assets/images/hub-control.PNG">
 
 This will pop open a new tab/window, and you'll click "Stop My Server". 
 
