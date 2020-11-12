@@ -1,5 +1,5 @@
 ---
-title: How do I manage installed packages in my Python workflow?
+title: How do I create a virtual environment for my Python workflow?
 tags:
  - Jupyter
  - Reproducible Research
@@ -10,15 +10,15 @@ Collaborative coding can benefit from having everyone use the same computing env
 -----
 
 ### 1)
- A Pipfile stores the information about your virtual environment.  If you have a Pipfile already, use the terminal to change to the directory containing your Pipfile, and run this code to see the path to your virtual environment.  
+A Pipfile stores the information about your virtual environment and the dependencies of your project.  It replaces the requirements.txt file that can be used in Python projects.  If you have a Pipfile already, use the terminal to change to the directory containing your Pipfile, and run this code to see the path to your virtual environment.  
 
-```{python}
+```
 pipenv --venv
 ```
 
 If you don't have a Pipfile, change to the directory where you would like to create one, and run 
 
-```{python}
+```
 pipenv install
 ```
 
@@ -42,28 +42,38 @@ python_version = "3.8"
 
 If your Pipfile doesn't include ipykernel, run this code (it may take a few minutes).
 
-```{python}
+```
 pipenv install ipykernel
 ```
 
 ### 3) 
 Then you can activate your virtual environment by running
-https://gitlab.sesync.org/rblake/ci_mtg_topics/-/value_stream_analytics
-```{python}
+
+```
 pipenv shell
 ```
 
 ### 4) 
-Next, add the kernel by running
+Next, add the kernel by running the following code.  Give your kernal a name, and a display name by replacing the placeholder text "kernal name" and "My Official Kernal Name". 
 
 ```{python}
-python -m ipykernel install --user --name=<name> --display-name=<"My Kernel Name">
+python -m ipykernel install --user --name=<"kernal name"> --display-name=<"My Official Kernel Name">
 ```
 
 Confirm that you've added the kernel by running
 
-```{python}
+```
 jupyter kernelspec list
+```
+
+Your list of kernels will look something like this
+
+```
+Available kernels:
+  test-kernel    /research-home/user/.local/share/jupyter/kernels/test-kernel
+  python3        /research-home/user/.local/share/virtualenvs/Python_test_env-VLKWaVDK/share/jupyter/kernels/python3
+  bash           /usr/local/share/jupyter/kernels/bash
+  python2        /usr/local/share/jupyter/kernels/python2
 ```
 
 ### 5) 
@@ -71,4 +81,12 @@ Now, you'll need to stop your current jupyter server (if running).  Go to the dr
 
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
+### 6) 
+If you would like to delete your kernel at any point, run (replacing kernelname with the name of your kernel)
+
+```
+jupyter kernelspec uninstall kernelname
+```
+
+It will ask you to confirm the deletion by typing `y` or cancel the deletion by typing `N`.  
 
