@@ -54,7 +54,7 @@ pipenv shell
 ```
 
 ### 4) 
-Next, add the kernel by running the following code.  Give your kernal a name, and a display name by replacing the placeholder text "kernal name" and "My Official Kernal Name". 
+Next, add the kernel by running the following code.  Give your kernal a name and a display name of your choosing by replacing <"kernal name"> and <"My Official Kernal Name">. 
 
 ```{python}
 python -m ipykernel install --user --name=<"kernal name"> --display-name=<"My Official Kernel Name">
@@ -77,12 +77,22 @@ Available kernels:
 ```
 
 ### 5) 
-Now, you'll need to stop your current jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel; it will pop open a new window, and you'll click "Stop My Server".  Jupyter lab will then ask if you'd like to restart your server; click Restart.  Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up.  
+Now, you'll need to stop your current jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel.  
+![](/assets/images/hub-control.png){: align="left"}
+
+This will pop open a new tab/window, and you'll click "Stop My Server".  
+![](/assets/images/jupyter_server.png){: align="left"}
+
+Jupyter lab will then ask if you'd like to restart your server; click Restart. 
+![](/assets/images/server_not_running.png){: align="left"}
+
+Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up. 
+![](/assets/images/new-kernel.png){: align="left"}
 
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
 ### 6) 
-If you would like to delete your kernel at any point, run (replacing kernelname with the name of your kernel)
+If you would like to delete your kernel at any point, run the following (replacing kernelname with the name of your kernel).
 
 ```
 jupyter kernelspec uninstall kernelname
