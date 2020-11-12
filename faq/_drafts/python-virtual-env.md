@@ -78,16 +78,16 @@ Available kernels:
 
 ### 5) 
 Now, you'll need to stop your current jupyter server (if running).  Go to the drop-down menu File > Hub Control Panel.  
-![](/assets/images/hub-control.png)
+![](/assets/images/hub-control.PNG){: align="left" style="padding-right: 25px"}
 
 This will pop open a new tab/window, and you'll click "Stop My Server".  
-![](/assets/images/jupyter_server.png)
+![](/assets/images/jupyter_server.PNG){: align="left" style="padding-right: 25px"}
 
 Jupyter lab will then ask if you'd like to restart your server; click Restart. 
-![](/assets/images/server_not_running.png)
+![](/assets/images/server_not_running.PNG){: align="left" style="padding-right: 25px"}
 
 Once it restarts, you will see the new kernel in the Launcher, with the name you gave it during set-up. 
-![](/assets/images/new-kernel.png)
+![](/assets/images/new-kernel.PNG){: align="left" style="padding-right: 25px"}
 
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
