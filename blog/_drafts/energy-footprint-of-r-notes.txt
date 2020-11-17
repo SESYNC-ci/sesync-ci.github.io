@@ -1,0 +1,31 @@
+
+Numbers so far
+==============
+
+Optimized code: Extra setup script ran on 1 processor for 1066 seconds. Then the uncertainty analysis took 29 seconds to run 100 iterations. (232 processor seconds, so 2.32 seconds per iteration)
+
+Unoptimized code: No extra setup script. Then the uncertainty analysis took 158 seconds to run 3 iterations, and 2756 seconds to run 100 iterations. (22048 processor seconds, so 220.48 seconds per iteration)
+
+Calculation:
+
+`((2756*8*100)-(29*8*100 + 1066))/3600`
+
+Result: 606 processor-hours saved
+Optimized code ran 6:45 processor-hours
+Unoptimized code ran 612:30 processor-hours
+
+Power consumption in HPCC: A few sources found, it looks like it varies from around 60-200 W per core when running the job. (will add details)
+
+Data to get GHG intensity of energy generation in Maryland: excel sheets with required data are at https://www.eia.gov/tools/faqs/faq.php?id=74&t=11
+
+The rough calculation shows 0.333 kg (333 g) per kWh. That's a bit less than driving a car a mile.
+
+Comparisons: Netflix? car? burger?
+
+GHG footprint of streaming: https://www.iea.org/commentaries/the-carbon-footprint-of-streaming-video-fact-checking-the-headlines
+GHG footprint of driving one mile: https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle (404 g )
+Carbon footprint of hamburger: https://www.sixdegreesnews.org/archives/10261/the-carbon-footprint-of-a-cheeseburger
+
+So we have 606 processor hours saved, 60 to 200 W generated per core, and 0.333 kg CO2 per 1000 W per hour.
+
+Range of kWh saved is `606*.06` to `606*.2` which is about 36 to 121 kWh. So that's actually 12 to 40 kg CO2. Equivalent to driving a car 30 to 100 miles.
