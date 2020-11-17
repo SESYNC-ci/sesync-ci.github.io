@@ -17,7 +17,7 @@ The average half life for a typical URL is 2 years, meaning that any link you co
 
 ### Content drift
 
-Website content is also constantly changing, so there is always some degree of uncertainty whether the information at a given URL is the same as what was intended to be referenced. A 1999 study showed that 50% of websites ending in `.com` substantially change content every 11 days, and 50% of `.gov` pages change within 4 months. A more recent study in 2016 found that 75% of references to web content in scientific articles linked to content that was changed from when it was referenced[^3]. If a dataset was downloaded from an online web portal, it may not be possible to tell whether the underlying data was updated since it was used.    
+Website content is also constantly changing, so there is always some degree of uncertainty whether the information at a given URL is the same as what was intended to be referenced. A 1999 study showed that 50% of websites ending in `.com` substantially change content every 11 days, and 50% of `.gov` pages change within 4 months. A more recent study in 2016 found that 75% of references to web content in scientific articles linked to content that was changed from when it was referenced[^3]. If a dataset was downloaded from an online web portal, it may not be possible to tell whether the underlying data was updated since it was used which [undermines reproducibility]( https://doi.org/10.1029/2020EO151665).    
 
 ## Our Recommendations
 
@@ -33,7 +33,7 @@ Note that if the interactive functionality of your app does not actually require
 
 ### Use object rather than location-based identifiers
 
-In other words: publish the source code and underlying data sets! Whereas URLs are addresses to locations on the internet, other standardized systems like digital object identifiers (DOIs) refer to specific pieces of information such as documents, images, software code, or datasets. In studies of link rot, even when there is identical attrition rates between links to URLs and DOIs, all of the inactive DOIs are recoverable by searching the web (inactive links are mostly due to typographic errors) or using the DOI system at [doi.org](https://www.doi.org/)
+In other words: publish the source code and underlying data sets! Whereas URLs are addresses to locations on the internet, other standardized systems like digital object identifiers (DOIs) refer to specific pieces of information such as documents, images, software code, or datasets. In studies of link rot, even when there is identical attrition rates between links to URLs and DOIs, all of the inactive DOIs are recoverable by searching the web (inactive links are mostly due to typographic errors) or using the DOI system at [doi.org](https://www.doi.org/).
 
 Instead of linking to a "live" version of an app on a server, consider directing readers directly to the code for your app by linking to a uniquely identifiable [release of a GitHub repository](https://cyberhelp.sesync.org/blog/shiny-sharing.html) using [Zenodo](https://guides.github.com/activities/citable-code/). The Readme file and/or repository website can include the link to the location of the hosted app, so even if the hosting platform changes (e.g. if you move institutions), the link in the published article still lets readers find the app. By registering a DOI for the code, you can also specifically refer to the current version of an app while leaving open the possibility of future updates and improvements. 
 
