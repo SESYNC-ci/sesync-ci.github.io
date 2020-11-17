@@ -2,9 +2,13 @@
 
 Carbon footprint. For many of us that term conjures up cars belching exhaust and cows belching methane as they wait to be rendered into hamburgers. However, the carbon footprint of our digital infrastructure is enormous as well. Data centers used x% of all electricity worldwide in 20XX. 
 
+![data center](/assets/images/BalticServers_data_center.jpg)
+
 At SESYNC, we synthesize big datasets and crunch lots of numbers to fit models. This data-intensive work does not come without a cost. It requires many computer processors to run for long periods of time, consuming large amounts of energy in the process. Some of this energy consumption, and associated greenhouse gas emissions, is unavoidable if you want to work with data. But if you are clever about the way you process and analyze your data, you can save significant amounts of energy and avert a non-negligible quantity of greenhouse gas emissions. 
 
 As most people reading this post probably know, the cyber team heavily promotes the use of R. R has a lot of advantages -- it was designed for statistical analysis, it has a very active community of users and developers who are constantly cranking out new, cool packages, and it is relatively easy to learn for beginning coders. But one of its major disadvantages is that it's pretty slow and memory-hungry. Both of those things mean inefficiency, and inefficiency equals high energy consumption. The main reason that R (and similar languages like Python) is so inefficient is that it is an interpreted language rather than a compiled one. An interpreted language is run line-by-line. This is the case whether you type the commands individually into the prompt or whether an entire R program is run all at once. Contrast this with a compiled language like C, where programs are written, compiled from human-readable code into machine code, and then the compiled code is run. The machine code is much more efficient so compiled languages tend to be faster and thus use less energy. (link to the language comparison)
+
+![R dripping oil](/assets/images/oil_r.jpg)
 
 All of that was not to discourage you from learning R, but to give you additional motivation to optimize your code.
 
@@ -12,7 +16,7 @@ All of that was not to discourage you from learning R, but to give you additiona
 
 Recently, I found a major inefficiency in my own code. I was doing a Monte Carlo uncertainty analysis, where I took 10,000 random draws from parameter distributions and repeated my analysis with each of the draws to estimate the uncertainty around the median result. Previously, I had been fitting a model within each iteration of the analysis, but I realized that I could save a lot of processing time by running a short script before the 10,000-iteration loop and using the results within each iteration. I was curious how much greenhouse gas emissions were saved in this process, comparing the final code I ran on SESYNC's Slurm cluster with the unoptimized code I would have run. Then I wanted to compare those emissions to other GHG-intensive activities, such as driving a car, streaming Netflix, or eating meat.
 
-We need the following information for a back-of-the-envelope analysis:
+I put together this information for a back-of-the-envelope analysis:
 
 - the length of processing time required by the code before and after optimization
 - power consumption of the processors on the Slurm cluster
@@ -37,7 +41,13 @@ For the car, we can use EPA's number[^3] of 404 g CO<sub>2</sub>/mile. For Netfl
 
 Assuming EPA's number for GHG intensity of driving a passenger car, the amount of CO<sub>2</sub> saved would get us 16 miles or 26 kilometers in a car. That would get you from Annapolis across the Bay Bridge and to the far side of Kent Island!
 
-Using the weighted average across devices, with the CO<sub>2</sub> saved from optimization, you would be able to kick back and stream Netflix for 94 hours, or almost 5 days straight. That's almost exactly enough to watch every episode of "Great British Baking Show" ever recorded.
+![route map](/assets/images/annap-to-kent.PNG)
+
+Using the weighted average across devices, with the CO<sub>2</sub> saved from optimization, you would be able to kick back and stream Netflix for 94 hours, or almost 5 days straight. That's almost exactly enough to watch every episode of "Great British Bake Off" ever recorded.
+
+![babka](/assets/images/babka.jpg)
+
+Plenty of time to mull over the [controversy](https://news.yahoo.com/yorkers-furious-great-british-baking-130044035.html) of whether Paul Hollywood's babka was better than one from New York.
 
 Producing a Big Mac requires about 4 kg of emissions[^5] so you'd only be able to produce 1.6 Big Macs with that amount of CO<sub>2</sub>. Not exactly the best food if we want to keep our consumption within planetary boundaries ... but the point is made.
 
@@ -45,7 +55,9 @@ Producing a Big Mac requires about 4 kg of emissions[^5] so you'd only be able t
 
 I was surprised by the size of the carbon footprint of running code on the cluster. I hope this encourages people to sit down with their friendly neighborhood data scientist and look at ways to optimize their code and make it run faster and greener!
 
-[^1]: Sources for Slurm power generation  
+[^1]: Basmadjian, R., de Meer, H., 2012. Evaluating and modeling power consumption of multi-core processors, in: Proceedings of the 3rd International Conference on Future Energy Systems Where Energy, Computing and Communication Meet - e-Energy ’12. Presented at the the 3rd International Conference, ACM Press, Madrid, Spain, pp. 1–10. https://doi.org/10.1145/2208828.2208840  
+Jarus, M., Oleksiak, A., Piontek, T., Węglarz, J., 2014. Runtime power usage estimation of HPC servers for various classes of real-life applications. Future Generation Computer Systems, Special Section: Intelligent Big Data Processing 36, 299–310. https://doi.org/10.1016/j.future.2013.07.012
+  
 [^2]: https://www.eia.gov/tools/faqs/faq.php?id=74&t=11 hosts two Excel files with the required data (total emissions generated by electricity in each US state, and the total electricity generated. Dividing the two yields GHG intensity.)  
 [^3]: https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle  
 [^4]: https://www.iea.org/commentaries/the-carbon-footprint-of-streaming-video-fact-checking-the-headlines  
