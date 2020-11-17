@@ -23,7 +23,7 @@ We need the following information for a back-of-the-envelope analysis:
 
 I'll spare you all the calculations. The unoptimized code would have taken ~220 seconds (3:40) to run each of the 10,000 iterations, which is over 25 processor-days. The optimized code had an extra script that ran once on a single processor for ~18 minutes, but after that each iteration only took 2.3 seconds to run. So that's around 7 processor-hours for the entire analysis, with setup included. The bottom line is that I saved about 606 processor-hours by optimizing the code!
 
-How much electricity was saved, and what is the difference in terms of carbon footprint? Well, based on a few different sources, it looks like a single Slurm processor code draws somewhere between 60 W and 200 W when running a job[^1]. So let's take the midpoint of 130 W. Then I used data from the Energy Information Administration[^2] to estimate that the average kWh of electricity in Maryland generates about 333 grams of CO<sub>2</sub>. (If we knew the exact mix of sources used to power Park Place we might be able to get a better number there.) Based on those numbers, I estimate that about 26 kg (&plusmn;14) of CO<sub>2</sub> emissions were saved by optimizing the code!
+How much electricity was saved, and what is the difference in terms of carbon footprint? Well, based on a few different sources, it looks like a single Slurm processor code draws somewhere between 15 W and 50 W when running a job[^1]. So let's take the midpoint of 33 W. Then I used data from the Energy Information Administration[^2] to estimate that the average kWh of electricity in Maryland generates about 333 grams of CO<sub>2</sub>. (If we knew the exact mix of sources used to power Park Place we might be able to get a better number there.) Based on those numbers, I estimate that about 6.6 kg (&plusmn;3) of CO<sub>2</sub> emissions were saved by optimizing the code!
 
 ### Put that in terms we can understand!
 
@@ -35,11 +35,11 @@ Let's compare the CO<sub>2</sub> footprint of the energy saved with the CO<sub>2
 
 For the car, we can use EPA's number[^3] of 404 g CO<sub>2</sub>/mile. For Netflix, it's a bit more uncertain since there are a number of sources of emissions[^4]: the data center, the data transmission, and the device you are streaming on. The CO<sub>2</sub> footprint of Wifi versus 4G is pretty different (much higher for 4G). Obviously larger-screen devices have a bigger footprint. Let's use the weighted average of 70 g CO<sub>2</sub>/hour across all modes of data transmission and whatever device you might use.
 
-Assuming EPA's number for GHG intensity of driving a passenger car, the amount of CO<sub>2</sub> saved would get us 65 miles or 105 kilometers in a car! That's roughly the distance from Annapolis to Frederick, MD!
+Assuming EPA's number for GHG intensity of driving a passenger car, the amount of CO<sub>2</sub> saved would get us 16 miles or 26 kilometers in a car. That would get you from Annapolis across the Bay Bridge and to the far side of Kent Island!
 
-Using the weighted average across devices, with the CO<sub>2</sub> saved from optimization, you would be able to kick back and stream Netflix for 375 hours, or almost 16 days straight! That's enough to watch every episode of "Great British Baking Show" ever recorded three times in a row, with a few days left over to watch "Tiger King" half a dozen times.
+Using the weighted average across devices, with the CO<sub>2</sub> saved from optimization, you would be able to kick back and stream Netflix for 94 hours, or almost 5 days straight. That's almost exactly enough to watch every episode of "Great British Baking Show" ever recorded.
 
-Producing a Big Mac requires about 4 kg of emissions[^5] so you'd only be able to produce 6.6 Big Macs with that amount of CO<sub>2</sub>. Not exactly the best food if we want to keep our consumption within planetary boundaries ... but the point is made.
+Producing a Big Mac requires about 4 kg of emissions[^5] so you'd only be able to produce 1.6 Big Macs with that amount of CO<sub>2</sub>. Not exactly the best food if we want to keep our consumption within planetary boundaries ... but the point is made.
 
 ### Final thoughts
 
