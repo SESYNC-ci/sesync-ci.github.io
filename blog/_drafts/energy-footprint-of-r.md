@@ -2,7 +2,7 @@
 
 Carbon footprint. For many of us that term conjures up cars belching exhaust and cows belching methane as they wait to be rendered into hamburgers. However, the carbon footprint of our digital infrastructure is enormous as well. Data centers used x% of all electricity worldwide in 20XX. 
 
-{% include captionedimage.html url="/assets/images/BalticServers_data_center.jpg" height="300px" description="<small><i>All those blinking blue lights aren't free, you know.</i></small>" %}
+{% include captionedimage.html url="/assets/images/BalticServers_data_center.jpg" height="200px" width="300px" description="<small><i>All those blinking blue lights aren't free, you know.</i></small>" %}
 
 At SESYNC, we synthesize big datasets and crunch lots of numbers to fit models. This data-intensive work does not come without a cost. It requires many computer processors to run for long periods of time, consuming large amounts of energy in the process. Some of this energy consumption, and associated greenhouse gas emissions, is unavoidable if you want to work with data. But if you are clever about the way you process and analyze your data, you can save significant amounts of energy and avert a non-negligible quantity of greenhouse gas emissions. 
 
@@ -41,15 +41,16 @@ For the car, we can use EPA's number[^3] of **404 g** CO<sub>2</sub>/mile. For N
 
 Assuming EPA's number for GHG intensity of driving a passenger car, the amount of CO<sub>2</sub> saved would get us **16 miles** or **26 kilometers** in a car. That would get you from Annapolis across the Bay Bridge and to the far side of Kent Island!
 
-{% include captionedimage.html url="/assets/images/annap-to-kent.PNG" height="300px" description="<small><i>Not a bad day trip.</i></small>" %}
+{% include captionedimage.html url="/assets/images/annap-to-kent.PNG" description="<small><i>Not a bad day trip.</i></small>" %}
 
 Using the weighted average across devices, with the CO<sub>2</sub> saved from optimization, you would be able to kick back and stream Netflix for **94 hours**, or almost **5 days** straight. That's almost exactly enough to watch every episode of "Great British Bake Off" ever recorded.
 
-{% include captionedimage.html url="/assets/images/babka.jpg" height="300px" description="<small><i>Plenty of time to mull over the [controversy](https://news.yahoo.com/yorkers-furious-great-british-baking-130044035.html) of whether Paul Hollywood's babka was better than one from New York.</i></small>" %}
+{% include captionedimage.html url="/assets/images/babka.jpg" height="200px" %}  
+<small><i>Plenty of time to mull over the <a href="https://news.yahoo.com/yorkers-furious-great-british-baking-130044035.html">controversy</a> of whether Paul Hollywood's babka was better than one from New York.</i></small>
 
 Producing a Big Mac requires about **4 kg** of emissions[^5] so you'd only be able to produce **1.6 Big Macs** with that amount of CO<sub>2</sub>.
 
-{% include captionedimage.html url="/assets/images/Big_Mac_hamburger.jpg" height="300px" description="<small><i>Not exactly the best food if we want to keep our consumption within planetary boundaries ... but the point is made.</i></small>" %}
+{% include captionedimage.html url="/assets/images/Big_Mac_hamburger.jpg" height="200px" description="<small><i>Not exactly the best food if we want to keep our consumption within planetary boundaries ... but the point is made.</i></small>" %}
 
 ### Final thoughts
 
