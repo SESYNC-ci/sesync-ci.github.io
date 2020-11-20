@@ -6,7 +6,7 @@ tags:
 author: khondula
 ---
 
-This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitious benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how closed captions on videos that make it possible for people with disabilities to access content also helps people who are just in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app. 
+This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitious benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how closed captions on videos that make it possible for people with disabilities to access content also helps anyone just in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app. 
 
 Web applications can be inaccessible to users that rely on keyboard navigation or assistive technologies like screen readers. Many websites lack basic accessibility provisions such as providing sufficient color contrast, alternative text for images, or navigable page layouts. This means the functionality of an app can be rendered useless if a user has no way of determining e.g. whether a checkbox is checked or can't read text against a low contrast background.
 
@@ -14,20 +14,19 @@ The internet has a detailed set of [technical specifications for Accessible Rich
 
 ### Evaluate accessibility
 
-Most important is to test out how your application looks and behaves with assistive technology. Operating systems and web browswers have many built-in tools that allow you emulate vision deficiencies or the output of assistive technologies like screen readers. There are also a number of tools for evaluating accessibility against best practice recommendations and standards such as [section 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology. 
-
-screenshot of color vision emulator?
+An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browswers have many built-in tools that allow you emulate vision deficiencies or the output of assistive technologies like screen readers. There are also a number of tools for evaluating websites against best practices and legal standards such as [section 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, such as:
 
 * The [Web Accessibilty Evaluation Tool](https://wave.webaim.org/) is a quick way to highlight problems on any webpage. 
 * Simulate different types of vision deficiencies using one-click emulators such as [Color Oracle](https://colororacle.org/) or [Google Chrome's built-in developer tool](https://developers.google.com/web/updates/2020/03/devtools). 
-* something for keyboard/tab navigation - just try out using only keyboard? 
 * Check out more tools on this [list of web accessibility evaluation tools]( https://www.w3.org/WAI/ER/tools/)
+
+maybe put in screenshot of color vision emulator?
 
 ### Accessible Shiny features
 
-Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature[^2] creates an `alt` parameter in `render*()` functions allows for dynamically updating alt text tags on images, such as a description of what a plot is showing:
+Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature[^2] creates an `alt` parameter in `render*()` functions which allows for dynamically updating alt text tags on images, such as a description of what a plot is showing:
 
-figure out why this still doesnt work!! 
+*still cant get this to work!!*
 ```
  output$plot1 <- renderPlot(
       {
@@ -40,7 +39,7 @@ figure out why this still doesnt work!!
 
 Another design consideration is the order in which fields get highlighted when navigating by keyboard instead of a mouse (i.e. using the tab key). By default, elements are navigated based on their order in the code source. You can override the order using the html tag [tabindex](https://www.w3.org/WAI/GL/wiki/Creating_Logical_Tab_Order_with_the_Tabindex_Attribute) which can be accomplished with the function `tagAppendAttributes()`. 
 
-For more advanced control beyond what is possible with standard HTML tags, [ARIA attributes](https://webaim.org/techniques/aria/) can be used to more precisely define what certain user interface elements do and their current status. In many cases these labels have already been incorporated into the source code for Shiny's user inputs. For example, using a `dateInput` widget now employs an ARIA-compliant solution that doesn't require clicking with a mouse[^3]. 
+For more advanced control beyond what is possible with standard HTML tags, [ARIA attributes](https://webaim.org/techniques/aria/) can be used to more precisely define what certain user interface elements do and their current status. In many cases these labels have already been incorporated into the source code for Shiny's user inputs. For example, using a `dateInput` widget now employs an ARIA-compliant solution that doesn't require clicking with a mouse[^3]. The [WAVE](https://wave.webaim.org/) tool described above can help determine whether there are features in your app that could be improved. 
 
 For more details, check out the design section of the book Engineering Production-Grade Shiny apps [here](https://engineering-shiny.org/matters.html#web-accessibility) or look through the issues and pull requests regarding accessibility on [shiny's GitHub page](https://github.com/rstudio/shiny/labels/Type%3A%20Accessibility). 
 
