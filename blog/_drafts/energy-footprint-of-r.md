@@ -1,6 +1,6 @@
 # The carbon footprint of code
 
-Carbon footprint. For many of us that term conjures up cars belching exhaust and cows belching methane as they wait to be rendered into hamburgers. However, the carbon footprint of our digital infrastructure is enormous as well. Data centers used x% of all electricity worldwide in 20XX. 
+Carbon footprint. For many of us that term conjures up cars belching exhaust and cows belching methane as they wait to be rendered into hamburgers. However, the carbon footprint of our digital infrastructure is enormous as well. Data centers used approximately 1% of all electricity worldwide in 2018 and account for almost 2% of electricty in the U.S. 
 
 {% include captionedimage.html url="/assets/images/BalticServers_data_center.jpg" height="200px" width="300px" description="<small><i>All those blinking blue lights aren't free, you know.</i></small>" %}
 
