@@ -23,7 +23,7 @@ An easy first step is to test out how your application looks and behaves with as
 * Identify color combinations that meet accessibility standards with [Who Can Use](https://whocanuse.com/)
 * Check out more tools on this [list of web accessibility evaluation tools]( https://www.w3.org/WAI/ER/tools/)
 
-![](/assets/images/simulate-color-df.png){: width="400px" alt="color palette with and without deuteranopia", description="It's a good idea to check whether people who are colorblind will be able to distinguish between the colors in your maps and figures!"}
+![](/assets/images/simulate-color-def.png){: width="400px" alt="color palette with and without deuteranopia", description="It's a good idea to check whether people who are colorblind will be able to distinguish between the colors in your maps and figures!"}
 
 ### Accessible Shiny features
 
