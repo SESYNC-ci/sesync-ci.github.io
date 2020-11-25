@@ -29,7 +29,7 @@ An easy first step is to test out how your application looks and behaves with as
 
 Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature[^2] creates an `alt` parameter in `render*()` functions which allows for dynamically updating the [alt text](https://webaim.org/techniques/alttext/) HTML attribute on images. This text helps conveys the content and purpose of an image for users (e.g. using a screen reader) or situations (e.g. slow internet connection) where images can't be loaded[^3]. For example, this code will create an alt text HTML tag with the mean value of the histogram:
 
-```
+```{r}
     output$plot1 <- renderPlot(
       {
         hist(vals())
