@@ -1,5 +1,5 @@
 ---
-title: "Shiny App Accessibility, Part 2: Design Considerations"
+title: "Shiny App Accessibility, Part 2: Accessible Design"
 tags:
  - Shiny
  - Accessibility
