@@ -40,7 +40,7 @@ Developers of RShiny have made substantial improvements for implementing accessi
     )
 ```
 
-![](/assets/images/alt-text-tag.png){: width="400px" alt="alt text screencapture"}
+![](/assets/images/alt-text-tag.png){: width="400px" alt="alt text screencapture", description="The calculated mean in the alt attribute is viewable in your browser's \"Inspect\" or \"Inspect element\" tool."}
 
 Another design consideration is the order in which fields get highlighted when navigating by keyboard instead of a mouse (i.e. using the tab key). By default, elements are navigated based on their order in the code source. You can override the order using the html tag [tabindex](https://www.w3.org/WAI/GL/wiki/Creating_Logical_Tab_Order_with_the_Tabindex_Attribute) which can be accomplished with the function `tagAppendAttributes()`. 
 
