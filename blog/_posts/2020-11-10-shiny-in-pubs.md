@@ -1,5 +1,5 @@
 ---
-title: "Only You Can Prevent Link Rot"
+title: "Shiny App Accessibility, Part 1: Only You Can Prevent Link Rot"
 tags:
  - Shiny
  - R
