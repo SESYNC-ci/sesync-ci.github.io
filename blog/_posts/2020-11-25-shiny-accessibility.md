@@ -6,31 +6,34 @@ tags:
 author: khondula
 ---
 
-This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app. 
+This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app.
+
+{% include captionedimage.html url="/assets/images/git_merge_conflict_message.PNG" description="Attempting to merge two conflicted versions of a file" %}
+
+[![](/assets/images/accessibility-poster-screen-readers.png){:alt="follow a linear layout and structure content using HTML5"}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
+*Example dos and don'ts from [the UK Home Office posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)*
 
 Web applications can be inaccessible to users that rely on keyboard navigation or assistive technologies like screen readers. Many websites lack basic accessibility provisions such as providing sufficient color contrast, alternative text for images, or navigable page layouts. This means the functionality of an app can be rendered useless if a user has no way of determining e.g. whether a checkbox is checked or can't read text against a low contrast background.
 
 The community that developed standards for the web has a detailed set of [technical specifications for Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-practices/), which developers can implement to ensure that users can effectively interact with elements of a user interface. Many of these are simple changes that, when implemented, more clearly communicate the roles, states, and properties of elements on the page. Here are some steps you can take to evaluate and improve the design of your apps, along with resources to learn more.
 
-[![](/assets/images/accessibility-poster-screen-readers.png){: width="300px" alt="follow a linear layout and structure content using HTML5", description="Example dos and don'ts from [the UK Home Office posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)"}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
-
 ### Evaluate accessibility
 
-An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browswers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. There are also a number of tools for evaluating websites against best practices and legal standards such as [section 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, such as:
+An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browsers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. There are also a number of tools for evaluating websites against best practices and legal standards such as [section 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, including:
 
-* The [Web Accessibilty Evaluation Tool](https://wave.webaim.org/) is a quick way to highlight problems on any webpage. 
-* Simulate different types of vision deficiencies using one-click emulators such as [Color Oracle](https://colororacle.org/) or [Google Chrome's built-in developer tool](https://developers.google.com/web/updates/2020/03/devtools). 
-* Identify color combinations that meet accessibility standards with [Who Can Use](https://whocanuse.com/)
-* Check out more tools on this [list of web accessibility evaluation tools]( https://www.w3.org/WAI/ER/tools/)
+* The [Web Accessibilty Evaluation Tool](https://wave.webaim.org/), a quick way to highlight problems on any webpage. 
+* One-click emulators to simulate different types of vision deficiencies such as [Color Oracle](https://colororacle.org/) or [Google Chrome's built-in developer tool](https://developers.google.com/web/updates/2020/03/devtools). 
+* The website [Who Can Use](https://whocanuse.com/) to identify color combinations that meet accessibility standards 
 
-![](/assets/images/simulate-color-def.png){: width="400px" alt="color palette with and without deuteranopia", description="It's a good idea to check whether people who are colorblind will be able to distinguish between the colors in your maps and figures!"}
+![](/assets/images/simulate-color-def.png){: alt="color palette with and without deuteranopia"}
+*It's a good idea to check whether people who are colorblind will be able to distinguish between the colors in your maps and figures!*
 
 ### Accessible Shiny features
 
 Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature[^2] creates an `alt` parameter in `render*()` functions which allows for dynamically updating the [alt text](https://webaim.org/techniques/alttext/) HTML attribute on images. This text helps conveys the content and purpose of an image for users (e.g. using a screen reader) or situations (e.g. slow internet connection) where images can't be loaded[^3]. For example, this code will create an alt text HTML tag with the mean value of the histogram:
 
-```{r}
-    output$plot1 <- renderPlot(
+```
+  output$plot1 <- renderPlot(
       {
         hist(vals())
       },
@@ -40,7 +43,8 @@ Developers of RShiny have made substantial improvements for implementing accessi
     )
 ```
 
-![](/assets/images/alt-text-tag.png){: width="350px" alt="alt text screencapture", description="The calculated mean in the alt attribute is viewable in your browser's \"Inspect\" or \"Inspect element\" tool."}
+![](/assets/images/alt-text-tag.png){: alt="alt text screencapture"}
+*The calculated mean in the alt attribute is viewable in your browser's \"Inspect\" or \"Inspect element\" tool.*
 
 Another design consideration is the order in which fields get highlighted when navigating by keyboard instead of a mouse (i.e. using the tab key). By default, elements are navigated based on their order in the code source. You can override the order using the html tag [tabindex](https://www.w3.org/WAI/GL/wiki/Creating_Logical_Tab_Order_with_the_Tabindex_Attribute) which can be accomplished with the function `tagAppendAttributes()`. 
 
