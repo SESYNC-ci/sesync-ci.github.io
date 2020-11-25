@@ -19,7 +19,7 @@ The community that developed standards for the web has a detailed set of [techni
 
 ### Evaluate accessibility
 
-An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browsers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. Try using your app only with a keyboard to see if you can successfully navigate. There are also a number of tools for evaluating websites against best practices and legal standards such as [&sect; 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, including:
+An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browsers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. Try using your app only with a keyboard to see if you can successfully navigate. There are also a number of tools for evaluating websites against best practices and legal standards such as [&sect;508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, including:
 
 * The [Web Accessibilty Evaluation Tool](https://wave.webaim.org/), a quick way to highlight problems on any webpage. 
 * One-click emulators to simulate different types of vision deficiencies such as [Color Oracle](https://colororacle.org/) or [Google Chrome's built-in developer tool](https://developers.google.com/web/updates/2020/03/devtools). 
