@@ -12,7 +12,7 @@ Web applications can be inaccessible to users that rely on keyboard navigation o
 
 The community that developed standards for the web has a detailed set of [technical specifications for Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-practices/), which developers can implement to ensure that users can effectively interact with elements of a user interface. Many of these are simple changes that, when implemented, more clearly communicate the roles, states, and properties of elements on the page. Here are some steps you can take to evaluate and improve the design of your apps, along with resources to learn more.
 
-![](/assets/images/accessibility-poster-screen-readers.png){: width="300px" alt="follow a linear layout and structure content using HTML5", description="Examples from the UK Home Office [posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)"}
+[![](/assets/images/accessibility-poster-screen-readers.png){: width="300px" alt="follow a linear layout and structure content using HTML5", description="Examples from the UK Home Office [posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)"}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
 
 ### Evaluate accessibility
 
