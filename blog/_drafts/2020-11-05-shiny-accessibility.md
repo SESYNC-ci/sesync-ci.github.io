@@ -12,7 +12,7 @@ Web applications can be inaccessible to users that rely on keyboard navigation o
 
 The community that developed standards for the web has a detailed set of [technical specifications for Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-practices/), which developers can implement to ensure that users can effectively interact with elements of a user interface. Many of these are simple changes that, when implemented, more clearly communicate the roles, states, and properties of elements on the page. Here are some steps you can take to evaluate and improve the design of your apps, along with resources to learn more.
 
-![](/assets/images/accessibility-poster-screen-readers.png){: width="400px" alt="follow a linear layout and structure content using HTML5", description="Examples from the UK Home Office [posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)"}
+![](/assets/images/accessibility-poster-screen-readers.png){: width="300px" alt="follow a linear layout and structure content using HTML5", description="Examples from the UK Home Office [posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)"}
 
 ### Evaluate accessibility
 
@@ -40,7 +40,7 @@ Developers of RShiny have made substantial improvements for implementing accessi
     )
 ```
 
-![](/assets/images/alt-text-tag.png){: width="400px" alt="alt text screencapture", description="The calculated mean in the alt attribute is viewable in your browser's \"Inspect\" or \"Inspect element\" tool."}
+![](/assets/images/alt-text-tag.png){: width="350px" alt="alt text screencapture", description="The calculated mean in the alt attribute is viewable in your browser's \"Inspect\" or \"Inspect element\" tool."}
 
 Another design consideration is the order in which fields get highlighted when navigating by keyboard instead of a mouse (i.e. using the tab key). By default, elements are navigated based on their order in the code source. You can override the order using the html tag [tabindex](https://www.w3.org/WAI/GL/wiki/Creating_Logical_Tab_Order_with_the_Tabindex_Attribute) which can be accomplished with the function `tagAppendAttributes()`. 
 
