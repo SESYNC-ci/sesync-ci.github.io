@@ -9,7 +9,7 @@ author: khondula
 This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app.
 
 [![](/assets/images/accessibility-poster-screen-readers.png){:alt="do follow a linear layout and structure content using HTML5, dont "}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
-*Example dos and don'ts from [the UK Home Office posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)*
+*Example dos and don'ts from [the UK Home Office posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/).*
 
 Web applications can be inaccessible to users that rely on keyboard navigation or assistive technologies like screen readers. Many websites lack basic accessibility provisions such as providing sufficient color contrast, alternative text for images, or navigable page layouts. This means the functionality of an app can be rendered useless if a user has no way of determining e.g. whether a checkbox is checked or can't read text against a low contrast background.
 
@@ -28,7 +28,7 @@ An easy first step is to test out how your application looks and behaves with as
 
 ### Accessible Shiny features
 
-Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature[^2] creates an `alt` parameter in `render*()` functions which allows for dynamically updating the [alt text](https://webaim.org/techniques/alttext/) HTML attribute on images. This text helps conveys the content and purpose of an image for users (e.g. using a screen reader) or situations (e.g. slow internet connection) where images can't be loaded[^3]. For example, this code will create an alt text HTML tag with the mean value of the histogram:
+Developers of RShiny have made substantial improvements for implementing accessibility standards, with arguments built into functions you're already using. For example, a recently implemented feature creates an `alt` parameter in `render*()` functions which allows for dynamically updating the [alt text](https://webaim.org/techniques/alttext/) HTML attribute on images[^2]. This text helps conveys the content and purpose of an image for users (e.g. using a screen reader) or situations (e.g. slow internet connection) where images can't be loaded[^3]. For example, this code will create an alt text HTML attribute with the mean value of the histogram:
 
 ```
   output$plot1 <- renderPlot(
