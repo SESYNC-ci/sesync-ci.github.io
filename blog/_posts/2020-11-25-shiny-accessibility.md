@@ -6,6 +6,8 @@ tags:
 author: khondula
 ---
 
+> Go back to [part 1 of our series on Shiny App Accessibility](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html)
+
 This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app.
 
 [![](/assets/images/accessibility-poster-screen-readers.png){:alt="do follow a linear layout and structure content using HTML5, dont "}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
@@ -58,7 +60,7 @@ For more details, check out the design section of the book [Engineering Producti
 * [18F's Accessibility guide](https://accessibility.18f.gov/)
 * Collections of [interviews](https://accessibility.blog.gov.uk/category/accessibility-and-me/) and [user profiles](https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles) of people with access needs 
 
-> Go back to part 1 of our series on [Shiny App Accessibility](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html)
+---
 
 [^1]: This is the idea that once assistive technology becomes sufficiently ubiquitous and widely used, it is considered normal. Learn more about the [history of curb cuts](https://99percentinvisible.org/episode/curb-cuts/), [their legacy](https://ssir.org/articles/entry/the_curb_cut_effect), and an example [how video captions benefit students](https://medium.com/@mosaicofminds/the-curb-cut-effect-how-making-public-spaces-accessible-to-people-with-disabilities-helps-everyone-d69f24c58785). 
 [^2]: Described in [this pull request](https://github.com/rstudio/shiny/pull/3006). Note that this is currently only available in the development version of the shiny package. 
