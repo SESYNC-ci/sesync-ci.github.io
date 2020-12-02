@@ -2,7 +2,7 @@
 # DO NOT EDIT THE .md ON GITHUB
 # DO EDIT THE .Rmd AND knit THE .md LOCALLY
 title: ggplot tricks not to forget about
-author: 
+authors: 
  - khondula
  - qdread
 tags:

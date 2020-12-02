@@ -3,7 +3,7 @@ title: "Resources to help you learn GitHub Pages"
 tags:
  - GitHub
  - git
-author:
+authors:
  - qread
  - khondula
  - rblake
