@@ -46,3 +46,8 @@ defaults:
       toc: true
       sticky: false
       permalink: /:categories/:title.html
+      
+# Feed settings
+feed:
+    excerpt_only: true
+    
