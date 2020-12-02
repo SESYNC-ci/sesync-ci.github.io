@@ -1,4 +1,11 @@
-# The carbon footprint of code
+---
+title: "The carbon footprint of R code, and how to reduce it"
+tags:
+ - R
+ - Slurm
+author:
+ - qread
+---
 
 Carbon footprint. For many of us that term conjures up cars belching exhaust and cows belching methane as they wait to be rendered into hamburgers. However, the carbon footprint of our digital infrastructure is enormous as well. Data centers used approximately [1% of all electricity worldwide][datacenterlink1] in 2018 and [almost 2% of electricity in the U.S][datacenterlink2]. There are efforts underway, including [at the University of Maryland][UMD audit] to increase the use of renewable energy to power data centers, to recycle waste heat for beneficial uses, and to cool data centers more efficiently, but power use by data centers is nevertheless [forecast to rise][nature news].
 
