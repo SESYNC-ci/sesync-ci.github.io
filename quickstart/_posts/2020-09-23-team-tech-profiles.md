@@ -8,7 +8,7 @@ tags:
  - GitLab
  - GitHub
  - Meeting
-author: 
+authors: 
  - rblake
  - khondula
 ---

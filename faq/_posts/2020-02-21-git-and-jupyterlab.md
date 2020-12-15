@@ -7,15 +7,38 @@ tags:
   - GitLab
 ---
 
-There's no user-friendly way to do this.  You have to use [git](https://git-scm.com/) in the command line.
-
+There are two ways to work with git projects in Jupyter Lab.
+You may either use the git extension for Jupyter Lab for a point-and-click interface, or
+issue git commands directly on the command line. 
 
 #### Create a repository on GitHub/GitLab that you want to work with in Jupyter Lab. 
 
-See our quickstart instructions [here](https://cyberhelp.sesync.org/quickstart/creating-a-new-git-project.html).
+Whether you are using the git extension or the command line, if you want to sync your local repo with a remote repo,
+you will need to create a remote repo on GitHub or GitLab.
+See our [quickstart instructions here](https://cyberhelp.sesync.org/quickstart/creating-a-new-git-project.html).
 
+#### Point-and-click interface
 
-#### Clone your repository to your home directory on Jupyter Lab. 
+SESYNC's Jupyter server has the [Jupyter Lab git extension][readme] enabled. 
+The extension is a user-friendly add-on for JupyterLab that lets you do basic git actions with a point-and-click interface.
+Access the extension by simply clicking on the git icon on the left-hand side of your screen in Jupyter Lab (you should
+see something like the screenshot below).
+
+![](/assets/images/jupyter_screenshot_git.PNG) 
+
+Check out this [lesson by Anne Fouilloux][lesson] if you are interested in learning more about using the git extension.
+
+If you aren't interested in using the git extension, you may disable it by going to the *Extensions* tab on the left-hand
+side of the screen, and selecting `Disable` under `@jupyterlab/git` (see screenshot below).
+
+![](/assets/images/jupyter_screenshot_addons.PNG) 
+
+#### Command-line interface
+
+If [git](https://git-scm.com/) in the command line is more to your liking, here are brief instructions for cloning your 
+remote repository to your home directory, and then staging, committing, and pushing local changes you make.
+
+#### Clone your repository to your home directory on Jupyter Lab: 
 
 1. log in to [jupyter.sesync.org](jupyter.sesync.org)
 2. open Terminal window: Files -> New Launcher -> Terminal
@@ -44,3 +67,6 @@ If you're confused about the differences between git, GitHub, GitLab, check out 
 If you're an RStudio user and would like to work with git, check out our FAQ [here](https://cyberhelp.sesync.org/faq/create-rstudio-from-git.html).
 
 [^1]: In GitHub and GitLab repositories created before October 1, 2020, the default branch is called `master`, not `main`. You will need to replace `main` with `master` in the commands above if you are working with an older repo.
+
+[readme]: https://github.com/jupyterlab/jupyterlab-git#readme
+[lesson]: https://annefou.github.io/jupyter_publish/02-git/index.html

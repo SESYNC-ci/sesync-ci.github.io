@@ -19,9 +19,24 @@ tags:
   - data
   - reproducible research
   - Python
+author: jdoe
 ---
 
 My blog post about open data for reproducible research in Python.
+```
+
+For blog posts, the front matter should also include the SESYNC username(s) of the author(s).
+(Typically no author name is included for Quickstarts and FAQs).
+The first time you author a post, you will need to edit `_data/authors.yml` 
+to include the full name and website link that you want associated with each username.
+
+If there is a single author, the required author name format in the front matter 
+is `author: jdoe`; if there are multiple authors the format is as follows:
+
+```
+authors:
+  - jdoe
+  - jroe
 ```
 
 ### Category

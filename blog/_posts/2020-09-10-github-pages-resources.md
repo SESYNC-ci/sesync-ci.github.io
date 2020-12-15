@@ -3,19 +3,20 @@ title: "Resources to help you learn GitHub Pages"
 tags:
  - GitHub
  - git
-author:
+authors:
  - qread
  - khondula
  - rblake
 ---
 
-The SESYNC Cyber Team has compiled some resources, including tutorials and examples, on how to use [GitHub Pages](https://pages.github.com/). 
-Most of them are based in [Markdown](https://daringfireball.net/projects/markdown/) and [Jekyll](https://jekyllrb.com/). 
+The SESYNC Cyber Team has compiled some resources, including tutorials and examples, on how to use [GitHub Pages](https://pages.github.com/). Most of them are based in [Markdown](https://daringfireball.net/projects/markdown/) and [Jekyll](https://jekyllrb.com/). 
 Markdown is a "lightweight markup language," meaning a way to write a text document with minimal formatting codes that can be rendered into a document such as a webpage. 
 Jekyll is a "gem" written in the Ruby language (to be cute, but confusing, they call packages in Ruby "gems") that turns documents written in Markdown into (static) HTML sites with nice layouts. 
 It isn't necessary to use Markdown and Jekyll to use GitHub Pages, but Jekyll has built-in support for GitHub Pages so everything integrates pretty well. 
 This means GitHub takes care of converting your human-readable files (like Markdown) to HTML, including all of the relative link paths to navigate your website based on configuration files. 
 [Hugo](https://gohugo.io/) is an alternative to Jekyll. 
+
+<!--break-->
 
 ![](/assets/images/octojekyll.png)
 

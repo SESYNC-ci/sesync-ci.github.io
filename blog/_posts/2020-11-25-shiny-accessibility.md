@@ -1,5 +1,5 @@
 ---
-title: "Shiny App Accessibility, Part 2: Design Considerations"
+title: "Shiny App Accessibility, Part 2: Accessible Design"
 tags:
  - Shiny
  - Accessibility
@@ -10,6 +10,8 @@ author: khondula
 
 This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app.
 
+<!--break-->
+
 [![](/assets/images/accessibility-poster-screen-readers.png){:alt="do follow a linear layout and structure content using HTML5, dont "}](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
 *Example dos and don'ts from [the UK Home Office posters on designing for accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/).*
 
@@ -19,7 +21,7 @@ The community that developed standards for the web has a detailed set of [techni
 
 ### Evaluate accessibility
 
-An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browsers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. Try using your app only with a keyboard to see if you can successfully navigate. There are also a number of tools for evaluating websites against best practices and legal standards such as [section 508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, including:
+An easy first step is to test out how your application looks and behaves with assistive technology or under certain impairments. Operating systems and web browsers have many built-in tools that allow you to emulate vision deficiencies or the output of assistive technologies like screen readers. Try using your app only with a keyboard to see if you can successfully navigate. There are also a number of tools for evaluating websites against best practices and legal standards such as [&sect;508](https://digital.gov/2018/01/30/updated-it-accessibility-standards/), the part of the ADA specific for information technology, including:
 
 * The [Web Accessibilty Evaluation Tool](https://wave.webaim.org/), a quick way to highlight problems on any webpage. 
 * One-click emulators to simulate different types of vision deficiencies such as [Color Oracle](https://colororacle.org/) or [Google Chrome's built-in developer tool](https://developers.google.com/web/updates/2020/03/devtools). 
