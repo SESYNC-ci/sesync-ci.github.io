@@ -6,7 +6,7 @@
 
 * **Lessons are experimental, incomplete, or in development.**
 * For a new -lesson repository before it has been taught
-* Add this disclaimer to top of lesson: *Disclaimer: This lesson is in alpha status! It is experimental or in a very early phase of develoment.*
+* Add to top of lesson: *Note: This lesson is in alpha status! It is experimental or in a very early phase of develoment.*
 
 ## Beta
 
@@ -14,7 +14,7 @@
 
 * **These lessons are complete but likely have open issues and need improvement.**
 *  Generally, for lessons that have been used and do not contain entirely outdated material, but are not suited for or ready to be linked on cyberhelp lesson page for a broad audience.
-* Add this disclaimer to top of lesson: *Disclaimer: This lesson is in beta status! It may have open issues that have not yet been addressed.*
+* Add to top of lesson: *Note: This lesson is in beta status! It may have open issues that have not yet been addressed.*
 
 ## Stable
 
