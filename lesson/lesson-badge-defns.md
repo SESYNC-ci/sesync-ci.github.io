@@ -4,6 +4,8 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-alpha-pink.svg)](https://github.com/orgs/SESYNC-ci/projects/2)
 
+text for badge: `[![lifecycle](https://img.shields.io/badge/lifecycle-alpha-pink.svg)](https://github.com/orgs/SESYNC-ci/projects/2)` 
+
 * **Lessons are experimental, incomplete, or in development.**
 * Generally, for a new -lesson repository before it has been taught, and/or has issues that need addressing to make the content not confusing or misleading
 * Add to top of lesson: *Note: This lesson is in alpha status! It is experimental or in a very early phase of develoment.*
@@ -11,6 +13,8 @@
 ## Beta
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-beta-blue.svg)](https://github.com/orgs/SESYNC-ci/projects/2)
+
+text for badge: `[![lifecycle](https://img.shields.io/badge/lifecycle-beta-blue.svg)](https://github.com/orgs/SESYNC-ci/projects/2)`
 
 * **These lessons are complete but likely have open issues and need improvement.**
 * Generally, for lessons that have been used in a workshop and do not contain entirely outdated material, but issues any issues that arise will likely not be addressed unless the lesson is planned to be used in a workshop. May rely on access to sesync infrastructure, have outstanding issues to improve content.  
@@ -21,6 +25,8 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://github.com/orgs/SESYNC-ci/projects/2)
 
+text for badge: `[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://github.com/orgs/SESYNC-ci/projects/2)`
+
 * **These lessons are actively maintained and should be self-contained with an active handouts link at the top of the lesson view.**
 * Add a file in `lesson/_posts/` to link to active version of lesson from cyberhelp lesson page with appropriate tags, sticky to pin, permalink with lesson slug name
 
@@ -29,9 +35,11 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-archived-lightgrey.svg)](https://github.com/orgs/SESYNC-ci/projects/2)
 
+text for badge: `[![lifecycle](https://img.shields.io/badge/lifecycle-archived-lightgrey.svg)](https://github.com/orgs/SESYNC-ci/projects/2)`
+
 * **These lessons are no longer actively maintained. Content is no longer updated and may not be accurate. Lesson material is preserved for reference.**
 * Turn off github pages on `-lesson` repo. 
-* Add to instructor notes (in lesson `readme.md`): "This lesson is archived" and if relevant "Active lessons covering similar material include: ... "
+* Add to instructor notes (in lesson `readme.md`): "This lesson is archived" and if relevant either "and was replaced with the following lesson: ...", "Active lessons covering similar material include: ... ", or similar
 * Includes: RNetlogo, Basic RMarkdown, Tidy Data - Portal Mammals, Geospatial Packages in Python, Data Provenance
 
 
