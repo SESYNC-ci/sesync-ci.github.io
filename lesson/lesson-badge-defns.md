@@ -33,5 +33,6 @@
 * Add to instructor notes (in lesson `readme.md`): "This lesson is archived" and if relevant "Active lessons covering similar material include: ... "
 * Includes: RNetlogo, Basic RMarkdown, Tidy Data - Portal Mammals, Geospatial Packages in Python, Data Provenance
 
-> What page should badges link to? 
+> What page should badges link to? SOme Possibilities: cyberhelp lessons page (just stable lessons), curriculum project page https://github.com/orgs/SESYNC-ci/projects/2, this markdown document or a rendered version of it somewhere
+
 > Had previously considered calling archived category "deprecated" but I think we agreed "archived" was more intuitive.
