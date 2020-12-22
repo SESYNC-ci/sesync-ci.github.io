@@ -20,21 +20,15 @@ ssh (your username goes here)@ssh.sesync.org
 
 into the terminal prompt, and then entering your password when prompted.
 
-Next, start an interactive job. This is done with the shell command `salloc`, which requests an allocation of one or more cluster nodes. A typical interactive job request could be as simple as:
+Next, start an interactive job. This is done with the shell command `srun`, which requests a node for a parallel job. A typical interactive job request is:
 
 ```
-salloc -n 1
+srun -n 1 --pty bash -i
 ```
 
-where `-n 1` means you are requesting one node. You can add other options such as `--partition=sesyncshared` or request specific amounts of memory or time. See the [Slurm documentation page for salloc](https://slurm.schedmd.com/salloc.html) or [the SESYNC cluster Quickstart page]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}) for more information &mdash; the available options for `salloc` are mostly the same as for `sbatch`.
+where `-n 1` means you are requesting one node. The `--pty bash -i` part tells the job to open an interactive terminal. You can add other options such as `--partition=sesyncshared` or request specific amounts of memory or time. See the [Slurm documentation page for srun](https://slurm.schedmd.com/srun.html) or [the SESYNC cluster Quickstart page]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}) for more information &mdash; the available options for `salloc` are mostly the same as for `sbatch`.
 
-If the node(s) you requested are available you will get a message like
-
-```
-salloc: Granted job allocation 363010
-```
-
-and you will get another terminal prompt. Your interactive job is now running!
+If the node(s) you requested are available you will get another terminal prompt with the name of the Slurm node you are logged into. Your interactive job is now running!
 
 ## Running R from an interactive job
 
@@ -56,10 +50,4 @@ Once you are done with your job, quit R using `q()` (or quit whatever other appl
 exit
 ```
 
-into the command prompt. You will see a message like
-
-```
-salloc: Relinquishing job allocation 363010
-```
-
-to indicate that the nodes you ran your job on are now freed up for other users.
+into the command prompt. Your terminal prompt will say `sshgw02` again, meaning you are back on the SSH gateway and the nodes you ran your job on are now freed up for other users.
