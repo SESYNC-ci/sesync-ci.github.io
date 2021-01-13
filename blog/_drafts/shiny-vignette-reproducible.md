@@ -23,9 +23,9 @@ I tried out a number of different ways of making an interactive flow diagram. I 
 
 So I wrote up a bit of a hacky way to enable information to pop up when you hover with your mouse over a ggalluvial plot. It involves using the coordinates of the mouse pointer and the polygons defining the "swoopy loopy" flow paths in the flow diagram to calculate whether the mouse is hovering over a flow path, one of the node boxes connecting the flow paths, or neither. A little box appears next to the mouse pointer showing information about the path or node that the mouse is hovering over. 
 
-{% include captionedimage.html url="/assets/images/screenshot_node.jpg" description="<small><i>Hovering over a node ...</i></small>" %}
+![Animation of app](/assets/images/sankey-app.gif)  
+<small><i>The app in action!</small></i>
 
-{% include captionedimage.html url="/assets/images/screenshot_path.jpg" description="<small><i>... and hovering over a path.</i></small>" %}
 
 There were a lot of little headaches involved in figuring out how to get this to work just so, which I won't go into detail about. I had to contact Cory, the developer of the package, for help while I was working on it. I did this by opening an issue on the package's GitHub repository. I ended up having to go into the source code of the ggalluvial package to figure out exactly how the graphics were being drawn, and how to extract that information so that the app could use it to associate the mouse's location with information from the underlying plot data. After lots of trial and error, it works! 
 
