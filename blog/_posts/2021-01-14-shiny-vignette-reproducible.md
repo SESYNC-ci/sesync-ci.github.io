@@ -13,18 +13,23 @@ Following up on Kelly H's recent excellent [blog posts on accessibility in Shiny
 
 The story started when Nicole Motzer and her collaborator Bethany wanted people to be able to better visualize the results of their review of studies that assess outcomes of interdisciplinary research. They had already categorized over 1000 cases of interdisciplinary collaboration with about 15 different attributes. Some of the attributes could have two values, while others could have over a dozen. It's hard to visualize all that at once. So I took a static graph that Kelly H made, and turned it into an interactive visualization. It's a [Shiny app][app] that you can check out on the SESYNC server --- or see the [source code here][repo]. 
 
-{% include captionedimage.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png" description="<small><i>Minard's famous flow diagram of Napoleon's invasion of Russia</i></small>" %}
+![Screenshot of app](/assets/images/sankey-app-screenshot.PNG){: width="600px" }  
+<small><i>Screenshot from the app</i></small>
 
 The visualization centers around a flow diagram, variously known as a Sankey diagram or an alluvial plot. Most likely you have seen one of these diagrams before when learning about [Earth's energy balance][sankey earth]. For a more historical example, you might be familiar with one of [the most famous data visualizations in history][minard], a flow diagram of Napoleon's military misadventure in Russia. (Or take a look at [more examples of flow diagrams in R][example2].) 
 
-{% include captionedimage.html url="http://www.sankey-diagrams.com/wp-content/gallery/x_sankey_215/cache/Earth_heat_balance_Sankey_diagram.png-nggid041127-ngg0dyn-500x0x100-00f0w010c010r110f110r010t010.png" description="<small><i>Earth's heat balance, original data from Kiehl & Trenberth 1997</i></small>" %}
+![Minard's flow diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png)  
+<small><i>Minard's famous flow diagram of Napoleon's invasion of Russia</i></small>
+
+![Earth's heat balance](http://www.sankey-diagrams.com/wp-content/gallery/x_sankey_215/cache/Earth_heat_balance_Sankey_diagram.png-nggid041127-ngg0dyn-500x0x100-00f0w010c010r110f110r010t010.png){: width="400px" }  
+<small><i>Earth's heat balance, original data from Kiehl & Trenberth 1997</i></small>
 
 I tried out a number of different ways of making an interactive flow diagram. I ran into the issue where we liked the look of the flow diagram made with the [ggalluvial package][ggalluvial] the best, but liked the feature on [googleVis][googleVis] where you can hover over the plot and get information in a "tooltip" about what you're hovering over. 
 
 So I wrote up a bit of a hacky way to enable information to pop up when you hover with your mouse over a ggalluvial plot. It involves using the coordinates of the mouse pointer and the polygons defining the "swoopy loopy" flow paths in the flow diagram to calculate whether the mouse is hovering over a flow path, one of the node boxes connecting the flow paths, or neither. A little box appears next to the mouse pointer showing information about the path or node that the mouse is hovering over. 
 
 ![Animation of app](/assets/images/sankey-app.gif)  
-<small><i>The app in action!</small></i>
+<small><i>The app in action!</i></small>
 
 
 There were a lot of little headaches involved in figuring out how to get this to work just so, which I won't go into detail about. I had to contact Cory, the developer of the package, for help while I was working on it. I did this by opening an issue on the package's GitHub repository. I ended up having to go into the source code of the ggalluvial package to figure out exactly how the graphics were being drawn, and how to extract that information so that the app could use it to associate the mouse's location with information from the underlying plot data. After lots of trial and error, it works! 
