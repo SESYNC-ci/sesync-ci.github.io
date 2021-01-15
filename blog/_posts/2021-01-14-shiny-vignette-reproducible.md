@@ -21,7 +21,7 @@ The visualization centers around a flow diagram, variously known as a Sankey dia
 ![Minard's flow diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png)  
 <small><i>Minard's famous flow diagram of Napoleon's invasion of Russia</i></small>
 
-![Earth's heat balance](http://www.sankey-diagrams.com/wp-content/gallery/x_sankey_215/cache/Earth_heat_balance_Sankey_diagram.png-nggid041127-ngg0dyn-500x0x100-00f0w010c010r110f110r010t010.png){: width="400px" }  
+![Earth's heat balance](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Earth_heat_balance_Sankey_diagram.svg/1024px-Earth_heat_balance_Sankey_diagram.svg.png){: width="400px" }  
 <small><i>Earth's heat balance, original data from Kiehl & Trenberth 1997</i></small>
 
 I tried out a number of different ways of making an interactive flow diagram. I ran into the issue where we liked the look of the flow diagram made with the [ggalluvial package][ggalluvial] the best, but liked the feature on [googleVis][googleVis] where you can hover over the plot and get information in a "tooltip" about what you're hovering over. 
