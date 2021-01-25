@@ -22,10 +22,14 @@ One thing that project participants should be aware of is that SESYNC is not set
 
 ### What about my home directory?
 
-Users also have a home directory located at `/research-home/yourusername`. This directory is only for storing code including scripts and packages, *not* for data! There is only enough space for each SESYNC user to store just a few GB in their home directory. **Please avoid uploading data to your home directory.** Your home directory is the default working directory when you log into the [RStudio server]({{'/quickstart/rstudio-server.html' | relative_url }}) or the [Jupyter Server]({{'/quickstart/jupyter-server.html' | relative_url }}), which is great for running your scripts, but requires you to navigate to the research data directory before uploading data. You can do this either with a [symlink]({{'faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}) or, in RStudio, by clicking on the "Go to directory" button in the Files tab and typing the name of your research data directory in the dialog box that opens. See image below for the location of the 
+Users also have a home directory located at `/research-home/yourusername`. This directory is only for storing code including scripts and packages, *not* for data! There is only enough space for each SESYNC user to store just a few GB in their home directory. **Please avoid uploading data to your home directory.** Overuse of the home directories may cause the space allocated to them to fill up, which affects all SESYNC users negatively! To avoid this situation, there is a hard quota of 20 GB per user --- if you exceed this quota you may find that you are [locked out of the RStudio or Jupyter servers]({{'/faq/locked-out-of-rstudio-server.html' | relative_url }}). 
+
+Your home directory is the default working directory when you log into the [RStudio server]({{'/quickstart/rstudio-server.html' | relative_url }}) or the [Jupyter Server]({{'/quickstart/jupyter-server.html' | relative_url }}), which is great for running your scripts, but requires you to navigate to the research data directory before uploading data. You can do this either with a [symlink]({{'faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}) or, in RStudio, by clicking on the "Go to directory" button in the Files tab and typing the name of your research data directory in the dialog box that opens. See image below for the location of the 
 tricky-to-find button, which has an ellipsis on it.
 
 ![go to directory in RStudio](/assets/images/rstudio_files_tab.PNG) 
+
+Also check out our [cyber resources infographic]({{'/faq/cyber-resources.html' | relative_url }}) to learn more.
 
 ### What kinds of data take up the most space?
 
