@@ -51,7 +51,7 @@ jdoe@sshgw02:~$ du -h --max-depth=1
 36G   .
 ```
 
-The final line shows the title.
+The final line shows the total across all subdirectories.
 
 To copy `big-directory` to your group's data directory, enter:
 
