@@ -22,15 +22,36 @@ It is possible that the quota can be exceeded by temporary hidden RStudio or Jup
 
 ## But I don't know how to move data without logging into the RStudio server first!
 
-It's possible to connect to the SESYNC server with SSH and move data between your home directory and research data directory using text commands on the command line. For example, if your username is `jdoe` you might have a directory called `/research-home/jdoe/big-directory` and you want to move it to your group's research data directory, `/nfs/cooltrees-data/`. Open a terminal window on your computer and log in to the SESYNC server:
+It's possible to connect to the SESYNC server with SSH and move data between your home directory and research data directory using text commands on the command line. For example, if your username is `jdoe` you might have a directory called `/research-home/jdoe/big-directory` and you want to move it to your group's research data directory, `/nfs/cooltrees-data/`. Open a terminal window on your computer. (See our [FAQ on accessing Linux resources]({{'faq/how-to-access-linux-resources.html' | relative_url }}) if you do not know how to access a terminal window on your computer.) 
+
+Log into the SESYNC server by entering the following command:
 
 ```
 ssh jdoe@ssh.sesync.org
 ```
 
-You will be connected to the SESYNC server and the current working directory will be `/research-home/jdoe`, which you can confirm by entering `pwd`.
+You will be prompted to enter your password and possibly to add SESYNC to your list of known hosts. 
+Once you do, you will be connected to the SESYNC server and the current working directory will be `/research-home/jdoe`, which you can confirm by entering `pwd`. You will see something like:
 
-To find out how much space is being used by the different subdirectories in your home directory, enter `du -h` and it will list all the subdirectories and how much space they are taking up.
+```
+jdoe@sshgw02:~$ pwd
+/research-home/jdoe
+```
+
+To find out how much space is being used by the different subdirectories in your home directory, enter `du -h --max-depth=1` and it will list all the top-level subdirectories and how much space they are taking up. It might look something like:
+
+```
+jdoe@sshgw02:~$ du -h --max-depth=1
+10M   ./.cache
+5M    ./.local
+1G    ./R
+100M  ./.rstudio
+40K   ./.ipynb_checkpoints
+35G   ./big-directory
+36G   .
+```
+
+The final line shows the title.
 
 To copy `big-directory` to your group's data directory, enter:
 
@@ -52,4 +73,4 @@ Now if your home directory is under the quota of 20 GB you will be able to acces
 
 ## I've tried everything and I still can't log in! What do I do?!?
 
-Please email SESYNC cyberhelp and we will be happy to assist you.
+Please [email SESYNC cyberhelp](mailto:cyberhelp@sesync.org) and we will be happy to assist you.
