@@ -57,7 +57,7 @@ Create a new file in the RStudio editor (File -> New File -> Text File). Save it
 
 Rscript --vanilla myRcode.R
 ```
-This script tells tells the scheduler and linux that this is a shell script and should be run using the bash shell (`#!/bin/bash`), using one CPU (`-n 1`) and that it should launch your R script with default configuration settings (`Rscript --vanilla myRcode.R`).
+This script tells the scheduler and linux that this is a shell script and should be run using the bash shell (`#!/bin/bash`), using one CPU (`-n 1`) and that it should launch your R script with default configuration settings (`Rscript --vanilla myRcode.R`).
 
 Open the terminal in RStudio (Tools -> Terminal -> New Terminal).
 
