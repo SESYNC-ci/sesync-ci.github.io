@@ -8,11 +8,17 @@ sticky: true
 SESYNC provides a large, shared file store to host data for all projects.
 Project participants have access to the research data directory for their
 project from our compute servers, a web portal, a desktop application for
-syncing, and SSH.
+syncing, and SSH. 
 
 The **directory name** will be based off your project's short-title.
 In the examples below, we use the short title `cooltrees` for a hypothetical
 project about urban green spaces.
+
+Note that your group's research data directory is not the same as your 
+personal home directory, which is only for code and software installations 
+and has a small storage quota. 
+The home directory is named `/research-home/(your SESYNC username)`.
+See our [cyber resources infographic]({{'/faq/cyber-resources.html' | relative_url }}) to learn more.
 
 For **postdocs and staff** at SESYNC, additional options are in our [internal Wiki](https://gitlab.sesync.org/it-staff/public-wiki/wikis/home).
 
