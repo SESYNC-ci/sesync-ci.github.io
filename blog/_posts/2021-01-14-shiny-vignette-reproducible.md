@@ -11,7 +11,7 @@ Following up on Kelly H's recent excellent [blog posts on accessibility in Shiny
 
 ![Clark Griswold saying I simply solved a problem](/assets/images/i_simply_solved_a_problem.gif)
 
-The story started when Nicole Motzer and her collaborator Bethany wanted people to be able to better visualize the results of their review of studies that assess outcomes of interdisciplinary research. They had already categorized over 1000 cases of interdisciplinary collaboration with about 15 different attributes. Some of the attributes could have two values, while others could have over a dozen. It's hard to visualize all that at once. So I took a static graph that Kelly H made, and turned it into an interactive visualization. It's a [Shiny app][app] that you can check out on the SESYNC server --- or see the [source code here][repo]. 
+The story started when Nicole Motzer and her collaborator Bethany wanted people to be able to better visualize the results of their review of studies that assess outcomes of interdisciplinary research. They had already categorized over 1000 cases of interdisciplinary collaboration with about 15 different attributes. Some of the attributes could have two values, while others could have over a dozen. It's hard to visualize all that at once. So I took a static graph that Kelly H made, and turned it into an interactive visualization. It's a [Shiny app][app] that you can check out on the SESYNC server. 
 
 ![Screenshot of app](/assets/images/sankey-app-screenshot.PNG){: width="600px" }  
 <small><i>Screenshot from the app</i></small>
@@ -40,7 +40,6 @@ This demonstrates quite a few nice things about open, reproducible research: I c
 
 [kelly post]: {{ '/blog/shiny-in-pubs.html' | relative_url }}
 [app]: https://shiny.sesync.org/apps/evaluation-sankey
-[repo]: https://github.com/qdread/evaluation-sankey
 [sankey earth]: http://www.sankey-diagrams.com/tag/earth/
 [minard]: https://www.edwardtufte.com/tufte/minard
 [ggalluvial]: http://corybrunson.github.io/ggalluvial/
