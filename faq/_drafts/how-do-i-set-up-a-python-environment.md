@@ -4,7 +4,8 @@ tags:
   - Python
   - environment
 ---
-
+The main purpose of a Python virtual environment is to create an isolated environment for your Python projects. This way, each project can have its own dependencies. It is good to have a virtual environment because it allows you to execute code in a constant environment, and a virtual environment is necessary if you want to install additional packages.             
+## Using Virtual Environments 
 ## Steps
 ### 1) Log into the SSH gateway.
 [Connecting to the ssh gateway](https://cyberhelp.sesync.org/faq/how-to-access-linux-resources.html)
@@ -37,3 +38,5 @@ source env38/bin/activate
 python myscript.py
 deactivate
 ```
+
+
