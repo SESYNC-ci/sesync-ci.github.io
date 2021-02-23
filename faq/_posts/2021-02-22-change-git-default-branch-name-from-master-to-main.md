@@ -13,7 +13,7 @@ When you initialize a new git repository from scratch with `git init`, or using 
 
 As of October 1, 2020, any new repository you create on GitHub.com will use `main` as the default branch. Existing repositories that have `master` set as the default branch will be left as is. 
 
-GitLab projects are created with the default branch as `master`, unless otherwise specified. 
+GitLab projects are created with the default branch as `master`, unless otherwise specified -- New repositories created on [SESYNC GitLab Service](https://gitlab.sesync.org) will use `main` as the default branch. 
 
 A conflict occurs when the local and remote default branches for both GitHub and GitLab have different names. This FAQ will help you set the default name in your own git repository to `main` (or any other term your team has chosen) and help you fix the conflict if it occurs.
 
@@ -47,14 +47,8 @@ When pushing to the remote repository use:
 git push origin main
 ```
 
-**GitLab**  
-GitLab allows you to customize the initial branch name to any name. Every project  created from then on will start from the custom branch name rather than `master`. 
-To do so:
-
-1. Go to **Admin Area -> Settings -> Repository**.
-2. Expand **Default initial branch name**.
-3. Change the default initial branch to **main**.
-4. Save changes.
+**GitLab**
+New repositories on SESYNC GitLab Sevice use `main` as the default branch. No action is needed.
 
 
 ## Renaming the default branch for an existing repository
@@ -124,7 +118,7 @@ You will then see an option to start a merge request which we are not going to d
 
 On your GitLab project:
 1. Go to **Admin Area -> Settings -> Repository**.
-2. Expand the default initial branch name.
+2. Expand **Default initial branch name**.
 3. Change the default to **main**.
 4. Save changes. 
 
