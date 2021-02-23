@@ -47,9 +47,9 @@ When pushing to the remote repository use:
 git push origin main
 ```
 
-**GitLab**
-New repositories on SESYNC GitLab Sevice use `main` as the default branch. No action is needed.
-
+**GitLab**  
+New repositories on SESYNC GitLab Service use `main` as the default branch name. 
+No action is needed.
 
 ## Renaming the default branch for an existing repository
 To rename the `master` branch in your existing Git repository to `main`:
