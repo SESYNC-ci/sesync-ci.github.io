@@ -11,18 +11,20 @@ The main purpose of a Python virtual environment is to create an isolated enviro
 
 Follow the steps below once, and then you will have a virtual environment that you can use for any Slurm jobs you run in the future.
 
-### 1) Log into the SSH gateway.
+**1) Log into the SSH gateway.**
 
-See [Connecting to the ssh gateway](https://cyberhelp.sesync.org/faq/how-to-access-linux-resources.html).
+See [Connecting to the ssh gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}).
 
-### 2) Create a virtual environment in Python 3.8:
+**2) Create a virtual environment in Python 3.8:**
+
 ```
 python3.8 -m venv env38
 ```
 
 This will create a directory called `env38/` (or whatever name you want to give it) in your current working directory.
 
-### 3) Activate the virtual environment:
+**3) Activate the virtual environment:**
+
 ```
 source env38/bin/activate
 ```
@@ -35,7 +37,7 @@ You can install packages now into the virtual environment with `pip install`. Fo
 pip install numpy
 ```
 
-### 4) Deactivate the environment by simply entering:
+**4) Deactivate the environment by simply entering:**
 
 ```
 deactivate
@@ -55,6 +57,6 @@ deactivate
 
 Notice that you will need to include the full path to the virtual environment (in the above example it is `/research-home/yourusername/env38` but yours may be different).
 
-### See also
+## See also
 
-- General information on running Python on the cluster is on our [quickstart page on the Slurm cluster]().
+- General information on running Python on the cluster is on our [quickstart page on the Slurm cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).

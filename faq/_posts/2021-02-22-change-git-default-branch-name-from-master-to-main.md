@@ -22,7 +22,7 @@ Before initializing a new Git repository you will have to set the default to `ma
 
 ### Steps
 
-First, open a terminal window either by [connecting to the ssh gateway](https://cyberhelp.sesync.org/faq/how-to-access-linux-resources.html) or opening a terminal tab on the RStudio or Jupyter server.
+First, open a terminal window either by [connecting to the ssh gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}) or opening a terminal tab on the RStudio or Jupyter server.
 
 #### 1) Override the default branch name value:
 

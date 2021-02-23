@@ -1,5 +1,5 @@
 ---
-title: How do I create a virtual environment for my Python workflow?
+title: How do I create a virtual environment on the Jupyter server?
 tags:
  - Jupyter
  - Reproducible Research
