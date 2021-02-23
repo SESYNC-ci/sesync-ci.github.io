@@ -222,6 +222,18 @@ outfile_name = "results" + job_id + ".txt"
 ...
 ```
 
+If your Python script requires the use of a virtual environment, your submit script should look like this:
+
+__submit.sh__
+
+```
+#!/bin/bash
+
+source venv/bin/activate
+python test.py $1 $1
+deactivate
+```
+
 ## Tip: Editing your remote Python files
 
 The RStudio Server interface (accessible via your web browswer at __rstudio.sesync.org__) can recognize Python syntax and thus serve as a code editor for your files hosted on the SESYNC server. Note that it may not be possible to run the scripts in RStudio Server, since you cannot access your virtual environment from that interface.
