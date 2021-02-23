@@ -89,10 +89,10 @@ GitHub now allows you to rename any branch, including the default branch, from t
 
 **1) Rename the default branch from the web:**
 
-[![infographic](/assets/images/github_default_rename.png)
+![infographic](/assets/images/github_default_rename.png)
 
 
-*2) Update your local clone:**
+**2) Update your local clone:**
 
 ```
 # Get the latest commits and branches from the remote
