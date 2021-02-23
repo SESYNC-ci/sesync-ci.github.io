@@ -1,32 +1,39 @@
 ---
-title: How to change Git default branch name for new repositories from master to main
+title: How do I change the git default branch name for new repositories from master to main?
 tags:
   - Git
   - GitLab
   - GitHub
   - ssh
 ---
-When you initialize a new Git repository from scratch with `git init`, Git creates a default branch with the name `master`. This is the case in our current version of Git (Git version 2.28.0).
 
-As of October 1, 2020, any new repository you create in GitHub will use `main` as the default branch. Existing repositories that have `master` set as the default branch will be left as is.
+**NOTE**: *See the [note on terminology](https://cyberhelp.sesync.org/basic-git-lesson/#/slides/config) in our basic git lesson for more background on why default repository names are changing from `master` to `main` across git platforms. Changes are ongoing across all git platforms so this FAQ may be out of date by the time you read it!*
+
+When you initialize a new git repository from scratch with `git init`, or using the new repository dialog on the RStudio server, git creates a default branch with the name `master`. This is the case in our current version of git (git version 2.28.0).
+
+As of October 1, 2020, any new repository you create on GitHub.com will use `main` as the default branch. Existing repositories that have `master` set as the default branch will be left as is. 
 
 GitLab projects are created with the default branch as `master`, unless otherwise specified. 
 
-A conflict occurs when the local and remote default branches for both GitHub and GitLab have different names.
-
-This FAQ will help you set the default name in your own Git repository to `main` (or any other term your team has chosen) and help you fix the conflict if it occurs.
+A conflict occurs when the local and remote default branches for both GitHub and GitLab have different names. This FAQ will help you set the default name in your own git repository to `main` (or any other term your team has chosen) and help you fix the conflict if it occurs.
 
 ## Setting the default branch name
 Before initializing a new Git repository you will have to set the default to `main`.
+
 ### Steps
-### 1) Override the the default branch name value:
+
+First, open a terminal window either by [connecting to the ssh gateway](https://cyberhelp.sesync.org/faq/how-to-access-linux-resources.html) or opening a terminal tab on the RStudio or Jupyter server.
+
+#### 1) Override the default branch name value:
+
 ```
 git config --global init.defaultBranch main
 ```
-You only have to do this once.
+You only have to do this once. Now all new repositories you create with `git init` or on the RStudio or Jupyter servers will have a default branch named `main`.
+
 **Note:** If the value is unset, `init.defaultBranch` defaults to `master`.
 
-### 2) Initialize your new Git repository:
+#### 2) Initialize your new Git repository:
 ```
 git init
 ```
@@ -50,29 +57,37 @@ To do so:
 4. Save changes.
 
 
-## Renaming the default branch name for existing repository
-To rename the `master` branch in  your existing Git repository to `main`:
+## Renaming the default branch for an existing repository
+To rename the `master` branch in your existing Git repository to `main`:
 ### Steps
-### 1) Rename the local master branch to main:
+### 1) Rename the local `master` branch to `main`:
 ```
 git branch -m master main
 ```
 ### 2) Check that the renaming worked:
+
+Call
+
 ```
 git status
+```
+
+If the renaming was successful you should see:
+
+```
 On branch main
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
-The local branch has been renamed, but we now need to make these changes to the remote repository as well. 
+The local branch has been renamed, but we now need to make these changes to the remote repository as well. You can do this on either GitHub or GitLab as follows.
 
 ### GitHub
 GitHub now allows you to rename any branch, including the default branch, from the web.
 
 ### Steps
 ### 1) Rename the default branch from the web:
-[![infographic](/assets/images/github_default_rename.png)](/assets/images/github_default_rename.png)
+[![infographic](/assets/images/github_default_rename.png)
 
 
 ### 2) Update your local clone:
@@ -89,6 +104,7 @@ Making the change to your GitLab repository is simple.
 
 ### Steps
 ### 1) Change it locally:
+
 Use the `move` command in Git to copy the entire `master` branch to a new branch called `main`.
 ```
 git branch -m master main
