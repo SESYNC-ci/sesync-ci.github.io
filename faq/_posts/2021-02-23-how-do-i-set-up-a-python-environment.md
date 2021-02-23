@@ -37,12 +37,6 @@ You can install packages now into the virtual environment with `pip install`. Fo
 pip install numpy
 ```
 
-You can also run short scripts within the virtual environment to test them, by calling 
-
-```
-python test.py
-```
-
 **4) Deactivate the environment by simply entering:**
 
 ```
@@ -53,11 +47,9 @@ All of the above you only have to do once.
 
 ## Activating the virtual environment in a job
 
-Now whenever you run Python from a Slurm job, you can activate your virtual environment within the job. Here is an example `submit.sh` script to run a Python script called `myscript.py`:
+Now whenever you run Python from a Slurm job, your job should include the following language:
 
 ```
-#!/bin/bash
-
 source /research-home/yourusername/env38/bin/activate
 python myscript.py
 deactivate
