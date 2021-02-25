@@ -7,7 +7,7 @@ authors:
  - qdread
 tags:
  - ggplot
- - dataviz
+ - Visualization
 output:
   md_document:
     preserve_yaml: true
