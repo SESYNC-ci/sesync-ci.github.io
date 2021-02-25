@@ -2,6 +2,6 @@
 title: Advanced Tidyverse
 tags:
  - R
-  - Vizualization
+ - Vizualization
 ---
 {% include description.md name=page.slug %}
