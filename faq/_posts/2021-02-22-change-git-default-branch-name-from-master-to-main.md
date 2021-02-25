@@ -1,10 +1,10 @@
 ---
 title: How do I change the git default branch name for new repositories from master to main?
 tags:
-  - Git
+  - git
   - GitLab
   - GitHub
-  - ssh
+  - SSH
 ---
 
 **NOTE**: *See the [note on terminology](https://cyberhelp.sesync.org/basic-git-lesson/#/slides/config) in our basic git lesson for more background on why default repository names are changing from `master` to `main` across git platforms. Changes are ongoing across all git platforms so this FAQ may be out of date by the time you read it!*
