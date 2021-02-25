@@ -2,6 +2,6 @@
 title: Plots in R
 tags:
  - R
- - Vizualization
+ - Visualization
 ---
 {% include description.md name=page.slug %}
