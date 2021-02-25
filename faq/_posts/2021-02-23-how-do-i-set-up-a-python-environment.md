@@ -3,7 +3,7 @@ title: How do I set up a Python virtual environment for Slurm jobs?
 tags:
   - Python
   - Slurm
-  - environment
+  - Environment
 ---
 The purpose of a Python virtual environment is to create an isolated virtual space for your Python project. It is good to have a virtual environment because it allows you to execute code in a constant context, and each project can have its own dependencies. Currently the default Python version for new package installation on the Slurm cluster (as of February 2020) is Python 3.5. If you would like to run your Slurm Python jobs with later versions, a virtual environment is necessary if you want to install additional packages.             
 
