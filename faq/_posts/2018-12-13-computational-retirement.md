@@ -1,8 +1,8 @@
 ---
 title: "How does SESYNC wind down computational support?"
 tags:
- - data
- - infrastructure
+ - Data
+ - Infrastructure
 ---
 
 SESYNC's data storage and computational resources are available to pursuit participants for approximately **one year after** the final meeting to allow completion of project-related tasks. 
