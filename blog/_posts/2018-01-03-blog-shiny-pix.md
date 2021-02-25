@@ -1,7 +1,7 @@
 ---
 title: Images for Data Exploration in RShiny Apps
 tags:
-  - Vizualization
+  - Visualization
   - R
   - Shiny
   - Qualitative Data
