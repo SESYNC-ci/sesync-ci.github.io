@@ -1,7 +1,7 @@
 ---
 title: Leaflet Maps
 tags:
- - Vizualization
+ - Visualization
  - R
  - Geospatial
 permalink: /leaflet-in-R-lesson/
