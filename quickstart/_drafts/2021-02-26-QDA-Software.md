@@ -35,7 +35,7 @@ If you’re planning on using QDA software, first consider your research questio
 Here are some important questions to consider: 
 * What type of data do you have? (e.g. tables, videos, transcripts)
 * How are you planning to transform your data?
-* Do the software’s unique features support your methodology? 
+* Does the software’s unique features support your methodology? 
 * How do you want your data visualized and exported? 
 * Is there a software learning community to join? 
 
