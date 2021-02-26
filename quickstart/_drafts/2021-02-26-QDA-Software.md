@@ -14,7 +14,7 @@ Here are some common examples of qualitative data:
 * Video or Audio Transcripts 
 * Secondary research (e.g. social media data, journal articles, historical records)
 
-Qualitative data analysis can be a great asset to your research project and will allow you to effectively transform unstructured data for analysis. 
+Qualitative data analysis can be a great asset to your research project and will allow you to effectively transform unstructured data. 
 
 # Using QDA software
 
