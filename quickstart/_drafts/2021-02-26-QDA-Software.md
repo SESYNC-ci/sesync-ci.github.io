@@ -65,8 +65,6 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 **If there is a software option not currently available through SESYNC that you would like to consider using, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org)
 
----------------- 
-
 # Free and/or open source QDA software
 
 There are a variety of free and open source QDA software choices.  If time permits, it may be a useful starting point to begin playing with your data in a [free and open-source QDA platform](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). 
