@@ -4,7 +4,7 @@ tags:
   - Qualitative Data Analysis 
 ---
 
-![Organizing Data](/assets/images/Qual_Stock.jpeg){: align="left" style="padding-right: 25px" height="400px" width="400px" }
+![](/assets/images/Qual_Stock.jpeg){: align="left" style="padding-right: 25px" height="250px" width="250px" }
 
 Qualitative data analysis (QDA) is the process of searching for patterns and themes in large volumes of unstructured textual data to help answer relevant research questions. This research approach commonly uses computer software, known as QDA software, to search for these connections.
 
