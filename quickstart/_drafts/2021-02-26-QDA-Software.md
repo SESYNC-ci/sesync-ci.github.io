@@ -49,9 +49,9 @@ Each QDA software offers different features and can have strengths and weaknesse
 
 Please check out these detailed descriptions and comparisons of popular QDA software options: 
 
-[QDA Software Comparison Chart (New York University)](https://guides.nyu.edu/QDA/comparison)
-[MERIT Library QDA Software Comparison (University of Wisconsin, Madison)](https://web.education.wisc.edu/qdatools/wp-content/uploads/sites/40/2014/12/Software-Comparison.pdf)
-[QDA Software Reviews](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis/resources/choosing-appropriate-caqdas-package)
+- [QDA Software Comparison Chart (New York University)](https://guides.nyu.edu/QDA/comparison)
+- [MERIT Library QDA Software Comparison (University of Wisconsin, Madison)](https://web.education.wisc.edu/qdatools/wp-content/uploads/sites/40/2014/12/Software-Comparison.pdf)
+- [QDA Software Reviews](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis/resources/choosing-appropriate-caqdas-package)
 
 # QDA software options at SESYNC
 
