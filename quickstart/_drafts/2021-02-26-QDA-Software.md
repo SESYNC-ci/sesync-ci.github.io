@@ -39,7 +39,7 @@ Here are some important questions to consider:
 * How do you want your data visualized and exported? 
 * Is there a software learning community to join? 
 
-Answering these questions early on in the research process will help you build your methodology and select the best software for your research aims. Ultimately, this will save you time and effort in completing your qualitative data analysis.
+Answering these questions early on in the research process will help you develop a methodology and select the best software for your research aims. Ultimately, this will save you time and effort in completing your qualitative data analysis.
 
 Video: [Choosing Qualitative Data Analysis Software: Qualitative Research Methods](https://www.youtube.com/watch?v=dYaAtuERpDI&feature=emb_title)
 
