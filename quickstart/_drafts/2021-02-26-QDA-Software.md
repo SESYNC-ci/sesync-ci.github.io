@@ -30,7 +30,7 @@ Video: [What Qualitative Data Analysis software can and can’t do for you](http
 
 The best software for your project depends entirely on your unique project’s needs. 
 
-If you’re planning on using QDA software, first consider your research question and envision what you expect to learn from your analysis. This will help you determine what methods and software will best meet your project’s goals. 
+If you’re planning on using QDA software, first consider your research question and envision what you expect to learn from your analysis. This will help you determine what methods and software to best meet your project’s goals. 
 
 Here are some important questions to consider: 
 * What type of data do you have? (e.g. tables, videos, transcripts)
