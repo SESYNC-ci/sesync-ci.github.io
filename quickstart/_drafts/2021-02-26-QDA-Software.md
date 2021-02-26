@@ -51,7 +51,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 - [QDA Software Comparison Chart (New York University)](https://guides.nyu.edu/QDA/comparison)
 - [MERIT Library QDA Software Comparison (University of Wisconsin, Madison)](https://web.education.wisc.edu/qdatools/wp-content/uploads/sites/40/2014/12/Software-Comparison.pdf)
-- [QDA Software Reviews](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis/resources/choosing-appropriate-caqdas-package)
+- [QDA Software Reviews (University of Surrey)](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis/resources/choosing-appropriate-caqdas-package)
 
 # QDA software options at SESYNC
 
@@ -65,13 +65,13 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 #### If you would like to discuss using a software option not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).
 
-# Free and/or open source QDA software
+# Free and/or open-source QDA software
 
 There are a variety of free and open source QDA software choices.  If time permits, it may be a useful starting point to begin playing with your data in a [free and open-source QDA platform](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). 
 
 These software options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.  Some of these options also make use of R, so if you are already an experienced R coder this may be a good time saving option.
 
-Lastly, many QDA software options that charge for use offer a free trial. Use this as an opportunity to explore how the software is displaying, organizing and exporting your data.
+Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software is displaying, organizing and exporting your data.
 
 # Additional Resources 
 - [Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
