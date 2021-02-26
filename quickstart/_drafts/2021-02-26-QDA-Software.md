@@ -45,7 +45,7 @@ Video: [Choosing Qualitative Data Analysis Software: Qualitative Research Method
 
 # QDA Software Features 
 
-Each QDA software offers different features and can have strengths and weaknesses depending on your project’s goals.  
+Each QDA software offers different features and has strengths and weaknesses depending on your project’s goals.  
 
 Please check out these detailed descriptions and comparisons of popular QDA software options: 
 
