@@ -4,7 +4,7 @@ tags:
   - Qualitative Data Analysis 
 ---
 
-Qualitative data analysis (QDA) is the process of searching for patterns and themes in large volumes of unstructured textual data to help answer relevant research questions. This research approach commonly uses computer software, known as QDA software, to search for these connections in your data.
+Qualitative data analysis (QDA) is the process of searching for patterns and themes in large volumes of unstructured textual data to help answer relevant research questions. This research approach commonly uses computer software, known as QDA software, to search for these connections.
 
 Here are some common examples of qualitative data: 
 * Interviews 
@@ -14,13 +14,19 @@ Here are some common examples of qualitative data:
 * Video or Audio Transcripts 
 * Secondary research (e.g. social media data, journal articles, historical records)
 
-Qualitative data analysis can be a great asset to your research project and will allow you to effectively transform unstructured data. 
+QDA software can be a great asset to your research project and will allow you to effectively transform and analyze unstructured data. 
 
 # Using QDA software
 
-QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software so all of your data exists in one location and is directly linked to your project files. 
+QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software, allowing all of your data to exist in one location and be directly linked to your project files. There are a variety qualitative techniques supported by QDA software such as: 
 
-Please note that QDA software is not able to analyze your data but rather is a tool for engaging with data. Plan to use QDA software as a way to organize and access information about your data more quickly and easily to assist with research analysis. 
+* Coding and classifying
+* Writing memos and descriptions
+* Tracking patterns and themes found in data
+* Text Mining 
+* Data Visualization 
+
+Please note that QDA software is not able to analyze your data but rather is a tool for engaging with data. Plan to use QDA software as a way to organize and access information about your data more quickly and easily to assist with analysis. 
 
  “The central analytic task in qualitative research- understanding the meaning of text – cannot be computerized” (Kelle, 1995) 
 
