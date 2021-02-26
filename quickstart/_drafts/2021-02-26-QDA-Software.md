@@ -28,7 +28,7 @@ QDA software assists with organizing, annotating, searching and displaying your 
 
 Please note that QDA software is not able to analyze your data but rather is a tool for engaging with data. Plan to use QDA software as a way to organize and access information about your data more quickly and easily to assist with analysis. 
 
- “The central analytic task in qualitative research- understanding the meaning of text – cannot be computerized” (Kelle, 1995) 
+ “The central analytic task in qualitative research- understanding the meaning of text – cannot be computerized” (Kelle, 1995).
 
 Video: [What Qualitative Data Analysis software can and can’t do for you](https://www.youtube.com/watch?v=tLKfaCiHVic&feature=emb_title)
 
