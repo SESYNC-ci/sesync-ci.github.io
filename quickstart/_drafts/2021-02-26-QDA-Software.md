@@ -76,9 +76,9 @@ These software options tend to have more basic functionality, giving you the opp
 Lastly, many QDA software options that charge for use offer a free trial. Use this as an opportunity to explore how the software is displaying, organizing and exporting your data.
 
 # Additional Resources 
-[Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
-[University of Wisconsin’s QDA Tools at MERIT Library](https://web.education.wisc.edu/qdatools/) 
-[New York University Qualitative Data Analysis Guide](https://guides.nyu.edu/QDA/qual)
-[George Mason University Text Analysis Tools](https://infoguides.gmu.edu/textanalysistools/home)
-[University of Illinois Text Mining Tools and Methods](https://guides.library.illinois.edu/c.php?g=405110&p=2757860)
-[Johns Hopkins University Qualitative Data Analysis Software Guide](https://guides.library.jhu.edu/c.php?g=941489)
+-[Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
+-[University of Wisconsin’s QDA Tools at MERIT Library](https://web.education.wisc.edu/qdatools/) 
+-[New York University Qualitative Data Analysis Guide](https://guides.nyu.edu/QDA/qual)
+-[George Mason University Text Analysis Tools](https://infoguides.gmu.edu/textanalysistools/home)
+-[University of Illinois Text Mining Tools and Methods](https://guides.library.illinois.edu/c.php?g=405110&p=2757860)
+-[Johns Hopkins University Qualitative Data Analysis Software Guide](https://guides.library.jhu.edu/c.php?g=941489)
