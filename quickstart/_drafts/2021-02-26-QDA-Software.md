@@ -63,7 +63,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 | [Weft QDA](http://www.pressure.to/qda/) | Open Source & Free |
 | [QCoder](https://docs.ropensci.org/qcoder/) | Open Source & Free; must have R installed to use |
 
-### If there is a software option not currently available through SESYNC that you would like to consider using, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org)
+#### If there is a software option not currently available through SESYNC that you would like to consider using, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org)
 
 # Free and/or open source QDA software
 
