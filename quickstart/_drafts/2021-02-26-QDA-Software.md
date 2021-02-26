@@ -71,7 +71,7 @@ There are a variety of free and open source QDA software choices.  If time permi
 
 These software options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.  Some of these options also make use of R, so if you are already an experienced R coder this may be a good time saving option.
 
-Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software is displaying, organizing and exporting your data.
+Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
 
 # Additional Resources 
 - [Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
