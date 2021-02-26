@@ -57,7 +57,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 | Software   | Accessibility | 
 | :--------- | :------------ | 
-| [Nvivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Supported by SESYNC | 
+| [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Supported by SESYNC | 
 | [MAXQDA](https://www.maxqda.com/) | Supported by SESYNC |
 | [Taguette](https://www.taguette.org/) | Open Source & Free |
 | [Weft QDA](http://www.pressure.to/qda/) | Open Source & Free |
