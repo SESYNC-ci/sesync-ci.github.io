@@ -18,7 +18,7 @@ QDA software can be a great asset to your research project and will allow you to
 
 # Using QDA software
 
-QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software, allowing all of your data to exist in one location and be directly linked to your project files. There are a variety qualitative techniques supported by QDA software such as: 
+QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software. This allows all of your data to exist in one location and be directly linked to your project files. There are a variety qualitative techniques supported by QDA software such as: 
 
 * Coding and classifying
 * Writing memos and descriptions
