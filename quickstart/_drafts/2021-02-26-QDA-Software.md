@@ -73,9 +73,9 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 # Free and/or open-source QDA software
 
-There are a variety of free and open source QDA software choices.  If time permits, it may be a useful starting point to begin playing with your data in a [free and open-source QDA platform](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). 
+There are a variety of [free and open-source QDA platforms](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). These options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.
 
-These software options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.  Some of these options also make use of R, so if you are already an experienced R coder this may be a good time saving option.
+Some of these options make use of R, so if you are already an experienced R coder this may be a good time saving option. Check out SESYNC's lesson on using [R to Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
 
 Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
 
