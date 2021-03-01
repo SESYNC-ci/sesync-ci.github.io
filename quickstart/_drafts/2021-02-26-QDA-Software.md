@@ -4,7 +4,7 @@ tags:
   - Qualitative Data Analysis 
 ---
 
-Qualitative data analysis (QDA) is the process of searching for patterns and themes in large volumes of unstructured textual data to help answer relevant research questions. This research approach commonly uses computer software, known as QDA software, to search for these connections.
+Qualitative data analysis (QDA) is the process of searching for patterns and themes in large volumes of unstructured data to help answer relevant research questions. This research approach commonly uses computer software, known as QDA software, to search for these connections.
 
 Here are some common examples of qualitative data: 
 * Interviews 
@@ -18,7 +18,6 @@ QDA software can be a great asset to your research project and will allow you to
 
 # Using QDA software
 
-QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software. This allows all of your data to exist in one location and be directly linked to your project files. There are a variety qualitative techniques supported by QDA software such as: 
 
 * Coding and classifying
 * Writing memos and descriptions
@@ -75,7 +74,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 There are a variety of [free and open-source QDA platforms](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). These options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.
 
-Some of these options make use of R, so if you are already an experienced R coder this may be a good time saving option. Check out SESYNC's lesson on using [R to Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
+Some of these options make use of R, so if you are already an experienced R coder this may be a good time saving option. Check out SESYNC's lesson on using R to [Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
 
 Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
 
