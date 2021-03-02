@@ -76,7 +76,7 @@ In addition to those listed above, there are a many [free and open-source QDA pl
 
 Some of these options make use of R and Python. If you have experience coding on these platforms this may be a good time saving option. Check out SESYNC's lesson on using R to [Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
 
-Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
+Lastly, many proprietary QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
 
 **If you would like to discuss using QDA software, or are interested in using a software option that is not currently available at SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
