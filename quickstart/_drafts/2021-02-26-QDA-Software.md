@@ -67,7 +67,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 | [MAXQDA](https://www.maxqda.com/) | Yes | No |
 | [ATLAS.ti](https://atlasti.com/) | No | No |
 | [Dedoose](https://www.dedoose.com/) | No | No |
-| [R](https://www.r-project.org/) \ QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext | Yes | Yes | QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext |
+| [R](https://www.r-project.org/)<br />QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext | Yes | Yes | QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext |
 | [Python](https://www.python.org/) | Yes | Yes | PyQDA, QualCoder |
 | [Weft QDA](http://www.pressure.to/qda/) | Yes | Yes |
 | [Taguette](https://www.taguette.org/) | Yes | Yes |
