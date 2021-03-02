@@ -18,7 +18,7 @@ QDA software can be a great asset to your research project and will allow you to
 
 # Using QDA software
 
-QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software so all of your data to exist in one location and is directly linked to all project files. There are a variety qualitative techniques supported by QDA software such as: 
+QDA software assists with organizing, annotating, searching and displaying your data.  You can import your data into QDA software so all of your data to exist in one location and is directly linked to all project files. There are a variety of qualitative techniques supported by QDA software, such as: 
 
 * Coding and classifying
 * Writing memos and descriptions
@@ -26,17 +26,17 @@ QDA software assists with organizing, annotating, searching and displaying your 
 * Text Mining 
 * Data Visualization 
 
-Please note that QDA software is not able to analyze your data but rather is a tool for engaging with data. Plan to use QDA software as a way to organize and access information about your data more quickly and easily to assist with analysis. 
+Please note that QDA software is not able to analyze your data, but rather is a tool for engaging with data. Plan to use QDA software as a way to organize and access information about your data more quickly and easily to assist with analysis. 
 
- “The central analytic task in qualitative research- understanding the meaning of text – cannot be computerized” (Kelle, 1995).
+> "The central analytic task in qualitative research --- understanding the meaning of text --- cannot be computerized" (Kelle, 1995).
 
-Video: [What Qualitative Data Analysis software can and can’t do for you](https://www.youtube.com/watch?v=tLKfaCiHVic&feature=emb_title)
+To learn more, watch this video: [What Qualitative Data Analysis software can and can’t do for you](https://www.youtube.com/watch?v=tLKfaCiHVic&feature=emb_title).
 
 # Choosing the right QDA software
 
-The best software for your project depends entirely on your unique project’s needs. 
+The best software for your project depends entirely on your unique project's needs. 
 
-If you’re planning on using QDA software, first consider your research question and envision what you expect to learn from your analysis. This will help you determine what methods and software best meet your project’s goals. 
+If you're planning on using QDA software, first consider your research question and envision what you expect to learn from your analysis. This will help you determine what methods and software best meet your project's goals. 
 
 Here are some important questions to consider: 
 * What type of data do you have? (e.g. tables, videos, transcripts)
@@ -47,7 +47,7 @@ Here are some important questions to consider:
 
 Answering these questions early on in the research process will help you develop a methodology and select the best software for your research aims. Ultimately, this will save you time and effort in completing your qualitative data analysis.
 
-Video: [Choosing Qualitative Data Analysis Software: Qualitative Research Methods](https://www.youtube.com/watch?v=dYaAtuERpDI&feature=emb_title)
+To learn more, watch this video: [Choosing Qualitative Data Analysis Software: Qualitative Research Methods](https://www.youtube.com/watch?v=dYaAtuERpDI&feature=emb_title)
 
 # QDA Software Features 
 
@@ -69,7 +69,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 | [Weft QDA](http://www.pressure.to/qda/) | Open Source & Free |
 | [QCoder](https://docs.ropensci.org/qcoder/) | Open Source & Free; must have R installed to use |
 
-#### If you would like to discuss using QDA software not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).
+**If you would like to discuss using QDA software not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
 # Free and/or open-source QDA software
 
