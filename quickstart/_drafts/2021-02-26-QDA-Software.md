@@ -61,14 +61,14 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 # QDA software options 
 
-| Software   | Availability for SESYNC Community | Open Source |
-| :--------- | :-------------------------------- | :---------- |
+| Software   | Availability for SESYNC Community | Open Source | QDA Packages |
+| :--------- | :-------------------------------- | :---------- | :----------- |
 | [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Yes | No | 
 | [MAXQDA](https://www.maxqda.com/) | Yes | No |
 | [ATLAS.ti](https://atlasti.com/) | No | No |
 | [Dedoose](https://www.dedoose.com/) | No | No |
-| [R](https://www.r-project.org/) (QDA Packages: QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext) | Yes | Yes |
-| [Python](https://www.python.org/) (QDA Packages: PyQDA, QualCoder) | Yes | Yes |
+| [R](https://www.r-project.org/) | Yes | Yes | QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext |
+| [Python](https://www.python.org/) | Yes | Yes | PyQDA, QualCoder |
 | [Weft QDA](http://www.pressure.to/qda/) | Yes | Yes |
 | [Taguette](https://www.taguette.org/) | Yes | Yes |
 
