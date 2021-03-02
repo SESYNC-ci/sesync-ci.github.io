@@ -78,7 +78,7 @@ Some of these options make use of R and Python, so if you have experience coding
 
 Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
 
-**If you would like to discuss using QDA software not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
+**If you would like to discuss using QDA software for your SESYNC research project or are interested in using a software option that is not currently available at SESYNC; please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
 # Additional Resources 
 - [Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
