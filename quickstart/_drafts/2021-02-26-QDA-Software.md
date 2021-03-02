@@ -59,25 +59,26 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 - [MERIT Library QDA Software Comparison (University of Wisconsin, Madison)](https://web.education.wisc.edu/qdatools/wp-content/uploads/sites/40/2014/12/Software-Comparison.pdf)
 - [QDA Software Reviews (University of Surrey)](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis/resources/choosing-appropriate-caqdas-package)
 
-# QDA software options at SESYNC
+# QDA software options 
 
-| Software   | Accessibility | 
-| :--------- | :------------ | 
-| [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Supported by SESYNC | 
-| [MAXQDA](https://www.maxqda.com/) | Supported by SESYNC |
-| [Taguette](https://www.taguette.org/) | Open Source & Free |
-| [Weft QDA](http://www.pressure.to/qda/) | Open Source & Free |
-| [QCoder](https://docs.ropensci.org/qcoder/) | Open Source & Free; must have R installed to use |
+| Software   | Availability for SESYNC Community | Open Source |
+| :--------- | :-------------------------------- | :---------- |
+| [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Yes | No | 
+| [MAXQDA](https://www.maxqda.com/) | Yes | No |
+| [ATLAS.ti](https://atlasti.com/) | No | No |
+| [Dedoose](https://www.dedoose.com/) | No | No |
+| [R](https://www.r-project.org/) (QDA Packages: QCoder, Aquad, RQDA, TM (Text Mining), Network, Tidytext) | Yes | Yes |
+| [Python](https://www.python.org/) (QDA Packages: PyQDA, QualCoder) | Yes | Yes |
+| [Weft QDA](http://www.pressure.to/qda/) | Yes | Yes |
+| [Taguette](https://www.taguette.org/) | Yes | Yes |
 
-**If you would like to discuss using QDA software not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
+There are a many [free and open-source QDA platforms](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). These options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.
 
-# Free and/or open-source QDA software
-
-There are a variety of [free and open-source QDA platforms](https://guides.library.illinois.edu/c.php?g=348074&p=2346107). These options tend to have more basic functionality, giving you the opportunity to explore what features you need and don’t need, before deciding to invest time and funds in more sophisticated software.
-
-Some of these options make use of R, so if you are already an experienced R coder this may be a good time saving option. Check out SESYNC's lesson on using R to [Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
+Some of these options make use of R and Python, so if you have experience coding on these platforms this may be a good time saving option. Check out SESYNC's lesson on using R to [Structure for Unstructured Data](https://cyberhelp.sesync.org/text-mining-lesson/).
 
 Lastly, many costly QDA software options offer a free trial. Use this as an opportunity to explore how the software displays, organizes and exports your data to decide which software is the right fit.
+
+**If you would like to discuss using QDA software not currently available through SESYNC, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
 # Additional Resources 
 - [Computer Assisted Qualitative Data Analysis (CAQDAS) Networking Project](https://www.surrey.ac.uk/computer-assisted-qualitative-data-analysis)
