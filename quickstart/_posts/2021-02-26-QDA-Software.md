@@ -61,8 +61,8 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 
 # QDA software options 
 
-| Software   | Availability for SESYNC Community | Open Source | 
-| :--------- | :-------------------------------- | :---------- |
+| Software   | Availability for<br />SESYNC Community | Open Source | 
+| :--------- | :------------------------------------- | :---------- |
 | [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) |Yes | No | 
 | [MAXQDA](https://www.maxqda.com/) | Yes | No |
 | [ATLAS.ti](https://atlasti.com/) | No | No |
