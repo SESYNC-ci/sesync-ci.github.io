@@ -67,7 +67,7 @@ Please check out these detailed descriptions and comparisons of popular QDA soft
 | [MAXQDA](https://www.maxqda.com/) | Yes | No |
 | [ATLAS.ti](https://atlasti.com/) | No | No |
 | [Dedoose](https://www.dedoose.com/) | No | No |
-| [R](https://www.r-project.org/)<br />QDA Packages: [qcoder](https://github.com/ropenscilabs/qcoder), [Aquad](http://www.aquad.de/en/), [RQDA](http://rqda.r-forge.r-project.org/),<br />[TM (Text Mining)](https://www.tidytextmining.com/), [Network](https://cran.r-project.org/web/packages/network/index.html), [Tidytext](https://cran.r-project.org/web/packages/tidytext/index.html) | Yes | Yes |
+| [R](https://www.r-project.org/)<br />QDA Packages: [qcoder](https://github.com/ropenscilabs/qcoder), [Aquad](http://www.aquad.de/en/), [RQDA](http://rqda.r-forge.r-project.org/), [TM (Text Mining)](https://www.tidytextmining.com/),<br />[Network](https://cran.r-project.org/web/packages/network/index.html), [Tidytext](https://cran.r-project.org/web/packages/tidytext/index.html) | Yes | Yes |
 | [Python](https://www.python.org/)<br />QDA Packages: [PyQDA](https://pypi.org/project/PyQDA/), [QualCoder](https://github.com/ccbogel/QualCoder) | Yes | Yes |
 | [Weft QDA](http://www.pressure.to/qda/) | Yes | Yes |
 | [Taguette](https://www.taguette.org/) | Yes | Yes |
