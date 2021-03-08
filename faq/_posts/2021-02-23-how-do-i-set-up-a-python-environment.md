@@ -5,7 +5,7 @@ tags:
   - Slurm
   - Environment
 ---
-The purpose of a Python virtual environment is to create an isolated virtual space for your Python project. It is good to have a virtual environment because it allows you to execute code in a constant context, and each project can have its own dependencies. Currently the default Python version for new package installation on the Slurm cluster (as of February 2020) is Python 3.5. If you would like to run your Slurm Python jobs with later versions, a virtual environment is necessary if you want to install additional packages.             
+The purpose of a Python virtual environment is to create an isolated virtual space for your Python project. It is good to have a virtual environment because it allows you to execute code in a constant context, and each project can have its own dependencies. Currently the default Python version for new package installation on the Slurm cluster and the RStudio server (as of February 2020) is Python 3.5. If you would like to run your Slurm Python jobs with later versions, or use Python 3.8 in a .Rmd notebook on the RStudio server, a virtual environment is necessary if you want to install additional packages.             
 
 ## Creating the virtual environment
 
@@ -58,6 +58,17 @@ deactivate
 Notice that you will need to include the full path to the virtual environment (in the above example it is `/research-home/yourusername/env38` but yours may be different).
 
 If you're unsure how to set up the rest of your bash script, see the [submission script section](https://cyberhelp.sesync.org/quickstart/Using-the-SESYNC-Cluster.html#2-create-a-job-submission-script) of our quickstart on using the cluster.  
+
+## Activating the virtual environment on the RStudio server
+
+To activate the virtual environment on the RStudio server, call:
+
+```
+library(reticulate)
+use_virtualenv('~/env38/')
+```
+
+Now any Python code you execute from within R will use your virtual environment. This can be used in .Rmd notebooks. All `{python}` code chunks in your notebook will use the virtual environment as long as you include the above code in your setup code chunk.
 
 ## See also
 
