@@ -5,9 +5,7 @@ tags:
 author: qread
 ---
 
-This is a little story about how I learned to stop worrying and love [data.table][data.table], a great (and in my opinion underrated) package for doing data science in R.
-
-<img src="assets/images/datatablelogo.png" align="right" width=150px>
+![data table logo](/assets/images/datatablelogo.png){: align="left" style="padding-right: 25px" width="200px" } This is a little story about how I learned to stop worrying and love [data.table][data.table], a great (and in my opinion underrated) package for doing data science in R.
 
 I have used R since 2011, and initially learned to work with data using mostly base R code. In about 2013 I started using the `plyr` package, which later morphed into `dplyr` and, along with some other packages, was dubbed the "tidyverse." I have long admired the tidyverse's design philosophy. It's really helped me speed up writing data analysis and processing scripts interactively. But there are some negatives of tidyverse. It's not very stable: code from a few years ago often breaks if you are keeping your package and R versions up to date. More importantly, it doesn't care that much about code being fast or lean in terms of memory use. Enter `data.table`.
 
@@ -16,6 +14,8 @@ I have used R since 2011, and initially learned to work with data using mostly b
 Both `data.table` and tidyverse are really well-designed but have different goals. The main goal of `data.table`, a package developed by Matt Dowle and Arun Srinivasan, is to quickly and efficiently manipulate huge data frames with millions of rows. Functions in `data.table` are optimized to use as little memory as possible by avoiding making unnecessary temporary copies of data frames. This results in code that is more efficient in both time and memory use. Another advantage is that `data.table` is much more stable than tidyverse, even though it has actually been around for longer (since 2008), and is constantly being updated. The old `data.table` code still works. Another nice feature is that it has no dependencies --- contrast that with the large number of back-end packages now required to run the tidyverse.
 
 For my food waste research I had a "big data" problem. My data includes pairwise flows of 10 different goods between all pairs of the ~3100 counties in the United States, replicated over 20 different scenarios. That's `20 * 3100^2 * 10` which ends up being a huge data frame. Just doing basic operations in tidyverse such as `pivot()`, `summarize()`, and `mutate()` was taking a day, even if I ran the code split up across a lot of cores in parallel on the Slurm cluster. Because I was still trying to work out some kinks in the analysis, it was annoying to have to run code for a day every time I wanted to check if the full analysis worked. That's why I thought it would be nice to learn `data.table`. It had been on the back burner for a long time but this time I actually decided to sit down and learn it.
+
+![example map of land flows among counties](/assets/images/example_county_map.png)
 
 ## Some examples
 
@@ -73,6 +73,6 @@ There are other options that allow hybrid solutions where code written in tidyve
 
 ## Take-home message
 
-I am happy with the performance benefit I got from learning `data.table` (roughly a 3x speedup), it was a fun learning experience, and it's always nice to learn a new language, or new syntax within a language. Just like learning a new foreign language, it helps your mind get out of set ways of thinking and frees you to come up with more creative solutions even in the language you already know. Of course it also fits with my quest to make my code more efficient and thereby get the same outcome while [consuming less energy]({{ '/blog/energy-footprint-of-r.html' | relative_url }}) .
+I am happy with the performance benefit I got from learning `data.table` (roughly a 3x speedup), it was a fun learning experience, and it's always nice to learn a new language, or new syntax within a language. Just like learning a new foreign language, it helps your mind get out of set ways of thinking and frees you to come up with more creative solutions even in the language you already know. Of course it also fits with my quest to make my code more efficient and thereby get the same outcome while [consuming less energy]({{ '/blog/energy-footprint-of-r.html' | relative_url }})!
 
 [data.table]: https://r-datatable.com/
