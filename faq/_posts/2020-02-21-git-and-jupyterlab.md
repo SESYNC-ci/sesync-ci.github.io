@@ -40,7 +40,7 @@ remote repository to your home directory, and then staging, committing, and push
 
 #### Clone your repository to your home directory on Jupyter Lab: 
 
-1. log in to [jupyter.sesync.org](jupyter.sesync.org)
+1. log in to [jupyter.sesync.org](https://jupyter.sesync.org)
 2. open Terminal window: Files -> New Launcher -> Terminal
 3. type `git clone <url_of_your_repository>`  (get the url from your GitHub/GitLab repository page)  
   
