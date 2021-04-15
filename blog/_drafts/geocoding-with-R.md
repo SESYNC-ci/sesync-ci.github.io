@@ -15,6 +15,7 @@ I decided to perform some geocoding to get the coordinates for each location to 
 
 Geocoding is the process of converting addresses/places into geographic coordinates which can be used to place markers on a map.  
 For example, by geocoding "Squamish, British Columbia, Canada" you can say that "Squamish" can be found at (49.701634, -123.155812) latitude and longitude coordinates.
+You can geocode address, cities, dog parks, countries, pretty much any place you can think of! 
 
 ## What geocoding tools are available?
 
