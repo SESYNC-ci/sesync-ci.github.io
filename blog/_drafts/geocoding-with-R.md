@@ -153,8 +153,8 @@ bee_data_joined[1,]
 We have successfully geocoded the locations from where the bee observations where taken.
 
 We have covered:
-- how to use ggmap with the Google Map API to perform geocoding.
-- how to use tmaptools with the Nominatim API to perform geocoding.
+- how to use the `ggmap` package with the Google Map API to perform geocoding.
+- how to use the `tmaptools` package with the Nominatim API to perform geocoding.
 
 You can now map your geolocated observations using your favorite mapping package!
 
