@@ -25,7 +25,9 @@ Google provides [detailed instructions](https://developers.google.com/maps/gmp-g
 
 Another option is to use [Nominatim](http://nominatim.org/release-docs/latest/api/Overview/), a public API from [OpenStreetMap](https://www.openstreetmap.org/about).
 OpenStreetMap is an open-source collaborative project aimed to create free map services for the public.
-Nominatim does not require you to register and get an API key. It does have its limits if you want to use it extensively in an application &mdash; OSM servers have limits after all. 
+Nominatim does not require you to register and get an API key. It does have its [limits](https://operations.osmfoundation.org/policies/nominatim/) if you want to use it extensively in an application. You will need to provide an email account to identify your application, limit your requests to a single machine and thread, and no more than 1 request per second &mdash; OSM servers have limits after all.
+
+
 
 ## Why geocode with R?
 
@@ -49,49 +51,54 @@ Register your Google Map API Key:
 register_google(key = <GoogleAPIKey>)
 ```
 
-Get a data frame of distinct locations:
-```r
-bee_data <- read_csv("data/bee_dataset.csv")
 
+Get a data frame of distinct locations:
+``` r
+library(ggmap)
+library(dplyr)
+
+# sample data
+bee_data <- data.frame(location = c("Alvin, TX, USA", "Alvin, TX, USA",
+                                    "Saratoga, CA, USA",
+                                    "Athens, GA, USA", "Athens, GA, USA", "Athens, GA, USA",
+                                    "San Jose, CA, USA", "New Orleans, LA, USA", 
+                                    "Des Moines, IA, USA", "Keene, NH, USA",
+                                    "Keene, NH, USA"))
 # get the distinct locations from the dataset and create a data frame
 locations_txt <- distinct(bee_data, location)
 locations_txt <- as.data.frame(locations_txt)
 head(locations_txt)
-
-#>      location
-#>  1   Alvin, TX, USA
-#>  2   Saratoga, CA, USA
-#>  3   Athens, GA, USA
-#>  4   San Jose, CA, USA
-#>  5   New Orleans, LA, USA
-#>  6   Des Moines, IA, USA
-#>  7   Keene, NH, USA
+#>               location
+#> 1       Alvin, TX, USA
+#> 2    Saratoga, CA, USA
+#> 3      Athens, GA, USA
+#> 4    San Jose, CA, USA
+#> 5 New Orleans, LA, USA
+#> 6  Des Moines, IA, USA
 ```
 
 The first argument in `mutate_geocode()` is the data frame of distinct locations.
 The second argument is the column containing the location names.
 `mutate_geocode()` returns a geocoded data frame of locations.
 
-```r
+``` r
 locations_geo <- mutate_geocode(locations_txt, location)
 head(locations_geo)
-
-#>      location                lon         lat
-#>  1   Alvin, TX, USA          -95.24410   29.42385
-#>  2   Saratoga, CA, USA       -122.02301  37.26383
-#>  3   Athens, GA, USA         -83.35757   33.95193
-#>  4   San Jose, CA, USA       -121.88633  37.33821
-#>  5   New Orleans, LA, USA    -90.07153   29.95107
-#>  6   Des Moines, IA, USA     -93.62496   41.58684
-#>  7   Keene, NH, USA          -72.27814   42.93369
+#>               location           lon        lat  
+#> 1       Alvin, TX, USA     -95.24410   29.42385
+#> 2    Saratoga, CA, USA    -122.02301   37.26383
+#> 3      Athens, GA, USA     -83.35757   33.95193
+#> 4    San Jose, CA, USA    -121.88633   37.33821
+#> 5 New Orleans, LA, USA     -90.07153   29.95107
+#> 6  Des Moines, IA, USA     -93.62496   41.58684
 ```
 
 Join the geocoded data frame with the original data frame:
-```r
+``` r
 bee_data_joined <- left_join(bee_data, locations_geo, by = "location")
 bee_data_joined[1,]
-#>      file               location            zip code    subspecies      health              caste       lon         lat
-#>  1   041_066.png        Alvin, TX, USA      77511       -1              hive being robbed   worker      -95.24410   29.42385
+#>               location           lon        lat  
+#> 1       Alvin, TX, USA     -95.24410   29.42385
 ```
 
 ## Using tmaptools package and the Nominatim API to geocode 
@@ -108,36 +115,42 @@ Let's use `tmaptools` to get the same coordinate information we extracted using 
 The first argument in `geocode_OSM()` is the data frame column containing the text locations.
 We set `details` to **FALSE** because we are only interested in the coordinates, and
 we set `as.data.frame` to **TRUE** in order to get a data frame back. 
-```r
+``` r
+library(tmaptools)
+
 nominatim_loc_geo <- geocode_OSM(locations_txt$location,
                               details = FALSE, as.data.frame = TRUE)
 ```
 
 You will notice that `geocode_OSM()` returns a data frame containing latitude, longitude, and a minimum and maximum range for both coordinates. 
-```r
+``` r
 # display first row
 nominatim_loc_geo[1,]
-
-#>      query               lat         lon         lat_min     lat_max     lon_min     lon_max
-#>  1   Alvin, TX, USA      29.42385    -95.24410   29.06809    29.50237    -95.58356   -95.05651
+#>                query           lon         lat         lat_min         lat_max         lon_min         lon_max
+#> 1      Alvin, TX, USA     29.42385   -95.24410        29.06809        29.50237       -95.58356       -95.05651
 ```
 
 We are interested in the **lat** and **lon** columns for each observation.
 Drop the **min** and **max** columns and rename the **query** column before joining.
 
-```r
+``` r
 nominatim_loc_geo <- nominatim_loc_geo %>% 
   select(query, lat, lon) %>%
   rename(location = query)
 ```
 
 Join the geocoded data frame with the original data set. 
-```r
+``` r
 bee_data_joined <- left_join(bee_data, nominatim_loc_geo, by = "location")
 bee_data_joined[1,]
+#>               location           lon        lat  
+#> 1       Alvin, TX, USA     -95.24410   29.42385
 ```
 
-HERE PUT AN EXAMPLE OF WHAT THE FIRST FEW ROWS LOOK LIKE NOW
+Every location in the `bee_data_joined` data fame has been geocoded.
+
+![example some rows of the bee dataset](/assets/images/rows_bee_data.png)  
+*First rows of `bee_data_joined`*
 
 ---
 
