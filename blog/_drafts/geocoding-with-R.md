@@ -15,7 +15,7 @@ I decided to do some geocoding to get the coordinates for each location to map t
 
 Geocoding is the process of converting addresses/places into geographic coordinates which can be used to place markers on a map.
 For example, by geocoding "Squamish, British Columbia, Canada" you can say that "Squamish" can be found at (49.701634, -123.155812) latitude and longitude coordinates.
-You can geocode address, cities, dog parks, countries, pretty much any place you can think of! 
+You can geocode addresses, cities, dog parks, countries, pretty much any place you can think of! 
 
 ## What geocoding tools are available?
 
@@ -25,7 +25,7 @@ Google provides [detailed instructions](https://developers.google.com/maps/gmp-g
 
 Another option is to use [Nominatim](http://nominatim.org/release-docs/latest/api/Overview/), a public API from [OpenStreetMap](https://www.openstreetmap.org/about).
 OpenStreetMap is an open-source collaborative project aimed to create free map services for the public.
-Nominatim does not require you to register and get an API key. It does have its [limits](https://operations.osmfoundation.org/policies/nominatim/) if you want to use it extensively in an application. You will need to provide an email account to identify your application, limit your requests to a single machine and thread, and no more than 1 request per second &mdash; OSM servers have limits after all.
+Nominatim does not require you to register and get an API key. It does have its [limits](https://operations.osmfoundation.org/policies/nominatim/) if you want to use it extensively in an application. You will need to provide an email account to identify your application, limit your requests to a single machine and thread, and no more than 1 request per second; OSM servers have limits after all.
 
 
 
@@ -40,7 +40,7 @@ The R community has created a few packages, which can be used for accessing the 
 [`ggmap`](https://cran.r-project.org/web/packages/ggmap/readme/README.html) is a package for R, which enables the creation of maps with [`ggplot`](https://ggplot2.tidyverse.org).
 
 You will first need to register your Google API key using the `register_google()` function from the `ggmap` package.
-To geocode the locations of a dataset use the `mutate_geocode()` function.
+To geocode the locations of a dataset, use the `mutate_geocode()` function.
 `mutate_geocode()` requires a data frame with a column containing the locations to geocode.
 The goal is to get a data frame with all the distinct locations and geocode them.
 We then join our original data frame with the geocoded data frame of distinct locations and just like that, every observations in your main dataset will have latitude and longitude coordinates which can be mapped.
@@ -149,7 +149,7 @@ bee_data_joined[1,]
 
 Every location in the `bee_data_joined` data fame has been geocoded.
 
-![example some rows of the bee dataset](/assets/images/rows_bee_data.png)  
+![example rows of the bee dataset](/assets/images/rows_bee_data.png)  
 *First rows of `bee_data_joined`*
 
 ---
