@@ -38,7 +38,6 @@ The R community has created a few packages, which can be used for accessing the 
 ## Using ggmap with the Google Map API to Geocode 
 
 [`ggmap`](https://cran.r-project.org/web/packages/ggmap/readme/README.html) is a package for R, which enables the creation of maps with [`ggplot`](https://ggplot2.tidyverse.org).
-
 You will first need to register your Google API key using the `register_google()` function from the `ggmap` package.
 To geocode the locations of a dataset, use the `mutate_geocode()` function.
 `mutate_geocode()` requires a data frame with a column containing the locations to geocode.
