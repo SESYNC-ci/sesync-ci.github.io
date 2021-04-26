@@ -74,9 +74,9 @@ An infographic can bring your research to life and convey complex topics to an a
 It is time consuming to create a high-quality infographic and it requires experience with or interest in learning about design and science communication.  
 
 **Resources:**<br />
-[Example Teaching Tool](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
-[Example Timeline](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)<br />
-[Example System](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
+[Example Teaching Tool Infographic](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
+[Example Timeline Infographic](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)<br />
+[Example System Infographic](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
 # Software Options 
