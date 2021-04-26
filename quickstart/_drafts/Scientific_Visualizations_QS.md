@@ -105,4 +105,4 @@ It may be important for your visualization to include images that help to illust
 * [The Integration and Application Network (IAN) at UMCES](https://ian.umces.edu/): 1000’s of free environmentally relevant vector graphics.  Account required to download images. 
 * [BioRender](https://biorender.com/): Free life science icons available via a web-based browser. Account required to download images. 
 
-**If you would like to discuss developing a visualization using these software options, or are interested in exploring software not listed here, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
+**If you would like to discuss developing a visualization using the listed software options, or are interested in exploring software not shown here, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
