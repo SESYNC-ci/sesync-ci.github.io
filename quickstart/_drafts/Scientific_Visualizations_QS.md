@@ -21,13 +21,13 @@ The map is constructed with a topic or image in the center which is connected to
 **Stage of Research Process:**  
 Mind mapping is most commonly used during the beginning stages of a project.  However, it is not limited to the start of a research endeavor.  This active brainstorming process can be useful at any stage where the team feels stuck, is looking to bring a new perspective to the problem, or may be searching for an opportunity to generate new and unexpected ideas. 
 
-**Advantages**
+**Advantages:**<br />
 This is a creative and unstructured way of brainstorming that is relatively quick and easy to learn.
 
-**Disadvantages**
+**Disadvantages:**<br />
 Mind maps are limited in their ability to articulate highly complex relationships.  Therefore, it is useful for teams trying to explain one unique concept but they don’t have the capacity to explore the interrelatedness of various concepts. 
 
-Resources:<br />
+**Resources:**<br />
 [The science of mind mapping: a visual way to make sense of the world](https://nesslabs.com/mind-mapping)<br />
 [Choosing and using Mind Maps and Concept Maps](https://www.olympic-limited.co.uk/wp-content/uploads/2013/05/Choosing-and-using-Mind-Maps-and-Concept-Maps.pdf)
 
@@ -41,13 +41,13 @@ A concept map begins with a word or idea related to a focus question, situated a
 **Stage of Research Process:**  
 Concept maps are useful as part of a projects initial scoping activities but are also ever-evolving.  As the project develops and new linkages are discovered it is important to include this progress in the concept map so it continues to serves the project from beginning to end. 
 
-**Advantages**
+**Advantages:**<br />
 Its ability to display relational links between relevant concepts can be especially useful for capturing the complex dynamics and systems relevant to socio-environmental research. 
 
-**Disadvantages**
+**Disadvantages:**<br />
 Concept maps are a rigorous and structured tool that has a learning curve. Although they are designed to explicitly identify related concepts, these maps are limited in their ability to describe the complexity of those relationships in detail. 
 
-Resources:<br />
+**Resources:**<br />
 [The Theory Underlying Concept Maps](https://cmap.ihmc.us/publications/researchpapers/TheoryUnderlyingConceptMaps.pdf)<br />
 [Concept mapping, mind mapping and argument mapping: what are the differences and do they matter?](https://doi.org/10.1007/s10734-010-9387-6)
 
@@ -73,11 +73,10 @@ An infographic can bring your research to life and convey complex topics to an a
 **Disadvantages**
 It is time consuming to create a high-quality infographic and it requires experience with or interest in learning about design and science communication.  
 
-Resources:<br />
-Sample Infographics: 
-* [Teaching Tool](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving) 
-* [Timeline](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)
-* [System](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
+**Resources:**<br />
+[Example Teaching Tool](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving) 
+[Example Timeline](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)
+[Example System](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
 # Software Options 
@@ -89,7 +88,7 @@ Here are some popular software options to consider:
 | Software   | Visualization Options | Accessibility | User Experience |
 | :--------- | :-------------------- | :------------ | :-------------- |
 | [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) | Maps, Diagrams & Infographics | Microsoft 365 | User friendly |
-| Adobe [Illustrator](https://www.adobe.com/products/illustrator.html), [InDesign](https://www.adobe.com/products/indesign.html), [Photoshop](https://www.adobe.com/products/photoshop.html) | Maps, Diagrams & Infographics | Adobe Suite Products | Requires Familiarity<br />with Adobe Products |
+| Adobe [Illustrator](https://www.adobe.com/products/illustrator.html), [InDesign](https://www.adobe.com/products/indesign.html),<br />[Photoshop](https://www.adobe.com/products/photoshop.html) | Maps, Diagrams & Infographics | Adobe Suite Products | Requires Familiarity<br />with Adobe Products |
 | [R](https://www.r-project.org/)<br />R Package:<br />[DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) |Maps & Diagrams  | Open Access | Requires Coding<br />Experience |
 | [Canva](https://www.canva.com/) | Maps, Diagrams & Infographics | Web Based | User friendly |
 | [Cmap](https://cmap.ihmc.us/) | Maps | Web Based | User friendly |
