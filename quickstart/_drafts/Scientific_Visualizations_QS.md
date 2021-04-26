@@ -1,5 +1,5 @@
 ---
-title: Scientific Teamwork and the Development of Process Visuals 
+title: Creating Visualizations to Enhance Scientific Teamwork
 tags:
   - Science Visualization
 ---
