@@ -39,13 +39,13 @@ A concept map begins with a word or idea related to a focus question, situated a
 ![Concept Map Sample](/assets/images/Concept_Maps.png)
 
 **Stage of Research Process:**  
-Concept maps are useful as part of a projects initial scoping activities but are also ever-evolving.  As the project develops and new linkages are discovered it is important to include this progress in the concept map so it continues to serves the project from beginning to end. 
+Concept maps are useful as part of a project's initial scoping activities but are also ever-evolving.  As the project develops and new linkages are discovered it is important to update the concept map so it continues to serves the project from beginning to end. 
 
 **Advantages:**<br />
 Its ability to display relational links between relevant concepts can be especially useful for capturing the complex dynamics and systems relevant to socio-environmental research. 
 
 **Disadvantages:**<br />
-Concept maps are a rigorous and structured tool that has a learning curve. Although they are designed to explicitly identify related concepts, these maps are limited in their ability to describe the complexity of those relationships in detail. 
+Concept maps are a rigorous and structured tool that have a learning curve. In addition, although they are designed to explicitly identify related concepts, these maps are limited in their ability to describe the complexity of those relationships in detail. 
 
 **Resources:**<br />
 [The Theory Underlying Concept Maps](https://cmap.ihmc.us/publications/researchpapers/TheoryUnderlyingConceptMaps.pdf)<br />
@@ -53,7 +53,7 @@ Concept maps are a rigorous and structured tool that has a learning curve. Altho
 
 ## Infographics
 
-An infographic is a collection of charts, diagrams, or illustrations that visually present information in a clear and attention-grabbing way.  Infographics are especially useful for communicating complex ideas to an audience who may not have experience or expertise in that subject. Research teams can develop an infographic as a science communications product to present their research problem, outcomes and/or goals.  
+An infographic is a collection of charts, diagrams, or illustrations that visually present information in a clear and attention-grabbing way.  Infographics are especially useful for communicating complex ideas to an audience who may not have experience or expertise in that subject. Research teams use infographics as a science communications product to present their research problem, outcomes and/or goals.  
 
 Here are some guiding questions to consider when creating an infographic: 
 
@@ -67,15 +67,15 @@ The answers to these questions will help your team outline the foundation of you
 **Stage of Research Process:**  
 It is helpful for teams to develop a communications strategy at the start of their project rather than as an end stage activity.  The infographic’s content will progress with the research project so choosing this product at the outset will help to direct ideas and inspiration for the infographic. 
 
-**Advantages**
+**Advantages:**<br />
 An infographic can bring your research to life and convey complex topics to an audience who may not have expertise in that subject.  Therefore, it is great for building bridges between science, community and action. 
 
-**Disadvantages**
+**Disadvantages:**<br />
 It is time consuming to create a high-quality infographic and it requires experience with or interest in learning about design and science communication.  
 
 **Resources:**<br />
-[Example Teaching Tool](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving) 
-[Example Timeline](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)
+[Example Teaching Tool](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
+[Example Timeline](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)<br />
 [Example System](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
@@ -88,7 +88,7 @@ Here are some popular software options to consider:
 | Software   | Visualization Options | Accessibility | User Experience |
 | :--------- | :-------------------- | :------------ | :-------------- |
 | [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) | Maps, Diagrams & Infographics | Microsoft 365 | User friendly |
-| Adobe [Illustrator](https://www.adobe.com/products/illustrator.html), [InDesign](https://www.adobe.com/products/indesign.html),<br />[Photoshop](https://www.adobe.com/products/photoshop.html) | Maps, Diagrams & Infographics | Adobe Suite Products | Requires Familiarity<br />with Adobe Products |
+| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html), [InDesign](https://www.adobe.com/products/indesign.html),<br />& [Photoshop](https://www.adobe.com/products/photoshop.html) | Maps, Diagrams & Infographics | Adobe Suite Products | Requires Familiarity<br />with Adobe Products |
 | [R](https://www.r-project.org/)<br />R Package:<br />[DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) |Maps & Diagrams  | Open Access | Requires Coding<br />Experience |
 | [Canva](https://www.canva.com/) | Maps, Diagrams & Infographics | Web Based | User friendly |
 | [Cmap](https://cmap.ihmc.us/) | Maps | Web Based | User friendly |
@@ -96,6 +96,8 @@ Here are some popular software options to consider:
 If you’re planning to use R to create a diagram or map with DiagrammeR, check out SESYNC’s post on [Creating Visualizations with DiagrammeR](https://cyberhelp.sesync.org/blog/visualization-with-diagrammeR.html). 
 
 The options listed above are just some possible software tools that can be used to create visualizations such as mind and concept maps, diagrams and infographics for research projects.  They offer varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
+
+## Images
 
 It may be important for your visualization to include images that help to illustrate your visual’s narrative.  Here are some resources to find science relevant royalty free vector images: 
 
