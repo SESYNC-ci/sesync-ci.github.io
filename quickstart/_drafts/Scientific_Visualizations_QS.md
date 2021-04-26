@@ -95,11 +95,11 @@ Here are some popular software options to consider:
 
 If you’re planning to use R to create a diagram or map with DiagrammeR, check out SESYNC’s post on [Creating Visualizations with DiagrammeR](https://cyberhelp.sesync.org/blog/visualization-with-diagrammeR.html). 
 
-The options listed above are just some possible software tools that can be used to create visualizations such as mind and concept maps, diagrams and infographics for research projects.  They offer varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
+The options listed above are just some possible software tools that can be used to create visualizations.  They offer varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
 
 ## Images
 
-It may be important for your visualization to include images that help to illustrate your visual’s narrative.  Here are some resources to find science relevant royalty free vector images: 
+It may be important for your visualization to include images to help illustrate your visual’s narrative.  Here are some resources for science relevant royalty free vector images: 
 
 * [Pixabay](https://pixabay.com/): Free downloadable images, no account required. 
 * [The Integration and Application Network (IAN) at UMCES](https://ian.umces.edu/): 1000’s of free environmentally relevant vector graphics.  Account required to download images. 
