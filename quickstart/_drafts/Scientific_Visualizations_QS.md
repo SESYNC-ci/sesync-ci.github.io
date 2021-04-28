@@ -79,7 +79,7 @@ It is time consuming to create a high-quality infographic and it requires experi
 **Resources:**<br />
 [Example Teaching Infographic](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
 [Example System Infographic](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
-[SESYNC's Communication & Broader Engagement Toolkit](http://www.sesync.org/for-you/communications/toolkit)<br />
+[SESYNC's Communications & Broader Engagement Toolkit](http://www.sesync.org/for-you/communications/toolkit)<br />
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
 # Software Options 
@@ -100,6 +100,8 @@ Here are some popular software options to consider:
 If you’re planning to use R to create a diagram or map with DiagrammeR, check out SESYNC’s post on [Creating Visualizations with DiagrammeR](https://cyberhelp.sesync.org/blog/visualization-with-diagrammeR.html). 
 
 The options listed above are just some possible software tools that can be used to create visualizations.  Many of these software options can be accessed through your home institution.  Each offers varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
+
+**For questions about using open source software, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
 ## Images
 
