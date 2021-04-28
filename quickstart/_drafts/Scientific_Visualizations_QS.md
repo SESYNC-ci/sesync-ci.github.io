@@ -105,7 +105,7 @@ The options listed above are just some possible software tools that can be used 
 
 ## Images
 
-It may be important for your visualization to include images to help illustrate your visual’s narrative.  Here are some resources for science relevant royalty free images: 
+It may be important for your visualization to include images that help illustrate your visual’s narrative.  Here are some resources for science relevant royalty free images: 
 
 * [The Integration and Application Network (IAN) at UMCES](https://ian.umces.edu/): 1000’s of free environmentally relevant vector graphics.  Account required to download images. 
 * [BioRender](https://biorender.com/): Free life science icons available. Account required to download images. 
