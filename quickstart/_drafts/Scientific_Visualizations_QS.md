@@ -64,6 +64,9 @@ Here are some guiding questions to consider when creating an infographic:
 
 The answers to these questions will help your team outline the foundation of your infographic and are key to communicating socio-environmental concepts in a visual format.  
 
+![Justinianic Plague Infographic](/assets/images/JP_infographic.png)
+This [infographic on the Justinianic Plague](https://www.sesync.org/news/mon-2019-12-02-2028/justinianic-plague-not-a-landmark-pandemic) uses visuals to convey the outcomes of a project led by SESYNC researchers. 
+
 **Stage of Research Process:**  
 It is helpful for teams to develop a communications strategy at the start of their project rather than as an end stage activity.  The infographic’s content will progress with the research project so choosing this product at the outset will help to direct ideas and inspiration for the infographic. 
 
