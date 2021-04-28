@@ -1,7 +1,7 @@
 ---
 title: Creating Visualizations to Enhance Scientific Teamwork
 tags:
-  - Science Visualization
+  - Visualization
 ---
 
 > *There are a variety of visualization options available to help scientific teams create and share a collective vision of their research project.  The development of these visualizations can promote deep learning and engagement by transcending verbal and written boundaries across diverse perspectives within a team.  These visuals allow groups to communicate complex socio-environmental concepts among the team, scientific community and public sphere.*
@@ -104,5 +104,3 @@ It may be important for your visualization to include images to help illustrate 
 * [Pixabay](https://pixabay.com/): Free downloadable images, no account required. 
 * [The Integration and Application Network (IAN) at UMCES](https://ian.umces.edu/): 1000’s of free environmentally relevant vector graphics.  Account required to download images. 
 * [BioRender](https://biorender.com/): Free life science icons available. Account required to download images. 
-
-**If you would like to discuss developing a visualization using the listed software options, or are interested in exploring software not shown here, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
