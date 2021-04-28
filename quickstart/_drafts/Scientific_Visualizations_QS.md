@@ -25,7 +25,7 @@ Mind mapping is most commonly used during the beginning stages of a project.  Ho
 This is a creative and unstructured way of brainstorming that is relatively quick and easy to learn.
 
 **Disadvantages:**<br />
-Mind maps are limited in their ability to articulate highly complex relationships.  Therefore, it is useful for teams trying to distill a unique concept but they are not designed to explore the interrelatedness between various concepts in detail. 
+Mind maps are limited in their ability to articulate highly complex relationships.  Therefore, it is useful for teams trying to distill a unique concept but they are not designed to explore the interrelatedness between various concepts. 
 
 **Resources:**<br />
 [The science of mind mapping: a visual way to make sense of the world](https://nesslabs.com/mind-mapping)<br />
