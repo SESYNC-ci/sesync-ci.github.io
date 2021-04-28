@@ -101,7 +101,7 @@ If you’re planning to use R to create a diagram or map with DiagrammeR, check 
 
 The options listed above are just some possible software tools that can be used to create visualizations.  Many of these software options can be accessed through your home institution.  Each offers varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
 
-**For questions about using open source software, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
+**For questions about using open source software for visualizations, please contact [cyberhelp@sesync.org](mailto:cyberhelp@sesync.org).**
 
 ## Images
 
