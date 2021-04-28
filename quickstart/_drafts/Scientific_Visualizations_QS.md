@@ -25,7 +25,7 @@ Mind mapping is most commonly used during the beginning stages of a project.  Ho
 This is a creative and unstructured way of brainstorming that is relatively quick and easy to learn.
 
 **Disadvantages:**<br />
-Mind maps are limited in their ability to articulate highly complex relationships.  Therefore, it is useful for teams trying to explain one unique concept but they don’t have the capacity to explore the interrelatedness of various concepts. 
+Mind maps are limited in their ability to articulate highly complex relationships.  Therefore, it is useful for teams trying to distill a unique concept but they are not designed to explore the detailed interrelatedness between various concepts. 
 
 **Resources:**<br />
 [The science of mind mapping: a visual way to make sense of the world](https://nesslabs.com/mind-mapping)<br />
@@ -65,7 +65,7 @@ Here are some guiding questions to consider when creating an infographic:
 The answers to these questions will help your team outline the foundation of your infographic and are key to communicating socio-environmental concepts in a visual format.  
 
 ![Justinianic Plague Infographic](/assets/images/JP_infographic.png)
-This [infographic on the Justinianic Plague](https://www.sesync.org/news/mon-2019-12-02-2028/justinianic-plague-not-a-landmark-pandemic) uses visuals to convey the outcomes of a project led by SESYNC researchers. 
+This [infographic on the Justinianic Plague](https://www.sesync.org/news/mon-2019-12-02-2028/justinianic-plague-not-a-landmark-pandemic) uses visual storytelling to share the outcomes of a project led by SESYNC researchers. 
 
 **Stage of Research Process:**  
 It is helpful for teams to develop a communications strategy at the start of their project rather than as an end stage activity.  The choice to create an infographic at the outset of the research project will help to direct ideas and inspiration for the final product. 
@@ -79,7 +79,7 @@ It is time consuming to create a high-quality infographic and it requires experi
 **Resources:**<br />
 [Example Teaching Infographic](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
 [Example System Infographic](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
-[SESYNC's Communication & Broader Engagement Toolkit](http://www.sesync.org/for-you/communications/toolkit)
+[SESYNC's Communication & Broader Engagement Toolkit](http://www.sesync.org/for-you/communications/toolkit)<br />
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
 # Software Options 
@@ -103,8 +103,9 @@ The options listed above are just some possible software tools that can be used 
 
 ## Images
 
-It may be important for your visualization to include images to help illustrate your visual’s narrative.  Here are some resources for science relevant royalty free vector images: 
+It may be important for your visualization to include images to help illustrate your visual’s narrative.  Here are some resources for science relevant royalty free images: 
 
-* [Pixabay](https://pixabay.com/): Free downloadable images, no account required. 
 * [The Integration and Application Network (IAN) at UMCES](https://ian.umces.edu/): 1000’s of free environmentally relevant vector graphics.  Account required to download images. 
 * [BioRender](https://biorender.com/): Free life science icons available. Account required to download images. 
+* [Pixabay](https://pixabay.com/): Free downloadable images, no account required. 
+* [Unsplash](https://unsplash.com/): Free downloadable images, no account required.  
