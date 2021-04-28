@@ -34,12 +34,12 @@ Mind maps are limited in their ability to articulate highly complex relationship
 ## Concept Mapping 
 Concept maps are linear and structured visualizations used by teams to outline the relationships between various concepts central to a research question. These maps provide a more precise look at the linkages between related concepts in a formally organized way. 
 
-A concept map begins with a word or idea related to a focus question, situated at the top of the map, that the diagram aims to answer.  The map then subsequently lays out all related concepts that are enclosed in circles or square boxes.  These relational concepts are connected through arrows defined by linking text (prepositional phrases) that explain how each idea is associated to one another.  These linking relationships can be hierarchical (downward arrows) or they can be moving in all directions.  
+A concept map begins with a word or idea related to a focus question that the diagram aims to answer.  The map then subsequently lays out all related concepts that are enclosed in circles or square boxes.  These relational concepts are connected through arrows defined by linking text (prepositional phrases) that explain how each idea is associated to one another.  These linking relationships can be hierarchical (downward arrows) or they can be moving in all directions.  
 
 ![Concept Map Sample](/assets/images/Concept_Maps.png)
 
 **Stage of Research Process:**  
-Concept maps are useful as part of a project's initial scoping activities but are also ever-evolving.  As the project develops and new linkages are discovered it is important to update the concept map so it continues to serves the project from beginning to end. 
+Concept maps are useful as part of a project's initial scoping activities but are also ever-evolving.  As the project develops and new linkages are discovered it is important to update the concept map so it continues to serve the project from beginning to end. 
 
 **Advantages:**<br />
 Its ability to display relational links between relevant concepts can be especially useful for capturing the complex dynamics and systems relevant to socio-environmental research. 
@@ -53,7 +53,7 @@ Concept maps are a rigorous and structured tool that have a learning curve. In a
 
 ## Infographics
 
-An infographic is a collection of charts, diagrams, or illustrations that visually present information in a clear and attention-grabbing way.  Infographics are especially useful for communicating complex ideas to an audience who may not have experience or expertise in that subject. Research teams use infographics as a science communications product to present their research problem, outcomes and/or goals.  
+An infographic is a collection of charts, diagrams, or illustrations that visually present information in a clear and attention-grabbing way.  Infographics are especially useful for communicating complex ideas to an audience who may not have expertise in that subject. Research teams use infographics as a science communications product to present their research problem, key findings, outcomes and/or goals.  
 
 Here are some guiding questions to consider when creating an infographic: 
 
@@ -68,7 +68,7 @@ The answers to these questions will help your team outline the foundation of you
 This [infographic on the Justinianic Plague](https://www.sesync.org/news/mon-2019-12-02-2028/justinianic-plague-not-a-landmark-pandemic) uses visuals to convey the outcomes of a project led by SESYNC researchers. 
 
 **Stage of Research Process:**  
-It is helpful for teams to develop a communications strategy at the start of their project rather than as an end stage activity.  The infographic’s content will progress with the research project so choosing this product at the outset will help to direct ideas and inspiration for the infographic. 
+It is helpful for teams to develop a communications strategy at the start of their project rather than as an end stage activity.  The choice to create an infographic at the outset of the research project will help to direct ideas and inspiration for the final product. 
 
 **Advantages:**<br />
 An infographic can bring your research to life and convey complex topics to an audience who may not have expertise in that subject.  Therefore, it is great for building bridges between science, community and action. 
@@ -77,9 +77,9 @@ An infographic can bring your research to life and convey complex topics to an a
 It is time consuming to create a high-quality infographic and it requires experience with or interest in learning about design and science communication.  
 
 **Resources:**<br />
-[Example Teaching Tool Infographic](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
-[Example Timeline Infographic](https://www.jpl.nasa.gov/infographics/voyager-mission-timeline)<br />
+[Example Teaching Infographic](https://www.sesync.org/infographic-teaching-socio-environmental-problem-solving)<br />
 [Example System Infographic](https://www.nationalgeographic.org/media/the-mangrove-ecosystem/)<br />
+[SESYNC's Communication & Broader Engagement Toolkit](http://www.sesync.org/for-you/communications/toolkit)
 [How to make an infographic in PowerPoint](https://graphicmama.com/blog/how-to-make-an-infographic-in-powerpoint/)
 
 # Software Options 
@@ -93,12 +93,13 @@ Here are some popular software options to consider:
 | [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) | Maps, Diagrams & Infographics | Microsoft 365 | User friendly |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html), [InDesign](https://www.adobe.com/products/indesign.html),<br />& [Photoshop](https://www.adobe.com/products/photoshop.html) | Maps, Diagrams & Infographics | Adobe Suite Products | Requires Familiarity<br />with Adobe Products |
 | [R](https://www.r-project.org/)<br />R Package:<br />[DiagrammeR](http://rich-iannone.github.io/DiagrammeR/index.html) |Maps & Diagrams  | Open Access | Requires Coding<br />Experience |
-| [Canva](https://www.canva.com/) | Maps, Diagrams & Infographics | Web Based | User friendly |
-| [Cmap](https://cmap.ihmc.us/) | Maps | Web Based | User friendly |
+| [Canva](https://www.canva.com/) | Maps, Diagrams & Infographics | Web Based | User Friendly |
+|[GitMind](https://gitmind.com/) | Maps | Web Based | User Friendly |
+| [Cmap](https://cmap.ihmc.us/) | Maps | Web Based | User Friendly |
 
 If you’re planning to use R to create a diagram or map with DiagrammeR, check out SESYNC’s post on [Creating Visualizations with DiagrammeR](https://cyberhelp.sesync.org/blog/visualization-with-diagrammeR.html). 
 
-The options listed above are just some possible software tools that can be used to create visualizations.  They offer varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
+The options listed above are just some possible software tools that can be used to create visualizations.  Many of these software options can be accessed through your home institution.  Each offers varying levels of difficulty depending on a user’s prior experience and comfort level working with these platforms. 
 
 ## Images
 
