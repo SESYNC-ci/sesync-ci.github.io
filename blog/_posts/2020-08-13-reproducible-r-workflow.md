@@ -51,6 +51,20 @@ In a future session, you can reload the objects by using the `load()` function:
 load('my_awesome_output.RData')
 ```
 
+*Edit May 2021*: I got a comment from a reader saying that an alternative and possibly superior way of saving R objects is to use `saveRDS()` instead of `save()`. The key difference is that `saveRDS()` does not save the name of the object along with it. This can be better if somehow the object name changed in your code between saving and loading, or (worse) you created another object with the same name. Loading your `.RData` file would overwrite that object. You can save an R object as an `.rds` file like this:
+
+```
+saveRDS(big_object, 'my_object.rds')
+```
+
+Then load it back in. Notice that you have to give the loaded object a name (which can be the same as the old name).
+
+```
+big_object_reloaded <- readRDS('my_object.rds')
+```
+
+So the upside of `saveRDS()` and `readRDS()` is that it avoids potential name conflicts but the downside is that you can only save one object at a time with it.
+
 **Bespoke: using RStudio projects in conjunction with saving objects**
 
 RStudio includes a feature called "projects" as a way to keep your work in R organized. It is best explained by Hadley Wickham in [the project chapter of his book R for Data Science](https://r4ds.had.co.nz/workflow-projects.html). The basic idea is to keep all the scripts and history associated with one of your real-life projects in one place as an R project. You can switch between them easily. Typically people associate each project with its own version control (i.e., git) repository. I won't go into too much detail on how to set up projects in RStudio --- read the [RStudio documentation](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) and the [book chapter](https://r4ds.had.co.nz/workflow-projects.html)!
