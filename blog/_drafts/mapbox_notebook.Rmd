@@ -1,0 +1,226 @@
+---
+title: "Map with Mapbox satellite imagery"
+author: "Quentin D. Read"
+date: "5/25/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+
+In this document I go through how to do the following, all from within R:
+
+- Download good-quality satellite imagery from Mapbox raster tile API for a given extent and zoom level
+- Use GDAL to georeference the resulting image files and mosaic them together
+- Load the mosaicked file as a raster and use it as a base image for a static map
+
+Note: none of the code that gets the tiles and georeferences them is run in the notebook itself. I ran it on my own machine earlier. But the code to actually draw the map is run within this notebook.
+
+Let's load some packages!
+
+```{r load pkgs, message = FALSE, warning = FALSE}
+library(curl)
+library(glue)
+library(sf)
+library(gdalUtils)
+library(purrr)
+library(ggplot2)
+library(ggspatial)
+library(raster)
+library(USAboundaries)
+library(viridis)
+```
+
+
+# Getting tiles 
+
+First you will need to sign up for a Mapbox API key. It is free to get tiles from Mapbox's API up to a certain limit, but the limit looks like it is extremely high compared to what you would need to make a few maps. So if you want to run this code yourself you'll have to sign up for a Mapbox account and then generate an API token. I set the token using the options you can see in the screenshot below, enabling listing and reading of tilesets, and everything seemed to work...
+
+![](C:/Users/qread/Documents/temp/mapboxapiscreenshot.PNG)
+
+Once you get the token, copy and paste it into a blank text file and save it somewhere. Then replace the file path in the code below with the path to your API token.
+
+```{r, eval = FALSE}
+Sys.setenv(MAPBOXAPIKEY = readLines('~/Documents/mapboxapikey.txt'))
+```
+
+## Figuring out which tiles to get
+
+Mapbox uses the [OpenStreetMap tile numbering system](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames). The link explains how you can find the x and y coordinates of the tile(s) you need, if you know the latitude and longitude of the corners of your map. Here is R code to do that.
+
+The function `find_tile_number()` takes a zoom level between 0 and 19 and two vectors, `lat_deg` or latitude in degrees of the two opposite map corners, and `lon_deg` or longitude in degrees of the corners. It manually projects them to the Mercator projection `EPSG:3857` and normalizs them to range between 0 and 1. Then it multiplies those numbers by the number of tiles there are along the x and y axes at your given zoom level (`n = 2^zoom` means for example that zoom level 3 covers the entire earth with an 8x8 grid of tiles because `2^3 = 8`). Then you round down to get the tile index in x and y. Now that you have the two extreme corners' tile indexes, you can use `expand.grid()` to list out the indexes of all the tiles you need for your map.
+
+```{r define tile number function}
+find_tile_number <- function(zoom, lat_deg, lon_deg) {
+  lat_rad <- lat_deg * pi / 180 # Convert lat to radians
+  n <- 2 ^ zoom
+  xtile <- floor(n * ((lon_deg + 180) / 360))
+  ytile <- floor(n * (1 - (log(tan(lat_rad) + 1/cos(lat_rad)) / pi)) / 2)
+  
+  xtileseq <- seq(min(xtile), max(xtile))
+  ytileseq <- seq(min(ytile), max(ytile))
+  expand.grid(x = xtileseq, y = ytileseq)
+}
+```
+
+The function `corner_coords()` does the opposite: it goes from tile index and zoom level, back to latitude and longitude coordinates. I will use this to get the two corners (upper left or NW, and lower right or SE) of each of the tiles I download.
+
+```{r define corner function}
+corner_coords <- function(zoom, xtile, ytile) {
+  n = 2 ^ zoom
+  xcorners <- xtile + c(0, 1) # NW, SE
+  ycorners <- ytile + c(0, 1)
+  lon_deg = xcorners / n * 360.0 - 180.0
+  lat_rad = atan(sinh(pi * (1 - 2 * ycorners / n)))
+  lat_deg = lat_rad * 180.0 / pi
+  cbind(lat = lat_deg, lon = lon_deg)
+}
+```
+
+I chose to use zoom level 7 since it seems like a pretty good resolution for this map but you could always change it. I used the corner coordinates as provided by Nicki.
+
+```{r zoom and coords}
+zoom <- 7
+
+upper_left<-c(30.24748,-87.5177) # coordinates for upper left corner of map
+lower_right<-c(22.91488,-80.2851) # coordinates for lower right corner of map
+```
+
+Now input the zoom level and coordinates as arguments to `find_tile_number()`.
+
+```{r find tile numbers}
+tile_numbers_mat <- find_tile_number(zoom=zoom, lat_deg=c(upper_left[1], lower_right[1]), lon_deg=c(upper_left[2], lower_right[2]))
+```
+
+We need to download 16 tiles from the API:
+
+```{r}
+tile_numbers_mat
+```
+
+## Downloading tiles from the API
+
+I followed [Mapbox API documentation](https://docs.mapbox.com/api/maps/raster-tiles/) in this step. The way the API call is set up is:
+
+```
+https://api.mapbox.com/v4/mapbox.satellite/zoom/x/y@2x.jpg90?access_token=(insert API token here)
+```
+
+In that call, `zoom` is the zoom level (we're using 7), `x` and `y` are the tile coordinates we found above, and `@2x.jpg90` means to get a 2x resolution tile at the highest possible quality JPEG (90% quality). Of course you also have to pass it your API token.
+
+Here, I put together some API calls and file paths where I want to save the files, using the function `glue()` to put the strings together. They are going to be JPEG files. I also made a list of file paths as TIFF files because we are going to convert all the files to GeoTIFF when we georeference them later. I put everything into a data frame. *note: I had to use the full file path because the GDAL functions do not like the `~` for some reason.*
+
+```{r build API calls}
+baseurl <- "https://api.mapbox.com/v4/mapbox.satellite"
+
+api_calls <- glue('{baseurl}/{zoom}/{tile_numbers_mat[,"x"]}/{tile_numbers_mat[,"y"]}@2x.jpg90?access_token={Sys.getenv("MAPBOXAPIKEY")}')
+file_names <- glue('C:/Users/qread/Documents/temp/fltiles/tile_{tile_numbers_mat[,"x"]}_{tile_numbers_mat[,"y"]}.jpg') 
+output_file_names <- gsub('jpg', 'tif', file_names)
+tile_numbers_df <- data.frame(tile_numbers_mat, api_call = api_calls, file_name = file_names, output_file_name = output_file_names)
+```
+
+Then I use the function `pwalk()` from the `purrr` package to "walk" through the rows of the data frame I made, and download the file from the API in each row, saving it to the file path as a JPEG.
+
+```{r download tiles, eval = FALSE}
+pwalk(tile_numbers_df, function(api_call, file_name, ...) curl_download(url = api_call, destfile = file_name))
+```
+
+# Georeferencing the images
+
+Okay, now we have a bunch of JPEGs but they are not georeferenced so we cannot use them to make a map yet. I was able to use information from this [blog post by Jimmy Utterström](https://jimmyutterstrom.com/blog/2019/06/05/map-tiles-to-geotiff/) and this [post on GIS StackExchange](https://gis.stackexchange.com/questions/27297/georeferencing-using-gdal) to figure out how to do it.
+
+This function, `georeference_tile()`, takes arguments of the file name of the JPEG, the file name of the GeoTIFF we are going to create, the x and y index of the tile, and the zoom level. It finds the coordinates of the upper left and lower right corners of the tile in lat and long. Then it calls the function `gdal_translate()` which uses a command from the GDAL library to georeference the JPEG and convert it to a GeoTIFF.
+
+```{r define georeference function}
+georeference_tile <- function(file_name, output_file_name, x, y, zoom, ...) {
+  # Determine the two extreme corners of the tile.
+  corners <- corner_coords(zoom, x, y)
+
+  gdal_translate(file_name,
+                 output_file_name,
+                 of = 'GTiff',
+                 a_ullr = c(corners[1, 'lon'], corners[1, 'lat'], corners[2, 'lon'], corners[2, 'lat']),
+                 a_srs = "EPSG:4326")
+}
+```
+
+Use `pwalk()` again to walk through the rows of the data frame, applying `georeference_tile()` each time.
+
+```{r georeference, eval = FALSE}
+pwalk(tile_numbers_df, georeference_tile, zoom = zoom)
+```
+
+Now use the function `gdalbuildvrt()` to mosaic all the tiles together to a single virtual raster called `fltile.vrt`. A VRT file acts like a raster but is just a small text file that points to all the actual tiles.
+
+```{r mosaic, eval = FALSE}
+gdalbuildvrt(Sys.glob('C:/Users/qread/Documents/temp/fltiles/*.tif'),
+             'C:/Users/qread/Documents/temp/fltiles/fltile.vrt')
+```
+
+# Making the map
+
+We load the VRT using the `raster` package, using the `stack()` function because it is a three banded RGB image.
+
+```{r load raster}
+fltile_raster <- stack('~/Documents/temp/fltiles/fltile.vrt')
+```
+
+I wanted to plot the final map in the Mercator projection again, but using the upper left and lower right limits Nicki provided. This might not be the best way to do this, but what I did was take the two corners and transform them to Mercator to use as axis limits later.
+
+```{r get map limits}
+map_limits <- st_sfc(st_point(rev(upper_left)), 
+                     st_point(rev(lower_right)), 
+                     crs = 4326) %>% 
+  st_transform(3857) %>%
+  st_coordinates
+```
+
+Here is the code from the older script that loads the raster layers, converts them to polygons, and clips them to remove the parts of the pixels that are over land. (I won't walk through that code here).
+
+```{r clip rasters}
+## mariculture siting raster (ssm)
+load("~/Documents/GitHub/sesync_repos/Mariculture_Team/Gulf_Suitability/Input_Data/effort_sum.rda")
+## fishing effort raster (gfw)
+load("~/Documents/GitHub/sesync_repos/Mariculture_Team/Gulf_Suitability/Input_Data/ssm_rc.rda")
+
+# Florida boundary polygon
+fl <- us_states(resolution = 'high', states = 'FL')
+
+# Project Florida boundaries to raster's projection
+flproj <- st_transform(fl, st_crs(effort_sum))
+
+### Convert rasters to polygon layers
+### Clip them to not intersect with FL coast
+effort_polygons <- effort_sum %>%
+  rasterToPolygons %>%
+  st_as_sf %>%
+  st_difference(flproj)
+
+ssm_polygons <- ssm_rc %>%
+  rasterToPolygons %>%
+  st_as_sf %>%
+  st_difference(flproj)
+```
+
+Now make the map! This uses `ggspatial::annotation_spatial()` to plot the RGB raster as a base layer. I added legend, scale bar, and north arrow but those elements could be tweaked. I also set the basemap and the effort raster layer to be slightly transparent but those `alpha` values could be tweaked too.
+
+```{r draw map, fig.height = 6}
+ggplot() +
+  annotation_spatial(data = fltile_raster, alpha = 0.9) +
+  geom_sf(data=effort_polygons, aes(fill = layer), alpha=0.75, color = NA) +
+  geom_sf(data=ssm_polygons, aes(fill = almacojack_OA_allyrs_yearlyavg), color = "#009E73") +
+  scale_fill_viridis(option="inferno", name = 'effort') +
+  scale_x_continuous(expand = c(0, 0), name = 'Longitude') +
+  scale_y_continuous(expand = c(0, 0), name = 'Latitude') +
+  coord_sf(xlim = map_limits[,'X'], ylim = rev(map_limits[,'Y']), crs = 3857) +
+  annotation_scale(text_col = 'white') +
+  annotation_north_arrow(location = 'br') +
+  theme(legend.position=c(0.1, 0.25), panel.grid = element_blank())
+```
+
+Now that looks nice! Don't forget to save as a high-resolution image!
+
+I plan to make this into a blog post at some point soon for the SESYNC cyber blog.
