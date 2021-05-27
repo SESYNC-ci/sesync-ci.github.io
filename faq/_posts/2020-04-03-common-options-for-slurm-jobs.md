@@ -42,12 +42,11 @@ As promised above, here is a table with the SESYNC-specific options that we have
 Some options to especially consider if your jobs often run out of memory are `--exclusive`, `--mem-per-cpu`, and `--nodelist`. See more details in the table.
 
 | Name | Shortcut | Example | What it does | Included in rslurm? |
-| --array | -a | `--array=1-10` | How many copies of the script to run | yes |
+| --array | -a | `--array=1-10%5` | How many copies of the script to run. In the example, the `%5` is optional; it means to run no more than 5 tasks at once. At SESYNC it is nice to set that extra option to be a good neighbor and make sure you don't use up the entire compute cluster! | yes |
 | --partition | -p | `-p sesyncshared` | Which group of nodes to submit the job to (more info [here]({{ 'faq/What-is-the-SESYNC-cluster.html' | relative_url }})). | no |
 | --job-name | -J | `-J awesome_job` | The job's name, of course! | yes |
 | --nodelist | -w | `--nodelist=pn44,pn45` | List of nodes to run your job on. At SESYNC, you will really only need this to specify the high-memory nodes, which are nodes 44-47 on the `sesync` partition. | no |
 | --exclusive | *none* | `--exclusive=user` | If you set this option to `user`, your job will only run on nodes with no other users' jobs running on them. This is useful if your jobs have high memory needs, and you don't want others' jobs competing with them for memory. | no |
-| --exclude | -x | `--exclude=pn24,pn25` | List of nodes *not* to run your job on. At SESYNC, this is nice if you are running an array job with many tasks and you want to be a friendly person and leave a few for other users. | no |
 | --export | *none* | `--export=x=50,y=foo` | Variables you want to pass to the job script. See details below[^2]. | no |
 | --time | -t | `-t 12:00:00` | Maximum time your job will run before being killed. At SESYNC, you only need to specify this if a scheduled [maintenance outage]({{ '/faq/maintenance-window-slurm.html' | relative_url }}) is coming up and you want your job to run before the outage begins. | no |
 | --ntasks | -n | `-n 8` | How many parallel processes your job will start (most SESYNC nodes have eight processors) | yes |
