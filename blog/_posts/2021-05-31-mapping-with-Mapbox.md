@@ -1,5 +1,5 @@
 ---
-title: "Making a static map with open-source satellite imagery using R, ggspatial, and Mapbox"
+title: "Making free maps with R, ggspatial, and Mapbox"
 tags:
  - R
  - Visualization
@@ -18,9 +18,9 @@ This blog post was inspired by a request from a graduate student researcher in a
 In the past, she had used the [ggmap][ggmap] package to put Google Earth imagery on her maps. 
 That used to be free but recently Google started to charge money to access their imagery tiles through an API ([though it is fairly cheap for light use][googlebilling]). 
 So she was looking for a free alternative. I did a lot of Googling and found lots of cool new stuff, 
-including the [ggspatial] package, which makes an appearance later in this post (scroll down for a list of packages to check out). 
+including the [ggspatial][ggspatial] package, which makes an appearance later in this post ([scroll to the bottom of this post](#other-packages-to-try-out) for a list of packages to check out). 
 I also found quite a few free or "freemium" tile servers that let you download satellite imagery tiles from an API to use in static or interactive maps. 
-The one I liked the best was Mapbox, but I couldn't find any R package to automate the process of downloading Mapbox tiles and adding them as background imagery for a map. 
+The one I liked the best was [Mapbox][mapbox], but I couldn't find any R package to automate the process of downloading Mapbox tiles and adding them as background imagery for a map. 
 So I wrote a little package of my own to do just that! 
 
 # Walkthrough
@@ -33,6 +33,8 @@ In this post I go through how to do the following, all from within R:
 
 I wrote a very minimalist R package called [qdrmapbox][qdrmapbox] to package up all the code for this blog post in one place. 
 It basically only does one thing, but it does that thing reasonably well (I think).
+
+You can follow along with the code in the post or [download an R script with all the code in one place][rscript].
 
 ## Setup
 
@@ -121,7 +123,7 @@ You can also see above how the API call is constructed. The base URL `https://ap
 tile x and y coordinates, the optional argument `@2x` for high resolution, and `.jpg90` for 90% quality JPEG. Notice that the access token is not 
 included in the data frame. The API key is never included in any variable in the workspace. It's only added to the API call when it's actually used. Now that's good security!
 
-![example tile](/assets/images/tile_73_97.jpg)  
+![example tile](/assets/images/tile_73_97.jpg){: width="250px" }  
 *This is the Mapbox Satellite imagery tile containing SESYNC's location at zoom level 8*.
 
 ## Georeferencing
@@ -208,62 +210,11 @@ Here is a list of R packages that allow you to put open-source tile imagery onto
 - [tutorial on accessing OpenStreetMap data in R](https://rforjournalists.com/2020/12/15/how-to-access-open-street-map-in-r/)
 - [tutorial on geospatial data viz in R with OpenStreetMap and RgoogleMaps](https://slcladal.github.io/maps.html)
 
-# Code
-
-Here is all the code from this blog post in one place so you can run it more easily.
-
-```
-#remotes::install_github('qdread/qdrmapbox')
-
-# Setup
-library(qdrmapbox)
-set_mapbox_api_key('~/Documents/mapboxapikey.txt')
-
-# Define zoom level and map corners, then find corresponding tile numbers.
-zoom <- 8
-upper_left <- c(39.8, -79.5)
-lower_right <- c(37.8, -74.8) 
-
-md_tile_index <- find_tile_numbers(zoom = zoom, upper_left = upper_left, lower_right = lower_right)
-
-# Define download directory, then query API to download the high-resolution tiles there
-download_dir <- '~/mdtiles'
-
-md_tile_df <- download_mapbox_tiles(tile_numbers_mat = md_tile_index, download_dir = download_dir, resolution = 'high', jpg_quality = 90)
-
-# Use GDAL to georeference and mosaic the tiles
-georeference_all_tiles(md_tile_df)
-
-build_virtual_raster(md_tile_df, file.path(download_dir, 'mdimage.vrt'))
-
-# Load packages for making the map
-library(sf)
-library(raster)
-library(USAboundaries)
-library(ggspatial)
-library(ggplot2)
-
-# Read mosaicked image back in as a raster stack
-mdimage_raster <- stack(file.path(download_dir, 'mdimage.vrt'))
-
-# Get data on Maryland counties and cities for making map
-md_counties <- us_counties(resolution = 'high', states = 'MD')
-md_cities <- us_cities(states = 'MD')
-
-# Make the map with the background image, in web Mercator projection, and add the proper attribution
-ggplot() +
-  annotation_spatial(data = mdimage_raster, alpha = 0.9) +
-  geom_sf(data = st_geometry(md_counties), color = 'white', fill = NA) +
-  geom_sf(data = md_cities, aes(color = population), size = 2) +
-  coord_sf(crs = 3857) +
-  mapbox_logo(xmin = -8870000, xmax = -8820000, ymin = 4535000, ymax = 4590000) +
-  annotate('text', x = Inf, y = -Inf, label = '\u00a9 Mapbox \u00a9 OpenStreetMap', hjust = 1, vjust = -1, color = 'white', size = 2) +
-  scale_color_viridis_c(trans = 'log10', labels = function(x) format(x, scientific = FALSE))
-```
-
 <!-- LINKS BELOW THIS LINE -->
+[rscript]: https://github.com/qdread/qdrmapbox/blob/main/walkthrough.R
 [googlebilling]: https://developers.google.com/maps/documentation/geocoding/usage-and-billing
 [ggmap]: https://github.com/dkahle/ggmap
+[mapbox]: https://www.mapbox.com
 [leaflet]: https://rstudio.github.io/leaflet/
 [mapview]: https://r-spatial.github.io/mapview/
 [jimmybp]: https://jimmyutterstrom.com/blog/2019/06/05/map-tiles-to-geotiff/

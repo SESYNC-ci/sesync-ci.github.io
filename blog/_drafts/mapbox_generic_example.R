@@ -101,4 +101,5 @@ ggplot() +
   annotation_scale(text_col = 'white') +
   scale_color_viridis_c(trans = 'log10', labels = function(x) format(x, scientific = FALSE))
 
-
+attribution <- '(c) Mapbox, (c) OpenStreetMap'
+attribution_long <- 'Prints use map data from Mapbox and OpenStreetMap and their data sources. To learn more, visit https://www.mapbox.com/about/maps/ and http://www.openstreetmap.org/copyright.'
