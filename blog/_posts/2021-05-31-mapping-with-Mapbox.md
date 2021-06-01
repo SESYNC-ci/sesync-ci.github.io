@@ -7,8 +7,6 @@ tags:
 author: qread
 ---
 
-# Problem
-
 These days, it seems like every time you turn around a new R package for making maps comes out, which renders an older one obsolete ... it's hard to keep track of! 
 There are tons of competing alternatives for both traditional (static) maps and interactive maps. 
 Tools like [leaflet][leaflet] and [mapview][mapview] are great for interactive maps, but this post focuses on a classic: a static map. 
