@@ -7,12 +7,15 @@ tags:
 author: qread
 ---
 
-# Introduction
+# Problem
 
 These days, it seems like every time you turn around a new R package for making maps comes out, which renders an older one obsolete ... it's hard to keep track of! 
 There are tons of competing alternatives for both traditional (static) maps and interactive maps. 
 Tools like [leaflet][leaflet] and [mapview][mapview] are great for interactive maps, but this post focuses on a classic: a static map. 
 That's right, no zooming in and out or panning back and forth. Just a nice clean simple map. 
+
+<a title="Unknown authorUnknown author, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:China-World_Map_Ming_front.jpg"><img width="500" alt="China-World Map Ming front" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/China-World_Map_Ming_front.jpg/512px-China-World_Map_Ming_front.jpg"></a>  
+*Static maps have been around for a long time &mdash; if it ain't broke, don't fix it.*
 
 This blog post was inspired by a request from a graduate student researcher in a SESYNC pursuit group who wanted to make a map displaying some raster data over a background of satellite imagery. 
 In the past, she had used the [ggmap][ggmap] package to put Google Earth imagery on her maps. 
@@ -27,7 +30,7 @@ So I wrote a little package of my own to do just that!
 
 In this post I go through how to do the following, all from within R:
 
-- Download good-quality satellite imagery from the Mapbox raster tile API for a given extent and zoom level
+- Download good-quality satellite imagery from the Mapbox Raster Tiles API for a given extent and zoom level
 - Georeference the downloaded image tiles and mosaic them together into a single image
 - Load the mosaicked image as a raster and use it as a base image for a static map
 
