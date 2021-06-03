@@ -70,7 +70,7 @@ A simple diagram:
     # print graph
     render_graph(my_graph)
 
-![](2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](assets/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 Use the `export_graph` function to save the figure as an image file, in
 this case a PNG:
@@ -104,7 +104,7 @@ A simple diagram:
 
     my_graphviz
 
-![](2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](assets/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 A GraphViz object requires a few more steps to save as an image file,
 such as a PNG:
@@ -168,7 +168,7 @@ using subgraph clustering.
           
           }")
 
-![](2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](assets/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 Adapted from a more detailed “real life” example located in this
 research [data
@@ -192,7 +192,7 @@ A simple diagram:
             B-->B1[Mussels]
             ")
 
-![](2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](assets/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 A more complex diagram specifying colors and shapes for nodes, and
 labels for edges.
@@ -218,6 +218,6 @@ labels for edges.
 
             ")
 
-![](2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](assets/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 Adapted from Klinger & Blake (in prep.)
