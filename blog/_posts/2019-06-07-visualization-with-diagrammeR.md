@@ -192,7 +192,7 @@ A simple diagram:
             B-->B1[Mussels]
             ")
 
-![](/assets/images/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](/assets/images/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-7-1.png){width=100%}
 
 A more complex diagram specifying colors and shapes for nodes, and
 labels for edges.
@@ -218,6 +218,6 @@ labels for edges.
 
             ")
 
-![](/assets/images/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](/assets/images/2019-06-07-visualization-with-diagrammeR_files/figure-markdown_strict/unnamed-chunk-8-1.png){width=100%}
 
 Adapted from Klinger & Blake (in prep.)
