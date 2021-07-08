@@ -27,7 +27,7 @@ You can generate a key pair for any machine onto which you will clone your repos
 6.  Paste the key in the larger box (leave the smaller box blank to use a default title or label)
 7.  Open every *existing* RStudio project you've previously cloned from GitLab/GitHub, and for each project enter the following command in the R console:
     - For GitHub repositories, enter `system('git remote set-url origin git@github.com:USERNAME/REPOSITORYNAME.git')`. Here, `USERNAME` will either be your GitHub username or the GitHub organization the repo belongs to.
-    - For GitLab repositories, the URL format will be `system('git remote set-url origin git@gitlab.sesync.org:USERNAME/REPOSITORYNAME.git')`. Here, `USERNAME` will either be your SESYNC username or the GitLab group the repo belongs to.
+    - For GitLab repositories, enter `system('git remote set-url origin git@gitlab.sesync.org:USERNAME/REPOSITORYNAME.git')`. Here, `USERNAME` will either be your SESYNC username or the GitLab group the repo belongs to.
 
 That's it! You should be able to push and pull between your local git
 repository on <https://rstudio.sesync.org> and the remote git repository on GitLab/GitHub. 
