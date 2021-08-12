@@ -122,7 +122,7 @@ To make it easier to copy-paste, all the code for the blog post is in one place 
 
 
 [code]: https://cyberhelp.sesync.org/assets/files/transform_alaska_hawaii.R
-[file]: https://cyberhelp.sesync.org/assets/files/tnc-ecoregions-usa.gpkg
+[file]: https://cyberhelp.sesync.org/assets/files/tnc_ecoregions_usa.gpkg
 [tncshp]: https://geospatial.tnc.org/datasets/b1636d640ede4d6ca8f5e369f2dc368b/about
 [urbnmapr]: https://urbaninstitute.github.io/urbnmapr/articles/introducing-urbnmapr.html
 [geopackage]: https://www.gis-blog.com/geopackage-vs-shapefile/
