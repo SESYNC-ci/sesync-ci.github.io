@@ -11,14 +11,17 @@ A few weeks ago, 30 researchers from 11 teams made their virtual way to SESYNC f
 It was a pleasure to interact with researchers from diverse backgrounds working on an array of interesting questions in socio-environmental synthesis.
 In this blog post, I'll go over some of the highlights of the week and the lessons we as instructors learned.
 
+![Screenshot of 2021 CSI participants](/assets/images/si2021screenshot.png){: width="600px" }
+*Some of the coaches and participants mugging for the camera*
+
 ## Recap
 
 2021 was the first summer institute that was intended to be virtual from the get-go, in contrast to 2020 when the pandemic threw a wrench into our plans when we had already begun to prepare. 
 This year, 11 teams participated. Half of them were SESYNC-funded --- but even among the folks on other teams there were a lot of SESYNC connections. 
-The "coaching staff" consisted of data scientists Rachael and Quentin, plus postdoc Renee and guest instructor/coach Mary. 
+The coaching staff consisted of data scientists Rachael and Quentin, plus postdoc Renee and guest instructor/coach Mary. 
 We had to juggle time zones stretching from the U.K. to Hawaii, an 11-hour difference. We're experts in that by now! 
 
-![Time zones of 2021 CSI participants](/assets/images/csi2021map.png){: width="600px" }  
+![Time zones of 2021 CSI participants](/assets/images/csi2021map.png){: width="600px" }
 *2021 CSI participants logged in from lots of different time zones!*  
 *Map in Robinson projection, made with the help of [this blog post][geocoding]. [Source code here][mapcode].*
 
@@ -36,7 +39,7 @@ a coach who they met with every day to work on their mini-project, which they pr
 
 We had a really interesting mix of projects and backgrounds represented --- check out the Twitter thread I made during the final presentations.
 
-<a class="twitter-timeline" href="https://twitter.com/QuentinDRead/timelines/1426165786331209735?ref_src=twsrc%5Etfw">2021CSI - Curated tweets by QuentinDRead</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<a class="twitter-timeline" height="500" href="https://twitter.com/QuentinDRead/timelines/1426165786331209735?ref_src=twsrc%5Etfw">2021CSI - Curated tweets by QuentinDRead</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 To give you a few examples, we had a team working on linking global biodiversity models to ecosystem models to predict changes in the biodiversity-ecosystem service relationship.
 Another team was looking at stories of sea ice loss: how is it portrayed in the media and how do the media portrayals correlate with observed trends in sea ice cover?
@@ -44,6 +47,11 @@ We even had a team really getting into the weeds of agent-based modeling to expl
 Other team projects included doing intensive spatial analysis on microclimates in Houston Texas to look at overlap between poverty, health, and climate, 
 modeling fishing outside of protected areas off the coast of Oahu, and environmental justice in stream restoration projects.
 Lots of teams' projects made heavy use of geospatial analysis and text mining. So those lessons came in handy!
+
+![Example figure: coral richness over time](/assets/images/Stony_Coral_Species_Richness.gif){: width="250px" align="left" } ![Example figure: watershed inference heatmap](/assets/images/watershedinferenceheatmap.jpg){: width="300px" align="left" }
+
+![Example figure: Hawaiian fisheries model output](/assets/images/hawaiifisheriesfig.png){: width="600px" }
+*A few of the data visualizations made by 2021 CSI teams*
 
 ## Impressions and lessons learned
 
