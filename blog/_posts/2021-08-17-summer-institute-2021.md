@@ -28,9 +28,13 @@ We had to juggle time zones stretching from the U.K. to Hawaii, an 11-hour diffe
 We used more or less the same tech setup as [last year][2020post]. The instructors recorded "code-along" lecture videos ahead of time and uploaded them to YouTube. 
 The teams worked through the lessons each day and asked questions at daily office hours. We communicated with teams on Slack, where each
 team had its own channel for collaborative work. We sprang for the Slack paid plan (fairly cheap with the educational discount) so that
-teams could make video calls from within Slack. All our full-group meetings were done in Zoom. As we have always done for both virtual and in-person
+teams could make video calls from within Slack. We probably could have gotten by without the paid Slack plan but it was nice for the
+groups to have the option to quickly switch between messaging and video calls. All our full-group meetings were done in Zoom. 
+
+As we have always done for both virtual and in-person
 workshops, we set up a "teaching lab," a virtual machine running on the SESYNC server that participants can just log into and have their work
-environment ready to go, with all R and Python packages already installed.
+environment ready to go, with all R and Python packages already installed. The teaching lab runs on [Docker](https://docs.docker.com/get-started/overview/).
+It can be finicky to set up but makes things *so* much easier for the students --- it's definitely worth the trouble.
 
 In addition to doing the lessons, each team also brought some of their own data and worked on a mini-project throughout the week. Each team was assigned
 a coach who they met with every day to work on their mini-project, which they presented at the final meeting on Friday. As always, it was a busy and fun week!
@@ -61,12 +65,14 @@ One thing we instructors took away is that collaborative coding tools like GitHu
 The most common thing we saw in students' feedback was how much they appreciated getting some hands-on experience with that kind of remote collaboration.
 So I think the most important accomplishment from the 2021 CSI was giving participants that practice. Other coaches echoed that sentiment.
 
-What could we have done better? There was a decent amount of interaction between teams but we could have done more to foster it. That has always been a challenge of the virtual format.
+What could we have done better? 
+
+**More interaction among teams.** There was a decent amount of interaction between teams but we could have done more to foster it. That has always been a challenge of the virtual format.
 Maybe next time we could more explicitly take advantage of some of the overlaps among teams? For example we had three teams that were working with coral reefs, and a couple
 of teams looking at migration and livelihoods of farmers in developing countries. We could have sorted the teams out by topics and given teams with overlapping topics a chance to 
 interact.
 
-Another thing that we are still trying to work out for the virtual format is how to maximize participation and engagement in the lessons.
+**Better engagement with lessons.** Another thing that we are still trying to work out for the virtual format is how to maximize participation and engagement in the lessons.
 In the previous in-person incarnations of CSI, we held lessons in the morning and teams worked independently in the afternoon, so everyone was at least present for each lesson.
 In the virtual CSI, participants had a greater incentive to spend a lot of time working on their own projects and skip some of the lessons. 
 This is hard to avoid in the virtual format, especially when the week is so packed with work and material to cover. 
