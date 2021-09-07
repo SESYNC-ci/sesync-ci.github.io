@@ -7,6 +7,8 @@ tags:
  - Shell
  - Python
  - SSH
+ - Environment
+ - Module
 sticky: true
 ---
 
@@ -17,6 +19,7 @@ FIXME: ADD ADDITIONAL DETAIL ON THE FOLLOWING
 - Provide more background
 - Any notes about system-wide versus module installations of software
 - Generally say when you would need to use them (on ssh gateway, in certain slurm scripts)
+- Explain how Rcommon includes R and all the common dependencies for things like sf
 
 ## Module commands
 
