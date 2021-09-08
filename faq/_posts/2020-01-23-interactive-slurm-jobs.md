@@ -12,13 +12,13 @@ SESYNC's [Slurm compute cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' |
 
 First, you need to open a terminal window and connect to the SSH server. On Windows machines, if you want to use applications with a graphical interface (such as displaying R plots in real time), you will need to use a third-party client such as [PuTTY](https://www.putty.org/) or [MobaXTerm](https://mobaxterm.mobatek.net). See [this FAQ on accessing Linux resources]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}) for help on getting the client set up.
 
-Log into the server by typing
+Log into the SSH server by typing
 
 ```
 ssh (your username goes here)@ssh.sesync.org
 ```
 
-into the terminal prompt, and then entering your password when prompted.
+into the terminal prompt, and then entering your password when prompted. You are now logged in to the server called `sshgw00` (SSH gateway).
 
 Next, start an interactive job. This is done with the shell command `srun`, which requests a node for a parallel job. A typical interactive job request is:
 
@@ -26,16 +26,24 @@ Next, start an interactive job. This is done with the shell command `srun`, whic
 srun -n 1 --pty bash -i
 ```
 
-where `-n 1` means you are requesting one node. The `--pty bash -i` part tells the job to open an interactive terminal. You can add other options such as `--partition=sesyncshared` or request specific amounts of memory or time. See the [Slurm documentation page for srun](https://slurm.schedmd.com/srun.html) or [the SESYNC cluster Quickstart page]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}) for more information &mdash; the available options for `salloc` are mostly the same as for `sbatch`.
+where `-n 1` means you are requesting one node. The `--pty bash -i` part tells the job to open an interactive terminal. You can add other options such as requesting specific amounts of memory or time. See the [Slurm documentation page for srun](https://slurm.schedmd.com/srun.html) or [the SESYNC cluster Quickstart page]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}) for more information &mdash; the available options for `srun` are mostly the same as for `sbatch`.
 
 If the node(s) you requested are available you will get another terminal prompt with the name of the Slurm node you are logged into. Your interactive job is now running!
 
 ## Running R from an interactive job
 
-Now that your interactive job has started, you can do things like start an R session from the command line. This is as easy as typing `R` but it is often preferable to type
+Now that your interactive job has started, you can do things like start an R session from the command line. First you will need to load the `R` environment module:
 
 ```
-R --no-save --no-restore
+module load R
+```
+
+You can also load specific versions of R &mdash; see the [environment modules Quickstart page]({{ 'quickstart/environment-modules.html' | relative_url }}) for more information.
+
+Now start the R session. This is as easy as typing `R` but it is often preferable to type
+
+```
+R --vanilla
 ```
 
 That will ensure that your R workspace will not automatically save to your working directory and clutter things up in case your job terminates abruptly.
@@ -50,4 +58,4 @@ Once you are done with your job, quit R using `q()` (or quit whatever other appl
 exit
 ```
 
-into the command prompt. Your terminal prompt will say `sshgw02` again, meaning you are back on the SSH gateway and the nodes you ran your job on are now freed up for other users.
+into the command prompt. Your terminal prompt will say `sshgw00` again, meaning you are back on the SSH gateway and the nodes you ran your job on are now freed up for other users.
