@@ -14,7 +14,7 @@ The scheduler puts your job in a queue and executes it when sufficient compute n
 processing is that you can submit many requests (hundreds or thousands), and they will run as resources become available. It also means
 that when you gain access to a compute node, you have sole access to it during the time your code is running, i.e., you're not competing with other individuals for CPU cycles. 
 
-The cluster nodes are running Red Hat Enterprise Linux 8.3 (Ootpa) and have compilers, core R packages, and Python available. 
+The cluster nodes are running Red Hat Enterprise Linux 8.3 (Ootpa) and have C++ compilers, core R packages, and Python available. 
 
 We use a scheduler system called the Simple Linux Utility for Resource Management (Slurm) developed by [Lawrence Livermore National Laboratory](https://www.llnl.gov/). It is  one of the most popular systems among large high performance clusters and is the one used by the University of Maryland Deepthought supercomputer. This means that any submission script you develop on our modest cluster can be easily ported to a much large HPC system.
 
