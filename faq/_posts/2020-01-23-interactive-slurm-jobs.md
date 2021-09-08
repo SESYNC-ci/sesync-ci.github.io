@@ -32,10 +32,10 @@ If the node(s) you requested are available you will get another terminal prompt 
 
 ## Running R from an interactive job
 
-Now that your interactive job has started, you can do things like start an R session from the command line. First you will need to load the `R` environment module:
+Now that your interactive job has started, you can do things like start an R session from the command line. First you will need to load the `Rcommon` environment module, which loads R and all commonly used dependencies such as GDAL:
 
 ```
-module load R
+module load Rcommon
 ```
 
 You can also load specific versions of R &mdash; see the [environment modules Quickstart page]({{ 'quickstart/environment-modules.html' | relative_url }}) for more information.

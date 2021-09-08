@@ -31,17 +31,19 @@ ssh jdoe@ssh.sesync.org
 ```
 
 You will be prompted to enter your password and possibly to add SESYNC to your list of known hosts. 
-Once you do, you will be connected to the SESYNC server and the current working directory will be `/research-home/jdoe`, which you can confirm by entering `pwd`. You will see something like:
+Once you do, you will be connected to the SSH gateway (`sshgw00`) on the SESYNC server 
+and the current working directory will be `/research-home/jdoe`, which you can confirm by entering `pwd`. 
+You will see something like:
 
 ```
-jdoe@sshgw02:~$ pwd
+jdoe@sshgw00:~$ pwd
 /research-home/jdoe
 ```
 
 To find out how much space is being used by the different subdirectories in your home directory, enter `du -h --max-depth=1` and it will list all the top-level subdirectories and how much space they are taking up. It might look something like:
 
 ```
-jdoe@sshgw02:~$ du -h --max-depth=1
+jdoe@sshgw00:~$ du -h --max-depth=1
 10M   ./.cache
 5M    ./.local
 1G    ./R

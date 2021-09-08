@@ -15,7 +15,7 @@ Each node has a location called `/tmp/` that can store roughly 100GB and is only
 
 ## Scratch space
 
-All nodes and all users can access `/nfs/scratch/`, where you can store large files. The scratch space is intended for intermediate data that you will only need temporarily but that you do need to access after the job is finished running. Read and write speeds are somewhat slower for `/nfs/scratch/`, but the storage space is much larger and the files are still preserved after the job is completed. **Important Note**: the scratch space is not intended for long-term storage! Use your own or your group's research data directory for longer-term needs.
+All nodes and all users can access `/nfs/scratch/`, where you can store large files. The scratch space is intended for intermediate data that you will only need temporarily but that you do need to access after the job is finished running. Read and write speeds are somewhat slower for `/nfs/scratch/`, but the storage space is much larger and the files are still preserved after the job is completed. **Important Note**: the scratch space is not intended for long-term storage! Use your own or your group's [research data directory]({{ 'quickstart/research-data-directory.html' | relative_url }}) for longer-term needs.
 
 ## Example usage within an R script
 

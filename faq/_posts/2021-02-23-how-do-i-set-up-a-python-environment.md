@@ -83,3 +83,6 @@ Now any Python code you execute from within R will use your virtual environment.
 
 - General information on running Python on the cluster is on our [Quickstart page on the Slurm cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
 - [FAQ on setting up a virtual environment for use on the Jupyter server]({{ 'faq/python-virtual-env.html' | relative_url }})
+- [Quickstart page on environment modules][modules]
+
+[modules]: ({{ 'quickstart/environment-modules.html' | relative_url }})

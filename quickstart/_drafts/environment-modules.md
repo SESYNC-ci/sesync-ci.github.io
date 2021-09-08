@@ -23,15 +23,15 @@ FIXME: ADD ADDITIONAL DETAIL ON THE FOLLOWING
 
 ## Module commands
 
-module load
+#### module load
 
 The most important command to know is `module load`. This command loads an environment module. If you don't specify a version, it will load the default version which is typically the most recent stable version. For example, 
 
 ```
-module load R
+module load Rcommon
 ```
 
-loads the most recent version of R. After running that command, you can type `R` to open an R session, or `Rscript` to run an R script.
+loads the default version of R, as well as the most common system dependencies &mdash; for example, `Rcommon` includes GDAL, GEOS, and PROJ, the three system dependencies for the `sf` package. After loading the module, you can type `R` to open an R session, or `Rscript` to run an R script.
 
 Running 
 
@@ -41,10 +41,34 @@ module load R/3.6.2
 
 will load R version 3.6.2.
 
-module avail
+#### module avail
 
-This command shows you which modules are available to load. Simply running `module avail` will show all of them, or you can search by running for example `module avail python` to see all available modules with the string "python" in their names.
+This command shows you which modules are available to load. Simply running `module avail` will show all of them, or you can search by running for example `module avail Python` to see all available modules with the (case-sensitive!) string "Python" in their names.
 
-- module list
-- module switch
-- module unload
+#### module list
+
+This command shows you which modules you currently have loaded in your environment. For example if you load the `Rcommon` module and then enter the `module list` command, you will see this output:
+
+```
+[jdoe@sesync.org@sshgw00 ~]$ module list
+Currently Loaded Modulefiles:
+ 1) R/4.1.1   2) Rcommon/4.1.1
+```
+
+#### module switch
+
+This command lets you switch from one version of a module to another. For instance, if you have R 3.6.2 loaded but want to switch to R 4.1.1, use this command:
+
+```
+module switch R/3.6.2 R/4.1.1
+```
+
+It is optional to type out the name of the currently loaded module, but mandatory to type out the name of the one you are switching to.
+
+#### module unload
+
+This command removes a module from your current environment, for example
+
+```
+module unload R
+```

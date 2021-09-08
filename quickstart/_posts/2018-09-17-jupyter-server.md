@@ -33,7 +33,7 @@ using a Python 2 or Python 3 kernel. To avoid a permission error, please use the
 `--user` flag. For instance, using the Terminal launched from Jupyter:
 
 ```bash
-<USERNAME>@juplab00:~$ pip3 install --user <PACKAGE>
+<USERNAME>@sesync01:~$ pip3 install --user <PACKAGE>
 ```
 
 If you receive an error stating that the package cannot be installed, there is a
