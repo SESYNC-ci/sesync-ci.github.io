@@ -14,7 +14,7 @@ sticky: true
 
 SESYNC provides a high-performance computing cluster for memory-intensive and time-intensive computing tasks. ([FAQ: What is the SESYNC cluster?]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }})) You can connect to the cluster through our [ssh gateway][gateway] service running at ssh.sesync.org or by submitting jobs through RStudio. The workflow for using a cluster is a little bit different from a typical run in R or Python. In addition to your processing code, you must give the cluster a list of execution instructions and a description of the resources your analysis will require. Any output or error messages from your script will be written out to a file called `slurm-[jobID].out`.
 
-The first part of this quickstart guide explains in general how to connect to the server and submit jobs, via the ssh gateway or the RStudio server. The second part of the guide gives specific examples showing how to submit jobs in R, Python, and MATLAB. 
+This quickstart guide explains how to connect to the ssh gateway server and submit jobs, and gives specific examples showing how to submit jobs in R from the RStudio server and Python from the ssh gateway. 
 
 The general process to submit your code (aka, job) to the cluster is as follows:
 
@@ -23,9 +23,7 @@ The general process to submit your code (aka, job) to the cluster is as follows:
 3. Check your job's status
 4. Look at your job's output
 
-# Connecting to the server and submitting jobs
-
-## Connect via the ssh gateway
+## Submitting jobs from the ssh gateway
 
 Login to SESYNC's ssh gateway at `ssh.sesync.org` (Read the [FAQ on accessing Linux resources][gateway] if you need to know how to do that). 
 
@@ -48,7 +46,7 @@ Check your job's status at the command prompt: `$ squeue`
 
 Check your job's output by using `$ ls` to find the `.out` file containing your job number. View the output with an editor or the `less` command. For example, if your job number were 1234, `$ less slurm-1234.out`
 
-# Submitting R jobs from the Rstudio server
+## Submitting R jobs from the Rstudio server
 
 The following is a simple example that shows you how to:
 
@@ -60,7 +58,7 @@ The following is a simple example that shows you how to:
 
 Once you are familiar with the process shown here, you may want to check our examples of the different ways to [run code in parallel](https://github.com/SESYNC-ci/cluster-parallel-examples) on the cluster.  You may also want to check out the [rslurm]({{ 'rslurm/index.html' | relative_url }}) package for submitting R code to a Slurm cluster.  
 
-## 1. Create a simple R script
+### 1. Create a simple R script
 
 Connect to the RStudio server at `rstudio.sesync.org`. For more information, [see the RStudio quickstart](https://cyberhelp.sesync.org/quickstart/rstudio-server.html). 
 
@@ -97,7 +95,7 @@ barplot(surveys_summary$mean_wgt)
 dev.off()
 ```
 
-## 2. Create a job submission script
+### 2. Create a job submission script
 
 In addition to the R script you want to run, you need to create a seperate submission script that instructs the cluster how to run your R script.
 
@@ -125,7 +123,7 @@ Here's what the submission script is doing:
 * `#SBATCH -n 1` - tells the scheduler that you will be running one task. Any line beginning `#SBATCH` is interpreted as an instruction to the scheduler, for more details on what is available please see [this guide](https://support.ceci-hpc.be/doc/_contents/QuickStart/SubmittingJobs/SlurmTutorial.html). 
 * `Rscript --vanilla plot.R` - is the command that will be run to launch your script. The "--vanilla" specifies R should run with minimal options or settings, and should not load any existing workspace or save the workspace when the job is complete. See the [documentation of Rscript](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html) for more details.
 
-## 3. Run your job
+### 3. Run your job
 
 Open the terminal in RStudio (switch to the Terminal tab or go to Tools -> Terminal -> New Terminal to create a new tab).
 
@@ -147,7 +145,7 @@ After you submit this job, it should finish in a few seconds. Click the refresh 
 
 You can open the __slurm-XX.out__ output log file in RStudio to look at any progress or error messages your job created while it was running.
 
-## 4. Modify your scripts to run more than once
+### 4. Modify your scripts to run more than once
 
 If you look at the script above, you'll notice that a problem arises when you want to run this file multiple times. The way it's currently written, it will overwrite the pdf output each time it is run. To prevent this, we can append the unique SLURM job number to the name of the file.
 
@@ -161,7 +159,7 @@ pdf(paste0("mean_per_species_", Sys.getenv("SLURM_JOB_ID"),".pdf"))
 
 Once you're finished you can re-submit your script using `sbatch` as you did before. When the script finishes, you'll notice that the PDF file is now called __mean_per_species_XX.pdf__, where XX is the job number.
 
-# Submitting Python jobs
+## Submitting Python jobs
 
 Save your Python script in the same location as your `submit.sh` script. If the Python script is named `test.py`, to run Python code, the submission script can be as simple as:
 
@@ -173,11 +171,11 @@ python test.py
 
 __Note__: If your script uses packages from a virtual environment, make sure to first activate it before calling sbatch.
 
-## Setting up a virtual environment
+### Setting up a virtual environment
 
 If your script requires additional Python packages besides the standard library and the few packages (such as numpy) already on the SESYNC server, you will need to install them in a virtual environment, which is a user-specific Python library. A virtual environment will also allow you to run your script with a specific version of Python. Follow the directions on our [FAQ on how to create a virtual environment for a Slurm job]({{ 'faq/how-do-i-set-up-a-python-environment.html' | relative_url }}). 
 
-## Running multiple copies of a Python script in parallel
+### Running multiple copies of a Python script in parallel
 
 In general, you may want to run multiple copies of a script in parallel, using different parameter sets. The following submission script accepts two command line parameters and passes them to Python.
 
@@ -224,37 +222,11 @@ python test.py $1 $1
 deactivate
 ```
 
-## Tip: Editing your remote Python files
+### PROTIP: Editing your remote Python files
 
 The RStudio Server interface (accessible via your web browser at __rstudio.sesync.org__) can recognize Python syntax and thus serve as a code editor for your files hosted on the SESYNC server. Note that it may not be possible to run the scripts in RStudio Server, since you cannot access your virtual environment from that interface.
 
-# Submitting MATLAB jobs
-
-Save your MATLAB script &mdash; we'll assume it is named `sampleMATLAB.m` &mdash; in the same place as your `submit.sh` file.
-
-Create your `submit.sh` file with the following:
-```
-#!/bin/bash
-#
-#SBATCH -n 1
-
-/usr/local/MATLAB/R2018b/bin/matlab -nodisplay < sampleMATLAB.m
-```
-or update your ~/.profile to include:
-`export PATH=$PATH:/usr/local/MATLAB/R2018b/bin/matlab`
-
-and the `submit.sh` file only needs:
-```
-#!/bin/bash
-#
-#SBATCH -n 1
-
-matlab -nodisplay < sampleMATLAB.m
-```
-
-From the ssh gateway, submit the script with the command prompt: `$ sbatch submit.sh`
-
-# For more information
+## For more information
 
 Here are some pages with helpful advice on using the SESYNC cluster.
 
