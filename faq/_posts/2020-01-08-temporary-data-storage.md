@@ -11,15 +11,15 @@ Many jobs on the Slurm compute cluster generate lots of big files that require l
 
 ## Temporary storage
 
-Each node has a location called `/tmp/` that can store roughly 100GB and is only accessible from within that node. This is useful for files that you create during the job but that you will no longer need to access after the job is completed. Files in `/tmp/` are deleted once the job terminates.
+Each node has a location called `/tmp/` that can store roughly 100 GB and is only accessible from within that node. The space on `/tmp/` is shared among all users currently running jobs on the node. The temporary storage is intended for files that you create during the job that you will no longer need after the job is completed. Files in `/tmp/` are deleted once the job terminates.
 
 ## Scratch space
 
-All nodes and all users can access `/nfs/scratch/`, where you can store large files. The scratch space is intended for intermediate data that you will only need temporarily but that you do need to access after the job is finished running. Read and write speeds are somewhat slower for `/nfs/scratch/`, but the storage space is much larger and the files are still preserved after the job is completed. **Important Note**: the scratch space is not intended for long-term storage! Use your own or your group's [research data directory]({{ 'quickstart/research-data-directory.html' | relative_url }}) for longer-term needs.
+All nodes and all users can access `/nfs/scratch/`, where you can store large files. The scratch space can store many terabytes of data. It is intended for intermediate data that you will only need temporarily but that you do need to access after the job is finished running. Read and write speeds are somewhat slower for `/nfs/scratch/`, but the storage space is much larger and the files are still preserved after the job is completed. **Important Note**: the scratch space is not intended for long-term storage! Use your own or your group's [research data directory]({{ 'quickstart/research-data-directory.html' | relative_url }}) for longer-term needs.
 
 ## Example usage within an R script
 
-If you want to write files to the scratch space within an R script, it is probably a good idea to make a subdirectory within `/nfs/scratch/` since it is a communal space that anyone can see. Here is an example:
+If you want to write files to the scratch space within an R script, it is probably a good idea to make a subdirectory within `/nfs/scratch/` since it is a communal space that anyone can see. Here is an example R script:
 
 ```
 mydata <- data.frame(a = letters, b = 1:26) # fake data
