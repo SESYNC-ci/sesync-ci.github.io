@@ -24,11 +24,11 @@ In contrast to many computing clusters at larger institutions that have to manag
 has relatively few users so we can get away with very lenient cluster use policies. For example, we have no default limits on memory
 use for jobs. However, if the total RAM in use on a node exceeds what is available on that node (515 GB), jobs on that node may 
 terminate with an out-of-memory error, so please keep an eye on your memory use. 
-Also, the time limit on jobs is set at a generous 30 days, which should be more than enough for any job you might want to run.
 
 Because of our lenient policies, we rely on the honor system to manage our cluster &mdash; it's up to you to be a good neighbor!
 We only have two cluster nodes so you will likely have to share the node your job is running on with other users. That means it's 
 important to make sure your job stays within reasonable limits of time and memory use. It is not very neighborly to use all 64 processor cores for a 
-job that will run for days. 
+job that will run for days. In addition, we don't have any time limit set on users' jobs &mdash; again it's up to you to keep an
+eye on your jobs and make sure you are not abusing the communal resources.
 
 Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
