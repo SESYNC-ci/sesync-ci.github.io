@@ -56,11 +56,11 @@ The following is a simple example that shows you how to:
 * Submit your job for execution
 * Look for the results
 
-Once you are familiar with the process shown here, you may want to check our examples of the different ways to [run code in parallel](https://github.com/SESYNC-ci/cluster-parallel-examples) on the cluster.  You may also want to check out the [rslurm]({{ 'rslurm/index.html' | relative_url }}) package for submitting R code to a Slurm cluster.  
+Once you are familiar with the process shown here, you may want to check our examples of the different ways to [run code in parallel](https://github.com/SESYNC-ci/cluster-parallel-examples) on the cluster.  You may also want to check out the [rslurm](https://cyberhelp.sesync.org/rslurm) package for submitting R code to a Slurm cluster.  
 
 ### 1. Create a simple R script
 
-Connect to the RStudio server at `rstudio.sesync.org`. For more information, [see the RStudio quickstart](https://cyberhelp.sesync.org/quickstart/rstudio-server.html). 
+Connect to the RStudio server at `rstudio.sesync.org`. For more information, [see the RStudio quickstart]({{ 'quickstart/rstudio-server.html' | relative_url }}). 
 
 Before you begin, download the `surveys.csv` data file from [Data Carpentry](https://github.com/datacarpentry/datacarpentry/raw/master/data/biology/). Place it in your current directory. The file contains observations on the weight of several species of small mammals across 24 survey plots.
 

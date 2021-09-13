@@ -89,7 +89,7 @@ However, if you are testing out code on the [SSH gateway]({{ 'faq/how-to-access-
 you will need to load modules before running any software. For example, if you want to create a [Python virtual environment][venv] from the terminal, 
 you need to load the module for your preferred version of Python first. The same goes for Slurm jobs that you submit from the SSH gateway. 
 If the Slurm job uses software such as R that is managed by environment modules, you'll need to include `module load` in your submit script. 
-If you use the [rslurm package]({{ 'rslurm' | relative_url }}), Slurm jobs you submit should work fine without loading any modules.
+If you use the [rslurm package](https://cyberhelp.sesync.org/rslurm), Slurm jobs you submit should work fine without loading any modules.
 
 ## See also
 

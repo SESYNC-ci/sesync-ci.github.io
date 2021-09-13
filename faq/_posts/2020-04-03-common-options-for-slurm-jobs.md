@@ -7,7 +7,7 @@ tags:
 
 There are a few different ways to run a job on SESYNC's [Slurm compute cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}), but all of them ultimately run a command called `sbatch` to submit the job to the cluster. The `sbatch` program is part of the Slurm software package and has a lot of different options. These include a maximum length of time your jobs can run, how much memory you are requesting, whether you want to be notified by email when your job finishes running, etc. It's possible to run a Slurm job without setting any of the options and going with all defaults, but there are times when you might want to customize the options. 
 
-The official [help documentation for sbatch](https://slurm.schedmd.com/sbatch.html) is great, but it's a lot to wade through. Here are some common SESYNC-specific options that you might want to set on your Slurm jobs, and how to set them either from the command line or through [the rslurm package]({{ 'rslurm' | relative_url }}).
+The official [help documentation for sbatch](https://slurm.schedmd.com/sbatch.html) is great, but it's a lot to wade through. Here are some common SESYNC-specific options that you might want to set on your Slurm jobs, and how to set them either from the command line or through [the rslurm package](https://cyberhelp.sesync.org/rslurm).
 
 ## Setting Slurm job options on the command line
 
@@ -25,7 +25,7 @@ sbatch -J cool_job -a 1-4 myscript.sh
 
 ## Setting Slurm job options within rslurm
 
-If you are submitting a Slurm job using [the rslurm package]({{ 'rslurm' | relative_url }}), some of the options are included in the default arguments to `slurm_apply()`[^1], specifically `array`, `job-name`, `ntasks`, `nodes`, `cpus-per-task`, and `output`. If you want to specify any other options  not included in the default arguments, pass them as a named list to the `slurm_options` argument. Enclose the list names in quotes or backticks if the `sbatch` option names contain hyphens, as in the example below. *You cannot use the single-letter shortcuts through rslurm!* 
+If you are submitting a Slurm job using [the rslurm package](https://cyberhelp.sesync.org/rslurm), some of the options are included in the default arguments to `slurm_apply()`[^1], specifically `array`, `job-name`, `ntasks`, `nodes`, `cpus-per-task`, and `output`. If you want to specify any other options  not included in the default arguments, pass them as a named list to the `slurm_options` argument. Enclose the list names in quotes or backticks if the `sbatch` option names contain hyphens, as in the example below. *You cannot use the single-letter shortcuts through rslurm!* 
 
 For example, let's say you want to submit a job called `cool_job` that runs an R function called `my_function()` and you want to get an email to your SESYNC address when the job either ends successfully or fails. You can specify that option by writing your call to `slurm_apply()` like this:
 
