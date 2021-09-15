@@ -9,7 +9,6 @@ tags:
  - SSH
  - Environment
  - Module
-sticky: true
 ---
 
 Software on the SESYNC server (as of September 2021) is organized using [environment modules](https://modules.readthedocs.io/en/latest/). 
@@ -21,10 +20,6 @@ if you want to ensure that your code runs exactly the same way every time.
 
 Most of the environment modules on the SESYNC server include a specific version of a single piece of software. 
 For example, if you load the `R/4.1.1` module, you will be able to run R 4.1.1 in your current environment. 
-One exception to the "one module, one piece of software" rule is the `Rcommon` module we created for your convenience. 
-This module includes R and all the most system libraries that are required for common R packages that SESYNC researchers use. 
-For example, `Rcommon` includes GDAL, GEOS, and PROJ, the three system dependencies for the `sf` package.
-This saves you having to load multiple modules every time you open an R session.
 
 ## Common module commands
 
@@ -32,13 +27,14 @@ You work with environment modules using the `module` command followed by a subco
 
 #### module load
 
-The most important subcommand to know is `module load`. This command loads an environment module. If you don't specify a version, it will load the default version which is typically the most recent stable version. For example, 
+The most important subcommand to know is `module load`. This command loads an environment module. 
+If you don't specify a version, it will load the default version which is typically the most recent stable version. For example, 
 
 ```
-module load Rcommon
+module load R
 ```
 
-loads the default version of R, as well as the most common system dependencies, as described above. After loading the module, you can type `R` to open an R session, or `Rscript` to run an R script.
+loads the default version of R. After loading the module, you can type `R` to open an R session, or `Rscript` to run an R script.
 
 You can specify which version of a piece of software you want to load. Entering 
 
@@ -50,21 +46,25 @@ will load R version 3.6.2.
 
 #### module avail
 
-This subcommand shows you which modules are available to load. Simply entering `module avail` will show all of them, or you can search by entering for example `module avail Python` to see all available modules with the (case-sensitive!) string "Python" in their names.
+This subcommand shows you which modules are available to load. Simply entering `module avail` will show all of them, 
+or you can search by entering for example `module avail Python` to see all available modules with the (case-sensitive!) 
+string "Python" in their names.
 
 #### module list
 
-This subcommand shows you which modules you currently have loaded in your environment. For example if you load the `Rcommon` module and then enter `module list`, you will see this output:
+This subcommand shows you which modules you currently have loaded in your environment. 
+For example if you load the `R` module and then enter `module list`, you will see this output:
 
 ```
 [jdoe@sesync.org@sshgw00 ~]$ module list
 Currently Loaded Modulefiles:
- 1) R/4.1.1   2) Rcommon/4.1.1
+ 1) R/4.1.1 
 ```
 
 #### module switch
 
-This subcommand lets you switch from one version of a module to another. For instance, if you have R 3.6.2 loaded but want to switch to R 4.1.1, use this syntax:
+This subcommand lets you switch from one version of a module to another. 
+For instance, if you have R 3.6.2 loaded but want to switch to R 4.1.1, use this syntax:
 
 ```
 module switch R/3.6.2 R/4.1.1
@@ -83,19 +83,24 @@ module unload R
 ## When do I need to use modules?
 
 If you are using the RStudio or Jupyter servers to run code, it's unlikely that you will need to worry too much about modules. 
-This is because those servers will automatically load the default R and Python modules, and all commonly used dependencies, whenever you start up a session. 
+On the RStudio server, the R module is loaded by default whenever you start up a session, as well as all commonly used dependencies.
+On the Jupyter server, Python is run with a virtual environment so it isn't necessary to load the module.
+On the Slurm nodes, R is also loaded by default. 
 
-However, if you are testing out code on the [SSH gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}), 
-you will need to load modules before running any software. For example, if you want to create a [Python virtual environment][venv] from the terminal, 
-you need to load the module for your preferred version of Python first. The same goes for Slurm jobs that you submit from the SSH gateway. 
-If the Slurm job uses software such as R that is managed by environment modules, you'll need to include `module load` in your submit script. 
-If you use the [rslurm package](https://cyberhelp.sesync.org/rslurm), Slurm jobs you submit should work fine without loading any modules.
+Everywhere else on the SESYNC system, you will need to use environment modules.
+For example, if you are testing out code on the [SSH gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}), 
+you will need to load modules before running any software. Let's say you want to create a [Python virtual environment][venv] from the terminal. 
+You would need to load the module for your preferred version of Python first. The same goes for Slurm jobs that you submit from the SSH gateway. 
+If the Slurm job uses software that is managed by environment modules, you'll need to include `module load` in your submit script. 
+The only exception is that the default version of R is loaded by default on the Slurm nodes.
+If you use the [rslurm package](https://cyberhelp.sesync.org/rslurm) from the RStudio server, Slurm jobs you submit should work fine without loading the R module.
+If you'd like to run code with an older version of R in a Slurm job, add a line at the top of your submit script after the `#SBATCH` options
+to load that specific module.
 
 ## See also
 
 - [Official documentation page for environment modules](https://modules.readthedocs.io/en/latest/)
 - [FAQ about the error message you get when you didn't load the proper module]({{ 'faq/why-is-R-not-found.html' | relative_url }})
 - [FAQ about setting up a Python virtual environment for Slurm jobs, using modules][venv]
-- [Quickstart page on the Slurm cluster, including how to use modules on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }})
 
 [venv]: {{ 'faq/how-do-i-set-up-a-python-environment.html' | relative_url }}

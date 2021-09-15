@@ -27,6 +27,9 @@ the features of the JupyterLab IDE, check out the complete
 
 ## Python Packages
 
+<!-- FIXME FIXME FIXME FIXME
+ THIS IS NOT RIGHT ATM FOR THE NEW INFRA -->
+
 User contributed Python packages can be installed on JupyterLab by using the
 "pip" or "pip3" utility from the Terminal, depending on whether you are
 using a Python 2 or Python 3 kernel. To avoid a permission error, please use the
@@ -40,6 +43,12 @@ If you receive an error stating that the package cannot be installed, there is a
 chance that some underlying system library is not installed. Please email the
 error message to **{{ site.email }}**, and explain which package you need to
 install.
+
+You might prefer to create a project-specific kernel with a specific version of Python and
+install only the packages you need for your project into that environment. 
+This is good for reproducibility because it ensures that your code is always executed in 
+the same environment. See the [FAQ on creating a virtual environment][venvfaq]
+on the Jupyter server for more details.
 
 ## Where should I save stuff?
 
@@ -73,13 +82,14 @@ all shared data here. Examples of data types that should be placed here include
 csv files, landsat imagery, hdf5 data files--anything that makes sense to have
 only a single copy, with access shared by your project members.
 
-Note that to connect to the  research data directory, you will need to create a symlink to your root project directory by opening the terminal jupyter and typing:
+Note that to connect to the  research data directory, you will need to create a symlink 
+to your root project directory by opening the terminal in JupyterLab and typing:
 
 ```
 ln -s /nfs/PROJECTNAME-data PROJECTNAME-data
 ```
 
-See the [FAQ](https://cyberhelp.sesync.org/faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html) for more information.
+See the [FAQ on creating a symlink][symlinkfaq] for more information.
 
 ## Dealing with Data
 
@@ -126,3 +136,13 @@ out_filename = os.path.join(out_dir, 'dataset.csv')
 ## write out to csv
 dataset.to_csv(out_filename)
 ```
+
+## See also
+
+- [FAQ: how to create a virtual environment on the Jupyter server][venvfaq]
+- [FAQ: using git on the Jupyter server][gitfaq]
+- [FAQ: creating a symlink on the Jupyter server][symlinkfaq]
+
+[venvfaq]: {{ 'faq/python-virtual-env.html' | relative_url }}
+[gitfaq]: {{ 'faq/git-and-jupyterlab.html' | relative_url }}
+[symlinkfaq]: {{ 'faq/how-to-create-a-symlink-to-research-directory-in-Jupyter-lab.html' | relative_url }}

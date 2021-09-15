@@ -100,6 +100,16 @@ Once it restarts, you will see the new kernel in the Launcher, with the name you
   
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
+### 6) Install additional packages into your virtual environment
+
+To install other Python packages into your virtual environment, you will need to open a Terminal window, change to the directory where your Pipfile is located, and run
+
+```
+pipenv install name-of-packages
+```
+
+to install packages. This is the same way you installed the `ipykernel` package as described above. 
+
 ### 6) Delete when finished
 
 If you would like to delete your kernel at any point, run the following (replacing test-kernel with the name of your kernel).

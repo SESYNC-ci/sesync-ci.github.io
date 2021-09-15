@@ -6,7 +6,7 @@ tags:
   - R
 ---
 
-If you trying to run R from the terminal or a Slurm job, and you see this scary-looking message,
+If you trying to run R from the terminal, and you see this scary-looking message,
 
 ```
 [jdoe@sesync.org@sshgw00 ~]$ R
@@ -22,17 +22,22 @@ This means that you can choose what version of R you want to use to run your cod
 can make sure your code is reproducible by always running it with the same version of R (and all the same R package versions) that you used
 when you originally developed the code.
 
+The R environment module is always loaded on the RStudio server and Slurm nodes, but you will need to load it on the SSH gateway. For other 
+software, you'll always need to load the environment module before you run it, whether it's on the RStudio server, the Slurm nodes, the
+Jupyter server, or the SSH gateway.
+
 ## Quick solution
 
-To get rid of the error message, just type this command before you try to run R:
+To get rid of the error message, just type this command in the terminal before you try to run R:
 
 ```
-module load Rcommon
+module load R
 ```
 
-This will load the `Rcommon` environment module which includes the default version of R and all commonly used system packages (such as GDAL, GEOS, and PROJ if you want to use the `sf` package). 
+This will load the `R` environment module which includes the default version of R. We've set the most recent stable version on our servers
+to be the default (as of October 2021, this is R 4.1.1). 
 If you'd rather load a specific version of R, you will need to specify the version number. Run `module avail R` to see which versions are available.
-Then you can type `module load Rcommon/4.1.1`, for example, to load that version of `Rcommon`.
+Then you can type `module load R/4.0.5`, for example, to load that version of `R`.
 
 For Python, you can load the default version of Python 3.x with:
 
