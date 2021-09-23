@@ -70,14 +70,12 @@ Confirm that you've added the kernel by running
 jupyter kernelspec list
 ```
 
-Your list of kernels will look something like this
+Your list of kernels will look something like this:
 
 ```
 Available kernels:
-  test-kernel    /research-home/user/.local/share/jupyter/kernels/test-kernel
-  python3        /research-home/user/.local/share/virtualenvs/Python_test_env-VLKWaVDK/share/jupyter/kernels/python3
-  bash           /usr/local/share/jupyter/kernels/bash
-  python2        /usr/local/share/jupyter/kernels/python2
+  test       /research-home/myname/.local/share/jupyter/kernels/test
+  python3    /research-home/myname/.local/share/virtualenvs/mydirectory-44neAqC_/share/jupyter/kernels/python3
 ```
 
 ### 5) Restart server
