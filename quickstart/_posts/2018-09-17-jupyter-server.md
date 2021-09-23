@@ -27,12 +27,9 @@ the features of the JupyterLab IDE, check out the complete
 
 ## Python Packages
 
-<!-- FIXME FIXME FIXME FIXME
- THIS IS NOT RIGHT ATM FOR THE NEW INFRA -->
-
 User contributed Python packages can be installed on JupyterLab by using the
-"pip" or "pip3" utility from the Terminal, depending on whether you are
-using a Python 2 or Python 3 kernel. To avoid a permission error, please use the
+"pip3" or "pip3.8" utility from the Terminal, depending on whether you are
+using a Python 3.6 or Python 3.8 kernel. To avoid a permission error, please use the
 `--user` flag. For instance, using the Terminal launched from Jupyter:
 
 ```bash
@@ -44,8 +41,9 @@ chance that some underlying system library is not installed. Please email the
 error message to **{{ site.email }}**, and explain which package you need to
 install.
 
-You might prefer to create a project-specific kernel with a specific version of Python and
-install only the packages you need for your project into that environment. 
+**Note for advanced users**: Instead of installing individual packages with the 
+`--user` flag, we recommend creating a project-specific kernel with a specific version of Python and
+installing only the packages you need for your project into that environment. 
 This is good for reproducibility because it ensures that your code is always executed in 
 the same environment. See the [FAQ on creating a virtual environment][venvfaq]
 on the Jupyter server for more details.

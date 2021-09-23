@@ -166,14 +166,14 @@ Save your Python script in the same location as your `submit.sh` script. If the 
 ```
 #!/bin/bash
 
-python test.py
+python3 test.py
 ```
 
-__Note__: If your script uses packages from a virtual environment, make sure to first activate it before calling sbatch.
+__Note__: If your script uses packages from a virtual environment, make sure to first activate it before calling sbatch. See below for an example.
 
 ### Setting up a virtual environment
 
-If your script requires additional Python packages besides the standard library and the few packages (such as numpy) already on the SESYNC server, you will need to install them in a virtual environment, which is a user-specific Python library. A virtual environment will also allow you to run your script with a specific version of Python. Follow the directions on our [FAQ on how to create a virtual environment for a Slurm job]({{ 'faq/how-do-i-set-up-a-python-environment.html' | relative_url }}). 
+If your script requires additional Python packages besides the standard library and the few packages (such as numpy) already on the SESYNC server, it's a good idea to install them in a virtual environment, which is a user-specific Python library. A virtual environment will also allow you to run your script with a specific version of Python. Follow the directions on our [FAQ on how to create a virtual environment for a Slurm job]({{ 'faq/how-do-i-set-up-a-python-environment.html' | relative_url }}). 
 
 ### Running multiple copies of a Python script in parallel
 
@@ -184,7 +184,7 @@ __submit.sh__
 ```
 #!/bin/bash
 
-python test.py $1 $1
+python3 test.py $1 $1
 ```
 
 Your Python script can access these parameters via the `sys.argv[]` list. Note that `sys.argv[0]` is always the name of the Python script, in this case `test.py`, so use subscripts starting with 1 for the arguments you passed to the script.
@@ -218,7 +218,7 @@ __submit.sh__
 #!/bin/bash
 
 source venv/bin/activate
-python test.py $1 $1
+python3 test.py $1 $1
 deactivate
 ```
 
