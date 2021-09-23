@@ -16,29 +16,31 @@ Follow the steps below once, and you will have a virtual environment that you ca
 
 See [Connecting to the ssh gateway]({{ 'faq/how-to-access-linux-resources.html' | relative_url }}).
 
-**2) Load your desired Python module.**
+**2) Create a virtual environment using your desired version of Python:**
 
-There are multiple Python [environment modules][modules] on the SESYNC server. Load the module for the version of Python you want to use in your virtual environment. Type `module avail Python` to see the different versions of Python 2.x and 3.x that are available, then load the module. For example to load Python 3.9.2 you would enter:
-
-```
-module load Python3/3.9.2
-```
-
-**3) Create a virtual environment using the version of Python you loaded:**
+To use the default system Python (currently Python 3.6), use `python3` to install the virtual environment like this:
 
 ```
-python3 -m venv env392
+python3 -m venv myproject_env
 ```
 
-This will create a directory called `env392/` (or whatever name you want to give it) in your current working directory.
+This will create a directory called `myproject_env/` (or whatever name you want to give it) in your current working directory. 
+
+Other versions of Python3 can be specified. For example, if you want to use Python 3.8, install the virtual environment like this:
+
+```
+python3.8 -m venv myproject_env
+```
+
+You can also use [environment modules][modules] to load a specific version of Python before creating the virtual environment.
 
 **4) Activate the virtual environment:**
 
 ```
-source env392/bin/activate
+source myproject_env/bin/activate
 ```
 
-Now it will say `(env392)` before your prompt to show you are in the virtual environment.
+Now it will say `(myproject_env)` before your prompt to show you are in the virtual environment.
 
 You can install packages now into the virtual environment with `pip install`. For example, to install `numpy`, enter:
 
@@ -59,7 +61,7 @@ All of the above you only have to do once.
 If you want to run a Python script called `myscript.py` on the Slurm cluster, the bash script for submitting your job (usually called `submit.sh`) should include the following commands.
 
 ```
-source /research-home/yourusername/env392/bin/activate
+source /research-home/yourusername/myproject_env/bin/activate
 python myscript.py
 deactivate
 ```
@@ -74,7 +76,7 @@ To activate the virtual environment on the RStudio server, use the following R c
 
 ```
 library(reticulate)
-use_virtualenv('~/env392/')
+use_virtualenv('~/myproject_env/')
 ```
 
 Now any Python code you execute from within R will use your virtual environment. This can be used in .Rmd notebooks. All `{python}` code chunks in your notebook will use the virtual environment as long as you include the above code in your `setup` code chunk at the top of the notebook.
