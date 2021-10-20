@@ -17,7 +17,7 @@ logging in with your SESYNC username and password. If you forgot your username o
 go to <https://pwm.sesync.org/>. If your SESYNC credentials do not give you RStudio access,
 please email **{{ site.email }}** and ask to enable this resource for your account or whole team.
 
-## Running RSudio
+## Running RStudio
 
 Once you log in, you will see an RStudio desktop like application. This RStudio Server application
 works almost identically to the desktop version. To learn how to use all the
@@ -42,7 +42,7 @@ message to **{{ site.email }}**, and explain which package you need to install.
 
 ### Research Home Directory
 
-When you first open R studio, you will be working in your home directory which
+When you first open RStudio, you will be working in your home directory which
 is located at "/research-home/USERNAME" or equivalently "~/". This is a private
 directory, and only you have access to the files in it. We strongly recommend
 that you save source code in to your home directory. This will protect against

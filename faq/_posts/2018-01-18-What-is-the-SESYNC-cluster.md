@@ -8,49 +8,27 @@ SESYNC's computational cluster ([see quickstart page]({{ 'quickstart/Using-the-S
 
 ## Overview of the cluster and Job Scheduler
 
-The cluster is a group of 26 virtual machines with a total of 190 cores and 1.65 TB of RAM that is accessible through
+The cluster is two large machines each with 64 processor cores and 515 GB RAM, for a total of 128 cores and 1.03 TB of RAM, that is accessible through
 a scheduler. Using two special commands (sbatch and srun), you request the scheduler to allocate one or more compute nodes for a job.
 The scheduler puts your job in a queue and executes it when sufficient compute nodes are available. The advantage of this type of
-processing is that you can submit many requests (hundreds or thousands), and they will run as  resources become available. It also means
+processing is that you can submit many requests (hundreds or thousands), and they will run as resources become available. It also means
 that when you gain access to a compute node, you have sole access to it during the time your code is running, i.e., you're not competing with other individuals for CPU cycles. 
 
-There are three types of nodes available in the SESYNC cluster: two development/testing nodes and 20 computation nodes, and 4 high memory computation nodes. All computation nodes are running running 64-bit Ubuntu Linux version 16.04. Twenty compuation nodes have 8 CPU cores and 60GB of memory each. Four computation nodes have 8 CPU cores and 120GB of memory each. All nodes have compilers, core R packages, and python available. 
+The cluster nodes are running Red Hat Enterprise Linux 8.3 (Ootpa) and have C++ compilers, core R packages, and Python available. 
 
 We use a scheduler system called the Simple Linux Utility for Resource Management (Slurm) developed by [Lawrence Livermore National Laboratory](https://www.llnl.gov/). It is  one of the most popular systems among large high performance clusters and is the one used by the University of Maryland Deepthought supercomputer. This means that any submission script you develop on our modest cluster can be easily ported to a much large HPC system.
 
-## Partitions
+## Job scheduler policies
 
-A partition can be thought of as a work queue which has a set of policies and computational nodes included in it. The SESYNC cluster
-currently has three partitions, each for different purposes:
+In contrast to many computing clusters at larger institutions that have to manage hundreds of simultaneous users, the SESYNC cluster
+has relatively few users so we can get away with very lenient cluster use policies. For example, we have no default limits on memory
+use for jobs. However, if the total RAM in use on a node exceeds what is available on that node (515 GB), jobs on that node may 
+terminate with an out-of-memory error, so please keep an eye on your memory use. 
 
-### sesync
-
-This partition will allocate entire nodes to your process. You should submit here ONLY if your job is parallel and can use all
-resources on a node. Otherwise, CPU's on the node you requested would sit idle. In R, if you use the parallel package you should
-submit your job to this queue.  
-
-| Time Limit | Max Job Size | Node Description |
-| 14 days | 24 nodes | 20 nodes of 8 core, 60GB memory nodes & 4 nodes of 8 core, 120GB memory|
-
-### sesyncshared
-
-This queue will run up to 8 simultanious jobs on a compute node. This is good for long running jobs that do not require more than
-one processor. In general, unless you know your job is memory intensive or parallel you'll want to submit here. This is the default
-partition to which jobs get submitted if no partition has been specified
-
-| Time Limit | Max Job Size | Node Description |
-| unlimited | 1 node | 8 core, 60GB memory |
-
-### sesynctest
-
-This is a partition designed for testing jobs and troubleshooting submissions. Using this partition on a small subset of data or
-paramaters allows you to receive immediate feedback to check for errors, so you will not waste time in queue only to find your
-job didn't work. Jobs submitted to this partition are limited to running for 1hr to ensure that resources are always available for
-testing.  Please remember to switch to one of sesync or sesyncshared once you've verified your job is working. You should NOT submit
-large jobs to this partition; submit them to sesync or sesync-shared. The two nodes in this partition are thin and have considerably
-less resources than the other cluster nodes. 
-
-| Time Limit | Max Job Size | Node Description |
-| 1hr | 2 nodes | 4 core, 8GB memory |
+Because of our lenient policies, we rely on the honor system to manage our cluster &mdash; it's up to you to be a good neighbor!
+We only have two cluster nodes so you will likely have to share the node your job is running on with other users. That means it's 
+important to make sure your job stays within reasonable limits of time and memory use. It is not very neighborly to use all 64 processor cores for a 
+job that will run for days. In addition, we don't have any time limit set on users' jobs &mdash; again it's up to you to keep an
+eye on your jobs and make sure you are not abusing the communal resources.
 
 Also see the quick start [page on the cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).

@@ -70,14 +70,12 @@ Confirm that you've added the kernel by running
 jupyter kernelspec list
 ```
 
-Your list of kernels will look something like this
+Your list of kernels will look something like this:
 
 ```
 Available kernels:
-  test-kernel    /research-home/user/.local/share/jupyter/kernels/test-kernel
-  python3        /research-home/user/.local/share/virtualenvs/Python_test_env-VLKWaVDK/share/jupyter/kernels/python3
-  bash           /usr/local/share/jupyter/kernels/bash
-  python2        /usr/local/share/jupyter/kernels/python2
+  test       /research-home/myname/.local/share/jupyter/kernels/test
+  python3    /research-home/myname/.local/share/virtualenvs/mydirectory-44neAqC_/share/jupyter/kernels/python3
 ```
 
 ### 5) Restart server
@@ -100,7 +98,39 @@ Once it restarts, you will see the new kernel in the Launcher, with the name you
   
 Again, if you have multiple projects for which you would like separate virtual environments, you can run the above set-up code sequence to create a different virtual environment in each separate project directory.  
 
-### 6) Delete when finished
+### 6) Install additional packages into your virtual environment
+
+To install other Python packages into your virtual environment, you will need to open a Terminal window, change to the directory where your Pipfile is located, and run
+
+```
+pipenv install name-of-packages
+```
+
+to install packages. This is the same way you installed the `ipykernel` package as described above. 
+
+### 7) Using your virtual environment in Slurm jobs
+
+If your code has high processing time or memory requirements, and it's too much to run on the Jupyter server,
+it's possible to use the virtual environment within a Slurm job as well, running your Python code as a 
+script (`.py` file) rather than a notebook (`.ipynb` file). You will need to call `pipenv` in your Slurm
+job script to run the Python script.
+
+If your `Pipfile` is in the directory
+`/research-home/myusername/my_cooltrees_code`, and your `.py` script is located at 
+`/research-home/myusername/my_cooltrees_code/coolscript.py`, your Slurm job
+submission script might look like this:
+
+```
+#!/bin/bash
+#SBATCH -n 1
+
+cd /research-home/myusername/my_cooltrees_code
+pipenv run python coolscript.py
+```
+
+For more details see the [Quickstart on using the SESYNC cluster]({{ 'quickstart/Using-the-SESYNC-Cluster.html' | relative_url }}).
+
+### 8) Delete when finished
 
 If you would like to delete your kernel at any point, run the following (replacing test-kernel with the name of your kernel).
 
