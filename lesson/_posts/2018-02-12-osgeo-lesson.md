@@ -1,5 +1,5 @@
 ---
-title: OSGeo
+title: Open Source Geospatial tools
 tags:
  - Geospatial
 permalink: /osgeo-lesson/
