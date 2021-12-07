@@ -3,6 +3,7 @@ title: Bulk Uploads and Downloads by SFTP
 tags:
  - Data
  - NFS
+ - FTP
 ---
 
 
