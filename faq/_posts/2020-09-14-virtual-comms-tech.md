@@ -41,7 +41,7 @@ Messaging can be an important alternate way to communicate, both during and betw
  
 ### Document Creation/Editing/Storage
 
-Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  In addition to the storage we provide at [files.sesync.org](files.sesync.org), some of these solutions include options such as simultaneous document editing, cloud storage, and document history.  
+Storing and sharing documents in one centralized place is important in collaborative projects to ensure everyone is working from the same starting point.  In addition to the storage we provide at [files.sesync.org](https://files.sesync.org), some of these solutions include options such as simultaneous document editing, cloud storage, and document history.  
 
  - [Etherpad](https://etherpad.org/)
  - [Google Drive*](https://www.google.com/intl/en/drive/)
