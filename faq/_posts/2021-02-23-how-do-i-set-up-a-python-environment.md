@@ -87,4 +87,4 @@ Now any Python code you execute from within R will use your virtual environment.
 - [FAQ on setting up a virtual environment for use on the Jupyter server]({{ 'faq/python-virtual-env.html' | relative_url }})
 - [Quickstart page on environment modules][modules]
 
-[modules]: ({{ 'quickstart/environment-modules.html' | relative_url }})
+[modules]: {{ 'quickstart/environment-modules.html' | relative_url }}

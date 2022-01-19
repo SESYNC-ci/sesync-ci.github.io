@@ -52,4 +52,4 @@ For more information, please see
 - [SESYNC Quickstart page on environment modules][modules]
 - [Official documentation for environment modules](https://modules.readthedocs.io/en/latest/)
 
-[modules]: ({{ 'quickstart/environment-modules.html' | relative_url }})
+[modules]: {{ 'quickstart/environment-modules.html' | relative_url }}
