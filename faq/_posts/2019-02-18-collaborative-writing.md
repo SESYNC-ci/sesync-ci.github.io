@@ -9,8 +9,8 @@ There are several resources available for collaborative writing depending on whi
 SESYNC groups have successfully used in the past.
 
 ### [Google Docs](https://www.google.com/docs/about/)
-For word processing, Google Docs is the most used collaborative platform. Multiple users can work on the platform simulatneously
-and you can customize group settings and user privilages.
+For word processing, Google Docs is the most used collaborative platform. Multiple users can work on the platform simultaneously
+and you can customize group settings and user privileges.
 
 ### [Overleaf](https://www.overleaf.com/)
 Overleaf allows for multiple users to work in LaTeX. It is free for a single user, but there is a subscription fee to add multiple users.
