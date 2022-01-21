@@ -29,7 +29,7 @@ comparable services.
 
 ## GitLab (i.e. <https://gitlab.sesync.org>)
 
-GitLab (a cloud service a lot like GitHub) comes in two flavors, a publically available
+GitLab (a cloud service a lot like GitHub) comes in two flavors, a publicly available
 [cloud service](https://gitlab.com/users/sign-in) and a cloud service for SESYNC science
 teams. Use the SESYNC server <https://gitlab.sesync.org> to host private projects shareable
 with other SESYNC users.
