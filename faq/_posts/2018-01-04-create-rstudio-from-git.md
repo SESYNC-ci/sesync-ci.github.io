@@ -8,7 +8,7 @@ tags:
 
 RStudio projects are folders that contain project files and a special .Rproj file. To link an RStudio project with a git repository, follow these steps:
 
-1. Create a new Gitlab or Github project and copy the URL for the project (e.g., https://gitlab.sesync.org/groupname/project.git)
+1. Create a new Gitlab or Github project and copy the URL for the project 
 
 1. Open RStudio, create a new project, choose *Version Control* for the project type, and select *git* as the type of versioned project. Use the URL from step one as the 'Repository URL' for your new project.
 
