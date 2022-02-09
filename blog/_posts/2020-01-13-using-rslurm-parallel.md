@@ -45,6 +45,7 @@ You can download the toy dataset used in this example [here](/assets/files/atus_
 library(rslurm)
 library(tidyverse)
 library(caret)
+library(gbm)
 
 atus_sample <- read_csv('atus_sample.csv')
 ```
@@ -80,7 +81,7 @@ Let's go through each step of using `rslurm` to fit a model to these data to pre
 
 When fitting a machine learning model, our goal is to do the best job of predicting test data that were not used to fit the model. There are many metrics for assessing the predictive performance of the model. Here we are sticking with a simple one: the prediction accuracy. An accuracy of 0.5 would be no better than random chance, and an accuracy of 1 would mean that the model predicts every individual's sex correctly. We want to find the combination of tuning parameters that yields the highest accuracy. 
 
-In this example, we are fitting a type of machine learning model called gradient boosting machine (GBM), implemented in the [caret](https://topepo.github.io/caret/) R package. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
+In this example, we are fitting a type of machine learning model called gradient boosting machine (GBM). The model is implemented in the [gbm](https://cran.r-project.org/package=gbm) R package, and we're using the [caret](https://topepo.github.io/caret/) R package to tune the model. To validate the model we are using 10-fold cross-validation, meaning that we fit the model 10 times on a different 90% of the data and then test it on the remaining 10%. That way, we make good use of all our data but avoid overfitting to the training data.
 
 Here is a function that takes a single set of tuning parameters and a random seed as arguments, then fits a GBM model to predict sex from activity times. We specify 10-fold cross-validation, so that for each fold it predicts the response variables of the 10% holdout dataset. Finally it averages the prediction accuracy across all 10 folds to return a single value of the model's accuracy.
 
@@ -151,27 +152,25 @@ For this example we need to make sure the data to fit the model is passed along,
 data_names <- c('atus_sample')
 ```
 
-We can also specify only the needed packages so that `rslurm` does not have to copy all the packages you happen to have loaded into your current R environment into each of the task environments. The only package required here is `caret`.
+We can also specify only the needed packages so that `rslurm` does not have to copy all the packages you happen to have loaded into your current R environment into each of the task environments. The packages required here are `caret` and `gbm`.
 
 ```
-needed_packages <- c('caret')
+needed_packages <- c('caret', 'gbm')
 ```
 
 ### Call slurm_apply() to run the parallel job
 
-Now we put it all together with a call to `slurm_apply()`. We specify the function name, the parameter data frame, a descriptive job name, the objects, and the packages. We also request the number of nodes to split the job across (only one is needed for this example) and how many CPUs per node. We request 4 CPUs, meaning that this job will run about 4x faster than if you fit all the models sequentially.
+Now we put it all together with a call to `slurm_apply()`. We specify the function name, the parameter data frame, a descriptive job name, the objects, and the packages. We also request the number of nodes to split the job across (only one is needed for this example) and how many CPUs per node. We request 4 CPU cores, meaning that this job will run about 4x faster than if you fit all the models sequentially. You can request more CPU cores if you have a bigger job. See the [cluster FAQ]({{ '/faq/What-is-the-SESYNC-cluster.html' | relative_url }}) for information on the number of available cores.
 
-Just for the purposes of this example, we pass the option `partition = 'sesynctest'` to `rslurm` which will send the job to run on one of the two nodes set aside for quick test jobs. The test nodes have only 4 CPUs apiece, while the other nodes have 8, which is why we specify `cpus_per_node = 4` (otherwise we could specify as many as eight CPUs if we are requesting a single node). Jobs on test nodes will terminate after one hour.
-
-Optionally, you could pass additional options to `slurm_apply()` to specify things like the maximum memory and time allocation for the job, but that isn't necessary for this relatively small job that we don't anticipate hogging a lot of resources.
+Optionally, you could use the `slurm_options` argument to pass additional options to specify things like the maximum memory and time allocation for the job, but that isn't necessary for this relatively small job that we don't anticipate hogging a lot of resources. The job scheduler will automatically assign the job to unused CPUs without you having to explicitly specify that.
 
 Putting that all together, here is our call:
 
 ```
 my_job <- slurm_apply(f = tune_model, params = tune_grid, jobname = 'tune_GBM', nodes = 1, cpus_per_node = 4,
-                      add_objects = data_names, pkgs = needed_packages, slurm_options = list(partition = 'sesynctest'))
+                      global_objects = data_names, pkgs = needed_packages)
 					  
-# Submitted batch job 361735
+# Submitted batch job 2881
 ```
 
 The message returned indicates that the job submitted to the cluster without any initial errors.
@@ -184,19 +183,19 @@ Off we go!
 
 ### Check job status
 
-As the job is running we can call `get_job_status()` to see how things are going. Below is an example of what the output returned by `get_job_status(my_job)` would look like while the job is ongoing. The job has been running for 48 seconds.
+As the job is running we can call `get_job_status()` to see how things are going. Below is an example of what the output returned by `get_job_status(my_job)` would look like while the job is ongoing. The job has been running for 9 seconds.
 
 ```
 $completed
 [1] FALSE
 
 $queue
-     JOBID PARTITION    NAME   USER ST TIME NODES NODELIST.REASON.
-1 361735_0 sesynctes tune_GBM qread  R 0:48     1             pn22
+   JOBID PARTITION     NAME     USER ST TIME NODES NODELIST.REASON.
+1 2881_0     dpart tune_GBM qread@se  R 0:09     1         sesync03
 
 $log
 _rslurm_tune_GBM/slurm_0.out 
-                         "" 
+                          "" 
 
 attr(,"class")
 [1] "slurm_job_status"
@@ -209,12 +208,13 @@ $completed
 [1] TRUE
 
 $queue
-[1] JOBID            PARTITION        NAME             USER             ST               TIME             NODES            NODELIST.REASON.
+[1] JOBID            PARTITION        NAME             USER             ST               TIME             NODES           
+[8] NODELIST.REASON.
 <0 rows> (or 0-length row.names)
 
 $log
 _rslurm_tune_GBM/slurm_0.out 
-                         "" 
+          "Loaded gbm 2.1.8" 
 
 attr(,"class")
 [1] "slurm_job_status"
