@@ -15,7 +15,7 @@ RShiny and related packages have lowered the bar for making web applications in 
 
 ## 2. Host a Live Version on shinyapps.io
 
-Whereas SESYNC's shiny server is only designed for prototyping and testing, RStudio's [shinyapps.io](http://www.shinyapps.io/) is available as a longer term solution. There is a free tier that allows limited web traffic (up to 5 applications and 25 hours per month), and pay plans that offer more traffic, apps, and support. Hosting on other cloud services like [AWS](https://www.r-bloggers.com/shiny-server-on-aws/) or [Digital Ocean](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/) will require more configuration but can also be used to run your app.
+RStudio's [shinyapps.io](http://www.shinyapps.io/) is available as a longer term solution. There is a free tier that allows limited web traffic (up to 5 applications and 25 hours per month), and pay plans that offer more traffic, apps, and support. Hosting on other cloud services like [AWS](https://www.r-bloggers.com/shiny-server-on-aws/) or [Digital Ocean](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/) will require more configuration but can also be used to run your app.
 
 ## 3. Publish HTML Websites
 
