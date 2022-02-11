@@ -41,7 +41,7 @@ In other words: publish the source code and underlying data sets! Whereas URLs a
 
 Instead of linking to a "live" version of an app on a server, consider directing readers directly to the code for your app by linking to a uniquely identifiable release of a GitHub repository using [Zenodo](https://guides.github.com/activities/citable-code/). The Readme file and/or repository website can include the link to the location of the hosted app, so even if the hosting platform changes (e.g. if you move institutions), the link in the published article still lets readers find the app. By registering a DOI for the code, you can also specifically refer to the current version of an app while leaving open the possibility of future updates and improvements[^7]. 
 
-This option also has an added benefit for people with R and Shiny installed on their computers. By sharing the files that make your app, anyone with R and Shiny installed will be able to run a local version of your app by copying a web link into functions in the shiny package like `runUrl`, `runGitHub`, or `runGist`[^8].
+This option also has an added benefit for people with R and Shiny installed on their computers. By sharing the files that make your app, anyone with R and Shiny installed will be able to run a local version of your app by copying a web link into functions in the shiny package like `runUrl`, `runGitHub`, or `runGist`.
 
 Datasets used in your application should also have their own DOI, obtained from an appropriate DOI-issuing repository such as FigShare, Dryad, or a domain-specific repository[^9]. Although a minimal amount of data can be stored along with the code in a GitHub repository, hosting the data in an appropriate repository will enable greater re-use, visibility, and adherence to metadata standards. We also don't recommend relying on journal appendices or supplemental material for maintaining access to datasets. For example, material published in ESA's Ecological Archives earlier than 2016 did not have permanent identifiers and is consequently not straightforward to locate where it was moved to on Figshare.   
 
@@ -54,5 +54,4 @@ Datasets used in your application should also have their own DOI, obtained from 
 [^5]: shinyapps.io [pricing models](https://www.shinyapps.io/#pricing)
 [^6]: Zenodo mints both a specific version DOI and a "concept" DOI that will always link to the lastest release of a GitHub repository. Learn more about versioning DOIs on [Zenodo's FAQ page](https://help.zenodo.org/#versioning)
 [^7]: How to [Share apps](https://shiny.rstudio.com/tutorial/written-tutorial/lesson7/)
-[^8]: Read more about publishing datasets in our Quickstart guide [here](https://cyberhelp.sesync.org/quickstart/sharing-data-products.html)
 
