@@ -9,7 +9,7 @@ author: khondula
 ---
 
 
-Photos, as a source of data, or to aid in the interpretation of data, can be a useful addition to [RShiny](http://cyberhelp.sesync.org/tags/#-shiny) applications. Here are two examples of using photo data: one that displays images from URLs, and another that uses species names to find pictures of animals. 
+Photos, as a source of data, or to aid in the interpretation of data, can be a useful addition to RShiny applications. Here are two examples of using photo data: one that displays images from URLs, and another that uses species names to find pictures of animals. 
 
 ## Display images from URLs
 
@@ -33,7 +33,7 @@ See a minimal example on github [here](https://github.com/khondula/image-viewer)
 
 ## Animal pictures from species names
 
-Another shiny app that used images to aid in data exploration shiny app was based on a large biodiversity data set. The main purpose of the app was to display country-level [time series](https://rstudio.github.io/dygraphs/shiny.html) data for a selected species---but with thousands of different taxa, exploring the dataset based on latin names proved difficult! So, I wanted the app to display some contextual information about the selected species aside from its latin name and the time series data. This is possible with functions from the [rinat](https://cran.r-project.org/web/packages/rinat/vignettes/rinatVignette.html) package, whichs draws on [iNaturalist](http://www.inaturalist.org/) data---which includes urls of user-uploaded images based on taxa names. 
+Another shiny app that used images to aid in data exploration shiny app was based on a large biodiversity data set. The main purpose of the app was to display country-level [time series](https://rstudio.github.io/dygraphs/shiny.html) data for a selected species---but with thousands of different taxa, exploring the dataset based on latin names proved difficult! So, I wanted the app to display some contextual information about the selected species aside from its latin name and the time series data. This is possible with functions from the [rinat](https://docs.ropensci.org/rinat/) package, whichs draws on [iNaturalist](http://www.inaturalist.org/) data---which includes urls of user-uploaded images based on taxa names. 
 
 ```
 inat <- reactive({
@@ -49,13 +49,9 @@ output$image1 = renderUI({
   })
 ```
 
-The [taxize](https://ropensci.org/tutorials/taxize_tutorial/) and [wikitaxa](https://cran.r-project.org/web/packages/wikitaxa/index.html)  packages also have useful functions for determining the common name, taxonomy, conservation status, geographic distribution, and more. 
+The [taxize](https://docs.ropensci.org/taxize/) and [wikitaxa](https://cran.r-project.org/web/packages/wikitaxa/index.html)  packages also have useful functions for determining the common name, taxonomy, conservation status, geographic distribution, and more. 
 
 ![species_pix](/assets/images/species_pix2.png)
-
----
-
-Learn more about creating interactive web applications using RShiny [here](http://cyberhelp.sesync.org/basic-Shiny-lesson/)
 
 
 
