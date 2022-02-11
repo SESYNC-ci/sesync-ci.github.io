@@ -8,7 +8,7 @@ author: khondula
 
 > Go back to [part 1 of our series on Shiny App Accessibility](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html)
 
-This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. As you [consider ways to provide long-term access to a shiny app](https://cyberhelp.sesync.org/blog/shiny-in-pubs.html), it's also a good time to consider how design choices might unintentionally hinder people from using your app.
+This year marks the 30th anniversary of the [Americans with Disabilities Act](https://adata.org/learn-about-ada), a transformative civil rights law that followed decades of action by disability activists. It is now commonly recognized that considering accessibility in design choices has ubiquitous benefits, i.e. the "curb cut effect[^1]." This holds especially true for technology, such as how captions on videos that make it possible for people with disabilities to access content also provides access to anyone who happens to be in a noisy environment. Along with considering ways to provide long-term access to a shiny app, it's also a good time to consider how design choices might unintentionally hinder people from using your app.
 
 <!--break-->
 
