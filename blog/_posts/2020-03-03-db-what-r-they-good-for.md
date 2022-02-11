@@ -19,7 +19,7 @@ Here are some aspects to consider:
 
 **How big?** 
 
-Perhaps the most common need that motivates database use is scalability, based on encountering limitations on file size or memory usage. Certain file types have size limits, such as a maximum number of rows for MS Excel files, or you may be trying  to use more than the amount of data that can be loaded into memory at once in a program like RStudio. Sometimes these issues can be resolved by using slightly different functions for reading in files (e.g. `fread` vs. `read.csv` in R), running code on SESYNC's RStudio server or [compute cluster](https://cyberhelp.sesync.org/faq/interactive-slurm-jobs.html) (which have much more memory than a typical laptop), or by [parallelizing code](https://cyberhelp.sesync.org/blog/using-rslurm-parallel.html) to run as separate tasks. Databases have essentially no inherent software-imposed size limitations and only read requested parts of data into memory. 
+Perhaps the most common need that motivates database use is scalability, based on encountering limitations on file size or memory usage. Certain file types have size limits, such as a maximum number of rows for MS Excel files, or you may be trying  to use more than the amount of data that can be loaded into memory at once in a program like RStudio. Sometimes these issues can be resolved by using slightly different functions for reading in files (e.g. `fread` vs. `read.csv` in R), running code on a compute cluster (which would much more memory than a typical laptop), or by parallelizing code to run as separate tasks. Databases have essentially no inherent software-imposed size limitations and only read requested parts of data into memory. 
 
 **Collaborating**
 
@@ -43,8 +43,6 @@ If your Pursuit team wants to set up a database, email cyberhelp@sesync.org to g
 
 See also:
 
-* Quickstart guide [Connecting to SESYNC's database server](https://cyberhelp.sesync.org/quickstart/connect-to-a-database.html)
-* SESYNC's [Intro to databases lesson](https://cyberhelp.sesync.org/introdb-lesson/)
 * USGS blog post [Working with pretty big data in R](https://waterdata.usgs.gov/blog/formats/)
 * [Situations where SQLite works well](https://www.sqlite.org/whentouse.html)
 
