@@ -1,16 +1,14 @@
 ---
-# DO NOT EDIT THE .md ON GITHUB
-# DO EDIT THE .Rmd AND knit THE .md LOCALLY
-title: ggplot tricks not to forget about
-authors: 
- - khondula
- - qdread
-tags:
- - ggplot
- - Visualization
+author:
+- khondula
+- qread
 output:
   md_document:
-    preserve_yaml: true
+    preserve_yaml: True
+tags:
+- ggplot
+- Visualization
+title: ggplot tricks not to forget about
 ---
 
 Tweaking figures for presentations or publications can be a tedious
@@ -23,7 +21,7 @@ particularly useful and want to remember.
 
 Within an `xlab()` or `ylab()` function, use `expression(paste())` to
 use special characters. Use brackets (`[]`) for subscript, the caret
-(`^`) for superscript, and the names of greek letters e.g. `mu`.
+(`^`) for superscript, and the names of greek letters e.g. `mu`.
 
       ylab(expression(paste("C", H[4], " (", mu,"mol ", L^-1,")"))) +
       xlab(expression(paste("DOC (mg ", L^-1,")")))
@@ -84,7 +82,9 @@ use special characters. Use brackets (`[]`) for subscript, the caret
       geom_smooth(method = 'lm', se = FALSE, size = 1.5) +
       annotate(geom = 'text', x = -Inf, y = Inf, label = rsq_label, hjust = 0, vjust = 1, parse = TRUE)
 
-![](/assets/images/unnamed-chunk-4-1.png)
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 -   To put text labels exactly in the corner or on the edge of the plot
     area, you can use `Inf` or `-Inf` as coordinate values. This is also
@@ -104,15 +104,15 @@ use special characters. Use brackets (`[]`) for subscript, the caret
       geom_boxplot() +
       facet_wrap(~ variable, labeller = label_parsed)
 
-![](/assets/images/unnamed-chunk-5-1.png)
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 ### Putting it all together
 
 -   For multi-panel plots, I like to “beef up” my plots using the
     [cowplot](https://cran.r-project.org/web/packages/cowplot/index.html)
     package in R. It has an intuitive way to arrange panels and add
-    annotation labels, which is described in one of the package’s
-    [vignettes](https://cran.r-project.org/web/packages/cowplot/vignettes/plot_grid.html).
+    annotation labels, which is described on the package’s
+    [documentation page](https://wilkelab.org/cowplot/index.html).
 
 The basic idea is to initiate an empty drawing canvas with the
 `ggdraw()` function, and then determined the location and sizing of each
@@ -159,4 +159,4 @@ directly from GitHub:
       geom_line() + 
       theme_black()
 
-![](/assets/images/unnamed-chunk-6-1.png)
+![](2019-09-25-ggplot-roundup_files/figure-markdown_strict/unnamed-chunk-6-1.png)
